@@ -15,6 +15,12 @@
   .rally-page h1{font-size:clamp(2rem,4.4vw,3.25rem);line-height:1.16;margin:0 0 16px}
   .intro{font-size:17px;color:#5a7184;max-width:730px;line-height:1.8}
   .rally-photo{display:block;width:100%;height:auto;max-height:525px;object-fit:contain;background:#19212b;border-radius:20px;margin:28px 0;box-shadow:0 18px 35px rgba(15,39,54,.12)}
+  .rally-video-section{background:#fff;border:1px solid #e0edf0;border-radius:20px;padding:26px;margin:0 0 24px}
+  .rally-video-section h2{font-size:clamp(1.3rem,2.6vw,1.65rem);line-height:1.3;letter-spacing:-.02em;margin:0 0 8px;color:#10243a}
+  .rally-video-section p{color:#52697d;line-height:1.7;margin:0 0 18px;font-size:15px}
+  .rally-video-frame{margin:auto;max-width:330px;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:#111820}
+  .rally-video-frame iframe{border:0;display:block;width:100%;height:100%}
+  .rally-video-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;color:#087e94;text-decoration:underline;text-underline-offset:3px;font-size:14px;font-weight:800}
   .rally-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
   .rally-box{border-radius:17px;background:white;border:1px solid #e0edf0;padding:24px}
   .rally-box h2{font-size:20px;letter-spacing:-.015em;margin:0 0 12px}
@@ -22,7 +28,7 @@
   .rally-box p:last-child{margin:0}
   .rally-box ul{margin:0;padding-left:22px}
   .rally-note{margin-top:22px;font-size:13px;line-height:1.75;color:#668096}
-  @media(max-width:650px){.rally-grid{grid-template-columns:1fr}.rally-page{padding-top:22px}.rally-photo{margin:20px 0}}
+  @media(max-width:650px){.rally-grid{grid-template-columns:1fr}.rally-page{padding-top:22px}.rally-photo{margin:20px 0}.rally-video-section{padding:18px}}
 </style>
 </head>
 <body>
@@ -32,11 +38,19 @@
 <h1>Ρομποτικό Rally<br>Drift Car με φτερό</h1>
 <p class="intro">Κατασκευάζουμε ένα αγωνιστικό ρομποτικό αυτοκίνητο με πίσω φτερό και εξερευνούμε πώς ο προγραμματισμός μπορεί να ελέγχει την κίνησή του.</p>
 <img class="rally-photo" src="cover.webp?v=8" alt="Αγωνιστικό αυτοκίνητο από LEGO WeDo 2.0 με πράσινο, μπλε και λευκό χρώμα, μεγάλους τροχούς και πίσω φτερό" width="1200" height="900">
+<section class="rally-video-section" aria-labelledby="rally-video-heading">
+<h2 id="rally-video-heading">🎬 Δες το Ρομποτικό Rally σε δράση</h2>
+<p>Παρακολούθησε το Drift Car με φτερό στο βίντεο του εργαστηρίου.</p>
+<div class="rally-video-frame">
+<iframe src="https://www.youtube-nocookie.com/embed/b9THrhm0h_8" title="Βίντεο Ρομποτικό Rally — Drift Car με φτερό" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<a class="rally-video-link" href="https://www.youtube.com/shorts/b9THrhm0h_8" target="_blank" rel="noopener noreferrer">Άνοιγμα βίντεο στο YouTube ↗</a>
+</section>
 <div class="rally-grid">
 <section class="rally-box"><h2>🎯 Τι θα μάθουμε</h2><ul><li>Να αναγνωρίζουμε τα βασικά μέρη ενός ρομποτικού οχήματος.</li><li>Να συνεργαζόμαστε για την κατασκευή του μοντέλου.</li><li>Να δοκιμάζουμε εντολές κίνησης και να παρατηρούμε το αποτέλεσμα.</li></ul></section>
 <section class="rally-box"><h2>🏁 Η αποστολή μας</h2><p>Η ομάδα σχεδιάζει, κατασκευάζει και δοκιμάζει το Rally. Έπειτα συγκρίνουμε τι συμβαίνει όταν αλλάζουμε τον χρόνο ή την ταχύτητα λειτουργίας του κινητήρα.</p></section>
 <section class="rally-box"><h2>💻 Προγραμματισμός</h2><p>Ξεκινάμε με απλές εντολές για τον κινητήρα και περνάμε σε μικρές δοκιμές. Οι αναλυτικές οδηγίες και τα στιγμιότυπα προγραμματισμού θα προστεθούν όταν ετοιμαστούν.</p></section>
-<section class="rally-box"><h2>📄 Υλικό εργαστηρίου</h2><p>Οδηγίες κατασκευής, αφίσα και βίντεο λειτουργίας θα προστεθούν εδώ, όταν είναι διαθέσιμα. Δεν υπάρχει ακόμη αρχείο PDF ή βίντεο για λήψη.</p></section>
+<section class="rally-box"><h2>📄 Υλικό εργαστηρίου</h2><p>Το βίντεο λειτουργίας είναι διαθέσιμο παραπάνω. Οι οδηγίες κατασκευής σε PDF και η αφίσα θα προστεθούν εδώ μόλις ετοιμαστούν.</p></section>
 </div>
 <p class="rally-note">EVAGELAK EDU LAB — Εκπαιδευτική ρομποτική για παιδιά Δημοτικού. Η φωτογραφία παρουσιάζει την κατασκευή που θα γνωρίσουμε.</p>
 </main>
