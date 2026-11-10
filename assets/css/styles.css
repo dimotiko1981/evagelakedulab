@@ -25,27 +25,49 @@
 @media (max-width:680px){.brand-mark.official-mark{width:52px;height:46px;flex-basis:52px}.hero-logo{max-height:75px}.hero-logo img{max-height:75px}}
 
 
-/* EVAGELAK EDU LAB v2 — official branding and responsive hero.
-   Colors drawn from the supplied navy / turquoise / green logo. */
-:root{--ink:#10243a;--muted:#627586;--purple:#087e94;--purple-dark:#075c74;--cream:#f6fafc;--soft:#eff8fb;--line:#e2edf0}
-.hero-art-halo{background:radial-gradient(ellipse at 50% 50%,#e7f8f5 0%,#eaf5fb 52%,transparent 75%)}
-.hero-main-logo{display:block;width:91%;max-width:490px;height:auto;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 19px 24px rgba(12,41,59,.13));position:relative;z-index:1}
-.brand-mark.official-mark,.brand-mark.official-mark.logo-ready{display:grid;place-items:center}
-.official-mark img{display:block;max-width:100%;width:100%;height:100%;object-fit:contain}
-.hero-logo{display:none}
-.hero h1 span{color:#0c91a3}
-.eyebrow{background:#eaf7f7;border-color:#d6eeed;color:#076d83}
-.play-dot{background:#e3f4f6;color:#087e94}
-.kids-card{background:#e1f4f5}
-.parents-card{background:#eef6e7}
-.kids-card .card-kicker{color:#087e94}
-.parents-card .card-kicker{color:#428442}
-.deco-ring{border-color:rgba(23,150,161,.13)}
-.quiz-section{background:#102d44}
-.quiz-intro h2 em{color:#7ad5cd}
-.light-label{color:#9edbd9}
-.quiz-intro p{color:#c6dce4}
-.orbit-star-two{color:#087e94}
-@media(max-width:900px){.hero-main-logo{width:87%;max-width:440px}}
-@media(max-width:680px){.hero-art{min-height:380px}.hero-main-logo{width:82%;max-width:340px}.note-top{right:0!important;top:26px!important}.note-bottom{left:0!important;bottom:5px!important}}
-@media(max-width:430px){.hero-art{min-height:310px}.hero-main-logo{width:86%;max-width:270px}.float-note{padding:7px 9px}.float-note strong{font-size:10px}}
+/* EVAGELAK EDU LAB — brand refinement (10 November 2026)
+   Preserve official emblem. Remove only background OUTSIDE its circular rim.
+   Keep the hero composition balanced, without overlapping captions. */
+:root { --ink:#10243a; --muted:#627586; --purple:#087e94; --purple-dark:#075c74; --cream:#f6fafc; --soft:#eff8fb; --line:#e2edf0; }
+.eyebrow { background:#eaf7f7; border-color:#d6eeed; color:#076d83; }
+.hero h1 span { color:#0c91a3; }
+.play-dot { background:#e3f4f6; color:#087e94; }
+.kids-card { background:#e1f4f5; }
+.parents-card { background:#eef6e7; }
+.kids-card .card-kicker { color:#087e94; }
+.parents-card .card-kicker { color:#428442; }
+.deco-ring { border-color:rgba(23,150,161,.13); }
+.quiz-section { background:#102d44; }
+.quiz-intro h2 em { color:#7ad5cd; }
+.light-label { color:#9edbd9; }
+.quiz-intro p { color:#c6dce4; }
+.orbit-star-two { color:#087e94; }
+.brand-mark.official-mark,.brand-mark.official-mark.logo-ready { display:grid; place-items:center; }
+.official-mark img { display:block; width:100%; height:100%; object-fit:contain; }
+.hero-logo { display:none; }
+.hero-art { min-width:0; min-height:500px; padding:24px 14px; display:grid; place-items:center; overflow:visible; }
+.hero-art-halo { inset:42px 24px 37px; background:radial-gradient(ellipse at 50% 50%,rgba(225,246,243,.84) 0%,rgba(236,249,252,.52) 54%,transparent 76%); }
+.hero-main-logo { display:block; width:73%; max-width:380px; height:auto; aspect-ratio:1; object-fit:contain; position:relative; z-index:1; border-radius:50%; filter:drop-shadow(0 12px 19px rgba(18,45,61,.13)); }
+.hero-art .float-note { z-index:2; }
+.hero-art .note-top { top:8%; right:0; transform:rotate(3deg); }
+.hero-art .note-bottom { bottom:8%; left:0; transform:rotate(-3deg); }
+.hero-art .orbit-star-one { top:16%; left:11%; }
+.hero-art .orbit-star-two { right:6%; bottom:18%; }
+@media(max-width:900px){
+  .hero-art{min-height:430px; padding:15px 8px;}
+  .hero-main-logo{width:73%;max-width:325px;}
+  .hero-art .note-top{top:3%;right:-2px;}
+  .hero-art .note-bottom{bottom:3%;left:-2px;}
+}
+@media(max-width:680px){
+  .hero-art{min-height:350px;padding:18px 10px 23px;}
+  .hero-main-logo{width:min(72%,310px);max-width:310px;}
+  .hero-art-halo{inset:20px 2px 12px;}
+  .hero-art .float-note{display:none;}
+  .hero-art .orbit-star-one{top:12%;left:4%;}
+  .hero-art .orbit-star-two{right:6%;bottom:12%;}
+}
+@media(max-width:430px){
+  .hero-art{min-height:290px;}
+  .hero-main-logo{width:min(75%,254px);}
+}
