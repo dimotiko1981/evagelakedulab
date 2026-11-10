@@ -1,13 +1,5 @@
 (() => {
   "use strict";
-  // Brand image is opt-in: if absent, the real name remains visible without a fake replacement logo.
-  document.querySelectorAll('[data-official-logo]').forEach(img => {
-    const show = () => img.parentElement.classList.add('logo-ready');
-    const hide = () => img.parentElement.classList.remove('logo-ready');
-    img.addEventListener('load', show);
-    img.addEventListener('error', hide);
-    if (img.complete && img.naturalWidth > 0) show();
-  });
   const menuButton = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#main-menu');
   menuButton.addEventListener('click', () => {
