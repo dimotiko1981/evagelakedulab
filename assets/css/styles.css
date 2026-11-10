@@ -130,3 +130,71 @@
 @media (max-width:380px) {
   .hero h1 { font-size:1.72rem; }
 }
+
+/* v12 - Motion for the ACTUAL hero logo (.hero-main-logo).
+   Cyan sheen is confined to the circular emblem; no HTML/JS or image changes. */
+.hero-art .hero-main-logo {
+  animation: edulab-logo-breathe 8s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+.hero-art::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(100%, 265px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(
+    112deg,
+    transparent 33%,
+    rgba(47, 212, 236, 0) 42%,
+    rgba(75, 225, 243, .15) 47%,
+    rgba(207, 252, 255, .36) 50%,
+    rgba(75, 225, 243, .15) 53%,
+    rgba(47, 212, 236, 0) 58%,
+    transparent 67%
+  );
+  background-size: 280% 100%;
+  background-position: 100% 50%;
+  opacity: 0;
+  animation: edulab-cyan-scan 10s ease-in-out infinite;
+}
+
+@keyframes edulab-logo-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.026); }
+}
+
+@keyframes edulab-cyan-scan {
+  0%, 14% { background-position: 100% 50%; opacity: 0; }
+  18% { opacity: .75; }
+  37% { background-position: 0% 50%; opacity: .75; }
+  42%, 100% { background-position: 0% 50%; opacity: 0; }
+}
+
+@media (max-width: 900px) {
+  .hero-art::after { width: min(100%, 230px); }
+}
+@media (max-width: 680px) {
+  .hero-art::after { width: min(66vw, 210px); }
+}
+@media (max-width: 430px) {
+  .hero-art::after { width: min(66vw, 185px); }
+}
+
+/* Accessibility: remove both animations when reduced motion is requested. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-art .hero-main-logo {
+    animation: none !important;
+    transform: none !important;
+  }
+  .hero-art::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+}
