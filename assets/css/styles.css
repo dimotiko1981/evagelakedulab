@@ -198,3 +198,50 @@
     opacity: 0 !important;
   }
 }
+
+/* v33 — Distinct section backgrounds, consistent with EVAGELAK EDU LAB branding.
+   CSS-only update: workshop order, navigation, logo, typography and page content remain unchanged. */
+.learning-strip {
+  background:#e8f5f5;
+  border-top-color:#d7e9e9;
+  border-bottom-color:#d7e9e9;
+}
+.workshops-section {
+  background:#edf5fa;
+  border-top:1px solid #dfeaf1;
+  border-bottom:1px solid #dfeaf1;
+}
+.workshops-section .workshop-card {
+  border-color:#dfeaf0;
+  box-shadow:0 8px 26px rgba(26,65,88,.045);
+}
+/* The teaching-method section is a .wrap, so a subtle contained color panel
+   gives it its own identity without changing HTML or creating horizontal overflow. */
+.how-section.section.wrap {
+  background:#eef8f1;
+  border:1px solid #dcece2;
+  border-radius:28px;
+  padding-inline:clamp(24px,4vw,55px);
+  margin-top:52px;
+  margin-bottom:52px;
+}
+.how-section .step-card {
+  background:#fff;
+  border-color:#dbeae1;
+}
+.quiz-section {
+  background:linear-gradient(120deg,#102d44 0%,#153b52 100%);
+  border-top:1px solid #0e2e42;
+}
+.footer {
+  background:#f5f9fb;
+  border-top-color:#e1ebf1;
+}
+@media(max-width:680px) {
+  .how-section.section.wrap {
+    border-radius:20px;
+    padding:54px 21px;
+    margin-top:30px;
+    margin-bottom:30px;
+  }
+}
