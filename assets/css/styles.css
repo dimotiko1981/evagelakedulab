@@ -199,49 +199,40 @@
   }
 }
 
-/* v33 — Distinct section backgrounds, consistent with EVAGELAK EDU LAB branding.
-   CSS-only update: workshop order, navigation, logo, typography and page content remain unchanged. */
+/* v34 — Quiet, coordinated section distinction for the EDU LAB homepage.
+   All tones use the same deep-blue / teal family. No lavender marketing banner. */
 .learning-strip {
-  background:#e8f5f5;
-  border-top-color:#d7e9e9;
-  border-bottom-color:#d7e9e9;
+  background:#f4f9fa;
+  border-top-color:#e7eef1;
+  border-bottom-color:#e7eef1;
 }
 .workshops-section {
-  background:#edf5fa;
-  border-top:1px solid #dfeaf1;
-  border-bottom:1px solid #dfeaf1;
+  background:#edf6f8;
+  border-top:1px solid #e0edf0;
+  border-bottom:1px solid #e0edf0;
 }
 .workshops-section .workshop-card {
-  border-color:#dfeaf0;
-  box-shadow:0 8px 26px rgba(26,65,88,.045);
+  border-color:#e1edf0;
+  box-shadow:0 7px 22px rgba(20,61,76,.045);
 }
-/* The teaching-method section is a .wrap, so a subtle contained color panel
-   gives it its own identity without changing HTML or creating horizontal overflow. */
+/* The teaching-method area returns to the clean, full-page white design. */
 .how-section.section.wrap {
-  background:#eef8f1;
-  border:1px solid #dcece2;
-  border-radius:28px;
-  padding-inline:clamp(24px,4vw,55px);
-  margin-top:52px;
-  margin-bottom:52px;
+  background:transparent;
+  border:0;
+  border-radius:0;
+  padding-inline:0;
+  margin-top:0;
+  margin-bottom:0;
 }
 .how-section .step-card {
-  background:#fff;
-  border-color:#dbeae1;
+  background:#f6fafb;
+  border-color:#e2edf0;
 }
 .quiz-section {
-  background:linear-gradient(120deg,#102d44 0%,#153b52 100%);
-  border-top:1px solid #0e2e42;
+  background:#102d44;
+  border-top:0;
 }
 .footer {
-  background:#f5f9fb;
-  border-top-color:#e1ebf1;
-}
-@media(max-width:680px) {
-  .how-section.section.wrap {
-    border-radius:20px;
-    padding:54px 21px;
-    margin-top:30px;
-    margin-bottom:30px;
-  }
+  background:#f7fafb;
+  border-top-color:#e2ebee;
 }
