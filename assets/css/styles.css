@@ -256,26 +256,63 @@
   .strip-grid strong { font-size:12px; }
 }
 
-/* v36 — Soft cyan glow ONLY on desktop hover (no permanent neon glow).
-   Keep the workshop photography and rounded card design unchanged. */
-@media (hover:hover) and (pointer:fine) {
-  .workshops-section .workshop-card {
-    transition: transform .26s ease, box-shadow .3s ease, border-color .3s ease;
-  }
+/* v37 — Clear cyan edge glow on hover; no glow when idle.
+   Keyboard focus receives the same visible treatment. */
+.workshops-section .workshop-card {
+  position: relative;
+  transition: transform .26s ease, border-color .26s ease, box-shadow .3s ease;
+}
+.workshops-section .workshop-image {
+  position: relative;
+}
+.workshops-section .workshop-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  border: 2px solid rgba(94,235,251,.92);
+  background: linear-gradient(180deg, transparent 48%, rgba(30,204,234,.14) 100%);
+  box-shadow: inset 0 0 24px rgba(76,224,249,.26);
+  transition: opacity .3s ease;
+}
+.workshops-section .workshop-image .category {
+  z-index: 2;
+}
+@media (hover: hover) and (pointer: fine) {
   .workshops-section .workshop-card:hover {
-    border-color: rgba(41,183,207,.62);
+    border-color: #31c7e5;
     box-shadow:
-      0 16px 32px rgba(15,54,72,.14),
-      0 0 0 1px rgba(74,211,230,.42),
-      0 0 24px rgba(33,182,212,.30);
+      0 0 0 2px rgba(56,214,241,.94),
+      0 0 24px 7px rgba(20,183,219,.48),
+      0 18px 34px rgba(14,63,87,.17);
+    transform: translateY(-3px);
+  }
+  .workshops-section .workshop-card:hover .workshop-image::after {
+    opacity: 1;
   }
   .workshops-section .workshop-card:hover .workshop-image img {
-    filter: brightness(1.045) saturate(1.045);
+    filter: brightness(1.08) saturate(1.09);
   }
 }
-@media (prefers-reduced-motion:reduce) {
+.workshops-section .workshop-card:focus-within {
+  border-color: #31c7e5;
+  box-shadow:
+    0 0 0 2px rgba(56,214,241,.94),
+    0 0 24px 7px rgba(20,183,219,.48),
+    0 18px 34px rgba(14,63,87,.17);
+}
+.workshops-section .workshop-card:focus-within .workshop-image::after {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
   .workshops-section .workshop-card,
+  .workshops-section .workshop-image::after,
   .workshops-section .workshop-image img {
     transition: none !important;
+  }
+  .workshops-section .workshop-card:hover {
+    transform: none;
   }
 }
