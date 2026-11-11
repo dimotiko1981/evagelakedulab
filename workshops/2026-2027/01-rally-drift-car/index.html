@@ -3,56 +3,85 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Ρομποτικό Rally – Drift Car με φτερό, πρώτο εργαστήριο EVAGELAK EDU LAB 2026–2027.">
-<title>Ρομποτικό Rally | EVAGELAK EDU LAB</title>
+<meta name="description" content="Ρομποτικό Rally — Drift Car με φτερό — κατασκευή LEGO WeDo 2.0, αποστολή, μαθησιακά αποτελέσματα και εκπαιδευτικό υλικό στο EVAGELAK EDU LAB.">
+<title>Ρομποτικό Rally — Drift Car με φτερό | EVAGELAK EDU LAB</title>
 <link rel="icon" type="image/png" href="../../../assets/images/branding/evagelak-logo.png">
 <link rel="stylesheet" href="../../../assets/css/styles.css">
 <style>
-  body{background:#f7fafb;color:#10243a}
-  .rally-page{width:min(920px,calc(100% - 40px));margin:0 auto;padding:42px 0 92px}
-  .back-link{display:inline-flex;align-items:center;gap:8px;background:white;color:#087e94;border:1px solid #d8e8ed;border-radius:12px;padding:11px 17px;font-weight:800;font-size:14px}
-  .rally-label{display:block;color:#087e94;font-weight:900;letter-spacing:.08em;font-size:12px;margin:40px 0 12px}
-  .rally-page h1{font-size:clamp(2rem,4.4vw,3.25rem);line-height:1.16;margin:0 0 16px}
-  .intro{font-size:17px;color:#5a7184;max-width:730px;line-height:1.8}
-  .rally-photo{display:block;width:100%;height:auto;max-height:525px;object-fit:contain;background:#19212b;border-radius:20px;margin:28px 0;box-shadow:0 18px 35px rgba(15,39,54,.12)}
-  .rally-video-section{background:#fff;border:1px solid #e0edf0;border-radius:20px;padding:26px;margin:0 0 24px}
-  .rally-video-section h2{font-size:clamp(1.3rem,2.6vw,1.65rem);line-height:1.3;letter-spacing:-.02em;margin:0 0 8px;color:#10243a}
-  .rally-video-section p{color:#52697d;line-height:1.7;margin:0 0 18px;font-size:15px}
-  .rally-video-frame{margin:auto;max-width:330px;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:#111820}
-  .rally-video-frame iframe{border:0;display:block;width:100%;height:100%}
-  .rally-video-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;color:#087e94;text-decoration:underline;text-underline-offset:3px;font-size:14px;font-weight:800}
-  .rally-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  .rally-box{border-radius:17px;background:white;border:1px solid #e0edf0;padding:24px}
-  .rally-box h2{font-size:20px;letter-spacing:-.015em;margin:0 0 12px}
-  .rally-box p,.rally-box li{font-size:15px;line-height:1.8;color:#52697d}
-  .rally-box p:last-child{margin:0}
-  .rally-box ul{margin:0;padding-left:22px}
-  .rally-note{margin-top:22px;font-size:13px;line-height:1.75;color:#668096}
-  @media(max-width:650px){.rally-grid{grid-template-columns:1fr}.rally-page{padding-top:22px}.rally-photo{margin:20px 0}.rally-video-section{padding:18px}}
+/* Scoped workshop page styles. Shared site CSS remains unchanged. */
+:root{--ws-ink:#10243a;--ws-muted:#52697d;--ws-teal:#087e94;--ws-border:#dcebef;--ws-bg:#f6fafb;--ws-accent:#e7f4f6}
+body{margin:0;background:var(--ws-bg);color:var(--ws-ink)}
+.workshop-detail{width:min(980px,calc(100% - 40px));margin:0 auto;padding:28px 0 80px}
+.ws-top{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-bottom:10px}
+.ws-name{font-size:13px;font-weight:900;letter-spacing:.045em;color:#087e94}
+.ws-back{display:inline-flex;gap:7px;align-items:center;background:white;color:#087e94!important;border:1px solid #d8e8ed;border-radius:11px;padding:10px 15px;font-size:14px;font-weight:850;text-decoration:none;white-space:nowrap}
+.ws-back:hover,.ws-back:focus-visible{background:#eaf7f8}
+.ws-label{display:block;color:#087e94;font-weight:900;letter-spacing:.09em;font-size:12px;margin:28px 0 8px}
+.workshop-detail h1{font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.18;letter-spacing:-.03em;margin:0 0 12px;color:var(--ws-ink)}
+.ws-intro{font-size:16px;line-height:1.75;color:var(--ws-muted);margin:0 0 24px;max-width:790px}
+.ws-photo{display:block;width:100%;height:auto;max-height:520px;object-fit:contain;background:#1b2530;border-radius:18px;box-shadow:0 14px 30px rgba(15,39,54,.10)}
+.ws-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:25px 0}
+.ws-card,.ws-panel{border:1px solid var(--ws-border);background:white;border-radius:18px;padding:23px}
+.ws-card h2,.ws-panel h2{font-size:clamp(1.2rem,2.3vw,1.42rem);line-height:1.3;letter-spacing:-.02em;color:var(--ws-ink);margin:0 0 12px}
+.ws-card p,.ws-card li,.ws-panel p{font-size:15px;line-height:1.75;color:var(--ws-muted)}
+.ws-card p:last-child,.ws-panel p:last-child{margin-bottom:0}
+.ws-card ul{padding-left:22px;margin:0}
+.ws-card li+li{margin-top:7px}
+.ws-panel{margin:20px 0 0}
+.ws-panel .ws-lead{margin:0 0 16px}
+.ws-program{display:block;width:100%;height:auto;background:white;border:1px solid var(--ws-border);border-radius:12px}
+.ws-program-open{display:block;margin-top:9px;font-size:13px;color:var(--ws-teal)!important;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.ws-material-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+.ws-material{border:1px solid #e0eaed;background:#f8fbfc;border-radius:14px;padding:18px;min-width:0}
+.ws-material h3{font-size:17px;font-weight:850;line-height:1.35;color:var(--ws-ink);margin:0 0 8px}
+.ws-material p{font-size:14px;line-height:1.65;color:var(--ws-muted);margin:0 0 13px}
+.ws-action{display:inline-flex;align-items:center;gap:5px;color:var(--ws-teal)!important;font-size:14px;font-weight:850;text-decoration:underline;text-underline-offset:3px;line-height:1.6}
+.ws-video-frame{width:min(100%,228px);aspect-ratio:9/16;background:#17202c;margin:12px auto 12px;border-radius:13px;overflow:hidden}
+.ws-video-frame iframe{display:block;width:100%;height:100%;border:0}
+.ws-material-wide{grid-column:1/-1}
+.ws-material-video-only{max-width:490px}
+.ws-footer{font-size:12px;color:#6d8495;margin:30px 0 0}
+@media(max-width:720px){.workshop-detail{width:calc(100% - 30px);padding-top:16px}.ws-grid,.ws-material-grid{grid-template-columns:1fr}.ws-material-wide{grid-column:auto}.ws-photo{border-radius:14px}.ws-card,.ws-panel{padding:19px}.ws-top{gap:10px}.ws-name{font-size:12px}.ws-back{font-size:13px;padding:9px 12px}}
+@media(prefers-reduced-motion:reduce){.ws-back{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<main class="rally-page">
-<a class="back-link" href="../../../index.html#workshops">← Πίσω στα εργαστήρια</a>
-<span class="rally-label">LEGO WeDo 2.0 · 2026–2027</span>
-<h1>Ρομποτικό Rally<br>Drift Car με φτερό</h1>
-<p class="intro">Κατασκευάζουμε ένα αγωνιστικό ρομποτικό αυτοκίνητο με πίσω φτερό και εξερευνούμε πώς ο προγραμματισμός μπορεί να ελέγχει την κίνησή του.</p>
-<img class="rally-photo" src="cover.webp?v=8" alt="Αγωνιστικό αυτοκίνητο από LEGO WeDo 2.0 με πράσινο, μπλε και λευκό χρώμα, μεγάλους τροχούς και πίσω φτερό" width="1200" height="900">
-<section class="rally-video-section" aria-labelledby="rally-video-heading">
-<h2 id="rally-video-heading">🎬 Δες το Ρομποτικό Rally σε δράση</h2>
-<p>Παρακολούθησε το Drift Car με φτερό στο βίντεο του εργαστηρίου.</p>
-<div class="rally-video-frame">
-<iframe src="https://www.youtube-nocookie.com/embed/b9THrhm0h_8" title="Βίντεο Ρομποτικό Rally — Drift Car με φτερό" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-<a class="rally-video-link" href="https://www.youtube.com/shorts/b9THrhm0h_8" target="_blank" rel="noopener noreferrer">Άνοιγμα βίντεο στο YouTube ↗</a>
-</section>
-<div class="rally-grid">
-<section class="rally-box"><h2>🎯 Τι θα μάθουμε</h2><ul><li>Να αναγνωρίζουμε τα βασικά μέρη ενός ρομποτικού οχήματος.</li><li>Να συνεργαζόμαστε για την κατασκευή του μοντέλου.</li><li>Να δοκιμάζουμε εντολές κίνησης και να παρατηρούμε το αποτέλεσμα.</li></ul></section>
-<section class="rally-box"><h2>🏁 Η αποστολή μας</h2><p>Η ομάδα σχεδιάζει, κατασκευάζει και δοκιμάζει το Rally. Έπειτα συγκρίνουμε τι συμβαίνει όταν αλλάζουμε τον χρόνο ή την ταχύτητα λειτουργίας του κινητήρα.</p></section>
-<section class="rally-box"><h2>💻 Προγραμματισμός</h2><p>Ξεκινάμε με απλές εντολές για τον κινητήρα και περνάμε σε μικρές δοκιμές. Οι αναλυτικές οδηγίες και τα στιγμιότυπα προγραμματισμού θα προστεθούν όταν ετοιμαστούν.</p></section>
-<section class="rally-box"><h2>📄 Υλικό εργαστηρίου</h2><p>Το βίντεο λειτουργίας είναι διαθέσιμο παραπάνω. Οι οδηγίες κατασκευής σε PDF και η αφίσα θα προστεθούν εδώ μόλις ετοιμαστούν.</p></section>
-</div>
-<p class="rally-note">EVAGELAK EDU LAB — Εκπαιδευτική ρομποτική για παιδιά Δημοτικού.</p>
+<main class="workshop-detail">
+  <div class="ws-top">
+    <span class="ws-name">EVAGELAK EDU LAB</span>
+    <a class="ws-back" href="../../../index.html#workshops">← Πίσω στις κατασκευές</a>
+  </div>
+  <span class="ws-label">LEGO WeDo 2.0 · 2026–2027</span>
+  <h1>Ρομποτικό Rally — Drift Car με φτερό</h1>
+  <p class="ws-intro">Κατασκευάσαμε ένα αγωνιστικό ρομποτικό αυτοκίνητο με πίσω φτερό και πειραματιστήκαμε με την κίνησή του.</p>
+  <img class="ws-photo" src="cover.webp" alt="Αγωνιστικό όχημα LEGO WeDo 2.0 με πράσινο, μπλε και λευκό χρώμα και μεγάλο πίσω φτερό" loading="eager">
+
+  <div class="ws-grid">
+    <section class="ws-card" aria-labelledby="mission-title">
+      <h2 id="mission-title">🏁 Η αποστολή μας</h2>
+      <p>Η ομάδα κατασκευάζει το ρομποτικό Rally και το προετοιμάζει για αγώνα. Δοκιμάζουμε την κίνησή του και συγκρίνουμε πώς ανταποκρίνεται στις διαφορετικές ρυθμίσεις του κινητήρα.</p>
+    </section>
+    <section class="ws-card" aria-labelledby="learn-title">
+      <h2 id="learn-title">🎯 Τι μάθαμε</h2>
+      <ul><li>Γνωρίσαμε τα βασικά μέρη ενός ρομποτικού οχήματος.</li>
+      <li>Συνεργαστήκαμε για τη συναρμολόγηση και τις δοκιμές του.</li>
+      <li>Παρατηρήσαμε πώς η ρύθμιση της κίνησης επηρεάζει το αποτέλεσμα.</li></ul>
+    </section>
+  </div>
+
+  <section class="ws-panel" aria-labelledby="materials-title">
+    <h2 id="materials-title">📁 Υλικό εργαστηρίου</h2>
+    <div class="ws-material-grid">
+      
+<article class="ws-material" aria-label="Βίντεο λειτουργίας">
+          <h3>🎬 Βίντεο λειτουργίας</h3>
+          <p>Παρακολούθησε την κατασκευή σε δράση.</p>
+          <div class="ws-video-frame"><iframe src="https://www.youtube-nocookie.com/embed/b9THrhm0h_8" title="Βίντεο λειτουργίας — Ρομποτικό Rally" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          <a class="ws-action" href="https://www.youtube.com/shorts/b9THrhm0h_8" target="_blank" rel="noopener noreferrer">Άνοιγμα βίντεο στο YouTube ↗</a>
+        </article>
+    </div>
+  </section>
+  <p class="ws-footer">EVAGELAK EDU LAB · Εκπαιδευτική ρομποτική για παιδιά Δημοτικού.</p>
 </main>
 </body>
 </html>
