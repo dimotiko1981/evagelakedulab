@@ -255,3 +255,27 @@
   .step-card { min-height:190px; }
   .strip-grid strong { font-size:12px; }
 }
+
+/* v36 — Soft cyan glow ONLY on desktop hover (no permanent neon glow).
+   Keep the workshop photography and rounded card design unchanged. */
+@media (hover:hover) and (pointer:fine) {
+  .workshops-section .workshop-card {
+    transition: transform .26s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .workshops-section .workshop-card:hover {
+    border-color: rgba(41,183,207,.62);
+    box-shadow:
+      0 16px 32px rgba(15,54,72,.14),
+      0 0 0 1px rgba(74,211,230,.42),
+      0 0 24px rgba(33,182,212,.30);
+  }
+  .workshops-section .workshop-card:hover .workshop-image img {
+    filter: brightness(1.045) saturate(1.045);
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  .workshops-section .workshop-card,
+  .workshops-section .workshop-image img {
+    transition: none !important;
+  }
+}
