@@ -49,7 +49,7 @@ function draw(){
   btn.onclick=()=>{if(selected!==-1)return;selected=j;if(selected===q.correct)score++;draw()};opts.appendChild(btn);
  });root.appendChild(opts);
  if(selected!==-1){const ok=selected===q.correct;const p=elem('div','answer '+(ok?'good':'bad'),(ok?'Σωστά! ':'Η σωστή απάντηση είναι: '+q.choices[q.correct].label+' — ')+q.explain);p.setAttribute('role','status');root.appendChild(p)}
- const actions=elem('div','actions');actions.appendChild(elem('div','hint','Οι εικόνες των εντολών προέρχονται από το PDF σου.'));
+ const actions=elem('div','actions');
  const next=elem('button','btn',index===QUIZ.length-1?'Δες αποτέλεσμα →':'Επόμενη ερώτηση →');next.type='button';next.disabled=selected===-1;next.onclick=()=>{if(selected===-1)return;index++;selected=-1;if(index>=QUIZ.length)finished=true;draw();document.getElementById('quiz').scrollIntoView({behavior:'smooth',block:'start'})};actions.appendChild(next);root.appendChild(actions);
 }
 draw();
