@@ -29,6 +29,18 @@ a{color:inherit}.ws-wrap{width:min(1060px,calc(100% - 52px));margin-inline:auto}
 .ws-mission p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; text-justify: inter-word; line-height: 1.82; }
 /* Long outcomes remain legible in the two-column layout. */
 .ws-card li span{min-width:0;overflow-wrap:anywhere}
+
+/* Workshop quiz invitation — scoped to the basketball page */
+.ws-quiz-cta{margin:22px 0 0;padding:clamp(21px,3.5vw,30px);border:1px solid #c9e3e5;border-radius:21px;background:linear-gradient(115deg,#ebf8f7 0%,#f5fbfc 60%,#fff 100%);display:flex;justify-content:space-between;align-items:center;gap:22px;box-shadow:0 12px 36px rgba(11,73,85,.06)}
+.ws-quiz-cta .ws-quiz-content{flex:1;min-width:0}
+.ws-quiz-cta .ws-quiz-eyebrow{font-size:11px;font-weight:900;letter-spacing:.105em;color:#087e94;margin:0 0 7px}
+.ws-quiz-cta h2{font-size:clamp(20px,2.6vw,26px);line-height:1.3;color:#14283c;margin:0 0 9px}
+.ws-quiz-cta p.ws-quiz-description{font-size:14px;color:#486278;line-height:1.7;margin:0;max-width:580px}
+.ws-quiz-cta a.ws-quiz-button{display:inline-flex;justify-content:center;align-items:center;gap:10px;flex:none;border-radius:12px;background:#087f95;padding:15px 21px;color:#fff!important;font-size:14px;font-weight:900;text-decoration:none;box-shadow:0 7px 17px rgba(8,127,149,.18);transition:background .2s,transform .2s}
+.ws-quiz-cta a.ws-quiz-button:hover{background:#066a7d;transform:translateY(-2px)}
+.ws-quiz-cta a.ws-quiz-button:focus-visible{outline:3px solid #11677b;outline-offset:3px}
+@media(max-width:720px){.ws-quiz-cta{flex-direction:column;align-items:stretch}.ws-quiz-cta a.ws-quiz-button{width:100%}}
+@media(prefers-reduced-motion:reduce){.ws-quiz-cta a.ws-quiz-button{transition:none}.ws-quiz-cta a.ws-quiz-button:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -59,6 +71,15 @@ a{color:inherit}.ws-wrap{width:min(1060px,calc(100% - 52px));margin-inline:auto}
  <div class="ws-video-embed"><div class="ws-video-frame"><iframe src="https://www.youtube-nocookie.com/embed/OadiAZxSOm0" title="Βίντεο λειτουργίας — Ρομποτική Μπασκέτα" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div>
  <a class="ws-action" href="https://www.youtube.com/shorts/OadiAZxSOm0" target="_blank" rel="noopener noreferrer">Άνοιγμα στο YouTube ↗</a>
  </article></div>
+</section>
+
+<section class="ws-quiz-cta" aria-labelledby="ws-basket-quiz-title">
+  <div class="ws-quiz-content">
+    <p class="ws-quiz-eyebrow">🏀 ΔΙΑΔΡΑΣΤΙΚΟ QUIZ · LEGO WeDo 2.0</p>
+    <h2 id="ws-basket-quiz-title">Θυμάσαι τις εντολές της Μπασκέτας;</h2>
+    <p class="ws-quiz-description">10 ερωτήσεις με τα πραγματικά χρωματιστά τουβλάκια που χρησιμοποιήσαμε, άμεση επεξήγηση και τελική βαθμολογία.</p>
+  </div>
+  <a class="ws-quiz-button" href="quiz.html" aria-label="Παίξε το διαδραστικό Quiz Ρομποτικής Μπασκέτας">Παίξε το Quiz <span aria-hidden="true">↗</span></a>
 </section>
 </main><footer class="ws-footer"><span>EVAGELAK EDU LAB · Εκπαιδευτική ρομποτική</span><a href="../../../index.html#workshops">Επιστροφή στις κατασκευές ↑</a></footer>
 </div></body></html>
