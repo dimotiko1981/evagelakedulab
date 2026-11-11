@@ -3,26 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6fafc">
+  <meta name="theme-color" content="#f8f9ff">
   <meta name="description" content="EVAGELAK EDU LAB – Εργαστήρια εκπαιδευτικής ρομποτικής για παιδιά Δημοτικού. Κατασκευάζουμε, προγραμματίζουμε και μαθαίνουμε μέσα από το παιχνίδι.">
   <meta property="og:title" content="EVAGELAK EDU LAB | Εργαστήρια Ρομποτικής">
   <meta property="og:description" content="Μικρές ιδέες, μεγάλες κατασκευές. Μια δημιουργική γωνιά για παιδιά και γονείς.">
   <meta property="og:type" content="website">
   <title>EVAGELAK EDU LAB | Εργαστήρια Εκπαιδευτικής Ρομποτικής</title>
-  <link rel="icon" type="image/png" href="assets/images/branding/evagelak-logo.png">
-  <meta property="og:image" content="assets/images/branding/evagelak-logo.png">
+  <link rel="icon" type="image/png" href="assets/official-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/script.js?v=8" defer></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Μετάβαση στο κύριο περιεχόμενο</a>
   <header class="site-header" id="top">
     <div class="nav-shell wrap">
       <a class="brand" href="#top" aria-label="EVAGELAK EDU LAB — αρχική">
-        <span class="brand-mark official-mark" aria-hidden="true"><img src="assets/images/branding/evagelak-logo.png" alt="" loading="eager"></span>
+        <span class="brand-mark official-mark" aria-hidden="true"><img data-official-logo src="assets/official-logo.png" alt="" loading="eager"></span>
         <span class="brand-text"><strong>EVAGELAK</strong><small>EDU LAB</small></span>
       </a>
       <button class="menu-toggle" type="button" aria-label="Άνοιγμα μενού" aria-controls="main-menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -31,8 +30,7 @@
         <a class="nav-link" href="#workshops">Εργαστήρια</a>
         <a class="nav-link" href="#how-it-works">Πώς μαθαίνουμε</a>
         <a class="nav-link" href="#quiz">Παιχνίδια</a>
-        <a class="nav-link" href="#parents">Για γονείς</a>
-        <a class="btn btn-nav" href="#workshops">Εξερεύνησε <span aria-hidden="true">↗</span></a>
+                <a class="btn btn-nav" href="#workshops">Εξερεύνησε <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -40,8 +38,9 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
+        <div class="hero-logo" aria-hidden="true"><img data-official-logo src="assets/official-logo.png" alt="" loading="eager"></div>
         <span class="eyebrow"><span class="live-dot"></span> ΕΡΓΑΣΤΗΡΙΑ ΡΟΜΠΟΤΙΚΗΣ · 2026–2027</span>
-        <h1 id="hero-title">Μικρές ιδέες.<br><span>Μεγάλες κατασκευές.</span></h1>
+        <h1 id="hero-title">Μικρές ιδέες.<br><span>Μεγάλες</span><br>κατασκευές.</h1>
         <p class="hero-lead">Στο <strong>EVAGELAK EDU LAB</strong> τα παιδιά ανακαλύπτουν τη ρομποτική μέσα από το παιχνίδι, τις κατασκευές και τον προγραμματισμό.</p>
         <div class="hero-buttons">
           <a class="btn btn-primary" href="#workshops">Δες τα εργαστήρια <span aria-hidden="true">↗</span></a>
@@ -49,9 +48,9 @@
         </div>
         <div class="hero-tags"><span>✦ Φαντασία</span><span>⌘ Προγραμματισμός</span><span>♡ Συνεργασία</span></div>
       </div>
-      <div class="hero-art">
+      <div class="hero-art" aria-label="Εικονογράφηση ενός φιλικού εκπαιδευτικού ρομπότ και εργαλείων κατασκευής" role="img">
         <div class="hero-art-halo"></div>
-        <img class="hero-main-logo" src="assets/images/branding/evagelak-logo.png" alt="Το επίσημο λογότυπο του EVAGELAK EDU LAB – Μαθαίνω, Δημιουργώ, Καινοτομώ" width="1100" height="1100" fetchpriority="high">
+        <img class="hero-robot" src="assets/hero-robot.svg" alt="" width="570" height="510">
         <div class="float-note note-top"><span class="note-icon note-icon-yellow">⚡</span><span><strong>Δημιουργούμε</strong><small>με φαντασία</small></span></div>
         <div class="float-note note-bottom"><span class="note-icon note-icon-green">✓</span><span><strong>Μαθαίνουμε</strong><small>παίζοντας</small></span></div>
         <div class="orbit-star orbit-star-one">✳</div><div class="orbit-star orbit-star-two">✦</div>
@@ -62,29 +61,16 @@
       <div class="wrap strip-grid"><span>🧩 <strong>Σκέφτομαι</strong></span><span>🔧 <strong>Κατασκευάζω</strong></span><span>💻 <strong>Προγραμματίζω</strong></span><span>🚀 <strong>Ανακαλύπτω</strong></span></div>
     </section>
 
-    <section class="audiences section wrap" aria-labelledby="audiences-title">
-      <div class="section-heading centered"><span class="section-label">ΕΝΑ ΕΡΓΑΣΤΗΡΙΟ ΓΙΑ ΟΛΟΥΣ</span><h2 id="audiences-title">Δύο διαδρομές, <em>μία εμπειρία.</em></h2><p>Η δική μας δημιουργική γωνιά για μαθητές και γονείς.</p></div>
-      <div class="audience-grid">
-        <article class="audience-card kids-card">
-          <div class="audience-content"><span class="card-kicker">01 / ΓΙΑ ΤΑ ΠΑΙΔΙΑ</span><div class="audience-emoji" aria-hidden="true">🕹️</div><h3>Η επόμενη αποστολή<br>σε περιμένει!</h3><p>Δοκίμασε κουίζ, γνώρισε τα ρομπότ και ανακάλυψε νέες προκλήσεις.</p><a class="text-arrow" href="#quiz">Πάμε για παιχνίδι <span aria-hidden="true">↗</span></a></div>
-          <div class="deco-ring" aria-hidden="true"></div>
-        </article>
-        <article class="audience-card parents-card">
-          <div class="audience-content"><span class="card-kicker">02 / ΓΙΑ ΤΟΥΣ ΓΟΝΕΙΣ</span><div class="audience-emoji" aria-hidden="true">💡</div><h3>Δείτε τι μαθαίνουν<br>τα παιδιά.</h3><p>Ενημερωθείτε για τη φιλοσοφία, τις κατασκευές και τις ανακοινώσεις των εργαστηρίων.</p><a class="text-arrow" href="#parents">Πληροφορίες για γονείς <span aria-hidden="true">↗</span></a></div>
-          <div class="deco-spark" aria-hidden="true">✳</div>
-        </article>
-      </div>
-    </section>
-
     <section class="workshops-section section" id="workshops" aria-labelledby="workshops-title">
       <div class="wrap">
-        <div class="section-row"><div class="section-heading"><span class="section-label">ΓΝΩΡΙΣΕ ΤΙΣ ΚΑΤΑΣΚΕΥΕΣ</span><h2 id="workshops-title">Η ρομποτική <em>στην πράξη.</em></h2></div><div class="filters" role="group" aria-label="Φίλτρο θεμάτων εργαστηρίων"><button class="filter-chip active" type="button" data-filter="all" aria-pressed="true">Όλα</button><button class="filter-chip" type="button" data-filter="nature" aria-pressed="false">Φύση</button><button class="filter-chip" type="button" data-filter="technology" aria-pressed="false">Τεχνολογία</button><button class="filter-chip" type="button" data-filter="motion" aria-pressed="false">Κίνηση</button></div></div>
+        <div class="section-row"><div class="section-heading"><span class="section-label">ΓΝΩΡΙΣΕ ΤΙΣ ΚΑΤΑΣΚΕΥΕΣ</span><h2 id="workshops-title">Η ρομποτική <em>στην πράξη.</em></h2><p>Ενδεικτικές δημιουργίες από προηγούμενα εργαστήρια LEGO WeDo 2.0.</p></div><div class="filters" role="group" aria-label="Φίλτρο θεμάτων εργαστηρίων"><button class="filter-chip active" type="button" data-filter="all" aria-pressed="true">Όλα</button><button class="filter-chip" type="button" data-filter="nature" aria-pressed="false">Φύση</button><button class="filter-chip" type="button" data-filter="technology" aria-pressed="false">Τεχνολογία</button><button class="filter-chip" type="button" data-filter="motion" aria-pressed="false">Κίνηση</button></div></div>
         <div class="workshop-grid" id="workshop-list">
-          <article class="workshop-card" data-category="motion" data-id="basket"><div class="workshop-image tone-lilac" style="background:#18212b"><img style="object-fit:contain;padding:0;object-position:center center" src="workshops/2026-2027/04-robotic-basket/cover.webp" alt="Ρομποτική μπασκέτα LEGO WeDo 2.0 με πράσινο στόχο, κινητήρα και λευκή μπάλα" loading="lazy"><span class="category">Κίνηση</span></div><div class="workshop-info"><small>LEGO WeDo 2.0</small><h3>Ρομποτική Μπασκέτα</h3><p>Κατασκευάζουμε ένα παιχνίδι μπάσκετ και συνδυάζουμε μηχανική κίνηση, αισθητήρα και καταμέτρηση πόντων.</p><a class="workshop-action" href="workshops/2026-2027/04-robotic-basket/index.html">Δες την ιδέα <span aria-hidden="true">↗</span></a></div></article>
-          <article class="workshop-card" data-category="nature" data-id="scorpion"><div class="workshop-image tone-blue" style="background:#18212b"><img style="object-fit:cover;padding:0;object-position:center 48%" src="workshops/2026-2027/03-robotic-scorpion/cover.webp" alt="Φωτογραφία της κατασκευής LEGO WeDo 2.0 Ρομποτικός Σκορπιός με πράσινα πόδια, δαγκάνες και ανασηκωμένη ουρά" loading="lazy"><span class="category">Φύση</span></div><div class="workshop-info"><small>LEGO WeDo 2.0</small><h3>Ρομποτικός Σκορπιός</h3><p>Ανακαλύπτουμε τα αραχνοειδή και προγραμματίζουμε αντίδραση με αισθητήρα απόστασης.</p><a class="workshop-action" href="workshops/2026-2027/03-robotic-scorpion/index.html">Δες την ιδέα <span aria-hidden="true">↗</span></a></div></article>
-          <article class="workshop-card" data-category="technology" data-id="jetfighter"><div class="workshop-image tone-peach" style="background:#1d2330"><img style="object-fit:cover;padding:0;object-position:center center" src="workshops/2026-2027/02-jet-fighter/cover.webp?v=13" alt="Πραγματική εικόνα της κατασκευής LEGO WeDo 2.0 Jet Fighter" loading="lazy"><span class="category">Τεχνολογία</span></div><div class="workshop-info"><small>LEGO WeDo 2.0</small><h3>Jet Fighter</h3><p>Κατασκευάζουμε ένα μαχητικό αεροσκάφος και δοκιμάζουμε το πρόγραμμά του.</p><a class="workshop-action" href="workshops/2026-2027/02-jet-fighter/index.html">Δες την ιδέα <span aria-hidden="true">↗</span></a></div></article>
-          <article class="workshop-card" data-category="motion" data-id="rally"><div class="workshop-image tone-lilac" style="background:#18212b"><img style="object-fit:cover;padding:0;object-position:center 54%" src="workshops/2026-2027/01-rally-drift-car/cover.webp?v=8" alt="Πραγματική εικόνα της κατασκευής LEGO WeDo 2.0 Drift Car με πίσω φτερό" loading="lazy"><span class="category">Κίνηση</span></div><div class="workshop-info"><small>LEGO WeDo 2.0</small><h3>Ρομποτικό Rally</h3><p>Drift Car με φτερό: κατασκευάζουμε αγωνιστικό όχημα και δοκιμάζουμε την κίνησή του.</p><a class="workshop-action" href="workshops/2026-2027/01-rally-drift-car/index.html">Δες την ιδέα <span aria-hidden="true">↗</span></a></div></article>
+          <article class="workshop-card" data-category="nature" data-id="wind"><div class="workshop-image tone-lilac"><img src="assets/wind.svg" alt="Εικονογράφηση ανεμογεννήτριας" loading="lazy"><span class="category">Ενέργεια</span></div><div class="workshop-info"><small>LEGO WeDo 2.0</small><h3>Ανεμογεννήτρια</h3><p>Από τον άνεμο στην κίνηση: γνωρίζουμε την ενέργεια.</p><button class="workshop-action" type="button" data-open="wind">Δες την ιδέα <span aria-hidden="true">↗</span></button></div></article>
+          <article class="workshop-card" data-category="technology" data-id="bin"><div class="workshop-image tone-peach"><img src="assets/bin.svg" alt="Εικονογράφηση έξυπνου κάδου" loading="lazy"><span class="category">Τεχνολογία</span></div><div class="workshop-info"><small>LEGO WeDo 2.0</small><h3>Έξυπνος κάδος</h3><p>Μια έξυπνη ιδέα για την καθημερινότητα και το περιβάλλον.</p><button class="workshop-action" type="button" data-open="bin">Δες την ιδέα <span aria-hidden="true">↗</span></button></div></article>
+          <article class="workshop-card" data-category="motion" data-id="keeper"><div class="workshop-image tone-mint"><img src="assets/keeper.svg" alt="Εικονογράφηση ρομποτικού τερματοφύλακα" loading="lazy"><span class="category">Κίνηση</span></div><div class="workshop-info"><small>LEGO WeDo 2.0</small><h3>Τερματοφύλακας</h3><p>Προγραμματίζουμε κίνηση και δοκιμάζουμε τις αντιδράσεις μας.</p><button class="workshop-action" type="button" data-open="keeper">Δες την ιδέα <span aria-hidden="true">↗</span></button></div></article>
+          <article class="workshop-card" data-category="nature" data-id="shark"><div class="workshop-image tone-blue"><img src="assets/shark.svg" alt="Εικονογράφηση ρομποτικού καρχαρία" loading="lazy"><span class="category">Φύση</span></div><div class="workshop-info"><small>LEGO WeDo 2.0</small><h3>Καρχαρίας</h3><p>Παρατηρούμε τα ζώα και δημιουργούμε μηχανισμούς κίνησης.</p><button class="workshop-action" type="button" data-open="shark">Δες την ιδέα <span aria-hidden="true">↗</span></button></div></article>
         </div>
+        <p class="workshop-hint">Οι εικόνες είναι πρωτότυπες εικονογραφήσεις. Οι πραγματικές φωτογραφίες και το υλικό θα προστεθούν σταδιακά.</p>
       </div>
     </section>
 
@@ -104,15 +90,10 @@
       </div>
     </section>
 
-    <section class="parents-section section wrap" id="parents" aria-labelledby="parents-title">
-      <div class="parent-info"><span class="section-label">ΓΙΑ ΤΟΥΣ ΓΟΝΕΙΣ</span><h2 id="parents-title">Η πρόοδος φαίνεται<br><em>σε κάθε δημιουργία.</em></h2><p>Το EVAGELAK EDU LAB είναι το διαδικτυακό σημείο αναφοράς των εργαστηρίων μας. Εδώ θα μοιραζόμαστε τη μαθησιακή διαδρομή: τι φτιάξαμε, πώς το προγραμματίσαμε και τι ανακαλύψαμε.</p><div class="parent-checks"><span><b>✓</b> Υλικό ανά εργαστήριο</span><span><b>✓</b> Μαθησιακοί στόχοι</span><span><b>✓</b> Κατασκευές και δραστηριότητες</span><span><b>✓</b> Ανακοινώσεις από τον Σύλλογο</span></div></div>
-      <aside class="notice-card" aria-labelledby="notice-title"><span class="notice-tag">📌 ΕΝΗΜΕΡΩΣΗ</span><h3 id="notice-title">Πρόγραμμα εργαστηρίων 2026–2027</h3><p>Οι ημερομηνίες, τα τμήματα και οι πληροφορίες συμμετοχής θα ανακοινωθούν από τον Σύλλογο.</p><div class="notice-divider"></div><h4>Ασφάλεια και ιδιωτικότητα</h4><p>Η σελίδα είναι δημόσια. Δεν ζητά στοιχεία παιδιών και το κουίζ λειτουργεί χωρίς λογαριασμό. Φωτογραφίες αναγνωρίσιμων παιδιών δημοσιεύονται μόνο με την κατάλληλη συγκατάθεση.</p><a href="#top" class="small-link">Επιστροφή στην αρχή ↑</a></aside>
-    </section>
-
     <section class="cta-section wrap" aria-labelledby="cta-title"><div class="cta-inner"><div><span class="section-label light-label">ΚΑΘΕ ΙΔΕΑ ΕΙΝΑΙ ΜΙΑ ΑΡΧΗ</span><h2 id="cta-title">Μαζί δημιουργούμε<br>το <em>αύριο!</em></h2><p>Περιέργεια, συνεργασία και πολλή φαντασία. Αυτή είναι η μαγεία της ρομποτικής.</p></div><a class="btn btn-light" href="#workshops">Γνώρισε τις κατασκευές <span aria-hidden="true">↗</span></a><div class="cta-deco" aria-hidden="true">✳</div></div></section>
   </main>
 
-  <footer class="footer"><div class="wrap footer-main"><div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark official-mark" aria-hidden="true"><img src="assets/images/branding/evagelak-logo.png" alt="" loading="lazy"></span><span class="brand-text"><strong>EVAGELAK</strong><small>EDU LAB</small></span></a><p>Μαθαίνουμε. Δημιουργούμε.<br>Προγραμματίζουμε.</p></div><div class="footer-links"><h3>Εξερεύνησε</h3><a href="#workshops">Εργαστήρια</a><a href="#how-it-works">Πώς μαθαίνουμε</a><a href="#quiz">Παιχνίδια</a><a href="#parents">Για γονείς</a></div><div class="footer-links"><h3>Πληροφορίες</h3><span>Εκπαιδευτική ρομποτική</span><span>Παιδιά Δημοτικού</span><span>Δημόσια πρόσβαση</span></div></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> EVAGELAK EDU LAB. Με αγάπη για τη μάθηση.</span><span>Built for curious minds ✳</span></div></footer>
+  <footer class="footer"><div class="wrap footer-main"><div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark official-mark" aria-hidden="true"><img data-official-logo src="assets/official-logo.png" alt="" loading="lazy"></span><span class="brand-text"><strong>EVAGELAK</strong><small>EDU LAB</small></span></a><p>Μαθαίνουμε. Δημιουργούμε.<br>Προγραμματίζουμε.</p></div><div class="footer-links"><h3>Εξερεύνησε</h3><a href="#workshops">Εργαστήρια</a><a href="#how-it-works">Πώς μαθαίνουμε</a><a href="#quiz">Παιχνίδια</a></div><div class="footer-links"><h3>Πληροφορίες</h3><span>Εκπαιδευτική ρομποτική</span><span>Παιδιά Δημοτικού</span><span>Δημόσια πρόσβαση</span></div></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> EVAGELAK EDU LAB. Με αγάπη για τη μάθηση.</span><span>Built for curious minds ✳</span></div></footer>
 
   <dialog class="workshop-modal" id="workshop-dialog" aria-labelledby="dialog-title"><div class="modal-wrap"><button type="button" class="modal-close" aria-label="Κλείσιμο παραθύρου">×</button><span class="section-label">ΜΙΑ ΙΔΕΑ ΓΙΑ ΕΡΓΑΣΤΗΡΙΟ</span><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="modal-facts"><div><strong>Τι ανακαλύπτουμε</strong><p id="dialog-learn"></p></div><div><strong>Μια πρόκληση</strong><p id="dialog-challenge"></p></div></div><p class="modal-footnote">Πρόκειται για συνοπτική παρουσίαση της ιδέας — όχι για πλήρη οδηγό κατασκευής.</p><button type="button" class="btn btn-primary modal-done">Επιστροφή στα εργαστήρια</button></div></dialog>
 </body>
