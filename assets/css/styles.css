@@ -316,3 +316,86 @@
     transform: none;
   }
 }
+
+
+/* v39 — Consistent outlined navigation and workshop filter buttons. */
+.main-nav {
+  gap: 10px;
+}
+.main-nav .nav-link,
+.main-nav .btn-nav,
+.workshops-section .filters .filter-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 10px 16px;
+  border: 2px solid #bed7df;
+  border-radius: 13px;
+  background: #fff;
+  color: #315367;
+  box-shadow: none;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1.2;
+  text-align: center;
+  transition: border-color .2s ease, background-color .2s ease,
+              color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.main-nav .nav-link.current {
+  border-color: #087e94;
+  background: #e9f7f9;
+  color: #076c80;
+}
+.main-nav .btn-nav,
+.workshops-section .filters .filter-chip.active {
+  border-color: #087e94;
+  background: #087e94;
+  color: #fff;
+}
+.main-nav .nav-link:hover,
+.workshops-section .filters .filter-chip:hover:not(.active) {
+  border-color: #087e94;
+  background: #eef9fa;
+  color: #076c80;
+  box-shadow: 0 5px 14px rgba(8, 126, 148, .10);
+  transform: translateY(-1px);
+}
+.main-nav .nav-link.current:hover {
+  background: #e1f3f6;
+  color: #076c80;
+}
+.main-nav .btn-nav:hover,
+.workshops-section .filters .filter-chip.active:hover {
+  border-color: #075c74;
+  background: #075c74;
+  color: #fff;
+  box-shadow: 0 5px 14px rgba(8, 126, 148, .12);
+}
+.main-nav .nav-link:focus-visible,
+.main-nav .btn-nav:focus-visible,
+.workshops-section .filters .filter-chip:focus-visible {
+  outline: 3px solid #4fc4d7;
+  outline-offset: 3px;
+}
+@media (max-width: 900px) {
+  .main-nav {
+    gap: 7px;
+  }
+  .main-nav .nav-link,
+  .main-nav .btn-nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .main-nav .nav-link,
+  .main-nav .btn-nav,
+  .workshops-section .filters .filter-chip {
+    transition: none;
+  }
+  .main-nav .nav-link:hover,
+  .workshops-section .filters .filter-chip:hover:not(.active) {
+    transform: none;
+  }
+}
