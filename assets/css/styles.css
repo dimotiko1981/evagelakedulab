@@ -536,3 +536,60 @@
   .workshop-page-btn,
   .workshop-reset { transition:none; }
 }
+
+
+/* v46 — LEGO WeDo 2.0 equipment identity.
+   Approximate display HEX values; not certified official LEGO color specifications.
+   Scoped to equipment metadata so future micro:bit / TPBot projects can use independent palettes.
+   The global petrol branding and strong cyan workshop hover are intentionally untouched. */
+:root {
+  --wedo-lime: #B7D832;
+  --wedo-azure: #17A8CF;
+  --wedo-orange: #FF941F;
+  --wedo-green: #20B35D;
+}
+.workshop-card[data-equipment~="wedo2"] .workshop-image::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(90deg,
+    var(--wedo-lime) 0 33.333%,
+    var(--wedo-azure) 33.333% 66.666%,
+    var(--wedo-orange) 66.666% 100%);
+  opacity: .90;
+}
+.workshop-card[data-equipment~="wedo2"] .workshop-info small {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  padding: 5px 9px;
+  border-radius: 7px;
+  border: 1px solid #d4ebdf;
+  background: #f1faf4;
+  color: #146e54;
+  font-size: 10px;
+  letter-spacing: .035em;
+  line-height: 1.3;
+}
+.workshop-card[data-equipment~="wedo2"] .workshop-info small::before {
+  content: "";
+  display: inline-block;
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--wedo-green);
+}
+/* Only the WeDo selection gets the WeDo accent. Other equipment stays neutral. */
+.workshop-equipment-field select:has(option[value="wedo2"]:checked) {
+  border-left: 4px solid var(--wedo-azure);
+}
+@media (forced-colors: active) {
+  .workshop-card[data-equipment~="wedo2"] .workshop-info small { border: 1px solid CanvasText; }
+}

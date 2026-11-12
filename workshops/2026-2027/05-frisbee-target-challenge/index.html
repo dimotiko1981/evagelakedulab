@@ -49,9 +49,29 @@ a{color:inherit}.ws-wrap{width:min(1060px,calc(100% - 52px));margin-inline:auto}
 .ws-video-pending{margin:auto 0 0;border:1px dashed #a9d2da;background:#eef8f9;border-radius:12px;text-align:center;padding:22px 14px;font-size:13px;font-weight:900;color:#23798c}
 .ws-quiz-eyebrow{letter-spacing:.08em}
 @media(max-width:650px){.ws-mission p{text-align:left}}
+
+/* v46 — WeDo 2.0 micro-accents. Retain the original petrol layout and buttons. */
+body[data-equipment~="wedo2"] .ws-kicker::before {
+  background: #20B35D;
+  box-shadow: 0 0 0 4px #e5f5e9;
+}
+body[data-equipment~="wedo2"] .ws-stage figcaption span:first-child::before {
+  background: #B7D832;
+}
+body[data-equipment~="wedo2"] .ws-card.ws-mission {
+  border-left: 3px solid #B7D832;
+}
+body[data-equipment~="wedo2"] .ws-card li::before {
+  color: #169b55;
+}
+body[data-equipment~="wedo2"] .ws-program-label i {
+  background: #17A8CF;
+  box-shadow: 13px 0 0 #B7D832,26px 0 0 #FF941F;
+}
+
 </style>
 </head>
-<body>
+<body data-equipment="wedo2">
 <div class="ws-wrap">
 <header class="ws-topbar"><div class="ws-brand">EVAGELAK <b>EDU LAB</b></div><a class="ws-back" href="../../../index.html#workshops">← Πίσω στις κατασκευές</a></header>
 <main class="ws-page">

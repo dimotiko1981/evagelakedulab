@@ -24,9 +24,29 @@ a{color:inherit}.ws-wrap{width:min(1060px,calc(100% - 52px));margin-inline:auto}
 @media(max-width:750px){.ws-wrap{width:calc(100% - 34px)}.ws-grid,.ws-material-grid{grid-template-columns:1fr}.ws-material{min-height:auto}.ws-pdf-mark{display:none}.ws-material.ws-pdf{gap:13px}.ws-video.ws-only{grid-template-columns:1fr;display:flex;align-items:stretch}.ws-video.ws-only .ws-video-embed{order:3}.ws-video.ws-only .ws-action{order:4;align-self:center}.ws-topbar{padding:17px 0}.ws-card,.ws-panel{padding:20px}.ws-material{padding:19px}}
 @media(max-width:450px){.ws-topbar{gap:10px}.ws-back{padding:9px 10px;font-size:12px}.ws-brand{font-size:11px;letter-spacing:.03em}.ws-kicker{margin:28px 0 11px}.ws-heading h1{font-size:clamp(1.9rem,8vw,2.2rem)}.ws-intro{font-size:14px}.ws-photo{height:260px}.ws-stage figcaption{font-size:10px;padding:10px 13px}.ws-section-intro h2{font-size:18px}.ws-card p,.ws-card li,.ws-lead{font-size:14px}.ws-video-frame{height:300px}.ws-footer{display:block}.ws-footer a{display:block;margin-top:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ws-action,.ws-back{transition:none}.ws-action:hover{transform:none}}
+
+/* v46 — WeDo 2.0 micro-accents. Retain the original petrol layout and buttons. */
+body[data-equipment~="wedo2"] .ws-kicker::before {
+  background: #20B35D;
+  box-shadow: 0 0 0 4px #e5f5e9;
+}
+body[data-equipment~="wedo2"] .ws-stage figcaption span:first-child::before {
+  background: #B7D832;
+}
+body[data-equipment~="wedo2"] .ws-card.ws-mission {
+  border-left: 3px solid #B7D832;
+}
+body[data-equipment~="wedo2"] .ws-card li::before {
+  color: #169b55;
+}
+body[data-equipment~="wedo2"] .ws-program-label i {
+  background: #17A8CF;
+  box-shadow: 13px 0 0 #B7D832,26px 0 0 #FF941F;
+}
+
 </style>
 </head>
-<body>
+<body data-equipment="wedo2">
 <div class="ws-wrap">
 <header class="ws-topbar"><div class="ws-brand">EVAGELAK <b>EDU LAB</b></div><a class="ws-back" href="../../../index.html#workshops">← Πίσω στις κατασκευές</a></header>
 <main class="ws-page">

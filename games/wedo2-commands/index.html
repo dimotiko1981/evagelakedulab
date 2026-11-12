@@ -30,6 +30,17 @@ button,input{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inh
 .result{text-align:center;padding:23px 0}.result-number{display:block;font-size:clamp(44px,7vw,71px);font-weight:900;line-height:1.1;color:var(--teal)}.result p{color:var(--muted)}.result .btn{margin:9px 4px 0}.small-note{font-size:12px;color:var(--muted);margin:0}.bottom{padding:0 0 42px;color:#708596;font-size:12px;text-align:center}
 @media(max-width:950px){.block-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:700px){.quiz-intro{grid-template-columns:1fr}.block-grid{grid-template-columns:1fr}.q-options{grid-template-columns:1fr}.q-option{min-height:60px}.hero{padding-top:30px}.top-inner{min-height:66px}.brand{font-size:13px}.back{padding:9px 12px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+/* v46 — discreet WeDo palette, without changing guide blocks or quiz logic. */
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin-top: 15px;
+  border-radius: 6px;
+  background: linear-gradient(90deg,#B7D832 0 33.333%,#17A8CF 33.333% 66.666%,#FF941F 66.666% 100%);
+}
 </style>
 </head>
 <body>
