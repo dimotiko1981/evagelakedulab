@@ -318,13 +318,12 @@
 }
 
 
-/* v39 — Consistent outlined navigation and workshop filter buttons. */
+/* v40 — Keep outlined main navigation; workshop filters use their original compact v38 dimensions. */
 .main-nav {
   gap: 10px;
 }
 .main-nav .nav-link,
-.main-nav .btn-nav,
-.workshops-section .filters .filter-chip {
+.main-nav .btn-nav {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -347,14 +346,12 @@
   background: #e9f7f9;
   color: #076c80;
 }
-.main-nav .btn-nav,
-.workshops-section .filters .filter-chip.active {
+.main-nav .btn-nav {
   border-color: #087e94;
   background: #087e94;
   color: #fff;
 }
-.main-nav .nav-link:hover,
-.workshops-section .filters .filter-chip:hover:not(.active) {
+.main-nav .nav-link:hover {
   border-color: #087e94;
   background: #eef9fa;
   color: #076c80;
@@ -365,16 +362,14 @@
   background: #e1f3f6;
   color: #076c80;
 }
-.main-nav .btn-nav:hover,
-.workshops-section .filters .filter-chip.active:hover {
+.main-nav .btn-nav:hover {
   border-color: #075c74;
   background: #075c74;
   color: #fff;
   box-shadow: 0 5px 14px rgba(8, 126, 148, .12);
 }
 .main-nav .nav-link:focus-visible,
-.main-nav .btn-nav:focus-visible,
-.workshops-section .filters .filter-chip:focus-visible {
+.main-nav .btn-nav:focus-visible {
   outline: 3px solid #4fc4d7;
   outline-offset: 3px;
 }
@@ -390,12 +385,10 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .main-nav .nav-link,
-  .main-nav .btn-nav,
-  .workshops-section .filters .filter-chip {
+  .main-nav .btn-nav {
     transition: none;
   }
-  .main-nav .nav-link:hover,
-  .workshops-section .filters .filter-chip:hover:not(.active) {
+  .main-nav .nav-link:hover {
     transform: none;
   }
 }
