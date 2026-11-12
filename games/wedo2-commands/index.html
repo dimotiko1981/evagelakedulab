@@ -25,7 +25,7 @@ button,input{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inh
 .quiz-intro{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}.quiz-intro p{color:var(--muted);font-size:14px}.quiz-modes{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.btn-primary{background:var(--teal);color:#fff;border-color:var(--teal)}.btn-primary:hover{background:var(--teal-dark);border-color:var(--teal-dark)}
 .quiz-info{border:1px solid #cfe7eb;border-radius:15px;background:#ecf8fa;padding:22px}.quiz-info strong{font-size:22px}.quiz-info p{font-size:13px;color:#4d6d7c;margin:10px 0 0}
 .qtop{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}.qcount{font-size:12px;font-weight:850;color:var(--teal)}.progress{height:7px;background:#ddecf0;border-radius:5px;overflow:hidden;margin:15px 0 25px}.progress span{display:block;background:var(--teal);height:100%;width:0;transition:width .25s}
-.q-card{border:1px solid #dce9ee;background:#f9fcfd;border-radius:17px;padding:20px}.q-card h3{font-size:clamp(18px,2.5vw,24px);line-height:1.42;margin:0 0 17px}.q-prompt-icon{width:111px;height:95px;object-fit:contain;display:block;margin:4px auto 19px}.q-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:15px 0}.q-option{display:flex;align-items:center;gap:12px;text-align:left;background:#fff;border:2px solid #d5e5eb;border-radius:12px;padding:12px 15px;color:#2c5061;font-weight:700;min-height:64px}.q-option img{height:53px;width:60px;object-fit:contain;flex:none}.q-option span{font-size:14px}.q-option:hover:not(:disabled){background:#eaf6f8;border-color:#8bc6d2}.q-option:disabled{cursor:default}.q-option.correct{background:#e7f8f1;border-color:#41a785;color:#17634b}.q-option.wrong{background:#fff0ed;border-color:#dc8a7a;color:#a64031}
+.q-card{border:1px solid #dce9ee;background:#f9fcfd;border-radius:17px;padding:20px}.q-card h3{font-size:clamp(18px,2.5vw,24px);line-height:1.42;margin:0 0 17px}.q-prompt-icon{width:154px;height:122px;object-fit:contain;display:block;margin:8px auto 20px;padding:10px;background:#fff;border:2px solid #d4e7ec;border-radius:15px}.q-prompt-icon[hidden]{display:none!important}.q-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:15px 0}.q-option{display:flex;align-items:center;gap:12px;text-align:left;background:#fff;border:2px solid #d5e5eb;border-radius:12px;padding:12px 15px;color:#2c5061;font-weight:700;min-height:64px}.q-option img{height:53px;width:60px;object-fit:contain;flex:none}.q-option span{font-size:14px}.q-option:hover:not(:disabled){background:#eaf6f8;border-color:#8bc6d2}.q-option:disabled{cursor:default}.q-option.correct{background:#e7f8f1;border-color:#41a785;color:#17634b}.q-option.wrong{background:#fff0ed;border-color:#dc8a7a;color:#a64031}
 .feedback{border-radius:12px;padding:13px 16px;font-size:13px;margin-top:17px;line-height:1.65}.feedback[hidden]{display:none}.feedback.good{background:#e7f8f1;color:#17634b}.feedback.bad{background:#fff0ed;color:#a64031}.quiz-controls{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;margin-top:18px}
 .result{text-align:center;padding:23px 0}.result-number{display:block;font-size:clamp(44px,7vw,71px);font-weight:900;line-height:1.1;color:var(--teal)}.result p{color:var(--muted)}.result .btn{margin:9px 4px 0}.small-note{font-size:12px;color:var(--muted);margin:0}.bottom{padding:0 0 42px;color:#708596;font-size:12px;text-align:center}
 @media(max-width:950px){.block-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:700px){.quiz-intro{grid-template-columns:1fr}.block-grid{grid-template-columns:1fr}.q-options{grid-template-columns:1fr}.q-option{min-height:60px}.hero{padding-top:30px}.top-inner{min-height:66px}.brand{font-size:13px}.back{padding:9px 12px}}
@@ -54,14 +54,14 @@ button,input{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inh
   <section class="panel" id="quiz-panel" role="tabpanel" aria-labelledby="tab-quiz" hidden>
     <div class="screen" id="quiz-start">
       <div class="quiz-intro"><div><h2 class="panel-title">Αναγνωρίζεις τις εντολές;</h2>
-        <p>Κάθε ερώτηση δείχνει ένα πραγματικό τουβλάκι ή μια κατάσταση προγραμματισμού. Επίλεξε τη σωστή απάντηση και δες αμέσως την εξήγηση.</p>
+        <p>Κάθε ερώτηση δείχνει ένα τουβλάκι LEGO WeDo 2.0. Διάλεξε τη σωστή ονομασία από τέσσερις επιλογές και μάθε τι κάνει η εντολή.</p>
         <div class="quiz-modes"><button class="btn btn-primary" type="button" id="start-short">Γρήγορο Quiz · 12 ερωτήσεις</button><button class="btn" type="button" id="start-full">Πλήρες Quiz · 37 ερωτήσεις</button></div>
       </div><div class="quiz-info"><strong>Εντολές στην πράξη</strong><p>Καλύπτουμε έναρξη, αναμονή, επανάληψη, κινητήρες, ήχους, LED, οθόνη, αισθητήρες και δεδομένα.</p></div></div>
     </div>
     <div class="screen" id="quiz-play" hidden>
       <div class="qtop"><span class="qcount" id="qcount"></span><span class="qcount" id="qscore"></span></div>
       <div class="progress" aria-hidden="true"><span id="qprogress"></span></div>
-      <div class="q-card"><h3 id="qtitle"></h3><img id="qicon" class="q-prompt-icon" src="" alt="Εικονίδιο εντολής LEGO WeDo 2.0"><div class="q-options" id="qoptions"></div><div class="feedback" id="qfeedback" role="status" hidden></div></div>
+      <div class="q-card"><h3 id="qtitle"></h3><img id="qicon" class="q-prompt-icon" src="" alt="Αναγνώρισε το εικονιζόμενο τουβλάκι LEGO WeDo 2.0"><div class="q-options" id="qoptions"></div><div class="feedback" id="qfeedback" role="status" hidden></div></div>
       <div class="quiz-controls"><span class="small-note" id="qnote">Επίλεξε μία απάντηση</span><button class="btn btn-primary" type="button" id="qnext" hidden>Επόμενη ερώτηση</button></div>
     </div>
     <div class="screen result" id="quiz-result" hidden>
@@ -89,30 +89,94 @@ $('search').addEventListener('input',e=>{search=e.target.value.trim().toLocaleLo
 function tab(to){const isGuide=to==='guide';$('guide-panel').hidden=!isGuide;$('quiz-panel').hidden=isGuide;$('tab-guide').setAttribute('aria-selected',String(isGuide));$('tab-quiz').setAttribute('aria-selected',String(!isGuide));}
 $('tab-guide').onclick=()=>tab('guide');$('tab-quiz').onclick=()=>tab('quiz');
 function shuffled(a){const x=[...a];for(let i=x.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[x[i],x[j]]=[x[j],x[i]];}return x;}
-const quizBlocks=BLOCKS.filter(b=>b.quiz);const hasDupNames=quizBlocks.some((b,i)=>quizBlocks.findIndex(x=>x.name===b.name)!==i);if(hasDupNames)throw new Error('Ambiguous quiz names');
-let questions=[],index=0,score=0,locked=false;
-function startGame(full){questions=shuffled(quizBlocks).slice(0,full?quizBlocks.length:12);index=0;score=0;$('quiz-start').hidden=true;$('quiz-result').hidden=true;$('quiz-play').hidden=false;renderQuestion();}
-$('start-short').onclick=()=>startGame(false);$('start-full').onclick=()=>startGame(true);
-function choicesFor(block){let pool=BLOCKS.filter(x=>x.quiz&&x.id!==block.id&&x.group===block.group);
-  if(pool.length<3)pool=pool.concat(BLOCKS.filter(x=>x.quiz&&x.id!==block.id&&x.group!==block.group));
-  // Different choices, and different descriptions; never give equivalent answers.
-  return shuffled([block,...shuffled(pool.filter(x=>x.name!==block.name&&x.desc!==block.desc)).slice(0,3)]);
+const quizBlocks=BLOCKS.filter(b=>b.quiz);
+const nameSet=new Set(quizBlocks.map(b=>b.name));
+if(nameSet.size!==quizBlocks.length)throw new Error('Διπλότυπη ονομασία εντολής');
+let questions=[],index=0,score=0,locked=true,currentChoices=[],questionSerial=0;
+
+function choicesFor(block){
+  // Use only DISTINCT real source labels; three distractors from the same group when possible.
+  const pool=quizBlocks.filter(b=>b.id!==block.id&&b.name!==block.name);
+  const same=shuffled(pool.filter(b=>b.group===block.group));
+  const other=shuffled(pool.filter(b=>b.group!==block.group));
+  const choices=shuffled([block,...[...same,...other].slice(0,3)]);
+  if(choices.length!==4||new Set(choices.map(b=>b.name)).size!==4)throw new Error('Μη έγκυρες επιλογές απαντήσεων');
+  return choices;
 }
-let currentChoices=[];
-function renderQuestion(){locked=false;const b=questions[index];$('qcount').textContent=`Ερώτηση ${index+1} / ${questions.length}`;$('qscore').textContent=`Σωστές: ${score}`;$('qprogress').style.width=`${((index+1)/questions.length)*100}%`;
-  const mode=index%3;currentChoices=choicesFor(b);$('qtitle').textContent=mode===0?'Πώς λέγεται το εικονιζόμενο τουβλάκι;':mode===1?'Τι κάνει το εικονιζόμενο τουβλάκι;':`Ποια εντολή αντιστοιχεί σε αυτή τη λειτουργία; ${b.desc}`;
-  $('qicon').hidden=mode===2;if(mode!==2){$('qicon').src=b.icon;$('qicon').alt='Εικονίδιο εντολής · βρες τη σωστή απάντηση';}
-  const opts=$('qoptions');opts.replaceChildren();$('qfeedback').hidden=true;$('qnext').hidden=true;$('qnote').textContent='Επίλεξε μία απάντηση';
-  currentChoices.forEach((opt,choice)=>{const btn=el('button','q-option');btn.type='button';if(mode===2)btn.append(makeImg(opt,''));btn.append(el('span','',mode===1?opt.desc:opt.name));btn.addEventListener('click',()=>answer(choice));opts.append(btn)})
+
+function startGame(full){
+  questions=full?[...quizBlocks]:shuffled(quizBlocks).slice(0,12);
+  index=0;score=0;questionSerial++;
+  $('quiz-start').hidden=true;$('quiz-result').hidden=true;$('quiz-play').hidden=false;
+  renderQuestion();
 }
-function answer(choice){if(locked)return;locked=true;const current=questions[index],correct=currentChoices.findIndex(x=>x.id===current.id),good=choice===correct;if(good)score++;
-  [...$('qoptions').children].forEach((btn,i)=>{btn.disabled=true;if(i===correct)btn.classList.add('correct');else if(i===choice)btn.classList.add('wrong')});
-  const fb=$('qfeedback');fb.hidden=false;fb.className='feedback '+(good?'good':'bad');fb.textContent=(good?'Σωστά! ':'Καλή προσπάθεια! ')+current.name+' — '+current.desc+' '+current.tip;
-  $('qscore').textContent=`Σωστές: ${score}`;$('qnote').textContent='Διάβασε την εξήγηση πριν συνεχίσεις';$('qnext').textContent=index===questions.length-1?'Δες τη βαθμολογία':'Επόμενη ερώτηση';$('qnext').hidden=false;
+$('start-short').onclick=()=>startGame(false);
+$('start-full').onclick=()=>startGame(true);
+
+function renderQuestion(){
+  const b=questions[index];const serial=++questionSerial;
+  locked=true;
+  $('qcount').textContent=`Ερώτηση ${index+1} / ${questions.length}`;
+  $('qscore').textContent=`Σωστές: ${score}`;
+  $('qprogress').style.width=`${((index+1)/questions.length)*100}%`;
+  $('qtitle').textContent='Ποιο τουβλάκι LEGO WeDo 2.0 βλέπεις;';
+  $('qfeedback').hidden=true;$('qnext').hidden=true;
+  $('qnote').textContent='Φόρτωση εικόνας…';
+  $('qoptions').replaceChildren();
+  const prompt=$('qicon');prompt.hidden=true;prompt.removeAttribute('src');
+  prompt.alt='Εικόνα εντολής προς αναγνώριση';
+  // Both image and four answer labels always belong to the SAME verified entry.
+  const img=new Image();
+  img.onload=()=>{
+    if(serial!==questionSerial)return;
+    prompt.src=b.icon;prompt.hidden=false;
+    currentChoices=choicesFor(b);
+    currentChoices.forEach((opt,choice)=>{
+      const btn=el('button','q-option');btn.type='button';
+      btn.append(el('span','',opt.name));
+      btn.addEventListener('click',()=>answer(choice,serial));
+      $('qoptions').append(btn);
+    });
+    locked=false;$('qnote').textContent='Επίλεξε τη σωστή ονομασία';
+  };
+  img.onerror=()=>{
+    if(serial!==questionSerial)return;
+    $('qnote').textContent='Η εικόνα δεν φορτώθηκε. Δοκίμασε ξανά.';
+    const retry=el('button','btn','Επανάληψη φόρτωσης');retry.type='button';retry.onclick=renderQuestion;$('qoptions').append(retry);
+  };
+  img.src=b.icon;
+}
+
+function answer(choice,serial){
+  if(locked||serial!==questionSerial)return;
+  locked=true;
+  const current=questions[index];
+  const correct=currentChoices.findIndex(x=>x.id===current.id);
+  const good=choice===correct;
+  if(good)score++;
+  [...$('qoptions').children].forEach((btn,i)=>{
+    btn.disabled=true;
+    if(i===correct)btn.classList.add('correct');
+    else if(i===choice)btn.classList.add('wrong');
+  });
+  const fb=$('qfeedback');fb.hidden=false;
+  fb.className='feedback '+(good?'good':'bad');
+  fb.textContent=(good?'Σωστά! ':'Η σωστή απάντηση είναι: ')+current.name+'. '+current.desc+' '+current.tip;
+  $('qscore').textContent=`Σωστές: ${score}`;
+  $('qnote').textContent='Διάβασε την επεξήγηση πριν συνεχίσεις';
+  $('qnext').textContent=index===questions.length-1?'Δες τη βαθμολογία':'Επόμενη ερώτηση';
+  $('qnext').hidden=false;
 }
 $('qnext').onclick=()=>{if(index<questions.length-1){index++;renderQuestion()}else{finish()}};
-function finish(){$('quiz-play').hidden=true;$('quiz-result').hidden=false;$('final-number').textContent=`${score} / ${questions.length}`;const pc=score/questions.length;$('final-title').textContent=pc>=.9?'Εξαιρετική επίδοση':pc>=.6?'Πολύ καλή προσπάθεια':'Συνέχισε την εξάσκηση';$('final-text').textContent='Κάθε δοκιμή σε βοηθά να αναγνωρίζεις περισσότερες εντολές. Μπορείς να μελετήσεις τον οδηγό και να ξαναπαίξεις.'}
-$('again').onclick=()=>{$('quiz-result').hidden=true;$('quiz-start').hidden=false};$('study-again').onclick=()=>{tab('guide');$('quiz-result').hidden=true;$('quiz-start').hidden=false};
+function finish(){
+  $('quiz-play').hidden=true;$('quiz-result').hidden=false;
+  $('final-number').textContent=`${score} / ${questions.length}`;
+  const pc=score/questions.length;
+  $('final-title').textContent=pc>=.9?'Εξαιρετική επίδοση':pc>=.6?'Πολύ καλή προσπάθεια':'Συνέχισε την εξάσκηση';
+  $('final-text').textContent='Κάθε δοκιμή σε βοηθά να αναγνωρίζεις περισσότερες εντολές. Μπορείς να μελετήσεις τον οδηγό και να ξαναπαίξεις.';
+}
+$('again').onclick=()=>{$('quiz-result').hidden=true;$('quiz-start').hidden=false;questionSerial++};
+$('study-again').onclick=()=>{tab('guide');$('quiz-result').hidden=true;$('quiz-start').hidden=false;questionSerial++};
 </script>
 </body>
 </html>
