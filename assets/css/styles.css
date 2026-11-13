@@ -711,3 +711,59 @@
   .footer-main { grid-template-columns: 1fr; gap: 25px; padding-block: 34px 28px; }
   .footer-main .footer-brand { grid-column: auto; }
 }
+
+
+/* v59 — Footer simplified and sections more clearly separated. */
+.how-section.section.wrap {
+  background:#f9fcfd;
+  border-top:1px solid #e0ecef;
+  border-bottom:1px solid #e0ecef;
+  border-radius:0;
+  padding-block:100px 110px;
+  padding-inline:32px;
+}
+.quiz-section {
+  background:linear-gradient(180deg,#14324a 0%,#102d44 100%);
+  border-top:1px solid #0f293d;
+  border-bottom:1px solid #0c2537;
+}
+.academy-home {
+  border-radius:28px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  padding:38px 40px;
+}
+.footer-main {
+  grid-template-columns:minmax(0,1fr);
+  gap:0;
+  padding-block:38px 28px;
+}
+.footer-brand {
+  max-width:720px;
+}
+.footer-brand p {
+  font-size:14px;
+  line-height:1.9;
+  margin-top:18px;
+  color:#5f7082;
+}
+.footer-links {
+  display:none !important;
+}
+@media (max-width:780px) {
+  .footer-main {
+    padding-block:30px 22px;
+  }
+}
+@media (max-width:680px) {
+  .how-section.section.wrap {
+    padding-inline:22px;
+    padding-block:72px 80px;
+  }
+  .academy-home {
+    padding:24px 20px;
+  }
+  .footer-brand p {
+    font-size:13px;
+  }
+}
