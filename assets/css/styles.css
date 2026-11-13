@@ -697,3 +697,17 @@
 .filters .filter-chip.active:hover {
   box-shadow: inset 0 -2px 0 #8ca1ab;
 }
+
+
+/* v58 — Clean hero / footer: remove redundant CTAs and informational footer column.
+   Future social links can be inserted once real account URLs are supplied. */
+.hero-copy .hero-lead { margin-bottom: 0; }
+.footer-main {
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 210px);
+  gap: 35px;
+  padding-block: 44px 36px;
+}
+@media (max-width: 780px) {
+  .footer-main { grid-template-columns: 1fr; gap: 25px; padding-block: 34px 28px; }
+  .footer-main .footer-brand { grid-column: auto; }
+}
