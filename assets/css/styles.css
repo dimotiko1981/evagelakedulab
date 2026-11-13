@@ -593,3 +593,31 @@
 @media (forced-colors: active) {
   .workshop-card[data-equipment~="wedo2"] .workshop-info small { border: 1px solid CanvasText; }
 }
+
+
+/* v55 — Κατηγορία στην πληροφορία της κάρτας, όχι επάνω στην εικόνα. */
+#workshop-list .workshop-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px 10px;
+  min-height: 26px;
+  margin-bottom: 6px;
+}
+#workshop-list .workshop-info .workshop-meta .category {
+  position: static;
+  z-index: auto;
+  display: inline;
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #547083;
+  font-size: 10px;
+  font-weight: 850;
+  line-height: 1.35;
+  letter-spacing: .01em;
+  box-shadow: none;
+}
+#workshop-list .workshop-info .workshop-meta small { margin: 0; }
