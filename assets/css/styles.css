@@ -647,3 +647,53 @@
   overflow-wrap: break-word;
   align-self: center;
 }
+
+
+/* v57 — White navigation and theme filters, with restrained neutral active states.
+   No persistent teal/cyan fills. The cyan workshop-card hover glow is untouched. */
+.main-nav .nav-link,
+.main-nav .nav-link.current,
+.main-nav .btn-nav {
+  background: #fff;
+  color: #365364;
+  border-color: #c9d7dd;
+  box-shadow: none;
+}
+.main-nav .nav-link.current {
+  color: #223f4e;
+  border-color: #8099a4;
+  box-shadow: inset 0 -2px 0 #8099a4;
+}
+.main-nav .nav-link:hover,
+.main-nav .nav-link.current:hover,
+.main-nav .btn-nav:hover {
+  background: #f7f9fa;
+  color: #223f4e;
+  border-color: #8da3ac;
+  box-shadow: none;
+  transform: none;
+}
+.main-nav .nav-link.current:hover {
+  box-shadow: inset 0 -2px 0 #8099a4;
+}
+.filters .filter-chip,
+.filters .filter-chip.active {
+  background: #fff;
+  color: #536a77;
+  border: 1px solid #d5dee2;
+  box-shadow: none;
+}
+.filters .filter-chip.active {
+  color: #2b4554;
+  border-color: #8ca1ab;
+  box-shadow: inset 0 -2px 0 #8ca1ab;
+}
+.filters .filter-chip:hover,
+.filters .filter-chip.active:hover {
+  background: #f7f9fa;
+  color: #2b4554;
+  border-color: #97aab2;
+}
+.filters .filter-chip.active:hover {
+  box-shadow: inset 0 -2px 0 #8ca1ab;
+}
