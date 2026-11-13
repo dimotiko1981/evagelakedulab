@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6fafb">
+<meta name="description" content="Πλήρης προβολή των πραγματικών εντολών LEGO WeDo 2.0 για το Ρομποτικός T-Rex, χωρίς περικοπή.">
+<title>Πρόγραμμα · Ρομποτικός T-Rex | EVAGELAK EDU LAB</title>
+<link rel="icon" type="image/png" href="../../../assets/images/branding/evagelak-logo.png">
+<style>
+  :root{color-scheme:light;--ink:#173347;--cyan:#087f95;--border:#d8e8ec;--page:#f6fafb}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:"Nunito Sans","Segoe UI",Arial,sans-serif}
+  .topbar{max-width:1520px;margin:auto;padding:19px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid var(--border)}
+  .brand{font-weight:900;font-size:14px;letter-spacing:.08em;white-space:nowrap}.brand strong{color:var(--cyan)}
+  .topbar a{color:var(--cyan);font-size:13px;font-weight:800;text-decoration:none;border:1px solid var(--border);background:white;border-radius:11px;padding:11px 15px}
+  .topbar a:hover{border-color:#72c4ce;background:#ecf9fa}
+  main{width:min(1520px,calc(100% - 32px));margin:27px auto 52px}
+  .eyebrow{font-weight:900;font-size:11px;letter-spacing:.11em;color:var(--cyan);margin:0 0 7px}
+  h1{margin:0 0 8px;font-size:clamp(24px,3.2vw,37px);letter-spacing:-.035em}
+  .summary{color:#526c7b;line-height:1.65;font-size:14px;margin:0 0 17px}
+  .toolbar{display:flex;justify-content:flex-start;gap:10px;flex-wrap:wrap;margin-bottom:15px}
+  .btn{font:800 13px "Nunito Sans","Segoe UI",Arial,sans-serif;border:1px solid #bedce2;border-radius:11px;background:#fff;color:#087f95;padding:11px 16px;text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+  .btn:hover{background:#eaf7f9;border-color:#75bdc9}
+  button:focus-visible,a:focus-visible{outline:3px solid #26adca;outline-offset:3px}
+  .picture-frame{background:white;border:1px solid var(--border);border-radius:19px;padding:clamp(8px,1.2vw,18px);box-shadow:0 12px 34px rgba(19,52,67,.06);}
+  .picture-scroll{width:100%;overflow:auto;overscroll-behavior-x:contain;background:#fff;border-radius:10px}
+  .picture-scroll img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;background:#fff}
+  .picture-scroll.actual img{width:2048px;min-width:2048px;max-width:none}
+  .hint{font-size:12px;color:#607989;margin:13px 4px 0;line-height:1.65}
+  @media(max-width:600px){.topbar{padding:15px 16px}.topbar a{font-size:11px;padding:9px 10px}.brand{font-size:11px}main{margin-top:23px}.toolbar{flex-direction:column}.btn{width:100%}}
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">EVAGELAK <strong>EDU LAB</strong></div>
+  <a href="index.html">← Επιστροφή στο εργαστήριο</a>
+</header>
+<main>
+  <p class="eyebrow">LEGO WeDo 2.0 · ΡΟΜΠΟΤΙΚΟΣ T-REX</p>
+  <h1>Το πρόγραμμα της κατασκευής</h1>
+  <p class="summary">Ολόκληρη η ακολουθία εντολών, χωρίς περικοπή. Η εικόνα προσαρμόζεται αυτόματα στο πλάτος της οθόνης σου.</p>
+  <div class="toolbar">
+    <button type="button" class="btn" id="zoom-control" aria-pressed="false">Προβολή σε φυσικό μέγεθος (100%)</button>
+    <a class="btn" href="program.webp" download="Robotic_T_Rex_Program.webp">Λήψη εικόνας WebP</a>
+  </div>
+  <div class="picture-frame">
+    <div id="picture-scroll" class="picture-scroll">
+      <img src="program.webp" width="2048" height="473" alt="Πρόγραμμα LEGO WeDo 2.0: έναρξη, ισχύς κινητήρα 2, επανάληψη, αλλαγή φοράς κινητήρα, τυχαίο χρώμα φωτισμού SmartHub, ήχος 1 και επανάληψη" fetchpriority="high">
+    </div>
+  </div>
+  <p class="hint" id="zoom-hint">Όλες οι εντολές εμφανίζονται μαζί. Επίλεξε φυσικό μέγεθος αν θέλεις να εξετάσεις μικρές λεπτομέρειες.</p>
+</main>
+<script>
+  const button = document.getElementById('zoom-control');
+  const frame = document.getElementById('picture-scroll');
+  const hint = document.getElementById('zoom-hint');
+  button.addEventListener('click', () => {
+    const zoomed = frame.classList.toggle('actual');
+    button.setAttribute('aria-pressed', String(zoomed));
+    button.textContent = zoomed ? 'Προσαρμογή στην οθόνη' : 'Προβολή σε φυσικό μέγεθος (100%)';
+    hint.textContent = zoomed ? 'Φυσικό μέγεθος: μετακινήσου οριζόντια για να δεις τις υπόλοιπες εντολές.' : 'Όλες οι εντολές εμφανίζονται μαζί. Επίλεξε φυσικό μέγεθος αν θέλεις να εξετάσεις μικρές λεπτομέρειες.';
+    if (!zoomed) frame.scrollLeft = 0;
+  });
+</script>
+</body>
+</html>
