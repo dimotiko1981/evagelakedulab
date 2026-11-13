@@ -621,3 +621,29 @@
   box-shadow: none;
 }
 #workshop-list .workshop-info .workshop-meta small { margin: 0; }
+
+
+/* v56 — Κατηγορία και εξοπλισμός στην ίδια οριζόντια σειρά.
+   Η δεύτερη στήλη επιτρέπεται να σπάσει ΕΣΩΤΕΡΙΚΑ σε 2 γραμμές
+   χωρίς να πέσει ποτέ κάτω από το badge του εξοπλισμού. */
+#workshop-list .workshop-meta {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: center;
+  column-gap: 8px;
+  row-gap: 0;
+}
+#workshop-list .workshop-info .workshop-meta small {
+  white-space: nowrap;
+  justify-self: start;
+  align-self: center;
+}
+#workshop-list .workshop-info .workshop-meta .category {
+  display: block;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  line-height: 1.28;
+  overflow-wrap: break-word;
+  align-self: center;
+}
