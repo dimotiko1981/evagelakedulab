@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html lang="el">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Ρομποτικό Χταπόδι LEGO WeDo 2.0: σενάριο, κινητήρας, γρανάζια, επανάληψη, φωτισμός SmartHub, ήχος, οδηγίες και διαδραστικό quiz." name="description"/>
+<title>Ρομποτικό Χταπόδι | EVAGELAK EDU LAB</title>
+<link href="../../../assets/images/branding/evagelak-logo.png" rel="icon" type="image/png"/>
+<link href="../../../assets/css/styles.css" rel="stylesheet"/>
+<style>
+:root{--ws-ink:#14283c;--ws-text:#486278;--ws-navy:#122b40;--ws-cyan:#087f95;--ws-green:#30987f;--ws-border:#deebef;--ws-soft:#f4f9fa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ws-ink);background:radial-gradient(ellipse at 90% 0%,rgba(52,170,174,.075),transparent 36%),#f6fafb}
+a{color:inherit}.ws-wrap{width:min(1060px,calc(100% - 52px));margin-inline:auto}.ws-topbar{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:24px 0;border-bottom:1px solid #e3edef}.ws-brand{font-size:13px;font-weight:900;letter-spacing:.095em;color:#183c4c}.ws-brand b{color:#07829a}.ws-back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:#087e94!important;font-size:13px;font-weight:850;padding:11px 16px;border-radius:11px;border:1px solid #d6e7ea;background:#fff;transition:background .2s,border-color .2s}.ws-back:hover{background:#ebf8f9;border-color:#add9dc}.ws-back:focus-visible,.ws-action:focus-visible,.ws-program-link:focus-visible{outline:3px solid #32b4cb;outline-offset:3px}
+.ws-page{padding-bottom:70px}.ws-kicker{display:inline-flex;align-items:center;gap:9px;margin:35px 0 13px;color:#087d94;font-size:11px;font-weight:900;letter-spacing:.135em;text-transform:uppercase}.ws-kicker::before{content:"";width:8px;height:8px;border-radius:100%;background:#28a38b;box-shadow:0 0 0 4px #e1f4ef}
+.ws-heading h1{font-size:clamp(2.05rem,4.2vw,2.9rem);line-height:1.13;letter-spacing:-.035em;margin:0 0 13px;font-weight:900;color:#112b40}.ws-intro{font-size:15.5px;line-height:1.85;color:var(--ws-text);margin:0 0 25px;max-width:760px}
+.ws-stage{border-radius:21px;background:linear-gradient(120deg,#172a3a,#132334);border:1px solid #20394b;box-shadow:0 20px 55px rgba(26,59,73,.115);overflow:hidden;position:relative;margin:0}.ws-stage::before{content:"";position:absolute;left:-8%;top:-40%;width:46%;height:140%;background:radial-gradient(circle,rgba(40,176,191,.13),transparent 68%);pointer-events:none}.ws-photo{display:block;width:100%;height:clamp(285px,40vw,485px);object-fit:contain;position:relative}.ws-stage figcaption{padding:11px 21px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:#182c3c;color:#c2d9df;font-size:11px;font-weight:800;letter-spacing:.05em}.ws-stage figcaption span:first-child{display:inline-flex;align-items:center;gap:8px}.ws-stage figcaption span:first-child::before{content:"";width:7px;height:7px;border-radius:50%;background:#67dec2}
+.ws-section-intro{display:flex;align-items:center;gap:11px;margin:0 0 15px}.ws-icon{display:grid;place-items:center;flex:0 0 38px;width:38px;height:38px;border-radius:12px;color:#067d94;background:#e4f5f6}.ws-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.ws-section-intro h2{font-size:20px;letter-spacing:-.03em;color:#152c41;margin:0;line-height:1.3;font-weight:900}
+.ws-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}.ws-card{border:1px solid var(--ws-border);background:#fff;border-radius:19px;padding:25px 27px;box-shadow:0 5px 22px rgba(16,54,67,.035);min-width:0}.ws-card.ws-mission{background:linear-gradient(145deg,#eaf7f6 0%,#f4faf9 100%);border-color:#d2eae7}.ws-mission .ws-icon{color:white;background:#078a97}.ws-card p,.ws-card li{font-size:14.5px;line-height:1.82;color:#476177;margin:0}.ws-card ul{margin:0;padding:0;list-style:none;display:grid;gap:11px}.ws-card li{display:grid;grid-template-columns:19px minmax(0,1fr);gap:9px}.ws-card li::before{content:"✓";font-weight:900;color:#119e89;font-size:16px;line-height:1.7}
+.ws-panel{border:1px solid var(--ws-border);border-radius:19px;background:white;padding:26px 28px;margin-top:18px;box-shadow:0 5px 22px rgba(16,54,67,.035)}.ws-lead{font-size:14.5px;color:#536b7a;line-height:1.75;margin:0 0 15px}
+.ws-program-area{background:#f5fafb;border:1px solid #dbe8eb;border-radius:15px;padding:16px;position:relative}.ws-program-label{display:flex;gap:7px;align-items:center;font-size:11px;letter-spacing:.08em;font-weight:900;color:#69828a;margin:0 0 12px}.ws-program-label i{width:8px;height:8px;border-radius:50%;background:#5fbcb0;display:inline-block;box-shadow:13px 0 0 #f0c371,26px 0 0 #9cb5d0;margin-right:28px}.ws-program{display:block;width:100%;height:auto;background:#fff;border:1px solid #dfebee;border-radius:11px}.ws-program-link{display:inline-flex;align-items:center;gap:6px;margin-top:13px;font-size:13px;font-weight:850;color:#087d94!important;text-decoration:none}.ws-program-link:hover{text-decoration:underline}
+.ws-materials{padding-bottom:27px}.ws-material-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.ws-material{min-width:0;min-height:370px;border:1px solid #d9e9ec;background:#f8fbfc;border-radius:15px;padding:23px;display:flex;flex-direction:column;gap:12px}.ws-material.ws-video{background:linear-gradient(155deg,#f3f9fa,#f8fbfc)}.ws-material h3{font-size:17px;font-weight:900;letter-spacing:-.02em;margin:0;color:#183044}.ws-material p{font-size:14px;line-height:1.7;margin:0;color:#536f7f}.ws-material-head{display:flex;align-items:center;gap:12px}.ws-material-icon{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;border:1px solid #dcebed;border-radius:13px;color:#0d8394;background:#e8f5f6}.ws-material-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.ws-pdf-mark{margin:auto;display:grid;place-items:center;width:110px;height:140px;background:#fff;border:1px solid #d7e6ea;border-radius:13px;box-shadow:0 10px 30px rgba(16,70,91,.07);position:relative}.ws-pdf-mark::before{content:"";width:52px;height:65px;border:3px solid #99c6cb;border-radius:7px;background:linear-gradient(#a6d8d8,#a6d8d8) 11px 17px/25px 4px no-repeat,linear-gradient(#c6e8e8,#c6e8e8) 11px 30px/31px 4px no-repeat,linear-gradient(#c6e8e8,#c6e8e8) 11px 43px/23px 4px no-repeat}.ws-pdf-mark::after{content:"PDF";position:absolute;bottom:13px;font-size:12px;letter-spacing:.11em;font-weight:900;color:#087e94}
+.ws-video-embed{width:fit-content;margin:0 auto;max-width:100%}.ws-video-frame{height:260px;aspect-ratio:9/16;background:#142635;border:1px solid #29465b;border-radius:13px;overflow:hidden;box-shadow:0 9px 20px rgba(20,54,71,.12)}.ws-video-frame iframe{width:100%;height:100%;display:block;border:0}
+.ws-action{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:fit-content;max-width:100%;min-height:41px;padding:10px 16px;color:white!important;background:#087f93;border-radius:10px;font-size:13px;font-weight:850;text-decoration:none;transition:background .2s,transform .2s;margin-top:auto}.ws-action:hover{background:#05687b;transform:translateY(-1px)}.ws-video .ws-action{align-self:center}.ws-video.ws-only{grid-column:1/-1;min-height:auto;display:grid;grid-template-columns:minmax(0,1fr) 165px;align-items:center;align-content:center;grid-template-rows:max-content max-content max-content;gap:15px 28px}.ws-video.ws-only .ws-material-head{grid-column:1;grid-row:1}.ws-video.ws-only p{grid-column:1;grid-row:2}.ws-video.ws-only .ws-video-embed{grid-column:2;grid-row:1/4}.ws-video.ws-only .ws-action{grid-column:1;grid-row:3;align-self:start;margin:0}.ws-footer{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:30px 0 0;font-size:12px;color:#78909c}.ws-footer a{font-size:12px;text-decoration:none;color:#087f93!important;font-weight:800}.ws-footer a:hover{text-decoration:underline}
+@media(max-width:750px){.ws-wrap{width:calc(100% - 34px)}.ws-grid,.ws-material-grid{grid-template-columns:1fr}.ws-material{min-height:auto}.ws-pdf-mark{display:none}.ws-material.ws-pdf{gap:13px}.ws-video.ws-only{grid-template-columns:1fr;display:flex;align-items:stretch}.ws-video.ws-only .ws-video-embed{order:3}.ws-video.ws-only .ws-action{order:4;align-self:center}.ws-topbar{padding:17px 0}.ws-card,.ws-panel{padding:20px}.ws-material{padding:19px}}
+@media(max-width:450px){.ws-topbar{gap:10px}.ws-back{padding:9px 10px;font-size:12px}.ws-brand{font-size:11px;letter-spacing:.03em}.ws-kicker{margin:28px 0 11px}.ws-heading h1{font-size:clamp(1.9rem,8vw,2.2rem)}.ws-intro{font-size:14px}.ws-photo{height:260px}.ws-stage figcaption{font-size:10px;padding:10px 13px}.ws-section-intro h2{font-size:18px}.ws-card p,.ws-card li,.ws-lead{font-size:14px}.ws-video-frame{height:300px}.ws-footer{display:block}.ws-footer a{display:block;margin-top:8px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ws-action,.ws-back{transition:none}.ws-action:hover{transform:none}}
+
+/* Πλήρης στοίχιση μόνο στο κείμενο της αποστολής */
+.ws-mission p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; text-justify: inter-word; line-height: 1.82; }
+/* Long outcomes remain legible in the two-column layout. */
+.ws-card li span{min-width:0;overflow-wrap:anywhere}
+
+/* Workshop quiz invitation — scoped to the basketball page */
+.ws-quiz-cta{margin:22px 0 0;padding:clamp(21px,3.5vw,30px);border:1px solid #c9e3e5;border-radius:21px;background:linear-gradient(115deg,#ebf8f7 0%,#f5fbfc 60%,#fff 100%);display:flex;justify-content:space-between;align-items:center;gap:22px;box-shadow:0 12px 36px rgba(11,73,85,.06)}
+.ws-quiz-cta .ws-quiz-content{flex:1;min-width:0}
+.ws-quiz-cta .ws-quiz-eyebrow{font-size:11px;font-weight:900;letter-spacing:.105em;color:#087e94;margin:0 0 7px}
+.ws-quiz-cta h2{font-size:clamp(20px,2.6vw,26px);line-height:1.3;color:#14283c;margin:0 0 9px}
+.ws-quiz-cta p.ws-quiz-description{font-size:14px;color:#486278;line-height:1.7;margin:0;max-width:580px}
+.ws-quiz-cta a.ws-quiz-button{display:inline-flex;justify-content:center;align-items:center;gap:10px;flex:none;border-radius:12px;background:#087f95;padding:15px 21px;color:#fff!important;font-size:14px;font-weight:900;text-decoration:none;box-shadow:0 7px 17px rgba(8,127,149,.18);transition:background .2s,transform .2s}
+.ws-quiz-cta a.ws-quiz-button:hover{background:#066a7d;transform:translateY(-2px)}
+.ws-quiz-cta a.ws-quiz-button:focus-visible{outline:3px solid #11677b;outline-offset:3px}
+@media(max-width:720px){.ws-quiz-cta{flex-direction:column;align-items:stretch}.ws-quiz-cta a.ws-quiz-button{width:100%}}
+@media(prefers-reduced-motion:reduce){.ws-quiz-cta a.ws-quiz-button{transition:none}.ws-quiz-cta a.ws-quiz-button:hover{transform:none}}
+
+/* Octopus workshop refinements */
+.ws-mission p{text-align:justify;text-justify:inter-word;hyphens:auto}
+.ws-material.ws-video{min-height:260px}
+.ws-video-pending{margin:auto 0 0;border:1px dashed #a9d2da;background:#eef8f9;border-radius:12px;text-align:center;padding:22px 14px;font-size:13px;font-weight:900;color:#23798c}
+.ws-quiz-eyebrow{letter-spacing:.08em}
+@media(max-width:650px){.ws-mission p{text-align:left}}
+
+/* v46 — WeDo 2.0 micro-accents. Retain the original petrol layout and buttons. */
+body[data-equipment~="wedo2"] .ws-kicker::before {
+  background: #20B35D;
+  box-shadow: 0 0 0 4px #e5f5e9;
+}
+body[data-equipment~="wedo2"] .ws-stage figcaption span:first-child::before {
+  background: #B7D832;
+}
+body[data-equipment~="wedo2"] .ws-card.ws-mission {
+  border-left: 3px solid #B7D832;
+}
+body[data-equipment~="wedo2"] .ws-card li::before {
+  color: #169b55;
+}
+body[data-equipment~="wedo2"] .ws-program-label i {
+  background: #17A8CF;
+  box-shadow: 13px 0 0 #B7D832,26px 0 0 #FF941F;
+}
+
+</style>
+</head>
+<body data-equipment="wedo2">
+<div class="ws-wrap">
+<header class="ws-topbar"><div class="ws-brand">EVAGELAK <b>EDU LAB</b></div><a class="ws-back" href="../../../index.html#workshops">← Πίσω στις κατασκευές</a></header>
+<main class="ws-page">
+<div class="ws-heading"><div class="ws-kicker">LEGO WeDo 2.0 · 2026–2027</div><h1>Ρομποτικό Χταπόδι</h1><p class="ws-intro">Robotic Octopus · Δημιουργούμε μια θαλάσσια ρομποτική κατασκευή, εξερευνούμε πώς μεταδίδεται η κίνηση και προγραμματίζουμε το χταπόδι με κίνηση, εναλλαγές φωτισμού και ήχο.</p></div>
+<figure class="ws-stage"><img alt="Πραγματική κατασκευή Ρομποτικό Χταπόδι LEGO WeDo 2.0 με γαλάζιο κεφάλι, πράσινα πλοκάμια, κινητήρα και γρανάζια σε σκούρο στούντιο" class="ws-photo" loading="eager" src="cover.webp"/><figcaption><span>Η ΚΑΤΑΣΚΕΥΗ</span><span>LEGO WeDo 2.0</span></figcaption></figure>
+<div class="ws-grid"><section class="ws-card ws-mission"><div class="ws-section-intro"><span aria-hidden="true" class="ws-icon"><svg viewbox="0 0 24 24"><path d="M5 21V4m0 1c3-2 5 2 9 0s6 0 6 0v11c-4-2-6 2-10 0s-5 0-5 0"></path></svg></span><h2>Η αποστολή μας</h2></div><p>Στα βάθη της θάλασσας συναντάμε ένα από τα πιο ενδιαφέροντα ζώα: το χταπόδι. Η αποστολή της ομάδας μας είναι να κατασκευάσει μια ρομποτική εκδοχή του και να της δώσει ζωή με το LEGO WeDo 2.0. Ακολουθούμε τις οδηγίες συναρμολόγησης και δημιουργούμε μια σταθερή βάση, έναν μηχανισμό με κινητήρα και γρανάζια, το σώμα με τα πλοκάμια και το χαρακτηριστικό κεφάλι με τα μάτια. Παρατηρούμε πώς η περιστροφή του κινητήρα μεταφέρεται στον μηχανισμό και πώς συνδυάζονται τα εξαρτήματα για να κινηθεί το μοντέλο. Στη συνέχεια θέτουμε την ισχύ κίνησης στην τιμή 2 και δημιουργούμε μια επανάληψη. Μέσα στην επανάληψη ο κινητήρας κινείται προς τα αριστερά, το LED του SmartHub ανάβει με τυχαίο χρώμα και ακούγεται ο ήχος με αριθμό 1. Δοκιμάζουμε το χταπόδι, παρατηρούμε τον συνδυασμό κίνησης, φωτός και ήχου και σκεφτόμαστε τι αλλάζει όταν πειράζουμε μία εντολή.</p></section><section class="ws-card"><div class="ws-section-intro"><span aria-hidden="true" class="ws-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><h2>Τι μάθαμε</h2></div><ul><li><span>Γνωρίσαμε βασικά χαρακτηριστικά του χταποδιού και τα αποδώσαμε με LEGO, δημιουργώντας σώμα, μάτια και πλοκάμια.</span></li><li><span>Συναρμολογήσαμε μια σταθερή βάση και παρατηρήσαμε τη συνεργασία κινητήρα, γραναζιών και αξόνων.</span></li><li><span>Μάθαμε ότι η περιστροφική κίνηση μπορεί να μεταφερθεί από τον κινητήρα σε άλλα μέρη της κατασκευής.</span></li><li><span>Χρησιμοποιήσαμε την εντολή «Ισχύς κίνησης» με αριθμό 2 για να ρυθμίσουμε τη λειτουργία του κινητήρα.</span></li><li><span>Αναγνωρίσαμε την εντολή «Κίνηση προς τα αριστερά» και τη διακρίναμε από την αλλαγή ισχύος.</span></li><li><span>Τοποθετήσαμε εντολές μέσα σε «Επανάληψη», ώστε να εκτελούνται ξανά και ξανά.</span></li><li><span>Συνδέσαμε το «Τουβλάκι φωτός» με τυχαία αριθμητική είσοδο (ζάρι), για να αλλάζει ο φωτισμός LED του SmartHub.</span></li><li><span>Προσθέσαμε το «Παίξε Ήχο» με αριθμό 1 και συνδυάσαμε κίνηση, φως και ήχο σε ένα πρόγραμμα.</span></li></ul></section></div>
+<section aria-labelledby="ws-program-title" class="ws-panel">
+<div class="ws-section-intro"><span aria-hidden="true" class="ws-icon"><svg viewbox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="4"></rect><path d="m9 9-3 3 3 3m6-6 3 3-3 3"></path></svg></span><h2 id="ws-program-title">Προγραμματισμός</h2></div>
+<p class="ws-lead">Το πρόγραμμα ξεκινά με το τουβλάκι «Ξεκίνημα» και ορίζει την «Ισχύ κίνησης» στην τιμή 2. Στη συνέχεια μπαίνει σε «Επανάληψη»: ο κινητήρας κινείται προς τα αριστερά, το LED του SmartHub παίρνει τυχαίο χρώμα χάρη στην είσοδο με το ζάρι και αναπαράγεται ο ήχος με αριθμό 1. Η ίδια ακολουθία εκτελείται ξανά και ξανά. Παρακάτω εμφανίζεται η αυθεντική εικόνα του προγράμματος, με όλες τις εντολές και τις τιμές της.</p>
+<div class="ws-program-area"><div class="ws-program-label"><i aria-hidden="true"></i> LEGO WeDo 2.0 · ΠΡΟΓΡΑΜΜΑ</div>
+<a aria-label="Προβολή του προγράμματος σε μεγάλο μέγεθος" href="program.webp" rel="noopener noreferrer" target="_blank"><img alt="Αυθεντικό πρόγραμμα LEGO WeDo 2.0 για το Ρομποτικό Χταπόδι: ξεκίνημα, ισχύς κινητήρα 2, επανάληψη, κίνηση αριστερά, φωτισμός SmartHub με τυχαίο χρώμα και ήχος 1" class="ws-program" height="494" loading="eager" src="program.webp" width="1718"/></a></div>
+<a class="ws-program-link" href="program.webp" rel="noopener noreferrer" target="_blank">Μεγέθυνση προγράμματος ↗</a>
+</section>
+<section aria-labelledby="ws-materials-title" class="ws-panel ws-materials">
+<div class="ws-section-intro"><span aria-hidden="true" class="ws-icon"><svg viewbox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v10H3z"></path></svg></span><h2 id="ws-materials-title">Υλικό εργαστηρίου</h2></div>
+<p class="ws-lead">Κατέβασε τις πραγματικές οδηγίες LEGO και, όταν προστεθεί, παρακολούθησε το βίντεο της κατασκευής.</p>
+<div class="ws-material-grid"><article class="ws-material ws-pdf">
+<div class="ws-material-head"><span aria-hidden="true" class="ws-material-icon"><svg viewbox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v5h5M9 12h6M9 16h6"></path></svg></span><h3>Οδηγίες συναρμολόγησης</h3></div>
+<p>Οι 23 σελίδες των οδηγιών παρουσιάζουν 38 αριθμημένα βήματα για τη βάση, τον μηχανισμό και την ολοκλήρωση του ρομποτικού χταποδιού.</p>
+<div aria-hidden="true" class="ws-pdf-mark"></div>
+<a class="ws-action" href="odigies-synarmologisis.pdf" rel="noopener noreferrer" target="_blank">Άνοιγμα PDF ↗</a>
+</article><article class="ws-material ws-video">
+<div class="ws-material-head"><span aria-hidden="true" class="ws-material-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="m10 8 6 4-6 4z"></path></svg></span><h3>Βίντεο λειτουργίας</h3></div>
+<p>Το βίντεο λειτουργίας δεν είναι ακόμη διαθέσιμο. Θα προστεθεί όταν δημοσιευτεί.</p>
+<div aria-label="Δεν υπάρχει ακόμη διαθέσιμο βίντεο" class="ws-video-pending">Διαθέσιμο σύντομα</div></article></div>
+</section>
+<section aria-labelledby="ws-octopus-quiz-title" class="ws-quiz-cta">
+<div class="ws-quiz-content">
+<p class="ws-quiz-eyebrow">ΔΙΑΔΡΑΣΤΙΚΟ QUIZ · LEGO WeDo 2.0</p>
+<h2 id="ws-octopus-quiz-title">Αναγνωρίζεις τις εντολές του Χταποδιού;</h2>
+<p class="ws-quiz-description">10 ερωτήσεις με αυθεντικά αποσπάσματα του προγράμματος: ισχύς, κίνηση, επανάληψη, φως, τυχαία τιμή και ήχος.</p>
+</div>
+<a aria-label="Παίξε το quiz προγραμματισμού του Ρομποτικού Χταποδιού" class="ws-quiz-button" href="quiz.html">Παίξε το Quiz <span aria-hidden="true">↗</span></a>
+</section>
+</main><footer class="ws-footer"><span>EVAGELAK EDU LAB · Εκπαιδευτική ρομποτική</span><a href="../../../index.html#workshops">Επιστροφή στις κατασκευές ↑</a></footer>
+</div></body></html>
