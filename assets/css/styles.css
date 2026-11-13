@@ -767,3 +767,49 @@
     font-size:13px;
   }
 }
+
+
+/* v60 — visible section alternation inspired by the green / azure in the EDU LAB emblem.
+   Hero = white, workshops = light azure, learning method = mint green,
+   command academy = dark petrol, footer = near-white sage. */
+:root {
+  --edulab-sage: #367b51;
+  --edulab-mint-bg: #dfefe3;
+  --edulab-mint-line: #b9d9c3;
+  --edulab-azure-bg: #eaf5f8;
+}
+body { background: #fff; }
+.hero { background: #fff; }
+.workshops-section {
+  background: var(--edulab-azure-bg);
+  border-top: 3px solid #c1e1e8;
+  border-bottom: 0;
+}
+.how-section.section {
+  background: linear-gradient(135deg,#e7f4e9 0%, var(--edulab-mint-bg) 100%);
+  border-top: 3px solid var(--edulab-mint-line);
+  border-bottom: 3px solid var(--edulab-mint-line);
+  padding-block: 100px 110px;
+}
+.how-section .section-label,
+.how-section .section-heading h2 em { color: var(--edulab-sage); }
+.how-section .section-heading p { color: #476b57; }
+.how-section .step-card {
+  background: #fff;
+  border: 1px solid #c5ddcd;
+  border-top: 4px solid #609d72;
+  box-shadow: 0 7px 23px rgba(44,99,69,.075);
+}
+.how-section .step-number { color: #4c9162; }
+.quiz-section {
+  background: #102d44;
+  border-top: 3px solid #6bbfae;
+  border-bottom: 0;
+}
+.footer {
+  background: #f3f8f5;
+  border-top: 3px solid #d7e8dd;
+}
+@media (max-width: 680px) {
+  .how-section.section { padding-block: 74px 82px; }
+}
