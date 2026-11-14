@@ -78,6 +78,15 @@ body[data-equipment~="wedo2"] .ws-program-label i {
 .ws-booklet .ws-action{margin:0;white-space:nowrap}
 @media(max-width:700px){.ws-material.ws-booklet{grid-template-columns:78px minmax(0,1fr);gap:14px;padding:17px}.ws-booklet-preview{width:78px;height:177px}.ws-booklet .ws-action{grid-column:1/-1;width:100%;justify-content:center}.ws-booklet-copy h3{font-size:16px}}
 
+
+/* v62 — Two workshop groups, two vertical YouTube clips. */
+.ws-video-two-groups .ws-two-videos {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start;width:100%;margin-top:4px}
+.ws-video-two-groups .ws-group-video {min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px}
+.ws-video-two-groups .ws-group-video h4 {margin:0;color:#193b50;font-size:13px;font-weight:900;text-align:center}
+.ws-video-two-groups .ws-video-frame {width:100%;max-width:146px;height:auto;aspect-ratio:9/16;border-radius:10px}
+.ws-video-two-groups .ws-group-video .ws-action {font-size:11px;min-height:38px;padding:8px 10px;max-width:100%;width:100%;text-align:center;white-space:normal;align-self:stretch;line-height:1.2}
+@media(max-width:390px){.ws-video-two-groups .ws-two-videos{gap:8px}.ws-video-two-groups .ws-group-video .ws-action{font-size:10px;padding:7px 5px}}
+
 </style>
 </head>
 <body data-equipment="wedo2">
@@ -96,16 +105,28 @@ body[data-equipment~="wedo2"] .ws-program-label i {
 </section>
 <section aria-labelledby="ws-materials-title" class="ws-panel ws-materials">
 <div class="ws-section-intro"><span aria-hidden="true" class="ws-icon"><svg viewbox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v10H3z"></path></svg></span><h2 id="ws-materials-title">Υλικό εργαστηρίου</h2></div>
-<p class="ws-lead">Κατέβασε τις πραγματικές οδηγίες LEGO και, όταν προστεθεί, παρακολούθησε το βίντεο της κατασκευής.</p>
+<p class="ws-lead">Κατέβασε τις οδηγίες συναρμολόγησης, δες τα βίντεο των δύο τμημάτων και εξερεύνησε το εκπαιδευτικό booklet.</p>
 <div class="ws-material-grid"><article class="ws-material ws-pdf">
 <div class="ws-material-head"><span aria-hidden="true" class="ws-material-icon"><svg viewbox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v5h5M9 12h6M9 16h6"></path></svg></span><h3>Οδηγίες συναρμολόγησης</h3></div>
 <p>Οι 23 σελίδες των οδηγιών παρουσιάζουν 38 αριθμημένα βήματα για τη βάση, τον μηχανισμό και την ολοκλήρωση του ρομποτικού χταποδιού.</p>
 <div aria-hidden="true" class="ws-pdf-mark"></div>
 <a class="ws-action" href="odigies-synarmologisis.pdf" rel="noopener noreferrer" target="_blank">Άνοιγμα PDF ↗</a>
-</article><article class="ws-material ws-video">
-<div class="ws-material-head"><span aria-hidden="true" class="ws-material-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="m10 8 6 4-6 4z"></path></svg></span><h3>Βίντεο λειτουργίας</h3></div>
-<p>Το βίντεο λειτουργίας δεν είναι ακόμη διαθέσιμο. Θα προστεθεί όταν δημοσιευτεί.</p>
-<div aria-label="Δεν υπάρχει ακόμη διαθέσιμο βίντεο" class="ws-video-pending">Διαθέσιμο σύντομα</div></article>
+</article><article class="ws-material ws-video ws-video-two-groups">
+<div class="ws-material-head"><span aria-hidden="true" class="ws-material-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="m10 8 6 4-6 4z"></path></svg></span><h3>Βίντεο εργαστηρίου</h3></div>
+<p>Δες τα δύο βίντεο του Ρομποτικού Χταποδιού, ένα για κάθε τμήμα.</p>
+<div class="ws-two-videos">
+  <div class="ws-group-video">
+    <h4>Τμήμα 1</h4>
+    <div class="ws-video-frame"><iframe src="https://www.youtube-nocookie.com/embed/Uxf0bTbDk84" title="Ρομποτικό Χταπόδι — Τμήμα 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    <a class="ws-action" href="https://www.youtube.com/shorts/Uxf0bTbDk84" target="_blank" rel="noopener noreferrer" aria-label="Άνοιγμα βίντεο Ρομποτικού Χταποδιού, Τμήμα 1, στο YouTube">YouTube · Τμήμα 1 ↗</a>
+  </div>
+  <div class="ws-group-video">
+    <h4>Τμήμα 2</h4>
+    <div class="ws-video-frame"><iframe src="https://www.youtube-nocookie.com/embed/VysAuDzeqrk" title="Ρομποτικό Χταπόδι — Τμήμα 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    <a class="ws-action" href="https://www.youtube.com/shorts/VysAuDzeqrk" target="_blank" rel="noopener noreferrer" aria-label="Άνοιγμα βίντεο Ρομποτικού Χταποδιού, Τμήμα 2, στο YouTube">YouTube · Τμήμα 2 ↗</a>
+  </div>
+</div>
+</article>
 <article class="ws-material ws-booklet" aria-labelledby="ws-booklet-title">
 <img class="ws-booklet-preview" src="booklet-cover.webp" alt="Εξώφυλλο της σειράς Μικροί Εξερευνητές: Χταπόδι — Ο έξυπνος ακροβάτης της θάλασσας" width="450" height="1020" loading="lazy">
 <div class="ws-booklet-copy"><span class="ws-booklet-eyebrow">ΜΙΚΡΟΙ ΕΞΕΡΕΥΝΗΤΕΣ · 5 ΣΕΛΙΔΕΣ</span><h3 id="ws-booklet-title">Εκπαιδευτικό Booklet</h3><p>Γνώρισε το χταπόδι: ανατομία, κύκλος ζωής, ενδιαίτημα, συμπεριφορά, ιδιαίτερες ικανότητες και προστασία του θαλάσσιου κόσμου.</p></div>
