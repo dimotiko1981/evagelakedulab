@@ -35,15 +35,24 @@ h1{font-size:clamp(27px,4vw,42px);letter-spacing:-.035em;margin:0 0 10px;line-he
 .earned .status{color:#09825e}.status .dot{height:8px;width:8px;border-radius:50%;background:#9badb7}.earned .status .dot{background:#08b77e}
 .title{font-size:26px;font-weight:900;margin:0 0 10px}.desc{color:#53697a;line-height:1.6;font-size:14px;max-width:500px;margin:0 0 18px}
 .actions{display:flex;flex-wrap:wrap;gap:10px}.action{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #087f95;border-radius:10px;padding:10px 16px;text-decoration:none;font-size:13px;font-weight:900;background:#087f95;color:white}
-.action.secondary{background:white;color:#08718a}.action:hover{filter:brightness(.93)}.action[hidden]{display:none}
+.action.secondary{background:white;color:#08718a}.action{cursor:pointer;font-family:inherit}.action:focus-visible{outline:3px solid #00c7dc;outline-offset:4px}.action:hover{filter:brightness(.93)}.action[hidden]{display:none}
 .footnote{margin-top:25px;color:#5b7282;font-size:13px;line-height:1.65;padding:15px 19px;background:#eaf4f6;border:1px solid #d4e9ec;border-radius:13px}
-.future{margin:32px 0 0;padding:22px 24px;border-radius:16px;border:1px dashed #c5dce3;background:#fff}.future h2{font-size:17px;margin:0 0 6px}.future p{font-size:13px;color:#5c7080;margin:0;line-height:1.65}
+.future{margin:32px 0 0;padding:22px 24px;border-radius:16px;border:1px solid #d8e9ed;background:#fff}.future h2{font-size:18px;margin:0 0 7px}.future p{font-size:13px;color:#5c7080;margin:0 0 18px;line-height:1.65}
+.upcoming-list{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.upcoming-list li{min-width:0;background:#f5f9fa;border:1px solid #e1ebee;border-radius:12px;padding:13px;display:flex;gap:6px;flex-direction:column}
+.upcoming-list strong{font-size:13px;color:#304f62}.upcoming-list small{color:#77909b;font-size:11px;font-weight:750}
+.upcoming-list .pending-icon{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#e5eef1;color:#66808f;font-size:14px;margin-bottom:2px}
+.preview-dialog{border:1px solid #d8e9ee;border-radius:20px;box-shadow:0 28px 80px rgba(4,27,42,.3);padding:20px;background:#fff;color:#132f43;width:min(530px,calc(100vw - 32px));max-height:calc(100dvh - 34px);overflow:auto}
+.preview-dialog::backdrop{background:rgba(4,20,32,.73)}.preview-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:12px}.preview-head h2{font-size:19px;margin:0}.preview-close{border:1px solid #cfe1e7;background:#fff;border-radius:9px;font-size:24px;line-height:1;cursor:pointer;color:#2b5568;width:38px;height:38px}
+.preview-image{display:block;width:min(390px,100%);height:auto;aspect-ratio:1;object-fit:contain;margin:0 auto;border-radius:14px;background:radial-gradient(circle,#104362,#071d2b 75%)}.preview-note{font-size:12px;color:#6a7c88;text-align:center;line-height:1.5;margin:13px 0}.preview-actions{display:flex;justify-content:center}
+
 .footer{padding:23px 0;border-top:1px solid #d9e8eb;font-size:12px;color:#69808c;text-align:center}
-@media(max-width:650px){.topbar-inner{min-height:72px}.brand{font-size:13px}.brand img{width:39px;height:39px}.back{font-size:12px;padding:9px}.main{padding:33px 0 50px}.badge-card{grid-template-columns:1fr}.badge-visual{width:min(100%,320px);margin:auto}.title{font-size:22px}.desc{margin-bottom:14px}}
+@media(max-width:750px){.upcoming-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.topbar-inner{min-height:72px}.brand{font-size:13px}.brand img{width:39px;height:39px}.back{font-size:12px;padding:9px}.main{padding:33px 0 50px}.badge-card{grid-template-columns:1fr}.badge-visual{width:min(100%,320px);margin:auto}.title{font-size:22px}.desc{margin-bottom:14px}.future{padding:17px}.upcoming-list{grid-template-columns:1fr}.upcoming-list li{flex-direction:row;align-items:center;flex-wrap:wrap;gap:8px}.upcoming-list .pending-icon{margin:0}.upcoming-list small{margin-left:auto}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important}}
 </style>
 <script src="../assets/js/badges.js?v=63" defer></script>
-<script defer src="gallery.js?v=63"></script>
+<script defer src="gallery.js?v=64"></script>
 </head>
 <body>
 <header class="topbar"><div class="shell topbar-inner"><a class="brand" href="../index.html"><img src="../assets/images/branding/evagelak-logo.png" alt=""><span>EVAGELAK<span>EDU LAB</span></span></a><a class="back" href="../index.html#workshops">← Εργαστήρια</a></div></header>
@@ -51,12 +60,21 @@ h1{font-size:clamp(27px,4vw,42px);letter-spacing:-.035em;margin:0 0 10px;line-he
 <p class="eyebrow">EVAGELAK EDU LAB · ΕΠΙΒΡΑΒΕΥΣΗ</p>
 <h1>Οι κονκάρδες μου</h1>
 <p class="lead">Κάθε ολοκληρωμένο quiz είναι μια νέα αποστολή! Κέρδισε μια κονκάρδα για κάθε κατασκευή και δημιούργησε τη δική σου συλλογή.</p>
-<div id="collection-count" class="collection-count" role="status" aria-live="polite">0 / 1 κονκάρδα</div>
+<div id="collection-count" class="collection-count" role="status" aria-live="polite">0 / 1 διαθέσιμη κονκάρδα</div>
 <article id="trex-card" class="badge-card" aria-labelledby="trex-title">
   <div id="trex-visual" class="badge-visual locked"><img src="../assets/images/badges/t-rex.webp" width="600" height="600" alt="Συλλεκτική κονκάρδα T-Rex EDULAB με το πραγματικό μοντέλο LEGO WeDo 2.0" loading="eager"><span class="lock-symbol" aria-label="Κλειδωμένη κονκάρδα"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span></div>
-  <div class="badge-copy"><p class="status"><span class="dot" aria-hidden="true"></span><span id="trex-status">ΚΛΕΙΔΩΜΕΝΗ</span></p><h2 id="trex-title" class="title">T-Rex</h2><p id="trex-description" class="desc">Ολοκλήρωσε και τις 10 ερωτήσεις του quiz του T-Rex — δεν χρειάζεται να έχεις όλες τις απαντήσεις σωστές.</p><div class="actions"><a id="trex-quiz-link" class="action" href="../workshops/2026-2027/07-robotic-t-rex/quiz.html">Παίξε το quiz ↗</a><a id="trex-download" class="action secondary" href="../assets/images/badges/t-rex.webp" download="EVAGELAK-EDULAB-T-REX.webp" hidden>Αποθήκευσε την κονκάρδα ↓</a></div></div>
+  <div class="badge-copy"><p class="status"><span class="dot" aria-hidden="true"></span><span id="trex-status">ΚΛΕΙΔΩΜΕΝΗ</span></p><h2 id="trex-title" class="title">T-Rex</h2><p id="trex-description" class="desc">Ολοκλήρωσε και τις 10 ερωτήσεις του quiz του T-Rex — δεν χρειάζεται να έχεις όλες τις απαντήσεις σωστές.</p><div class="actions"><a id="trex-download" class="action" href="../assets/images/badges/t-rex.png" download="EVAGELAK-EDULAB-T-REX.png" hidden>Κατέβασε την κονκάρδα ↓</a><button id="trex-view" class="action secondary" type="button" hidden>Προβολή κονκάρδας</button><a id="trex-quiz-link" class="action secondary" href="../workshops/2026-2027/07-robotic-t-rex/quiz.html">Παίξε το quiz ↗</a></div></div>
 </article>
-<div class="future"><h2>Η συλλογή μεγαλώνει</h2><p>Οι κονκάρδες των υπόλοιπων κατασκευών θα προστεθούν μόλις ολοκληρωθεί ο σχεδιασμός τους.</p></div>
+<section class="future" aria-labelledby="future-title"><h2 id="future-title">Οι επόμενες κονκάρδες</h2><p>Η συλλογή θα μεγαλώνει με νέες, ξεχωριστά σχεδιασμένες κονκάρδες. Οι παρακάτω δεν είναι ακόμη διαθέσιμες.</p>
+<ul class="upcoming-list">
+<li><span class="pending-icon" aria-hidden="true">○</span><strong>Ρομποτικό Χταπόδι</strong><small>Σε προετοιμασία</small></li>
+<li><span class="pending-icon" aria-hidden="true">○</span><strong>Ρομποτικός Σκορπιός</strong><small>Σε προετοιμασία</small></li>
+<li><span class="pending-icon" aria-hidden="true">○</span><strong>Ρομποτικός Στόχος Frisbee</strong><small>Σε προετοιμασία</small></li>
+<li><span class="pending-icon" aria-hidden="true">○</span><strong>Ρομποτική Μπασκέτα</strong><small>Σε προετοιμασία</small></li>
+<li><span class="pending-icon" aria-hidden="true">○</span><strong>Jet Fighter</strong><small>Σε προετοιμασία</small></li>
+<li><span class="pending-icon" aria-hidden="true">○</span><strong>Ρομποτικό Rally</strong><small>Σε προετοιμασία</small></li>
+</ul></section>
+<dialog id="trex-preview" class="preview-dialog" aria-labelledby="preview-title"><div class="preview-head"><h2 id="preview-title">Κονκάρδα T-Rex</h2><button id="preview-close" class="preview-close" type="button" aria-label="Κλείσιμο προεπισκόπησης">×</button></div><img class="preview-image" src="../assets/images/badges/t-rex.webp" width="600" height="600" alt="Κονκάρδα T-Rex EDULAB"><p class="preview-note">Η εικόνα αποθηκεύεται σε PNG με διαφανές εξωτερικό φόντο.</p><div class="preview-actions"><a class="action" href="../assets/images/badges/t-rex.png" download="EVAGELAK-EDULAB-T-REX.png">Κατέβασε την κονκάρδα ↓</a></div></dialog>
 <p class="footnote">Η συλλογή αποθηκεύεται μόνο σε αυτή τη συσκευή και σε αυτόν τον περιηγητή, χωρίς λογαριασμό. Αν αλλάξεις συσκευή ή διαγράψεις τα δεδομένα περιήγησης, η πρόοδός σου ενδέχεται να χαθεί.</p>
 </main><footer class="footer">EVAGELAK EDU LAB · Μαθαίνουμε. Δημιουργούμε. Προγραμματίζουμε.</footer>
 </body></html>
