@@ -1,21 +1,87 @@
 <!doctype html><html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5fafb"><title>Quiz — Ρομποτικός T-Rex | EVAGELAK EDU LAB</title><link rel="icon" type="image/png" href="../../../assets/images/branding/evagelak-logo.png"><link rel="stylesheet" href="../../../assets/css/styles.css"><style>
 :root{--ink:#173247;--teal:#0b8194;--muted:#5a7080}*{box-sizing:border-box}body{margin:0;background:#f5fafb;color:var(--ink);font-family:'Nunito Sans',system-ui,sans-serif}a{color:inherit}button{font:inherit;cursor:pointer}.quiz-wrap{width:min(860px,calc(100% - 32px));margin:0 auto}.quiz-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px 0;border-bottom:1px solid #dcebed}.quiz-brand{font-size:13px;font-weight:900;letter-spacing:.05em}.quiz-brand b{color:var(--teal)}.back{border:1px solid #bdd8df;border-radius:12px;background:white;padding:10px 16px;text-decoration:none;color:#0b7489;font-size:13px;font-weight:800}.back:hover{background:#ebf7f9}.quiz-kicker{font-size:11px;letter-spacing:.15em;color:#13879a;font-weight:900;margin:36px 0 8px}.quiz-page h1{font-weight:900;letter-spacing:-.035em;font-size:clamp(27px,4vw,38px);margin:0 0 10px;line-height:1.2}.quiz-subtitle{color:#627685;line-height:1.75;margin:0 0 28px;font-size:15px}.question-card{background:white;border:1px solid #d9e8ec;border-radius:22px;padding:clamp(20px,3vw,34px);box-shadow:0 14px 40px rgba(28,66,87,.055);margin-bottom:42px}.status{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12px;font-weight:900;color:#637a87}.status span:last-child{font-variant-numeric:tabular-nums}.progress{height:7px;background:#e5eff2;border-radius:30px;overflow:hidden;margin:14px 0 27px}.progress-fill{height:100%;width:10%;background:#0c879b;transition:width .2s}.question-card h2{font-size:clamp(18px,2.7vw,22px);letter-spacing:-.015em;line-height:1.45;margin:0 0 18px}.block-frame{min-height:130px;display:flex;align-items:center;justify-content:center;padding:18px 22px;background:#fff;border:1px solid #dde9ec;border-radius:16px;margin-bottom:20px}.block-image{display:block;width:auto;max-width:100%;max-height:200px;object-fit:contain;image-rendering:auto}.options{display:grid;gap:10px}.option{display:flex;gap:14px;text-align:left;align-items:center;background:#f8fbfc;border:1.5px solid #dce9ee;border-radius:13px;padding:13px 16px;font-size:14px;font-weight:800;color:#20394f}.option:hover:not(:disabled){background:#edf8f9;border-color:#5cb7c8}.option:focus-visible,.next:focus-visible,.back:focus-visible{outline:3px solid #60c8db;outline-offset:3px}.option:disabled{cursor:default}.option.correct{border-color:#2ea489;background:#ecfaf5;color:#137561}.option.wrong{border-color:#d78c73;background:#fff4ee;color:#9a5042}.letter{display:inline-grid;place-items:center;flex:0 0 29px;width:29px;height:29px;border-radius:8px;background:#e3eff2;color:#1d7788;font-size:12px}.feedback{min-height:26px;line-height:1.65;margin:17px 0 0;font-size:14px;font-weight:750;color:#376176}.next{display:none;margin-top:17px;border:1px solid #0b8194;border-radius:12px;padding:12px 18px;background:#0b8194;color:white;font-size:14px;font-weight:900}.next:hover{background:#086678}.next.visible{display:inline-flex}.result{text-align:center;padding:28px 0}.result strong{display:block;font-size:56px;color:#097e93;line-height:1.2}.result p{font-size:16px;line-height:1.8;color:#587183}.quiz-foot{margin:0 0 35px;color:#68808a;font-size:12px;text-align:center}@media(max-width:600px){.quiz-head{padding:16px 0}.quiz-brand{font-size:11px}.back{padding:9px 11px;font-size:12px}.question-card{padding:18px}.block-frame{min-height:105px;padding:10px}.block-image{max-height:155px}.option{padding:11px 12px;font-size:13px}}@media(prefers-reduced-motion:reduce){.progress-fill{transition:none}}
 
-/* Premium one-time badge reveal: rise, 3D spin and gentle landing. */
-.award-stage{position:relative;width:min(270px,80vw);aspect-ratio:1;display:grid;place-items:center;margin:10px auto 16px;perspective:850px;isolation:isolate}
-.award-stage::before{content:"";position:absolute;inset:9%;border-radius:50%;background:radial-gradient(circle,rgba(31,203,227,.30) 0%,rgba(27,177,206,.10) 44%,transparent 72%);opacity:0;animation:award-glow 1750ms ease-out both;pointer-events:none}
-.award-spinner{position:relative;width:min(225px,69vw);aspect-ratio:1;transform-style:preserve-3d;animation:award-rise-spin 1750ms cubic-bezier(.18,.73,.24,1) both;will-change:transform}
-.award-spinner .award-face{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;backface-visibility:hidden;-webkit-backface-visibility:hidden;filter:drop-shadow(0 13px 18px rgba(9,46,68,.19))}
-.award-spinner .award-face-back{transform:rotateY(180deg)}
-@keyframes award-rise-spin{
-  0%{opacity:0;transform:translateY(68px) scale(.42) rotateY(-360deg)}
-  28%{opacity:1}
-  67%{transform:translateY(-20px) scale(1.07) rotateY(-48deg)}
-  85%{transform:translateY(5px) scale(.98) rotateY(7deg)}
-  100%{opacity:1;transform:translateY(0) scale(1) rotateY(0deg)}
+/* Premium award ceremony: light, physical 3D rise and single reveal, not a perpetual spinner. */
+.award-stage{
+  position:relative;width:min(390px,100%);height:322px;display:grid;place-items:center;
+  margin:14px auto 20px;border-radius:25px;overflow:hidden;isolation:isolate;
+  perspective:1050px;background:radial-gradient(ellipse at 50% 42%,#164b64 0%,#0d304a 39%,#071a2b 78%,#061525 100%);
+  box-shadow:inset 0 0 0 1px rgba(71,212,234,.25),0 18px 36px rgba(11,47,68,.18);
 }
-@keyframes award-glow{0%{opacity:0;transform:scale(.5)}35%{opacity:.85}72%{opacity:.5;transform:scale(1.15)}100%{opacity:.12;transform:scale(1)}}
-@media(prefers-reduced-motion:reduce){.award-spinner,.award-stage::before{animation:none!important}.award-spinner{opacity:1;transform:none}.award-stage::before{opacity:.1}}
+.award-stage::before{
+  content:"";position:absolute;inset:-30%;border-radius:50%;pointer-events:none;
+  background:conic-gradient(from 6deg,transparent 0deg,rgba(75,218,239,.10) 17deg,transparent 33deg,transparent 64deg,rgba(118,224,235,.09) 79deg,transparent 98deg,transparent 144deg,rgba(73,199,225,.09) 160deg,transparent 181deg,transparent 234deg,rgba(120,216,229,.08) 250deg,transparent 270deg,transparent 360deg);
+  opacity:0;animation:award-rays 2450ms ease-out both;
+}
+.award-stage::after{
+  content:"";position:absolute;z-index:0;left:20%;right:20%;bottom:27px;height:22px;
+  border-radius:50%;background:rgba(0,9,17,.70);filter:blur(13px);
+  transform:scale(.65);opacity:.35;animation:award-shadow 2250ms ease-out both;
+}
+.award-aura{
+  position:absolute;inset:14%;z-index:0;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,rgba(43,222,237,.48),rgba(39,187,218,.18) 42%,transparent 72%);
+  opacity:0;animation:award-aura-on 2400ms ease-out both;
+}
+.award-orbit{position:absolute;z-index:1;width:248px;height:248px;max-width:78%;aspect-ratio:1;border-radius:50%;pointer-events:none;
+  border:1px solid rgba(51,216,235,.62);box-shadow:0 0 16px rgba(26,202,225,.17),inset 0 0 13px rgba(26,202,225,.14);
+  opacity:0;animation:award-wave 1200ms cubic-bezier(.12,.5,.28,1) both;animation-delay:550ms;
+}
+.award-orbit--second{animation-delay:850ms;border-color:rgba(200,239,239,.44)}
+.award-medal{
+  position:relative;z-index:3;width:min(235px,70vw);aspect-ratio:1;
+  transform-style:preserve-3d;animation:award-hero 2650ms cubic-bezier(.22,.76,.26,1) both;
+  filter:drop-shadow(0 18px 16px rgba(0,0,0,.42));will-change:transform;
+}
+.award-face{
+  display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:contain;
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;
+}
+.award-face-back{transform:rotateY(180deg);filter:brightness(.45) saturate(.65)}
+.award-medal::after{
+  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(108deg,transparent 0%,transparent 41%,rgba(230,253,255,.05) 48%,rgba(233,254,255,.42) 50%,rgba(249,255,255,.07) 52%,transparent 59%,transparent 100%);
+  background-size:270% 100%;background-position:100% 50%;
+  -webkit-mask-image:url('../../../assets/images/badges/t-rex.webp');mask-image:url('../../../assets/images/badges/t-rex.webp');
+  -webkit-mask-size:contain;mask-size:contain;-webkit-mask-position:center;mask-position:center;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  animation:award-sweep 850ms ease-in-out 2060ms both;
+}
+.award-spark{
+  position:absolute;z-index:2;left:50%;top:50%;width:5px;height:5px;border-radius:50%;pointer-events:none;
+  background:#b8f6fd;box-shadow:0 0 12px 3px rgba(47,221,240,.56);
+  opacity:0;animation:award-spark-out 1000ms cubic-bezier(.1,.6,.2,1) var(--d,900ms) both;
+}
+.award-eyebrow{margin:2px 0 5px!important;color:#078397!important;letter-spacing:.13em;font-size:11px!important;font-weight:900}
+.result .award-title{font-size:clamp(20px,3vw,27px);line-height:1.3;color:#12344c;margin:8px 0}
+.result .award-description{font-size:14px;line-height:1.6;margin:5px auto 15px;max-width:470px}
+.award-meta{display:inline-flex;align-items:center;justify-content:center;gap:11px;
+  padding:7px 14px;border:1px solid #d4e8ec;border-radius:50px;background:#eff8fa;
+  font-size:12px;font-weight:850;color:#517383;
+}
+.result .award-meta strong{font-size:15px;line-height:1.4;display:inline;color:#057d92}
+@keyframes award-hero{
+  0%{opacity:0;transform:translate3d(0,98px,-170px) scale(.44) rotateX(20deg) rotateY(-205deg)}
+  19%{opacity:1}
+  45%{transform:translate3d(0,-26px,28px) scale(1.05) rotateX(-9deg) rotateY(-76deg)}
+  67%{transform:translate3d(0,-21px,18px) scale(1.10) rotateX(4deg) rotateY(14deg)}
+  82%{transform:translate3d(0,3px,0) scale(.97) rotateX(-2deg) rotateY(-5deg)}
+  93%{transform:translate3d(0,-4px,0) scale(1.02) rotateX(1deg) rotateY(2deg)}
+  100%{opacity:1;transform:translate3d(0,0,0) scale(1) rotateX(0) rotateY(0)}
+}
+@keyframes award-aura-on{0%,8%{opacity:0;transform:scale(.15)}35%{opacity:.45;transform:scale(.75)}61%{opacity:1;transform:scale(1.24)}100%{opacity:.36;transform:scale(1)}}
+@keyframes award-rays{0%,14%{opacity:0;transform:scale(.4) rotate(-40deg)}62%{opacity:.78}100%{opacity:.32;transform:scale(1) rotate(18deg)}}
+@keyframes award-wave{0%{opacity:0;transform:scale(.42)}25%{opacity:.78}100%{opacity:0;transform:scale(1.6)}}
+@keyframes award-shadow{0%{opacity:0;transform:scale(.25)}60%{opacity:.30;transform:scale(.8)}100%{opacity:.55;transform:scale(1)}}
+@keyframes award-spark-out{0%{opacity:0;transform:translate3d(0,0,0) scale(.15)}30%{opacity:.94}100%{opacity:0;transform:translate3d(var(--dx),var(--dy),0) scale(.35)}}
+@keyframes award-sweep{0%{background-position:100% 50%;opacity:0}20%{opacity:.85}100%{background-position:0% 50%;opacity:0}}
+@media(prefers-reduced-motion:reduce){
+  .award-stage::before,.award-stage::after,.award-aura,.award-orbit,.award-medal,.award-spark,.award-medal::after{animation:none!important}
+  .award-medal{opacity:1;transform:none;will-change:auto}
+  .award-stage::before{opacity:.22}.award-stage::after{opacity:.55;transform:scale(1)}
+  .award-aura{opacity:.28}.award-orbit,.award-spark,.award-medal::after{display:none}
+}
+@media(max-width:440px){.award-stage{height:285px;border-radius:20px}.award-medal{width:min(220px,69vw)}.award-orbit{width:205px}}
 
 /* Earned T-Rex badge — no score threshold. */
 .earned-badge{display:block;width:min(220px,70vw);height:auto;aspect-ratio:1;object-fit:contain;margin:15px auto;filter:drop-shadow(0 10px 14px rgba(9,46,68,.14))}
@@ -33,7 +99,7 @@ function render(){answered=false;const item=QUESTIONS[index];$('count').textCont
 function choose(chosen){if(answered)return;answered=true;const item=QUESTIONS[index];if(chosen===item.answer)score++;[...$('options').children].forEach((b,i)=>{b.disabled=true;if(i===item.answer)b.classList.add('correct');else if(i===chosen)b.classList.add('wrong')});$('feedback').textContent=(chosen===item.answer?'Σωστά. ':'Η σωστή απάντηση είναι: '+item.options[item.answer]+'. ')+item.explanation;$('next').textContent=index===QUESTIONS.length-1?'Δες τη βαθμολογία →':'Επόμενη ερώτηση →';$('next').classList.add('visible');}
 $('next').addEventListener('click',()=>{if(index+1<QUESTIONS.length){index++;const oldScroll=window.scrollY;render();root.scrollIntoView({behavior:'smooth',block:'start'});}else{
   const saved = window.EduLabBadges ? window.EduLabBadges.award('t-rex') : false;
-  root.innerHTML='<div class="result"><strong>'+score+' / '+QUESTIONS.length+'</strong><h2>Ολοκλήρωσες το quiz!</h2><p>Μπράβο για την προσπάθειά σου! Κέρδισες την κονκάρδα του Ρομποτικού T-Rex.</p><div class="award-stage" aria-label="Ξεκλειδωμένη κονκάρδα T-Rex"><div class="award-spinner"><img class="award-face" src="../../../assets/images/badges/t-rex.webp" alt="Κονκάρδα T-Rex EDULAB" width="225" height="225"><img class="award-face award-face-back" src="../../../assets/images/badges/t-rex.webp" alt="" aria-hidden="true" width="225" height="225"></div></div><div class="earned-actions"><a class="earned-download" href="../../../assets/images/badges/t-rex.png" download="EVAGELAK-EDULAB-T-REX.png">Κατέβασε την κονκάρδα ↓</a><a class="earned-link" href="../../../badges/index.html">Οι κονκάρδες μου ↗</a><button id="restart" class="next visible" type="button">Παίξε ξανά</button></div>'+(saved?'':'<p class="storage-note">Η κονκάρδα απονεμήθηκε. Για να αποθηκευτεί και στη συλλογή σου, χρειάζεται να επιτρέπεται η τοπική αποθήκευση στον περιηγητή.</p>')+'</div>';
+  root.innerHTML='<div class="result"><p class="award-eyebrow">ΑΠΟΣΤΟΛΗ ΟΛΟΚΛΗΡΩΘΗΚΕ</p><div class="award-stage" aria-label="Απονομή κονκάρδας T-Rex"><span class="award-aura" aria-hidden="true"></span><span class="award-orbit" aria-hidden="true"></span><span class="award-orbit award-orbit--second" aria-hidden="true"></span><span class="award-spark" style="--dx:-137px;--dy:-89px;--d:800ms" aria-hidden="true"></span><span class="award-spark" style="--dx:141px;--dy:-81px;--d:1000ms" aria-hidden="true"></span><span class="award-spark" style="--dx:154px;--dy:36px;--d:840ms" aria-hidden="true"></span><span class="award-spark" style="--dx:-157px;--dy:33px;--d:970ms" aria-hidden="true"></span><span class="award-spark" style="--dx:71px;--dy:-121px;--d:1160ms" aria-hidden="true"></span><span class="award-spark" style="--dx:-83px;--dy:125px;--d:1110ms" aria-hidden="true"></span><div class="award-medal"><img class="award-face" src="../../../assets/images/badges/t-rex.webp" alt="Κονκάρδα T-Rex EDULAB" width="235" height="235"><img class="award-face award-face-back" src="../../../assets/images/badges/t-rex.webp" alt="" aria-hidden="true" width="235" height="235"></div></div><h2 class="award-title">Κέρδισες την κονκάρδα T-Rex!</h2><p class="award-description">Μπράβο για την προσπάθειά σου! Η νέα σου κονκάρδα είναι έτοιμη για λήψη.</p><div class="award-meta"><span>Βαθμολογία quiz</span><strong>'+score+' / '+QUESTIONS.length+'</strong></div><div class="earned-actions"><a class="earned-download" href="../../../assets/images/badges/t-rex.png" download="EVAGELAK-EDULAB-T-REX.png">Κατέβασε την κονκάρδα ↓</a><a class="earned-link" href="../../../badges/index.html">Οι κονκάρδες μου ↗</a><button id="restart" class="next visible" type="button">Παίξε ξανά</button></div>'+(saved?'':'<p class="storage-note">Η κονκάρδα απονεμήθηκε. Για να αποθηκευτεί και στη συλλογή σου, χρειάζεται να επιτρέπεται η τοπική αποθήκευση στον περιηγητή.</p>')+'</div>';
   $('restart').addEventListener('click',()=>window.location.reload());
 }});
 render();</script></body></html>
