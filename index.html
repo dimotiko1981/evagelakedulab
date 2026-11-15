@@ -15,6 +15,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css?v=60">
+  <style>
+    /* v67 — Badge collection replaces the standalone quiz promo on the homepage. */
+    .badge-home-layout { align-items:center; }
+    .badge-home-showcase { display:flex; min-width:0; flex-direction:column; align-items:center; justify-content:center; gap:13px; text-decoration:none; color:#dceef3; }
+    .badge-home-shield { width:min(100%,320px); display:block; padding:12px; border:1px solid rgba(130,215,228,.23); border-radius:24px; background:radial-gradient(circle at 50% 44%,#1c5473 0%,#0c253a 68%); box-shadow:0 22px 44px rgba(0,9,23,.30); transition:transform .25s ease,border-color .25s ease; }
+    .badge-home-shield img { width:100%; aspect-ratio:1; height:auto; object-fit:contain; display:block; filter:drop-shadow(0 14px 15px rgba(0,0,0,.20)); }
+    .badge-home-showcase:hover .badge-home-shield { transform:translateY(-4px); border-color:rgba(130,215,228,.65); }
+    .badge-home-showcase:focus-visible { outline:3px solid #83dfed; outline-offset:5px; border-radius:12px; }
+    .badge-home-caption { font-size:11px; font-weight:900; letter-spacing:.15em; text-align:center; color:#a8dfe7; }
+    .academy-home-copy .badge-home-note { margin:15px 0 0; color:#adcbd8; font-size:12px; line-height:1.5; }
+    @media (max-width:780px) { .badge-home-shield { width:min(100%,255px); } }
+    @media (prefers-reduced-motion:reduce) { .badge-home-shield { transition:none; } .badge-home-showcase:hover .badge-home-shield { transform:none; } }
+  </style>
   <script src="assets/js/script.js?v=46" defer></script>
 </head>
 <body>
@@ -30,7 +43,6 @@
         <a class="nav-link current" href="#home">Αρχική</a>
         <a class="nav-link" href="#workshops">Εργαστήρια</a>
         <a class="nav-link" href="#how-it-works">Πώς μαθαίνουμε</a>
-        <a class="nav-link" href="#quiz">Παιχνίδια</a>
         <a class="nav-link" href="badges/index.html">Κονκάρδες</a>
         <a class="btn btn-nav" href="#workshops">Εξερεύνησε <span aria-hidden="true">↗</span></a>
       </nav>
@@ -98,19 +110,19 @@
       </div>
     </section>
 
-    <section class="quiz-section section" id="quiz" aria-labelledby="quiz-title">
-      <div class="wrap academy-home">
+    <section class="quiz-section section" id="badges" aria-labelledby="badges-title">
+      <div class="wrap academy-home badge-home-layout">
         <div class="academy-home-copy">
-          <span class="section-label light-label">ΑΚΑΔΗΜΙΑ ΕΝΤΟΛΩΝ · LEGO WeDo 2.0</span>
-          <h2 id="quiz-title">Μαθαίνουμε τις <em>εντολές</em></h2>
-          <p>Αναγνώρισε τα πραγματικά τουβλάκια προγραμματισμού, εξερεύνησε τι κάνει το καθένα και δοκίμασε τις γνώσεις σου σε ένα γενικό quiz.</p>
-          <a class="btn btn-academy-home" href="games/wedo2-commands/index.html">Άνοιγμα Ακαδημίας Εντολών <span aria-hidden="true">↗</span></a>
+          <span class="section-label light-label">EVAGELAK EDU LAB · ΣΥΛΛΟΓΗ ΚΟΝΚΑΡΔΩΝ</span>
+          <h2 id="badges-title">Κάθε αποστολή, <em>μια κονκάρδα!</em></h2>
+          <p>Ολοκλήρωσε το quiz μιας κατασκευής και κέρδισε τη δική της συλλεκτική κονκάρδα, ανεξάρτητα από τη βαθμολογία σου. Κράτησέ τη στη συλλογή σου ή κατέβασέ τη ως εικόνα.</p>
+          <a class="btn btn-academy-home" href="badges/index.html">Δες τις κονκάρδες μου <span aria-hidden="true">↗</span></a>
+          <p class="badge-home-note">Χωρίς λογαριασμό — η συλλογή αποθηκεύεται σε αυτή τη συσκευή.</p>
         </div>
-        <div class="academy-home-points" aria-label="Τι περιλαμβάνει">
-          <div><strong>Οπτικός οδηγός</strong><span>Οι εντολές του WeDo 2.0 με τις πραγματικές εικόνες τους</span></div>
-          <div><strong>Δύο τρόποι εξάσκησης</strong><span>Γρήγορο quiz ή ολοκληρωμένη εξάσκηση</span></div>
-          <div><strong>Ανατροφοδότηση</strong><span>Επεξήγηση απαντήσεων και τελικό αποτέλεσμα</span></div>
-        </div>
+        <a class="badge-home-showcase" href="badges/index.html" aria-label="Εξερεύνησε τη συλλογή κονκαρδών, ξεκινώντας με τον Ρομποτικό T-Rex">
+          <span class="badge-home-shield"><img src="assets/images/badges/t-rex.webp" alt="Συλλεκτική κονκάρδα του Ρομποτικού T-Rex" width="600" height="600" loading="lazy"></span>
+          <span class="badge-home-caption">ΠΡΩΤΗ ΚΟΝΚΑΡΔΑ · T-REX</span>
+        </a>
       </div>
     </section>
   </main>
