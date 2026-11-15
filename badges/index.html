@@ -2,79 +2,123 @@
 <html lang="el">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f6fafc">
-<meta name="description" content="Η συλλογή κονκαρδών του EVAGELAK EDU LAB. Κέρδισε κονκάρδες ολοκληρώνοντας τα quiz ρομποτικής.">
-<title>Οι κονκάρδες μου | EVAGELAK EDU LAB</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09273c">
+<meta name="description" content="Το συλλεκτικό άλμπουμ κονκαρδών του EVAGELAK EDU LAB. Ολοκλήρωσε τα quiz ρομποτικής και ξεκλείδωσε τις κονκάρδες των κατασκευών σου.">
+<title>Συλλεκτικό Άλμπουμ | EVAGELAK EDU LAB</title>
 <link rel="icon" type="image/png" href="../assets/images/branding/evagelak-logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{font-family:"Nunito Sans",system-ui,-apple-system,sans-serif;color:#112b42;background:#f6fafc;font-synthesis:none}
-*{box-sizing:border-box}body{margin:0}a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid #00c7dc;outline-offset:4px}
-.shell{width:min(1040px,calc(100% - 38px));margin:auto}.topbar{border-bottom:1px solid #dae7ea;background:#fff}
-.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:83px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-size:16px;letter-spacing:.025em}
-.brand img{height:44px;width:44px;object-fit:contain}.brand span span{display:block;font-size:11px;letter-spacing:.1em;color:#078ca2}
-.back{font-size:13px;font-weight:800;text-decoration:none;border:1px solid #c7dce3;border-radius:10px;padding:10px 13px;color:#0b5872;background:#fff}
-.main{padding:48px 0 65px}.eyebrow{font-size:11px;font-weight:900;letter-spacing:.13em;color:#087f96;margin:0 0 12px}
-h1{font-size:clamp(27px,4vw,42px);letter-spacing:-.035em;margin:0 0 10px;line-height:1.15}h2{font-size:20px;letter-spacing:-.02em;margin:0 0 9px}
-.lead{line-height:1.7;color:#526a7a;font-size:15px;max-width:690px;margin:0 0 28px}
-.collection-count{font-size:12px;color:#4d6777;font-weight:800;display:inline-flex;gap:9px;align-items:center;border:1px solid #cce3e6;border-radius:30px;background:#eff8f9;padding:9px 13px;margin-bottom:24px}
-.collection-count::before{content:"";width:8px;height:8px;border-radius:50%;background:#08adc5}
-.badge-card{display:grid;grid-template-columns:minmax(0,330px) 1fr;gap:25px;align-items:center;padding:clamp(18px,3vw,32px);border:1px solid #d5e5ea;border-radius:22px;background:white;box-shadow:0 15px 36px rgba(13,52,73,.07)}
-.badge-visual{min-width:0;border-radius:18px;aspect-ratio:1;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at center,#0d2f46,#061827 68%,#071623)}
-.badge-visual img{width:100%;height:100%;object-fit:contain;display:block;transition:filter .3s ease,opacity .3s ease,transform .3s ease}
-.badge-visual.locked img{filter:grayscale(1);opacity:.29;transform:scale(.92)}
-.badge-visual::after{content:"";display:none}.badge-visual.locked::after{display:block;position:absolute}
-.badge-visual{position:relative}
-.lock-symbol{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(5,21,35,.8);border:1px solid #66869a;border-radius:50%;width:72px;height:72px;display:grid;place-items:center;color:white}
-.lock-symbol svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.earned .lock-symbol{display:none}
-.status{font-weight:900;font-size:12px;letter-spacing:.04em;color:#48647a;display:inline-flex;align-items:center;gap:7px;margin:0 0 8px}
-.earned .status{color:#09825e}.status .dot{height:8px;width:8px;border-radius:50%;background:#9badb7}.earned .status .dot{background:#08b77e}
-.title{font-size:26px;font-weight:900;margin:0 0 10px}.desc{color:#53697a;line-height:1.6;font-size:14px;max-width:500px;margin:0 0 18px}
-.actions{display:flex;flex-wrap:wrap;gap:10px}.action{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #087f95;border-radius:10px;padding:10px 16px;text-decoration:none;font-size:13px;font-weight:900;background:#087f95;color:white}
-.action.secondary{background:white;color:#08718a}.action{cursor:pointer;font-family:inherit}.action:focus-visible{outline:3px solid #00c7dc;outline-offset:4px}.action:hover{filter:brightness(.93)}.action[hidden]{display:none}
-.footnote{margin-top:25px;color:#5b7282;font-size:13px;line-height:1.65;padding:15px 19px;background:#eaf4f6;border:1px solid #d4e9ec;border-radius:13px}
-.future{margin:32px 0 0;padding:22px 24px;border-radius:16px;border:1px solid #d8e9ed;background:#fff}.future h2{font-size:18px;margin:0 0 7px}.future p{font-size:13px;color:#5c7080;margin:0 0 18px;line-height:1.65}
-.upcoming-list{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.upcoming-list li{min-width:0;background:#f5f9fa;border:1px solid #e1ebee;border-radius:12px;padding:13px;display:flex;gap:6px;flex-direction:column}
-.upcoming-list strong{font-size:13px;color:#304f62}.upcoming-list small{color:#77909b;font-size:11px;font-weight:750}
-.upcoming-list .pending-icon{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#e5eef1;color:#66808f;font-size:14px;margin-bottom:2px}
-.preview-dialog{border:1px solid #d8e9ee;border-radius:20px;box-shadow:0 28px 80px rgba(4,27,42,.3);padding:20px;background:#fff;color:#132f43;width:min(530px,calc(100vw - 32px));max-height:calc(100dvh - 34px);overflow:auto}
-.preview-dialog::backdrop{background:rgba(4,20,32,.73)}.preview-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:12px}.preview-head h2{font-size:19px;margin:0}.preview-close{border:1px solid #cfe1e7;background:#fff;border-radius:9px;font-size:24px;line-height:1;cursor:pointer;color:#2b5568;width:38px;height:38px}
-.preview-image{display:block;width:min(390px,100%);height:auto;aspect-ratio:1;object-fit:contain;margin:0 auto;border-radius:14px;background:radial-gradient(circle,#104362,#071d2b 75%)}.preview-note{font-size:12px;color:#6a7c88;text-align:center;line-height:1.5;margin:13px 0}.preview-actions{display:flex;justify-content:center}
-
-.footer{padding:23px 0;border-top:1px solid #d9e8eb;font-size:12px;color:#69808c;text-align:center}
-@media(max-width:750px){.upcoming-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:650px){.topbar-inner{min-height:72px}.brand{font-size:13px}.brand img{width:39px;height:39px}.back{font-size:12px;padding:9px}.main{padding:33px 0 50px}.badge-card{grid-template-columns:1fr}.badge-visual{width:min(100%,320px);margin:auto}.title{font-size:22px}.desc{margin-bottom:14px}.future{padding:17px}.upcoming-list{grid-template-columns:1fr}.upcoming-list li{flex-direction:row;align-items:center;flex-wrap:wrap;gap:8px}.upcoming-list .pending-icon{margin:0}.upcoming-list small{margin-left:auto}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important}}
+:root{color-scheme:light;font-family:'Nunito Sans',system-ui,-apple-system,sans-serif;--ink:#153247;--navy:#092739;--cyan:#00c6dc;--green:#a8ec30;--muted:#617786;--line:#d9e7eb;--paper:#f3f8fa;font-synthesis:none}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink)}button{font:inherit;cursor:pointer}a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid #08bfd1;outline-offset:4px}[hidden]{display:none!important}
+.shell{width:min(1130px,calc(100% - 40px));margin:auto}
+.topbar{background:#fff;border-bottom:1px solid #dce9ec}.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:78px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:900;letter-spacing:.028em;line-height:1.02}.brand img{width:47px;height:47px;object-fit:contain}.brand-name{font-size:16px}.brand-name small{display:block;font-size:11px;letter-spacing:.15em;color:#0a8c9f;margin-top:5px}.back{font-size:13px;font-weight:850;text-decoration:none;border:1px solid #c8e0e6;border-radius:10px;padding:10px 13px;background:#fff;color:#0b6079}.back:hover{background:#edf8fa}
+/* A quiet, premium album cover instead of a generic gallery title */
+.cover{margin:34px auto 0;position:relative;overflow:hidden;isolation:isolate;border:1px solid #20465b;border-radius:25px;color:#fff;background:radial-gradient(circle at 87% 42%,#12526b 0%,transparent 38%),linear-gradient(126deg,#0a2a3e 0%,#071e30 76%);box-shadow:0 17px 39px rgba(7,34,50,.13)}
+.cover:before{content:"";position:absolute;inset:13px;border:1px solid rgba(142,208,222,.19);border-radius:16px;pointer-events:none}
+.cover:after{content:"";position:absolute;inset:0;opacity:.2;pointer-events:none;background-image:radial-gradient(#55bdd3 .8px,transparent 1px);background-size:28px 28px;mask-image:linear-gradient(90deg,transparent 28%,black)}
+.cover-content{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(240px,.85fr);align-items:center;gap:32px;padding:clamp(34px,5vw,64px)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:#83ddeb;font-size:11px;letter-spacing:.16em;font-weight:900;margin:0 0 16px}.eyebrow:before{content:"";display:block;width:19px;height:2px;background:#a2e43d}
+.cover h1{font-size:clamp(33px,4.2vw,55px);letter-spacing:-.042em;line-height:1.09;margin:0 0 16px;font-weight:900}.cover h1 em{color:#a9ea39;font-style:normal}.cover-lead{color:#c3dbe5;line-height:1.8;font-size:15px;max-width:510px;margin:0 0 23px}.cover-note{display:inline-flex;align-items:center;gap:9px;color:#d0e4ea;font-weight:750;font-size:12px;letter-spacing:.02em}.cover-note:before{content:"";width:9px;height:9px;border-radius:50%;background:#a6ed40;box-shadow:0 0 0 4px rgba(166,237,64,.1)}
+.cover-emblem{min-height:255px;position:relative;display:grid;place-items:center}.cover-emblem:before{content:"";position:absolute;width:min(275px,88%);aspect-ratio:1;border:1px solid rgba(46,195,220,.37);border-radius:50%;box-shadow:0 0 0 23px rgba(0,186,217,.04),0 0 0 46px rgba(0,186,217,.025)}.cover-emblem:after{content:"";position:absolute;width:260px;aspect-ratio:1;border:2px dashed rgba(84,208,227,.19);border-radius:50%}.cover-shield{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;flex-direction:column;width:180px;height:205px;clip-path:polygon(50% 0%,94% 20%,94% 64%,50% 100%,6% 64%,6% 20%);background:linear-gradient(165deg,#a7bbca,#31526b 45%,#90aab9);padding:6px}.cover-shield-inner{display:flex;align-items:center;justify-content:center;flex-direction:column;width:100%;height:100%;clip-path:inherit;background:linear-gradient(165deg,#103c54,#092337)}.cover-shield-inner strong{font-size:56px;line-height:1;font-weight:900;letter-spacing:-.06em;color:#e8f4f6}.cover-shield-inner span{font-size:10px;font-weight:900;letter-spacing:.21em;color:#93dce6;margin-top:9px}
+/* Collecting progress only counts the already-available badge, not unreleased artwork */
+.progress-panel{background:#fff;border:1px solid #d7e7eb;border-radius:17px;padding:22px 27px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:18px;margin:20px 0 43px;box-shadow:0 8px 20px rgba(20,58,76,.035)}
+.progress-label{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin:0 0 11px;font-size:13px;font-weight:900}.progress-label span:last-child{color:#557181}.progress-track{height:9px;border-radius:30px;overflow:hidden;background:#e6eff1}.progress-bar{width:0;height:100%;border-radius:30px;background:linear-gradient(90deg,#078da2,#a1da38);transition:width .55s ease}.progress-stats{display:flex;align-items:center;gap:10px;padding-left:20px;border-left:1px solid #dfebef}.progress-stats strong{font-size:32px;line-height:1;color:#0a7990}.progress-stats span{font-size:12px;font-weight:850;color:#627a89;max-width:85px}
+.album-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:20px}.section-overline{display:block;font-size:11px;font-weight:900;letter-spacing:.15em;color:#0b869a;margin-bottom:7px}.album-head h2{font-size:clamp(23px,2.9vw,30px);letter-spacing:-.03em;margin:0 0 5px;font-weight:900}.album-head p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}.page-index{font-size:12px;letter-spacing:.1em;font-weight:900;color:#5d7888;white-space:nowrap}
+/* Binder sheet: one dedicated numbered slot per project */
+.album-sheet{background:#fff;border:1px solid #d7e7eb;border-radius:22px;position:relative;padding:31px 28px 28px 45px;box-shadow:0 16px 42px rgba(7,42,62,.055);margin-bottom:22px}
+.album-sheet:before{content:"";position:absolute;left:19px;top:0;bottom:0;width:1px;background:linear-gradient(transparent,#d4e4e8 10%,#d4e4e8 90%,transparent)}
+.binder-holes{position:absolute;left:10px;top:19%;bottom:19%;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none}.binder-holes i{display:block;width:18px;height:18px;border-radius:50%;background:#dfeaed;border:3px solid #f5f9fa;box-shadow:inset 0 1px 4px rgba(18,55,78,.19),0 0 0 1px #cfdee3}
+.album-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.slot{min-width:0;min-height:330px;display:flex;flex-direction:column;border:1px solid #d8e7ea;border-radius:17px;background:linear-gradient(170deg,#f5fbfc,#edf5f7);padding:13px;position:relative;overflow:hidden;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}.slot:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(16,70,92,.09);border-color:#a9d8df}
+.slot-num{font-weight:900;color:#6a8795;font-size:11px;letter-spacing:.12em;line-height:1.3}.slot-state{font-size:9px;font-weight:900;letter-spacing:.055em;color:#6d8795;text-transform:uppercase}.slot-top{display:flex;align-items:center;justify-content:space-between;gap:5px;margin:0 0 9px}.slot-art{display:grid;place-items:center;min-height:175px;flex:1;position:relative;border:1px solid rgba(42,104,133,.12);border-radius:12px;background:radial-gradient(circle at 50% 42%,#164c69,#09273a 75%);overflow:hidden}.slot-art img{display:block;width:100%;height:178px;object-fit:contain;transition:filter .4s,opacity .4s,transform .4s}.slot-art.locked img{filter:grayscale(1) brightness(.75);opacity:.28;transform:scale(.89)}
+.slot-art .lock-symbol{position:absolute;z-index:2;display:grid;place-items:center;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;background:rgba(5,24,35,.83);border:1px solid #7f9eaa;border-radius:50%;color:#eff8fb}.lock-symbol svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}.earned .lock-symbol{display:none}.earned .slot-art img{filter:none;opacity:1;transform:none}.earned .slot-state{color:#087d60}.earned .slot-art{border-color:#33aebd;box-shadow:inset 0 0 0 1px rgba(72,211,224,.25)}
+.slot-placeholder{background:radial-gradient(circle at center,#e5eff2,#d8e6eb);border-style:dashed;border-color:#c0d4db}.placeholder-shield{display:block;width:min(108px,76%);height:133px;color:#91aeba;opacity:.72}.placeholder-shield path:first-child{fill:#bbced5;stroke:#91adb8;stroke-width:2}.placeholder-shield path:nth-child(2){fill:#dce8ec;stroke:#a7c0c9;stroke-width:1.5}.placeholder-shield path:nth-child(3){fill:none;stroke:#9bb5c0;stroke-width:2;stroke-dasharray:4 6}
+.slot-name{font-size:14px;font-weight:900;line-height:1.35;margin:13px 0 5px;min-height:38px;letter-spacing:-.01em}.slot-help{font-size:11px;line-height:1.5;color:#607b8a;margin:0 0 11px;min-height:33px}.slot .status{font-size:11px;color:#617987;margin:0 0 8px;font-weight:900}.slot .status .dot{display:inline-block;width:7px;height:7px;background:#99acb6;border-radius:50%;margin-right:5px}.earned .status{color:#0b8067}.earned .status .dot{background:#11a781}
+.slot-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}.action{min-height:38px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #087e93;border-radius:9px;padding:7px 10px;text-decoration:none;background:#087e93;color:#fff;font-size:11px;font-weight:900;text-align:center;cursor:pointer}.action:hover{background:#056878;color:#fff}.action.secondary{background:#fff;color:#076f85}.action.secondary:hover{background:#e2f2f4;color:#075f72}.action[hidden]{display:none!important}.action:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.album-note{font-size:12px;color:#627b89;line-height:1.65;margin:0}.legend{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.legend span{font-size:11px;font-weight:800;color:#5a7786}.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;background:#12a57b;margin-right:5px}.legend .soon i{background:#abbec7}
+.info{margin:26px 0 40px;display:grid;grid-template-columns:1fr 1fr;gap:13px}.info-card{background:#fff;border:1px solid #dce8ec;border-radius:14px;padding:19px 21px}.info-card h3{font-size:15px;font-weight:900;margin:0 0 7px}.info-card p{font-size:12px;line-height:1.75;color:#587182;margin:0}.info-card a{color:#08768e;font-weight:900}
+.footer{border-top:1px solid #dce8eb;background:#fff;color:#68818e;text-align:center;font-size:12px;padding:23px 16px}
+.preview-dialog{border:1px solid #d3e5eb;border-radius:20px;box-shadow:0 28px 80px rgba(4,27,42,.3);padding:21px;background:#fff;color:#132f43;width:min(530px,calc(100vw - 28px));max-height:calc(100dvh - 28px);overflow:auto}.preview-dialog::backdrop{background:rgba(4,20,32,.77)}.preview-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:12px}.preview-head h2{font-size:19px;font-weight:900;margin:0}.preview-close{background:#fff;color:#2b5568;border:1px solid #cfe1e7;border-radius:9px;width:39px;height:39px;font-size:24px;line-height:1}.preview-image{display:block;width:min(385px,100%);aspect-ratio:1;object-fit:contain;height:auto;margin:0 auto;border-radius:13px;background:radial-gradient(circle,#11415c,#071b2b 77%)}.preview-note{text-align:center;color:#617989;font-size:12px;line-height:1.6;margin:13px 0 17px}.preview-actions{display:flex;justify-content:center;gap:8px}
+@media(max-width:980px){.album-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.cover-content{gap:18px}}
+@media(max-width:720px){.shell{width:min(100% - 28px,1130px)}.cover-content{grid-template-columns:1fr;padding:31px 25px}.cover-emblem{min-height:150px}.cover-shield{width:125px;height:147px}.cover-shield-inner strong{font-size:40px}.cover-emblem:before{width:185px}.cover-emblem:after{width:170px}.progress-panel{padding:18px}.album-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.album-sheet{padding:22px 15px 22px 33px}.binder-holes{left:7px}.binder-holes i{width:14px;height:14px}.album-sheet:before{left:14px}.info{grid-template-columns:1fr}.album-head{align-items:start}}
+@media(max-width:470px){.brand img{width:40px;height:40px}.brand-name{font-size:13px}.brand-name small{font-size:10px}.back{font-size:11px;padding:8px}.cover{margin-top:18px}.cover-content{padding:25px 22px 22px}.cover h1{font-size:35px}.cover-lead{font-size:13px;margin-bottom:10px}.progress-panel{grid-template-columns:1fr;gap:12px;margin:14px 0 30px}.progress-stats{padding:10px 0 0;border-left:0;border-top:1px solid #e6eff1}.progress-stats strong{font-size:26px}.progress-stats span{max-width:100%}.album-head{flex-direction:column;gap:7px}.album-sheet{padding:18px 9px 17px 25px}.binder-holes{left:4px}.album-sheet:before{left:12px}.album-grid{gap:8px}.slot{padding:9px;border-radius:12px;min-height:291px}.slot-art{min-height:136px;border-radius:9px}.slot-art img{height:140px}.slot-name{font-size:12px;min-height:34px;margin:10px 0 3px}.slot-help{font-size:10px;min-height:26px;margin-bottom:8px}.slot-num{font-size:10px}.slot-state{font-size:8px}.action{font-size:10px;min-height:35px;padding:6px 8px}.placeholder-shield{width:min(88px,75%);height:114px}.legend{gap:9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 </style>
 <script src="../assets/js/badges.js?v=63" defer></script>
-<script defer src="gallery.js?v=64"></script>
+<script src="gallery.js?v=68.1" defer></script>
 </head>
 <body>
-<header class="topbar"><div class="shell topbar-inner"><a class="brand" href="../index.html"><img src="../assets/images/branding/evagelak-logo.png" alt=""><span>EVAGELAK<span>EDU LAB</span></span></a><a class="back" href="../index.html#workshops">← Εργαστήρια</a></div></header>
-<main class="main shell">
-<p class="eyebrow">EVAGELAK EDU LAB · ΕΠΙΒΡΑΒΕΥΣΗ</p>
-<h1>Οι κονκάρδες μου</h1>
-<p class="lead">Κάθε ολοκληρωμένο quiz είναι μια νέα αποστολή! Κέρδισε μια κονκάρδα για κάθε κατασκευή και δημιούργησε τη δική σου συλλογή.</p>
-<div id="collection-count" class="collection-count" role="status" aria-live="polite">0 / 1 διαθέσιμη κονκάρδα</div>
-<article id="trex-card" class="badge-card" aria-labelledby="trex-title">
-  <div id="trex-visual" class="badge-visual locked"><img src="../assets/images/badges/t-rex.webp" width="600" height="600" alt="Συλλεκτική κονκάρδα T-Rex EDULAB με το πραγματικό μοντέλο LEGO WeDo 2.0" loading="eager"><span class="lock-symbol" aria-label="Κλειδωμένη κονκάρδα"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span></div>
-  <div class="badge-copy"><p class="status"><span class="dot" aria-hidden="true"></span><span id="trex-status">ΚΛΕΙΔΩΜΕΝΗ</span></p><h2 id="trex-title" class="title">T-Rex</h2><p id="trex-description" class="desc">Ολοκλήρωσε και τις 10 ερωτήσεις του quiz του T-Rex — δεν χρειάζεται να έχεις όλες τις απαντήσεις σωστές.</p><div class="actions"><a id="trex-download" class="action" href="../assets/images/badges/t-rex.png" download="EVAGELAK-EDULAB-T-REX.png" hidden>Κατέβασε την κονκάρδα ↓</a><button id="trex-view" class="action secondary" type="button" hidden>Προβολή κονκάρδας</button><a id="trex-quiz-link" class="action secondary" href="../workshops/2026-2027/07-robotic-t-rex/quiz.html">Παίξε το quiz ↗</a></div></div>
+<header class="topbar"><div class="shell topbar-inner"><a class="brand" href="../index.html"><img src="../assets/images/branding/evagelak-logo.png" alt=""><span class="brand-name">EVAGELAK<small>EDU LAB</small></span></a><a class="back" href="../index.html">← Αρχική</a></div></header>
+<main class="shell" id="main">
+<section class="cover" aria-labelledby="album-title"><div class="cover-content"><div>
+<p class="eyebrow">EVAGELAK EDU LAB · ΣΥΛΛΟΓΗ 2026–2027</p>
+<h1 id="album-title">Το συλλεκτικό <em>άλμπουμ μου</em></h1>
+<p class="cover-lead">Κάθε κατασκευή είναι μια νέα αποστολή. Ολοκλήρωσε το quiz της, ξεκλείδωσε την κονκάρδα της και γέμισε σιγά σιγά το άλμπουμ σου!</p>
+<span class="cover-note">Χωρίς εγγραφή · Χωρίς βαθμολογικό όριο</span>
+</div><div class="cover-emblem" aria-hidden="true"><div class="cover-shield"><div class="cover-shield-inner"><strong id="album-project-count">07</strong><span>ΑΠΟΣΤΟΛΕΣ</span></div></div></div></div></section>
+<section class="progress-panel" aria-label="Η πρόοδός μου">
+<div><div class="progress-label"><strong>Η πρόοδός μου</strong><span id="collection-count" role="status" aria-live="polite">0 / 1 διαθέσιμη κονκάρδα</span></div><div class="progress-track" id="album-progress-track" role="progressbar" aria-label="Συλλογή διαθέσιμων κονκαρδών" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0"><div class="progress-bar" id="album-progress"></div></div></div>
+<div class="progress-stats"><strong id="album-earned">0</strong><span>κερδισμένες κονκάρδες</span></div>
+</section>
+<section aria-labelledby="collection-title"><div class="album-head"><div><span class="section-overline">Η ΣΥΛΛΟΓΗ ΜΟΥ</span><h2 id="collection-title">Οι κονκάρδες των εργαστηρίων</h2><p>Κάθε νέο εργαστήριο αποκτά αυτόματα θέση στο άλμπουμ. Οι κονκάρδες ενεργοποιούνται όταν ολοκληρώνεται ο σχεδιασμός τους.</p></div><span class="page-index"><span id="album-slot-count">07</span> ΘΕΣΕΙΣ</span></div>
+<div class="album-sheet"><div class="binder-holes" aria-hidden="true"><i></i><i></i><i></i></div><div class="album-grid" id="album-grid">
+<article id="trex-card" class="slot" data-project-id="trex" aria-labelledby="trex-title">
+<div class="slot-top"><span class="slot-num">01 / 07</span><span id="trex-state-label" class="slot-state">ΚΛΕΙΔΩΜΕΝΗ</span></div>
+<div id="trex-visual" class="slot-art locked"><img src="../assets/images/badges/t-rex.webp" width="600" height="600" alt="Επίσημη κονκάρδα T-Rex του EVAGELAK EDU LAB" loading="eager"><span class="lock-symbol" aria-label="Κλειδωμένη κονκάρδα"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span></div>
+<h3 id="trex-title" class="slot-name">Ρομποτικός T-Rex</h3><p id="trex-description" class="slot-help">Ολοκλήρωσε το quiz του T-Rex για να την κερδίσεις.</p>
+<p class="status"><span class="dot" aria-hidden="true"></span><span id="trex-status">ΚΛΕΙΔΩΜΕΝΗ</span></p>
+<div class="slot-actions"><a id="trex-quiz-link" class="action" href="../workshops/2026-2027/07-robotic-t-rex/quiz.html">Παίξε το quiz ↗</a><button id="trex-view" class="action secondary" type="button" hidden>Προβολή</button><a id="trex-download" class="action secondary" href="../assets/images/badges/t-rex.png" download="EVAGELAK-EDULAB-T-REX.png" hidden>Λήψη PNG ↓</a></div>
 </article>
-<section class="future" aria-labelledby="future-title"><h2 id="future-title">Οι επόμενες κονκάρδες</h2><p>Η συλλογή θα μεγαλώνει με νέες, ξεχωριστά σχεδιασμένες κονκάρδες. Οι παρακάτω δεν είναι ακόμη διαθέσιμες.</p>
-<ul class="upcoming-list">
-<li><span class="pending-icon" aria-hidden="true">○</span><strong>Ρομποτικό Χταπόδι</strong><small>Σε προετοιμασία</small></li>
-<li><span class="pending-icon" aria-hidden="true">○</span><strong>Ρομποτικός Σκορπιός</strong><small>Σε προετοιμασία</small></li>
-<li><span class="pending-icon" aria-hidden="true">○</span><strong>Ρομποτικός Στόχος Frisbee</strong><small>Σε προετοιμασία</small></li>
-<li><span class="pending-icon" aria-hidden="true">○</span><strong>Ρομποτική Μπασκέτα</strong><small>Σε προετοιμασία</small></li>
-<li><span class="pending-icon" aria-hidden="true">○</span><strong>Jet Fighter</strong><small>Σε προετοιμασία</small></li>
-<li><span class="pending-icon" aria-hidden="true">○</span><strong>Ρομποτικό Rally</strong><small>Σε προετοιμασία</small></li>
-</ul></section>
-<dialog id="trex-preview" class="preview-dialog" aria-labelledby="preview-title"><div class="preview-head"><h2 id="preview-title">Κονκάρδα T-Rex</h2><button id="preview-close" class="preview-close" type="button" aria-label="Κλείσιμο προεπισκόπησης">×</button></div><img class="preview-image" src="../assets/images/badges/t-rex.webp" width="600" height="600" alt="Κονκάρδα T-Rex EDULAB"><p class="preview-note">Η εικόνα αποθηκεύεται σε PNG με διαφανές εξωτερικό φόντο.</p><div class="preview-actions"><a class="action" href="../assets/images/badges/t-rex.png" download="EVAGELAK-EDULAB-T-REX.png">Κατέβασε την κονκάρδα ↓</a></div></dialog>
-<p class="footnote">Η συλλογή αποθηκεύεται μόνο σε αυτή τη συσκευή και σε αυτόν τον περιηγητή, χωρίς λογαριασμό. Αν αλλάξεις συσκευή ή διαγράψεις τα δεδομένα περιήγησης, η πρόοδός σου ενδέχεται να χαθεί.</p>
-</main><footer class="footer">EVAGELAK EDU LAB · Μαθαίνουμε. Δημιουργούμε. Προγραμματίζουμε.</footer>
+<article class="slot slot-coming" data-project-id="octopus" aria-label="Ρομποτικό Χταπόδι — σε προετοιμασία">
+<div class="slot-top"><span class="slot-num">02 / 07</span><span class="slot-state">ΣΥΝΤΟΜΑ</span></div>
+<div class="slot-art slot-placeholder"><svg class="placeholder-shield" aria-hidden="true" viewBox="0 0 128 154"><path d="M64 5 115 26 111 96 64 148 17 96 13 26Z"></path><path d="M64 15 105 32 102 93 64 136 26 93 23 32Z"></path><path d="M37 64h54m-27-26v52"></path></svg></div>
+<h3 class="slot-name">Ρομποτικό Χταπόδι</h3>
+<p class="slot-help">Μαθαίνουμε με κίνηση και χρώμα</p><p class="status"><span class="dot" aria-hidden="true"></span>Σε προετοιμασία</p>
+</article>
+<article class="slot slot-coming" data-project-id="frisbee" aria-label="Ρομποτικός Στόχος Frisbee — σε προετοιμασία">
+<div class="slot-top"><span class="slot-num">03 / 07</span><span class="slot-state">ΣΥΝΤΟΜΑ</span></div>
+<div class="slot-art slot-placeholder"><svg class="placeholder-shield" aria-hidden="true" viewBox="0 0 128 154"><path d="M64 5 115 26 111 96 64 148 17 96 13 26Z"></path><path d="M64 15 105 32 102 93 64 136 26 93 23 32Z"></path><path d="M37 64h54m-27-26v52"></path></svg></div>
+<h3 class="slot-name">Ρομποτικός Στόχος Frisbee</h3>
+<p class="slot-help">Η πρόκληση της στόχευσης</p><p class="status"><span class="dot" aria-hidden="true"></span>Σε προετοιμασία</p>
+</article>
+<article class="slot slot-coming" data-project-id="basket" aria-label="Ρομποτική Μπασκέτα — σε προετοιμασία">
+<div class="slot-top"><span class="slot-num">04 / 07</span><span class="slot-state">ΣΥΝΤΟΜΑ</span></div>
+<div class="slot-art slot-placeholder"><svg class="placeholder-shield" aria-hidden="true" viewBox="0 0 128 154"><path d="M64 5 115 26 111 96 64 148 17 96 13 26Z"></path><path d="M64 15 105 32 102 93 64 136 26 93 23 32Z"></path><path d="M37 64h54m-27-26v52"></path></svg></div>
+<h3 class="slot-name">Ρομποτική Μπασκέτα</h3>
+<p class="slot-help">Ένα παιχνίδι με προγραμματισμό</p><p class="status"><span class="dot" aria-hidden="true"></span>Σε προετοιμασία</p>
+</article>
+<article class="slot slot-coming" data-project-id="scorpion" aria-label="Ρομποτικός Σκορπιός — σε προετοιμασία">
+<div class="slot-top"><span class="slot-num">05 / 07</span><span class="slot-state">ΣΥΝΤΟΜΑ</span></div>
+<div class="slot-art slot-placeholder"><svg class="placeholder-shield" aria-hidden="true" viewBox="0 0 128 154"><path d="M64 5 115 26 111 96 64 148 17 96 13 26Z"></path><path d="M64 15 105 32 102 93 64 136 26 93 23 32Z"></path><path d="M37 64h54m-27-26v52"></path></svg></div>
+<h3 class="slot-name">Ρομποτικός Σκορπιός</h3>
+<p class="slot-help">Μια αποστολή στη φύση</p><p class="status"><span class="dot" aria-hidden="true"></span>Σε προετοιμασία</p>
+</article>
+<article class="slot slot-coming" data-project-id="jetfighter" aria-label="Jet Fighter — σε προετοιμασία">
+<div class="slot-top"><span class="slot-num">06 / 07</span><span class="slot-state">ΣΥΝΤΟΜΑ</span></div>
+<div class="slot-art slot-placeholder"><svg class="placeholder-shield" aria-hidden="true" viewBox="0 0 128 154"><path d="M64 5 115 26 111 96 64 148 17 96 13 26Z"></path><path d="M64 15 105 32 102 93 64 136 26 93 23 32Z"></path><path d="M37 64h54m-27-26v52"></path></svg></div>
+<h3 class="slot-name">Jet Fighter</h3>
+<p class="slot-help">Μια αποστολή στον αέρα</p><p class="status"><span class="dot" aria-hidden="true"></span>Σε προετοιμασία</p>
+</article>
+<article class="slot slot-coming" data-project-id="rally" aria-label="Ρομποτικό Rally — σε προετοιμασία">
+<div class="slot-top"><span class="slot-num">07 / 07</span><span class="slot-state">ΣΥΝΤΟΜΑ</span></div>
+<div class="slot-art slot-placeholder"><svg class="placeholder-shield" aria-hidden="true" viewBox="0 0 128 154"><path d="M64 5 115 26 111 96 64 148 17 96 13 26Z"></path><path d="M64 15 105 32 102 93 64 136 26 93 23 32Z"></path><path d="M37 64h54m-27-26v52"></path></svg></div>
+<h3 class="slot-name">Ρομποτικό Rally</h3>
+<p class="slot-help">Κίνηση και οδήγηση</p><p class="status"><span class="dot" aria-hidden="true"></span>Σε προετοιμασία</p>
+</article>
+</div></div>
+<div class="legend" aria-label="Επεξήγηση καταστάσεων"><span><i></i>Κερδισμένη κονκάρδα</span><span class="soon"><i></i>Σε προετοιμασία</span></div>
+</section>
+<section class="info" aria-label="Οδηγίες και πληροφορίες">
+<div class="info-card"><h3>Πώς κερδίζω κονκάρδες;</h3><p>Ολοκλήρωσε όλες τις ερωτήσεις του quiz μιας κατασκευής. Δεν χρειάζεται να τις απαντήσεις όλες σωστά. Μόλις τελειώσεις, η διαθέσιμη κονκάρδα ξεκλειδώνει και μπορείς να την κατεβάσεις.</p></div>
+<div class="info-card"><h3>Πού αποθηκεύεται η συλλογή μου;</h3><p>Μόνο στον περιηγητή αυτής της συσκευής, χωρίς λογαριασμό και χωρίς προσωπικά στοιχεία. Αν αλλάξεις συσκευή ή διαγράψεις τα δεδομένα περιήγησης, η πρόοδός σου μπορεί να χαθεί. Κατέβασε τις κονκάρδες που κερδίζεις για να τις κρατήσεις.</p></div>
+</section>
+<dialog id="trex-preview" class="preview-dialog" aria-labelledby="preview-title">
+<div class="preview-head"><h2 id="preview-title">Η κονκάρδα μου · T-Rex</h2><button id="preview-close" class="preview-close" type="button" aria-label="Κλείσιμο προεπισκόπησης">×</button></div>
+<img class="preview-image" src="../assets/images/badges/t-rex.webp" width="600" height="600" alt="Ξεκλειδωμένη κονκάρδα Ρομποτικού T-Rex">
+<p class="preview-note">Κατέβασε την κονκάρδα σε PNG με διαφανές εξωτερικό φόντο.</p>
+<div class="preview-actions"><a class="action" href="../assets/images/badges/t-rex.png" download="EVAGELAK-EDULAB-T-REX.png">Κατέβασε την κονκάρδα ↓</a></div></dialog>
+</main>
+<footer class="footer">EVAGELAK EDU LAB · Μαθαίνουμε. Δημιουργούμε. Προγραμματίζουμε.</footer>
 </body></html>
