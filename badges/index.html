@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6fafc">
+<meta name="description" content="Η συλλογή κονκαρδών του EVAGELAK EDU LAB. Κέρδισε κονκάρδες ολοκληρώνοντας τα quiz ρομποτικής.">
+<title>Οι κονκάρδες μου | EVAGELAK EDU LAB</title>
+<link rel="icon" type="image/png" href="../assets/images/branding/evagelak-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{font-family:"Nunito Sans",system-ui,-apple-system,sans-serif;color:#112b42;background:#f6fafc;font-synthesis:none}
+*{box-sizing:border-box}body{margin:0}a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid #00c7dc;outline-offset:4px}
+.shell{width:min(1040px,calc(100% - 38px));margin:auto}.topbar{border-bottom:1px solid #dae7ea;background:#fff}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:83px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-size:16px;letter-spacing:.025em}
+.brand img{height:44px;width:44px;object-fit:contain}.brand span span{display:block;font-size:11px;letter-spacing:.1em;color:#078ca2}
+.back{font-size:13px;font-weight:800;text-decoration:none;border:1px solid #c7dce3;border-radius:10px;padding:10px 13px;color:#0b5872;background:#fff}
+.main{padding:48px 0 65px}.eyebrow{font-size:11px;font-weight:900;letter-spacing:.13em;color:#087f96;margin:0 0 12px}
+h1{font-size:clamp(27px,4vw,42px);letter-spacing:-.035em;margin:0 0 10px;line-height:1.15}h2{font-size:20px;letter-spacing:-.02em;margin:0 0 9px}
+.lead{line-height:1.7;color:#526a7a;font-size:15px;max-width:690px;margin:0 0 28px}
+.collection-count{font-size:12px;color:#4d6777;font-weight:800;display:inline-flex;gap:9px;align-items:center;border:1px solid #cce3e6;border-radius:30px;background:#eff8f9;padding:9px 13px;margin-bottom:24px}
+.collection-count::before{content:"";width:8px;height:8px;border-radius:50%;background:#08adc5}
+.badge-card{display:grid;grid-template-columns:minmax(0,330px) 1fr;gap:25px;align-items:center;padding:clamp(18px,3vw,32px);border:1px solid #d5e5ea;border-radius:22px;background:white;box-shadow:0 15px 36px rgba(13,52,73,.07)}
+.badge-visual{min-width:0;border-radius:18px;aspect-ratio:1;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at center,#0d2f46,#061827 68%,#071623)}
+.badge-visual img{width:100%;height:100%;object-fit:contain;display:block;transition:filter .3s ease,opacity .3s ease,transform .3s ease}
+.badge-visual.locked img{filter:grayscale(1);opacity:.29;transform:scale(.92)}
+.badge-visual::after{content:"";display:none}.badge-visual.locked::after{display:block;position:absolute}
+.badge-visual{position:relative}
+.lock-symbol{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(5,21,35,.8);border:1px solid #66869a;border-radius:50%;width:72px;height:72px;display:grid;place-items:center;color:white}
+.lock-symbol svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.earned .lock-symbol{display:none}
+.status{font-weight:900;font-size:12px;letter-spacing:.04em;color:#48647a;display:inline-flex;align-items:center;gap:7px;margin:0 0 8px}
+.earned .status{color:#09825e}.status .dot{height:8px;width:8px;border-radius:50%;background:#9badb7}.earned .status .dot{background:#08b77e}
+.title{font-size:26px;font-weight:900;margin:0 0 10px}.desc{color:#53697a;line-height:1.6;font-size:14px;max-width:500px;margin:0 0 18px}
+.actions{display:flex;flex-wrap:wrap;gap:10px}.action{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #087f95;border-radius:10px;padding:10px 16px;text-decoration:none;font-size:13px;font-weight:900;background:#087f95;color:white}
+.action.secondary{background:white;color:#08718a}.action:hover{filter:brightness(.93)}.action[hidden]{display:none}
+.footnote{margin-top:25px;color:#5b7282;font-size:13px;line-height:1.65;padding:15px 19px;background:#eaf4f6;border:1px solid #d4e9ec;border-radius:13px}
+.future{margin:32px 0 0;padding:22px 24px;border-radius:16px;border:1px dashed #c5dce3;background:#fff}.future h2{font-size:17px;margin:0 0 6px}.future p{font-size:13px;color:#5c7080;margin:0;line-height:1.65}
+.footer{padding:23px 0;border-top:1px solid #d9e8eb;font-size:12px;color:#69808c;text-align:center}
+@media(max-width:650px){.topbar-inner{min-height:72px}.brand{font-size:13px}.brand img{width:39px;height:39px}.back{font-size:12px;padding:9px}.main{padding:33px 0 50px}.badge-card{grid-template-columns:1fr}.badge-visual{width:min(100%,320px);margin:auto}.title{font-size:22px}.desc{margin-bottom:14px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important}}
+</style>
+<script src="../assets/js/badges.js?v=63" defer></script>
+<script defer src="gallery.js?v=63"></script>
+</head>
+<body>
+<header class="topbar"><div class="shell topbar-inner"><a class="brand" href="../index.html"><img src="../assets/images/branding/evagelak-logo.png" alt=""><span>EVAGELAK<span>EDU LAB</span></span></a><a class="back" href="../index.html#workshops">← Εργαστήρια</a></div></header>
+<main class="main shell">
+<p class="eyebrow">EVAGELAK EDU LAB · ΕΠΙΒΡΑΒΕΥΣΗ</p>
+<h1>Οι κονκάρδες μου</h1>
+<p class="lead">Κάθε ολοκληρωμένο quiz είναι μια νέα αποστολή! Κέρδισε μια κονκάρδα για κάθε κατασκευή και δημιούργησε τη δική σου συλλογή.</p>
+<div id="collection-count" class="collection-count" role="status" aria-live="polite">0 / 1 κονκάρδα</div>
+<article id="trex-card" class="badge-card" aria-labelledby="trex-title">
+  <div id="trex-visual" class="badge-visual locked"><img src="../assets/images/badges/t-rex.webp" width="600" height="600" alt="Συλλεκτική κονκάρδα T-Rex EDULAB με το πραγματικό μοντέλο LEGO WeDo 2.0" loading="eager"><span class="lock-symbol" aria-label="Κλειδωμένη κονκάρδα"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span></div>
+  <div class="badge-copy"><p class="status"><span class="dot" aria-hidden="true"></span><span id="trex-status">ΚΛΕΙΔΩΜΕΝΗ</span></p><h2 id="trex-title" class="title">T-Rex</h2><p id="trex-description" class="desc">Ολοκλήρωσε και τις 10 ερωτήσεις του quiz του T-Rex — δεν χρειάζεται να έχεις όλες τις απαντήσεις σωστές.</p><div class="actions"><a id="trex-quiz-link" class="action" href="../workshops/2026-2027/07-robotic-t-rex/quiz.html">Παίξε το quiz ↗</a><a id="trex-download" class="action secondary" href="../assets/images/badges/t-rex.webp" download="EVAGELAK-EDULAB-T-REX.webp" hidden>Αποθήκευσε την κονκάρδα ↓</a></div></div>
+</article>
+<div class="future"><h2>Η συλλογή μεγαλώνει</h2><p>Οι κονκάρδες των υπόλοιπων κατασκευών θα προστεθούν μόλις ολοκληρωθεί ο σχεδιασμός τους.</p></div>
+<p class="footnote">Η συλλογή αποθηκεύεται μόνο σε αυτή τη συσκευή και σε αυτόν τον περιηγητή, χωρίς λογαριασμό. Αν αλλάξεις συσκευή ή διαγράψεις τα δεδομένα περιήγησης, η πρόοδός σου ενδέχεται να χαθεί.</p>
+</main><footer class="footer">EVAGELAK EDU LAB · Μαθαίνουμε. Δημιουργούμε. Προγραμματίζουμε.</footer>
+</body></html>
