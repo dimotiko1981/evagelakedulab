@@ -22,7 +22,6 @@
     .album-home-book { display:block; width:clamp(208px,25vw,292px); max-width:100%; flex:none; transform-origin:50% 70%; animation:album-book-float 7.4s ease-in-out infinite; filter:drop-shadow(0 20px 19px rgba(0,8,19,.34)); transition:filter .35s ease; }
     .album-home-book img { display:block; width:100%; height:auto; aspect-ratio:1122/1402; object-fit:contain; animation:album-book-appear .95s ease-out both; }
     .album-home-showcase:hover .album-home-book { filter:drop-shadow(0 26px 22px rgba(0,8,19,.46)); }
-    .album-home-showcase:focus-visible { outline:3px solid #83dfed; outline-offset:6px; border-radius:13px; }
     .album-home-caption { display:block; font-size:11px; font-weight:900; letter-spacing:.09em; line-height:1.45; color:#a8dfe7; text-align:center; }
     .academy-home-copy .card-home-note { margin:15px 0 0; color:#adcbd8; font-size:12px; line-height:1.55; }
     @keyframes album-book-float {
@@ -51,7 +50,7 @@
         <a class="nav-link current" href="#home">Αρχική</a>
         <a class="nav-link" href="#workshops">Εργαστήρια</a>
         <a class="nav-link" href="#how-it-works">Πώς μαθαίνουμε</a>
-        <a class="nav-link" href="badges/index.html">Συλλεκτικό άλμπουμ</a>
+        <a class="nav-link" href="#badges">Συλλεκτικό άλμπουμ</a>
         <a class="btn btn-nav" href="#workshops">Εξερεύνησε <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
@@ -127,10 +126,10 @@
           <a class="btn btn-academy-home" href="badges/index.html">Άνοιξε το συλλεκτικό άλμπουμ <span aria-hidden="true">↗</span></a>
           <p class="card-home-note">Χωρίς λογαριασμό · Η πρόοδός σου αποθηκεύεται σε αυτή τη συσκευή.</p>
         </div>
-        <a class="album-home-showcase" href="badges/index.html" aria-label="Άνοιξε το συλλεκτικό άλμπουμ EVAGELAK EDU LAB">
+        <div class="album-home-showcase">
           <span class="album-home-book"><img src="assets/images/branding/collectible-album-cover.webp" width="1122" height="1402" alt="Εξώφυλλο Συλλεκτικού Άλμπουμ Καρτών EVAGELAK EDU LAB, Εργαστήρια Ρομποτικής 2026–2027" loading="lazy" decoding="async"></span>
           <span class="album-home-caption">ΑΝΑΚΑΛΥΨΕ · ΚΕΡΔΙΣΕ · ΣΥΛΛΕΞΕ</span>
-        </a>
+        </div>
       </div>
     </section>
 
