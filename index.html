@@ -16,29 +16,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css?v=60">
   <style>
-    /* v75 — Closed collectible album teaser. No card artworks on the homepage. */
+    /* v77 — real, approved album cover. No collectible cards disclosed on homepage. */
     .card-home-layout { align-items:center; }
-    .album-home-showcase { display:flex; min-width:0; flex-direction:column; align-items:center; justify-content:center; gap:12px; text-decoration:none; color:#dceef3; }
-    .album-home-book { position:relative; display:block; width:min(100%,267px); aspect-ratio:0.81; padding:0 0 0 13px; transform:perspective(900px) rotateY(-8deg); filter:drop-shadow(9px 17px 14px rgba(0,9,20,.27)); transition:transform .3s ease,filter .3s ease; }
-    .album-home-showcase:hover .album-home-book { transform:perspective(900px) rotateY(-3deg) translateY(-4px); filter:drop-shadow(12px 20px 16px rgba(0,9,20,.32)); }
-    .album-home-book::after { content:""; position:absolute; top:10px; bottom:8px; right:-6px; width:10px; border-radius:0 6px 8px 0; background:repeating-linear-gradient(90deg,#bacad2 0px,#f3f9fa 2px,#97b4be 4px); box-shadow:inset -3px 0 3px rgba(5,30,43,.3); }
-    .album-home-spine { position:absolute; z-index:2; top:0; bottom:0; left:0; width:23px; border-radius:10px 0 0 10px; background:linear-gradient(90deg,#051b2c,#1b506b 25%,#0b2f48 76%,#204c62); border:1px solid rgba(109,205,221,.4); box-shadow:inset -5px 0 7px rgba(0,0,0,.35); }
-    .album-home-spine::before { content:""; position:absolute; left:9px; top:14px; bottom:14px; width:1px; background:linear-gradient(transparent,rgba(175,226,234,.55) 10%,rgba(175,226,234,.55) 90%,transparent); }
-    .album-home-cover { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:space-between; overflow:hidden; width:100%; height:100%; border-radius:6px 15px 15px 6px; border:1px solid rgba(77,191,213,.68); padding:27px 18px 25px; background:radial-gradient(ellipse at 54% 49%,#10435d 0%,#0b3048 48%,#062236 78%),linear-gradient(145deg,#103c58,#061c2f); box-shadow:inset 0 0 0 6px rgba(3,22,35,.5),inset 0 0 0 7px rgba(96,184,197,.2); text-align:center; }
-    .album-home-cover::before { content:""; position:absolute; pointer-events:none; inset:15px; border:1px solid rgba(125,202,212,.21); border-radius:6px; }
-    .album-home-cover::after { content:""; position:absolute; width:230px; height:230px; border:1px solid rgba(78,195,212,.16); border-radius:50%; top:47%; left:50%; transform:translate(-50%,-50%); box-shadow:0 0 0 15px rgba(71,178,199,.035),0 0 0 30px rgba(71,178,199,.022); pointer-events:none; }
-    .album-home-brand { position:relative; z-index:1; color:#fff; font-size:11px; font-weight:900; line-height:1.45; letter-spacing:.17em; white-space:nowrap; }
-    .album-home-brand strong { color:#64dce8; font-weight:900; }
-    .album-home-center { display:flex; position:relative; z-index:1; flex-direction:column; align-items:center; gap:14px; }
-    .album-home-seal { display:grid; place-items:center; width:65px; height:65px; border:1.5px solid #d2c59c; border-radius:50%; color:#f4d8a1; background:radial-gradient(circle,#16435a,#0a2d44); box-shadow:0 0 0 6px rgba(222,190,132,.07); }
-    .album-home-seal svg { width:29px; height:29px; stroke:currentColor; stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
-    .album-home-name { font-size:20px; font-weight:900; line-height:1.2; letter-spacing:.04em; color:#f6f9f9; }
-    .album-home-edition { position:relative; z-index:1; display:flex; flex-direction:column; gap:5px; color:#9ad6e0; font-size:10px; letter-spacing:.18em; font-weight:900; }
-    .album-home-caption { display:block; font-size:11px; font-weight:900; letter-spacing:.09em; color:#a8dfe7; text-align:center; }
+    .album-home-showcase { display:flex; min-width:0; flex-direction:column; align-items:center; justify-content:center; gap:11px; text-decoration:none; color:#dceef3; perspective:1100px; }
+    .album-home-book { display:block; width:clamp(208px,25vw,292px); max-width:100%; flex:none; transform-origin:50% 70%; animation:album-book-float 7.4s ease-in-out infinite; filter:drop-shadow(0 20px 19px rgba(0,8,19,.34)); transition:filter .35s ease; }
+    .album-home-book img { display:block; width:100%; height:auto; aspect-ratio:1122/1402; object-fit:contain; animation:album-book-appear .95s ease-out both; }
+    .album-home-showcase:hover .album-home-book { filter:drop-shadow(0 26px 22px rgba(0,8,19,.46)); }
     .album-home-showcase:focus-visible { outline:3px solid #83dfed; outline-offset:6px; border-radius:13px; }
+    .album-home-caption { display:block; font-size:11px; font-weight:900; letter-spacing:.09em; line-height:1.45; color:#a8dfe7; text-align:center; }
     .academy-home-copy .card-home-note { margin:15px 0 0; color:#adcbd8; font-size:12px; line-height:1.55; }
-    @media(max-width:780px) { .album-home-book { width:min(100%,222px); } .album-home-cover { padding:23px 15px; } .album-home-name { font-size:18px; } }
-    @media(prefers-reduced-motion:reduce) { .album-home-book { transition:none; } .album-home-showcase:hover .album-home-book { transform:none; } }
+    @keyframes album-book-float {
+      0%, 100% { transform:translate3d(0,0,0) rotateY(-2deg) rotateZ(-.25deg); }
+      50% { transform:translate3d(0,-8px,0) rotateY(2deg) rotateZ(.25deg); }
+    }
+    @keyframes album-book-appear {
+      from { opacity:0; transform:scale(.965); }
+      to { opacity:1; transform:scale(1); }
+    }
+    @media(max-width:780px) { .album-home-book { width:min(68vw,238px); } }
+    @media(prefers-reduced-motion:reduce) { .album-home-book,.album-home-book img { animation:none!important; transform:none!important; } .album-home-book { transition:none; } }
   </style>
   <script src="assets/js/script.js?v=46" defer></script>
 </head>
@@ -132,17 +128,7 @@
           <p class="card-home-note">Χωρίς λογαριασμό · Η πρόοδός σου αποθηκεύεται σε αυτή τη συσκευή.</p>
         </div>
         <a class="album-home-showcase" href="badges/index.html" aria-label="Άνοιξε το συλλεκτικό άλμπουμ EVAGELAK EDU LAB">
-          <span class="album-home-book" aria-hidden="true">
-            <span class="album-home-spine"></span>
-            <span class="album-home-cover">
-              <span class="album-home-brand">EVAGELAK <strong>EDU LAB</strong></span>
-              <span class="album-home-center">
-                <span class="album-home-seal"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 6v20M7 12l9-6 9 6M7 12v13l9 3 9-3V12M7 12l9 4 9-4"/></svg></span>
-                <span class="album-home-name">ΣΥΛΛΕΚΤΙΚΟ<br>ΑΛΜΠΟΥΜ</span>
-              </span>
-              <span class="album-home-edition">ΕΡΓΑΣΤΗΡΙΑ ΡΟΜΠΟΤΙΚΗΣ<br>2026–2027</span>
-            </span>
-          </span>
+          <span class="album-home-book"><img src="assets/images/branding/collectible-album-cover.webp" width="1122" height="1402" alt="Εξώφυλλο Συλλεκτικού Άλμπουμ Καρτών EVAGELAK EDU LAB, Εργαστήρια Ρομποτικής 2026–2027" loading="lazy" decoding="async"></span>
           <span class="album-home-caption">ΑΝΑΚΑΛΥΨΕ · ΚΕΡΔΙΣΕ · ΣΥΛΛΕΞΕ</span>
         </a>
       </div>
