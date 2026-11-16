@@ -18,9 +18,9 @@
     $('trex-status').textContent = earned ? 'ΚΕΡΔΙΣΜΕΝΗ' : 'ΚΛΕΙΔΩΜΕΝΗ';
     $('trex-state-label').textContent = earned ? 'ΑΠΟΚΤΗΘΗΚΕ' : 'ΚΛΕΙΔΩΜΕΝΗ';
     $('trex-description').textContent = earned
-      ? 'Η κονκάρδα του T-Rex είναι στη συλλογή σου!'
-      : 'Ολοκλήρωσε το quiz του T-Rex για να την κερδίσεις.';
-    $('collection-count').textContent = (earned ? '1' : '0') + ' / 1 διαθέσιμη κονκάρδα';
+      ? 'Η συλλεκτική κάρτα T-Rex LEVEL 3 βρίσκεται στο άλμπουμ σου!'
+      : 'Ολοκλήρωσε το quiz του T-Rex για να κερδίσεις τη συλλεκτική κάρτα LEVEL 3.';
+    $('collection-count').textContent = (earned ? '1' : '0') + ' / 1 διαθέσιμη κάρτα';
     $('album-earned').textContent = earned ? '1' : '0';
     progress.style.width = earned ? '100%' : '0%';
     track.setAttribute('aria-valuenow', earned ? '1' : '0');
@@ -35,11 +35,11 @@
     item.className = 'slot slot-coming';
     item.dataset.projectId = project.id;
     item.setAttribute('aria-label', project.name + ' — σε προετοιμασία');
-    // The placeholder is deliberately NOT a fabricated badge.
+    // The placeholder is deliberately NOT a fabricated collectible card.
     item.innerHTML = '<div class="slot-top"><span class="slot-num"></span><span class="slot-state">ΣΥΝΤΟΜΑ</span></div>' +
       '<div class="slot-art slot-placeholder">' + shield + '</div>' +
       '<h3 class="slot-name"></h3>' +
-      '<p class="slot-help">Η κονκάρδα σχεδιάζεται</p>' +
+      '<p class="slot-help">Η συλλεκτική κάρτα σχεδιάζεται</p>' +
       '<p class="status"><span class="dot" aria-hidden="true"></span>Σε προετοιμασία</p>';
     item.querySelector('.slot-name').textContent = project.name;
     return item;
@@ -98,7 +98,7 @@
   function openPreview(){
     if(!window.EduLabBadges || !window.EduLabBadges.unlocked('t-rex')) return;
     if(typeof preview.showModal === 'function') preview.showModal();
-    else window.open('../assets/images/badges/t-rex.webp','_blank','noopener,noreferrer');
+    else window.open('../assets/images/cards/t-rex-level3.webp','_blank','noopener,noreferrer');
   }
   view.addEventListener('click',openPreview);
   close.addEventListener('click',()=>preview.close());

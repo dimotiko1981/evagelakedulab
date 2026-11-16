@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#09273c">
-<meta name="description" content="Το συλλεκτικό άλμπουμ κονκαρδών του EVAGELAK EDU LAB. Ολοκλήρωσε τα quiz ρομποτικής και ξεκλείδωσε τις κονκάρδες των κατασκευών σου.">
+<meta name="description" content="Το συλλεκτικό άλμπουμ καρτών του EVAGELAK EDU LAB. Ολοκλήρωσε τα quiz ρομποτικής και ξεκλείδωσε τις συλλεκτικές κάρτες των κατασκευών σου.">
 <title>Συλλεκτικό Άλμπουμ | EVAGELAK EDU LAB</title>
 <link rel="icon" type="image/png" href="../assets/images/branding/evagelak-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,9 +45,16 @@
 @media(max-width:720px){.shell{width:min(100% - 28px,1130px)}.cover-content{grid-template-columns:1fr;padding:31px 25px}.cover-emblem{min-height:150px}.cover-shield{width:125px;height:147px}.cover-shield-inner strong{font-size:40px}.cover-emblem:before{width:185px}.cover-emblem:after{width:170px}.progress-panel{padding:18px}.album-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.album-sheet{padding:22px 15px 22px 33px}.binder-holes{left:7px}.binder-holes i{width:14px;height:14px}.album-sheet:before{left:14px}.info{grid-template-columns:1fr}.album-head{align-items:start}}
 @media(max-width:470px){.brand img{width:40px;height:40px}.brand-name{font-size:13px}.brand-name small{font-size:10px}.back{font-size:11px;padding:8px}.cover{margin-top:18px}.cover-content{padding:25px 22px 22px}.cover h1{font-size:35px}.cover-lead{font-size:13px;margin-bottom:10px}.progress-panel{grid-template-columns:1fr;gap:12px;margin:14px 0 30px}.progress-stats{padding:10px 0 0;border-left:0;border-top:1px solid #e6eff1}.progress-stats strong{font-size:26px}.progress-stats span{max-width:100%}.album-head{flex-direction:column;gap:7px}.album-sheet{padding:18px 9px 17px 25px}.binder-holes{left:4px}.album-sheet:before{left:12px}.album-grid{gap:8px}.slot{padding:9px;border-radius:12px;min-height:291px}.slot-art{min-height:136px;border-radius:9px}.slot-art img{height:140px}.slot-name{font-size:12px;min-height:34px;margin:10px 0 3px}.slot-help{font-size:10px;min-height:26px;margin-bottom:8px}.slot-num{font-size:10px}.slot-state{font-size:8px}.action{font-size:10px;min-height:35px;padding:6px 8px}.placeholder-shield{width:min(88px,75%);height:114px}.legend{gap:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Authentic portrait card: exact aspect ratio, no cropping at any breakpoint. */
+#trex-visual{min-height:207px}
+#trex-visual img{width:auto;height:auto;max-width:100%;max-height:237px;aspect-ratio:1638/2048;object-fit:contain}
+.trex-card-level{margin:0 0 6px;color:#a77c2c;font-size:10px;font-weight:900;line-height:1.4;letter-spacing:.02em}
+#trex-preview .preview-image{aspect-ratio:1638/2048;width:auto;max-width:100%;max-height:min(65dvh,640px);height:auto;object-fit:contain}
+@media(max-width:470px){#trex-visual{min-height:158px}#trex-visual img{max-height:167px}}
 </style>
 <script src="../assets/js/badges.js?v=63" defer></script>
-<script src="gallery.js?v=68.1" defer></script>
+<script src="gallery.js?v=69" defer></script>
 </head>
 <body>
 <header class="topbar"><div class="shell topbar-inner"><a class="brand" href="../index.html"><img src="../assets/images/branding/evagelak-logo.png" alt=""><span class="brand-name">EVAGELAK<small>EDU LAB</small></span></a><a class="back" href="../index.html">← Αρχική</a></div></header>
@@ -55,21 +62,21 @@
 <section class="cover" aria-labelledby="album-title"><div class="cover-content"><div>
 <p class="eyebrow">EVAGELAK EDU LAB · ΣΥΛΛΟΓΗ 2026–2027</p>
 <h1 id="album-title">Το συλλεκτικό <em>άλμπουμ μου</em></h1>
-<p class="cover-lead">Κάθε κατασκευή είναι μια νέα αποστολή. Ολοκλήρωσε το quiz της, ξεκλείδωσε την κονκάρδα της και γέμισε σιγά σιγά το άλμπουμ σου!</p>
+<p class="cover-lead">Κάθε κατασκευή είναι μια νέα αποστολή. Ολοκλήρωσε το quiz της, ξεκλείδωσε τη συλλεκτική κάρτα της και γέμισε σιγά σιγά το άλμπουμ σου!</p>
 <span class="cover-note">Χωρίς εγγραφή · Χωρίς βαθμολογικό όριο</span>
 </div><div class="cover-emblem" aria-hidden="true"><div class="cover-shield"><div class="cover-shield-inner"><strong id="album-project-count">07</strong><span>ΑΠΟΣΤΟΛΕΣ</span></div></div></div></div></section>
 <section class="progress-panel" aria-label="Η πρόοδός μου">
-<div><div class="progress-label"><strong>Η πρόοδός μου</strong><span id="collection-count" role="status" aria-live="polite">0 / 1 διαθέσιμη κονκάρδα</span></div><div class="progress-track" id="album-progress-track" role="progressbar" aria-label="Συλλογή διαθέσιμων κονκαρδών" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0"><div class="progress-bar" id="album-progress"></div></div></div>
-<div class="progress-stats"><strong id="album-earned">0</strong><span>κερδισμένες κονκάρδες</span></div>
+<div><div class="progress-label"><strong>Η πρόοδός μου</strong><span id="collection-count" role="status" aria-live="polite">0 / 1 διαθέσιμη κάρτα</span></div><div class="progress-track" id="album-progress-track" role="progressbar" aria-label="Συλλογή διαθέσιμων κονκαρδών" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0"><div class="progress-bar" id="album-progress"></div></div></div>
+<div class="progress-stats"><strong id="album-earned">0</strong><span>κερδισμένες κάρτες</span></div>
 </section>
-<section aria-labelledby="collection-title"><div class="album-head"><div><span class="section-overline">Η ΣΥΛΛΟΓΗ ΜΟΥ</span><h2 id="collection-title">Οι κονκάρδες των εργαστηρίων</h2><p>Κάθε νέο εργαστήριο αποκτά αυτόματα θέση στο άλμπουμ. Οι κονκάρδες ενεργοποιούνται όταν ολοκληρώνεται ο σχεδιασμός τους.</p></div><span class="page-index"><span id="album-slot-count">07</span> ΘΕΣΕΙΣ</span></div>
+<section aria-labelledby="collection-title"><div class="album-head"><div><span class="section-overline">Η ΣΥΛΛΟΓΗ ΜΟΥ</span><h2 id="collection-title">Οι συλλεκτικές κάρτες των εργαστηρίων</h2><p>Κάθε νέο εργαστήριο αποκτά αυτόματα θέση στο άλμπουμ. Οι κάρτες ενεργοποιούνται όταν ολοκληρώνεται ο σχεδιασμός τους.</p></div><span class="page-index"><span id="album-slot-count">07</span> ΘΕΣΕΙΣ</span></div>
 <div class="album-sheet"><div class="binder-holes" aria-hidden="true"><i></i><i></i><i></i></div><div class="album-grid" id="album-grid">
 <article id="trex-card" class="slot" data-project-id="trex" aria-labelledby="trex-title">
 <div class="slot-top"><span class="slot-num">01 / 07</span><span id="trex-state-label" class="slot-state">ΚΛΕΙΔΩΜΕΝΗ</span></div>
-<div id="trex-visual" class="slot-art locked"><img src="../assets/images/badges/t-rex.webp" width="600" height="600" alt="Επίσημη κονκάρδα T-Rex του EVAGELAK EDU LAB" loading="eager"><span class="lock-symbol" aria-label="Κλειδωμένη κονκάρδα"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span></div>
-<h3 id="trex-title" class="slot-name">Ρομποτικός T-Rex</h3><p id="trex-description" class="slot-help">Ολοκλήρωσε το quiz του T-Rex για να την κερδίσεις.</p>
+<div id="trex-visual" class="slot-art locked"><img src="../assets/images/cards/t-rex-level3.webp" width="1638" height="2048" alt="Επίσημη συλλεκτική κάρ T-Rex LEVEL 3 του EVAGELAK EDU LAB" loading="eager"><span class="lock-symbol" aria-label="Κλειδωμένη κονκάρδα"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span></div>
+<h3 id="trex-title" class="slot-name">Ρομποτικός T-Rex</h3><p class="trex-card-level">LEVEL 3 · Δύσκολο · Κίνηση</p><p id="trex-description" class="slot-help">Ολοκλήρωσε το quiz του T-Rex για να την κερδίσεις.</p>
 <p class="status"><span class="dot" aria-hidden="true"></span><span id="trex-status">ΚΛΕΙΔΩΜΕΝΗ</span></p>
-<div class="slot-actions"><a id="trex-quiz-link" class="action" href="../workshops/2026-2027/07-robotic-t-rex/quiz.html">Παίξε το quiz ↗</a><button id="trex-view" class="action secondary" type="button" hidden>Προβολή</button><a id="trex-download" class="action secondary" href="../assets/images/badges/t-rex.png" download="EVAGELAK-EDULAB-T-REX.png" hidden>Λήψη PNG ↓</a></div>
+<div class="slot-actions"><a id="trex-quiz-link" class="action" href="../workshops/2026-2027/07-robotic-t-rex/quiz.html">Παίξε το quiz ↗</a><button id="trex-view" class="action secondary" type="button" hidden>Προβολή</button><a id="trex-download" class="action secondary" href="../assets/images/cards/t-rex-level3.webp" download="EVAGELAK-EDU-LAB-T-REX-LEVEL-3.webp" hidden>Λήψη κάρτας ↓</a></div>
 </article>
 <article class="slot slot-coming" data-project-id="octopus" aria-label="Ρομποτικό Χταπόδι — σε προετοιμασία">
 <div class="slot-top"><span class="slot-num">02 / 07</span><span class="slot-state">ΣΥΝΤΟΜΑ</span></div>
@@ -108,17 +115,17 @@
 <p class="slot-help">Κίνηση και οδήγηση</p><p class="status"><span class="dot" aria-hidden="true"></span>Σε προετοιμασία</p>
 </article>
 </div></div>
-<div class="legend" aria-label="Επεξήγηση καταστάσεων"><span><i></i>Κερδισμένη κονκάρδα</span><span class="soon"><i></i>Σε προετοιμασία</span></div>
+<div class="legend" aria-label="Επεξήγηση καταστάσεων"><span><i></i>Κερδισμένη κάρτα</span><span class="soon"><i></i>Σε προετοιμασία</span></div>
 </section>
 <section class="info" aria-label="Οδηγίες και πληροφορίες">
-<div class="info-card"><h3>Πώς κερδίζω κονκάρδες;</h3><p>Ολοκλήρωσε όλες τις ερωτήσεις του quiz μιας κατασκευής. Δεν χρειάζεται να τις απαντήσεις όλες σωστά. Μόλις τελειώσεις, η διαθέσιμη κονκάρδα ξεκλειδώνει και μπορείς να την κατεβάσεις.</p></div>
-<div class="info-card"><h3>Πού αποθηκεύεται η συλλογή μου;</h3><p>Μόνο στον περιηγητή αυτής της συσκευής, χωρίς λογαριασμό και χωρίς προσωπικά στοιχεία. Αν αλλάξεις συσκευή ή διαγράψεις τα δεδομένα περιήγησης, η πρόοδός σου μπορεί να χαθεί. Κατέβασε τις κονκάρδες που κερδίζεις για να τις κρατήσεις.</p></div>
+<div class="info-card"><h3>Πώς κερδίζω κάρτες;</h3><p>Ολοκλήρωσε όλες τις ερωτήσεις του quiz μιας κατασκευής. Δεν χρειάζεται να τις απαντήσεις όλες σωστά. Μόλις τελειώσεις, η διαθέσιμη κάρτα ξεκλειδώνει και μπορείς να την κατεβάσεις.</p></div>
+<div class="info-card"><h3>Πού αποθηκεύεται η συλλογή μου;</h3><p>Μόνο στον περιηγητή αυτής της συσκευής, χωρίς λογαριασμό και χωρίς προσωπικά στοιχεία. Αν αλλάξεις συσκευή ή διαγράψεις τα δεδομένα περιήγησης, η πρόοδός σου μπορεί να χαθεί. Κατέβασε τις κάρτες που κερδίζεις για να τις κρατήσεις.</p></div>
 </section>
 <dialog id="trex-preview" class="preview-dialog" aria-labelledby="preview-title">
-<div class="preview-head"><h2 id="preview-title">Η κονκάρδα μου · T-Rex</h2><button id="preview-close" class="preview-close" type="button" aria-label="Κλείσιμο προεπισκόπησης">×</button></div>
-<img class="preview-image" src="../assets/images/badges/t-rex.webp" width="600" height="600" alt="Ξεκλειδωμένη κονκάρδα Ρομποτικού T-Rex">
-<p class="preview-note">Κατέβασε την κονκάρδα σε PNG με διαφανές εξωτερικό φόντο.</p>
-<div class="preview-actions"><a class="action" href="../assets/images/badges/t-rex.png" download="EVAGELAK-EDULAB-T-REX.png">Κατέβασε την κονκάρδα ↓</a></div></dialog>
+<div class="preview-head"><h2 id="preview-title">Η συλλεκτική κάρτα μου · T-Rex</h2><button id="preview-close" class="preview-close" type="button" aria-label="Κλείσιμο προεπισκόπησης">×</button></div>
+<img class="preview-image" src="../assets/images/cards/t-rex-level3.webp" width="1638" height="2048" alt="Ξεκλειδωμένη συλλεκτική κάρ T-Rex LEVEL 3">
+<p class="preview-note">Αποθήκευσε την αυθεντική κάρτα σε WebP, 1638 × 2048 px, χωρίς απώλεια ποιότητας.</p>
+<div class="preview-actions"><a class="action" href="../assets/images/cards/t-rex-level3.webp" download="EVAGELAK-EDU-LAB-T-REX-LEVEL-3.webp">Κατέβασε την κάρτα ↓</a></div></dialog>
 </main>
 <footer class="footer">EVAGELAK EDU LAB · Μαθαίνουμε. Δημιουργούμε. Προγραμματίζουμε.</footer>
 </body></html>

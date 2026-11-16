@@ -3,7 +3,7 @@
 
 /* Premium award ceremony: light, physical 3D rise and single reveal, not a perpetual spinner. */
 .award-stage{
-  position:relative;width:min(390px,100%);height:322px;display:grid;place-items:center;
+  position:relative;width:min(405px,100%);height:400px;display:grid;place-items:center;
   margin:14px auto 20px;border-radius:25px;overflow:hidden;isolation:isolate;
   perspective:1050px;background:radial-gradient(ellipse at 50% 42%,#164b64 0%,#0d304a 39%,#071a2b 78%,#061525 100%);
   box-shadow:inset 0 0 0 1px rgba(71,212,234,.25),0 18px 36px rgba(11,47,68,.18);
@@ -29,7 +29,7 @@
 }
 .award-orbit--second{animation-delay:850ms;border-color:rgba(200,239,239,.44)}
 .award-medal{
-  position:relative;z-index:3;width:min(235px,70vw);aspect-ratio:1;
+  position:relative;z-index:3;width:min(246px,69vw);aspect-ratio:1638/2048;
   transform-style:preserve-3d;animation:award-hero 2650ms cubic-bezier(.22,.76,.26,1) both;
   filter:drop-shadow(0 18px 16px rgba(0,0,0,.42));will-change:transform;
 }
@@ -42,7 +42,7 @@
   content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
   background:linear-gradient(108deg,transparent 0%,transparent 41%,rgba(230,253,255,.05) 48%,rgba(233,254,255,.42) 50%,rgba(249,255,255,.07) 52%,transparent 59%,transparent 100%);
   background-size:270% 100%;background-position:100% 50%;
-  -webkit-mask-image:url('../../../assets/images/badges/t-rex.webp');mask-image:url('../../../assets/images/badges/t-rex.webp');
+  -webkit-mask-image:url('../../../assets/images/cards/t-rex-level3.webp');mask-image:url('../../../assets/images/cards/t-rex-level3.webp');
   -webkit-mask-size:contain;mask-size:contain;-webkit-mask-position:center;mask-position:center;
   -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
   animation:award-sweep 850ms ease-in-out 2060ms both;
@@ -81,7 +81,7 @@
   .award-stage::before{opacity:.22}.award-stage::after{opacity:.55;transform:scale(1)}
   .award-aura{opacity:.28}.award-orbit,.award-spark,.award-medal::after{display:none}
 }
-@media(max-width:440px){.award-stage{height:285px;border-radius:20px}.award-medal{width:min(220px,69vw)}.award-orbit{width:205px}}
+@media(max-width:440px){.award-stage{height:355px;border-radius:20px}.award-medal{width:min(220px,68vw)}.award-orbit{width:205px}}
 
 /* Earned T-Rex badge — no score threshold. */
 .earned-badge{display:block;width:min(220px,70vw);height:auto;aspect-ratio:1;object-fit:contain;margin:15px auto;filter:drop-shadow(0 10px 14px rgba(9,46,68,.14))}
@@ -99,7 +99,7 @@ function render(){answered=false;const item=QUESTIONS[index];$('count').textCont
 function choose(chosen){if(answered)return;answered=true;const item=QUESTIONS[index];if(chosen===item.answer)score++;[...$('options').children].forEach((b,i)=>{b.disabled=true;if(i===item.answer)b.classList.add('correct');else if(i===chosen)b.classList.add('wrong')});$('feedback').textContent=(chosen===item.answer?'Σωστά. ':'Η σωστή απάντηση είναι: '+item.options[item.answer]+'. ')+item.explanation;$('next').textContent=index===QUESTIONS.length-1?'Δες τη βαθμολογία →':'Επόμενη ερώτηση →';$('next').classList.add('visible');}
 $('next').addEventListener('click',()=>{if(index+1<QUESTIONS.length){index++;const oldScroll=window.scrollY;render();root.scrollIntoView({behavior:'smooth',block:'start'});}else{
   const saved = window.EduLabBadges ? window.EduLabBadges.award('t-rex') : false;
-  root.innerHTML='<div class="result"><p class="award-eyebrow">ΑΠΟΣΤΟΛΗ ΟΛΟΚΛΗΡΩΘΗΚΕ</p><div class="award-stage" aria-label="Απονομή κονκάρδας T-Rex"><span class="award-aura" aria-hidden="true"></span><span class="award-orbit" aria-hidden="true"></span><span class="award-orbit award-orbit--second" aria-hidden="true"></span><span class="award-spark" style="--dx:-137px;--dy:-89px;--d:800ms" aria-hidden="true"></span><span class="award-spark" style="--dx:141px;--dy:-81px;--d:1000ms" aria-hidden="true"></span><span class="award-spark" style="--dx:154px;--dy:36px;--d:840ms" aria-hidden="true"></span><span class="award-spark" style="--dx:-157px;--dy:33px;--d:970ms" aria-hidden="true"></span><span class="award-spark" style="--dx:71px;--dy:-121px;--d:1160ms" aria-hidden="true"></span><span class="award-spark" style="--dx:-83px;--dy:125px;--d:1110ms" aria-hidden="true"></span><div class="award-medal"><img class="award-face" src="../../../assets/images/badges/t-rex.webp" alt="Κονκάρδα T-Rex EDULAB" width="235" height="235"><img class="award-face award-face-back" src="../../../assets/images/badges/t-rex.webp" alt="" aria-hidden="true" width="235" height="235"></div></div><h2 class="award-title">Κέρδισες την κονκάρδα T-Rex!</h2><p class="award-description">Μπράβο για την προσπάθειά σου! Η νέα σου κονκάρδα είναι έτοιμη για λήψη.</p><div class="award-meta"><span>Βαθμολογία quiz</span><strong>'+score+' / '+QUESTIONS.length+'</strong></div><div class="earned-actions"><a class="earned-download" href="../../../assets/images/badges/t-rex.png" download="EVAGELAK-EDULAB-T-REX.png">Κατέβασε την κονκάρδα ↓</a><a class="earned-link" href="../../../badges/index.html">Οι κονκάρδες μου ↗</a><button id="restart" class="next visible" type="button">Παίξε ξανά</button></div>'+(saved?'':'<p class="storage-note">Η κονκάρδα απονεμήθηκε. Για να αποθηκευτεί και στη συλλογή σου, χρειάζεται να επιτρέπεται η τοπική αποθήκευση στον περιηγητή.</p>')+'</div>';
+  root.innerHTML='<div class="result"><p class="award-eyebrow">ΑΠΟΣΤΟΛΗ ΟΛΟΚΛΗΡΩΘΗΚΕ</p><div class="award-stage" aria-label="Απονομή συλλεκτικής κάρτας T-Rex LEVEL 3"><span class="award-aura" aria-hidden="true"></span><span class="award-orbit" aria-hidden="true"></span><span class="award-orbit award-orbit--second" aria-hidden="true"></span><span class="award-spark" style="--dx:-137px;--dy:-89px;--d:800ms" aria-hidden="true"></span><span class="award-spark" style="--dx:141px;--dy:-81px;--d:1000ms" aria-hidden="true"></span><span class="award-spark" style="--dx:154px;--dy:36px;--d:840ms" aria-hidden="true"></span><span class="award-spark" style="--dx:-157px;--dy:33px;--d:970ms" aria-hidden="true"></span><span class="award-spark" style="--dx:71px;--dy:-121px;--d:1160ms" aria-hidden="true"></span><span class="award-spark" style="--dx:-83px;--dy:125px;--d:1110ms" aria-hidden="true"></span><div class="award-medal"><img class="award-face" src="../../../assets/images/cards/t-rex-level3.webp" alt="Συλλεκτική κάρτα T-Rex LEVEL 3 του EVAGELAK EDU LAB" width="246" height="308"><img class="award-face award-face-back" src="../../../assets/images/cards/t-rex-level3.webp" alt="" aria-hidden="true" width="246" height="308"></div></div><h2 class="award-title">Κέρδισες τη συλλεκτική κάρτα T-Rex!</h2><p class="award-description">Μπράβο για την προσπάθειά σου! Η κάρτα LEVEL 3 είναι διαθέσιμη στην αρχική της ποιότητα.</p><div class="award-meta"><span>Βαθμολογία quiz</span><strong>'+score+' / '+QUESTIONS.length+'</strong></div><div class="earned-actions"><a class="earned-download" href="../../../assets/images/cards/t-rex-level3.webp" download="EVAGELAK-EDU-LAB-T-REX-LEVEL-3.webp">Κατέβασε την κάρτα ↓</a><a class="earned-link" href="../../../badges/index.html">Το συλλεκτικό άλμπουμ ↗</a><button id="restart" class="next visible" type="button">Παίξε ξανά</button></div>'+(saved?'':'<p class="storage-note">Η κάρτα απονεμήθηκε. Για να αποθηκευτεί και στο άλμπουμ σου, χρειάζεται να επιτρέπεται η τοπική αποθήκευση στον περιηγητή.</p>')+'</div>';
   $('restart').addEventListener('click',()=>window.location.reload());
 }});
 render();</script></body></html>
