@@ -16,22 +16,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css?v=60">
   <style>
-    /* v74 — Real collectible cards replace the retired circular badges. */
+    /* v75 — Closed collectible album teaser. No card artworks on the homepage. */
     .card-home-layout { align-items:center; }
-    .card-home-showcase { display:flex; min-width:0; flex-direction:column; align-items:center; justify-content:center; gap:10px; text-decoration:none; color:#dceef3; }
-    .card-home-grid { display:flex; align-items:start; justify-content:center; gap:12px; width:100%; min-width:0; }
-    .card-home-item { display:flex; flex-direction:column; align-items:center; gap:9px; width:min(47%,185px); min-width:0; transition:transform .24s ease; }
-    .card-home-image { display:flex; align-items:center; justify-content:center; width:100%; aspect-ratio:1638/2048; position:relative; overflow:hidden; padding:5px; border:1px solid rgba(123,208,224,.26); border-radius:14px; background:radial-gradient(circle at 50% 42%,#17445b,#0a2438 75%); box-shadow:0 12px 32px rgba(1,14,27,.3); }
-    .card-home-image img { display:block; position:absolute; inset:5px; width:calc(100% - 10px); height:calc(100% - 10px); object-fit:contain; }
-    .card-home-item-label { color:#d7f2f7; font-size:11px; font-weight:900; letter-spacing:.05em; text-align:center; line-height:1.35; }
-    .card-home-showcase:hover .card-home-item:first-child { transform:translateY(-5px); }
-    .card-home-showcase:hover .card-home-item:last-child { transform:translateY(-2px); }
-    .card-home-showcase:focus-visible { outline:3px solid #83dfed; outline-offset:5px; border-radius:12px; }
-    .card-home-caption { margin:3px 0 0; font-size:11px; font-weight:900; letter-spacing:.12em; color:#a8dfe7; text-align:center; }
+    .album-home-showcase { display:flex; min-width:0; flex-direction:column; align-items:center; justify-content:center; gap:12px; text-decoration:none; color:#dceef3; }
+    .album-home-book { position:relative; display:block; width:min(100%,267px); aspect-ratio:0.81; padding:0 0 0 13px; transform:perspective(900px) rotateY(-8deg); filter:drop-shadow(9px 17px 14px rgba(0,9,20,.27)); transition:transform .3s ease,filter .3s ease; }
+    .album-home-showcase:hover .album-home-book { transform:perspective(900px) rotateY(-3deg) translateY(-4px); filter:drop-shadow(12px 20px 16px rgba(0,9,20,.32)); }
+    .album-home-book::after { content:""; position:absolute; top:10px; bottom:8px; right:-6px; width:10px; border-radius:0 6px 8px 0; background:repeating-linear-gradient(90deg,#bacad2 0px,#f3f9fa 2px,#97b4be 4px); box-shadow:inset -3px 0 3px rgba(5,30,43,.3); }
+    .album-home-spine { position:absolute; z-index:2; top:0; bottom:0; left:0; width:23px; border-radius:10px 0 0 10px; background:linear-gradient(90deg,#051b2c,#1b506b 25%,#0b2f48 76%,#204c62); border:1px solid rgba(109,205,221,.4); box-shadow:inset -5px 0 7px rgba(0,0,0,.35); }
+    .album-home-spine::before { content:""; position:absolute; left:9px; top:14px; bottom:14px; width:1px; background:linear-gradient(transparent,rgba(175,226,234,.55) 10%,rgba(175,226,234,.55) 90%,transparent); }
+    .album-home-cover { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:space-between; overflow:hidden; width:100%; height:100%; border-radius:6px 15px 15px 6px; border:1px solid rgba(77,191,213,.68); padding:27px 18px 25px; background:radial-gradient(ellipse at 54% 49%,#10435d 0%,#0b3048 48%,#062236 78%),linear-gradient(145deg,#103c58,#061c2f); box-shadow:inset 0 0 0 6px rgba(3,22,35,.5),inset 0 0 0 7px rgba(96,184,197,.2); text-align:center; }
+    .album-home-cover::before { content:""; position:absolute; pointer-events:none; inset:15px; border:1px solid rgba(125,202,212,.21); border-radius:6px; }
+    .album-home-cover::after { content:""; position:absolute; width:230px; height:230px; border:1px solid rgba(78,195,212,.16); border-radius:50%; top:47%; left:50%; transform:translate(-50%,-50%); box-shadow:0 0 0 15px rgba(71,178,199,.035),0 0 0 30px rgba(71,178,199,.022); pointer-events:none; }
+    .album-home-brand { position:relative; z-index:1; color:#fff; font-size:11px; font-weight:900; line-height:1.45; letter-spacing:.17em; white-space:nowrap; }
+    .album-home-brand strong { color:#64dce8; font-weight:900; }
+    .album-home-center { display:flex; position:relative; z-index:1; flex-direction:column; align-items:center; gap:14px; }
+    .album-home-seal { display:grid; place-items:center; width:65px; height:65px; border:1.5px solid #d2c59c; border-radius:50%; color:#f4d8a1; background:radial-gradient(circle,#16435a,#0a2d44); box-shadow:0 0 0 6px rgba(222,190,132,.07); }
+    .album-home-seal svg { width:29px; height:29px; stroke:currentColor; stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+    .album-home-name { font-size:20px; font-weight:900; line-height:1.2; letter-spacing:.04em; color:#f6f9f9; }
+    .album-home-edition { position:relative; z-index:1; display:flex; flex-direction:column; gap:5px; color:#9ad6e0; font-size:10px; letter-spacing:.18em; font-weight:900; }
+    .album-home-caption { display:block; font-size:11px; font-weight:900; letter-spacing:.09em; color:#a8dfe7; text-align:center; }
+    .album-home-showcase:focus-visible { outline:3px solid #83dfed; outline-offset:6px; border-radius:13px; }
     .academy-home-copy .card-home-note { margin:15px 0 0; color:#adcbd8; font-size:12px; line-height:1.55; }
-    @media (max-width:780px) { .card-home-item { width:min(45%,195px); } .card-home-grid { justify-content:center; } }
-    @media (max-width:480px) { .card-home-grid { gap:10px; } .card-home-item { width:min(46%,172px); } .card-home-image { padding:4px; } .card-home-item-label { font-size:10px; } }
-    @media (prefers-reduced-motion:reduce) { .card-home-item { transition:none; } .card-home-showcase:hover .card-home-item { transform:none!important; } }
+    @media(max-width:780px) { .album-home-book { width:min(100%,222px); } .album-home-cover { padding:23px 15px; } .album-home-name { font-size:18px; } }
+    @media(prefers-reduced-motion:reduce) { .album-home-book { transition:none; } .album-home-showcase:hover .album-home-book { transform:none; } }
   </style>
   <script src="assets/js/script.js?v=46" defer></script>
 </head>
@@ -118,61 +125,30 @@
     <section class="quiz-section section" id="badges" aria-labelledby="badges-title">
       <div class="wrap academy-home card-home-layout">
         <div class="academy-home-copy">
-          <span class="section-label light-label">EVAGELAK EDU LAB · ΣΥΛΛΕΚΤΙΚΕΣ ΚΑΡΤΕΣ · LEVEL 1–3</span>
-          <h2 id="badges-title">Κάθε αποστολή, <em>μια συλλεκτική κάρτα!</em></h2>
-          <p>Ολοκλήρωσε το quiz μιας κατασκευής, ξεκλείδωσε τη δική της συλλεκτική κάρτα και πρόσθεσέ τη στο άλμπουμ σου. Κάθε επίπεδο δυσκολίας έχει το δικό του χρώμα. Μπορείς να τις κατεβάσεις και να τις κρατήσεις στη συσκευή σου.</p>
+          <span class="section-label light-label">EVAGELAK EDU LAB · ΣΥΛΛΕΚΤΙΚΟ ΑΛΜΠΟΥΜ</span>
+          <h2 id="badges-title">Κάθε αποστολή, <em>μια νέα ανακάλυψη!</em></h2>
+          <p>Ολοκλήρωσε το quiz κάθε κατασκευής, ξεκλείδωσε τη συλλεκτική της κάρτα και πρόσθεσέ τη στο άλμπουμ σου. Η συλλογή μεγαλώνει με κάθε νέο εργαστήριο — και οι εκπλήξεις σε περιμένουν μέσα!</p>
           <a class="btn btn-academy-home" href="badges/index.html">Άνοιξε το συλλεκτικό άλμπουμ <span aria-hidden="true">↗</span></a>
           <p class="card-home-note">Χωρίς λογαριασμό · Η πρόοδός σου αποθηκεύεται σε αυτή τη συσκευή.</p>
         </div>
-        <a class="card-home-showcase" href="badges/index.html" aria-label="Δες το συλλεκτικό άλμπουμ καρτών EVAGELAK EDU LAB">
-          <span class="card-home-grid" id="home-card-gallery">
-            <span class="card-home-item"><span class="card-home-image"><img src="assets/images/cards/t-rex-level3.webp?v=74" alt="Συλλεκτική κάρτα T-Rex, LEVEL 3" width="1638" height="2048" loading="lazy"></span><span class="card-home-item-label">T-Rex · LEVEL 3</span></span>
-            <span class="card-home-item"><span class="card-home-image"><img src="assets/images/cards/octopus-level1.webp?v=74" alt="Συλλεκτική κάρτα Χταπόδι, LEVEL 1" width="1638" height="2048" loading="lazy"></span><span class="card-home-item-label">Χταπόδι · LEVEL 1</span></span>
+        <a class="album-home-showcase" href="badges/index.html" aria-label="Άνοιξε το συλλεκτικό άλμπουμ EVAGELAK EDU LAB">
+          <span class="album-home-book" aria-hidden="true">
+            <span class="album-home-spine"></span>
+            <span class="album-home-cover">
+              <span class="album-home-brand">EVAGELAK <strong>EDU LAB</strong></span>
+              <span class="album-home-center">
+                <span class="album-home-seal"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 6v20M7 12l9-6 9 6M7 12v13l9 3 9-3V12M7 12l9 4 9-4"/></svg></span>
+                <span class="album-home-name">ΣΥΛΛΕΚΤΙΚΟ<br>ΑΛΜΠΟΥΜ</span>
+              </span>
+              <span class="album-home-edition">ΕΡΓΑΣΤΗΡΙΑ ΡΟΜΠΟΤΙΚΗΣ<br>2026–2027</span>
+            </span>
           </span>
-          <span class="card-home-caption">ΚΕΡΔΙΣΕ · ΣΥΛΛΕΞΕ · ΟΛΟΚΛΗΡΩΣΕ ΤΟ ΑΛΜΠΟΥΜ</span>
+          <span class="album-home-caption">ΑΝΑΚΑΛΥΨΕ · ΚΕΡΔΙΣΕ · ΣΥΛΛΕΞΕ</span>
         </a>
       </div>
     </section>
 
-  <script>
-    /* v74 — Preview the approved cards already available in the album.
-       The album remains the source of truth: new approved cards appear here
-       without editing the homepage. This does not read or reveal earned status. */
-    (function(){
-      'use strict';
-      const gallery = document.getElementById('home-card-gallery');
-      if(!gallery || typeof fetch !== 'function' || typeof DOMParser !== 'function') return;
-      fetch('badges/index.html', {cache:'no-store'})
-        .then(response => { if(!response.ok) throw new Error('Album not available'); return response.text(); })
-        .then(source => {
-          const album = new DOMParser().parseFromString(source, 'text/html');
-          const albumUrl = new URL('badges/index.html', window.location.href);
-          const cards = Array.from(album.querySelectorAll('.slot[data-project-id]:not(.slot-coming)'))
-            .map(slot => {
-              const image = slot.querySelector('.slot-art img[src]');
-              if(!image) return null;
-              const url = new URL(image.getAttribute('src'), albumUrl);
-              if(url.origin !== window.location.origin || !url.pathname.includes('/assets/images/cards/')) return null;
-              const name = slot.querySelector('.slot-name')?.textContent.trim() || 'Συλλεκτική κάρτα';
-              const match = slot.textContent.match(/LEVEL\s*[123]/i);
-              const level = match ? match[0].replace(/\s+/g,' ').toUpperCase() : '';
-              return {src:url.href, name, level};
-            }).filter(Boolean);
-          if(cards.length < 2) return; // Keep the verified T-Rex/Octopus preview as fallback.
-          const previews = cards.slice(0,2).map(card => {
-            const item = document.createElement('span'); item.className = 'card-home-item';
-            const frame = document.createElement('span'); frame.className = 'card-home-image';
-            const img = document.createElement('img');
-            img.src = card.src; img.alt = 'Συλλεκτική κάρτα ' + card.name + (card.level ? ', ' + card.level : '');
-            img.loading = 'lazy'; img.decoding = 'async';
-            const label = document.createElement('span'); label.className = 'card-home-item-label';
-            label.textContent = card.name + (card.level ? ' · ' + card.level : '');
-            frame.appendChild(img); item.append(frame,label); return item;
-          });
-          gallery.replaceChildren(...previews);
-        }).catch(() => { /* Keep the static preview if offline. */ });
-    })();
-  </script>
+
   </main>
 
   <footer class="footer"><div class="wrap footer-main"><div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark official-mark" aria-hidden="true"><img src="assets/images/branding/evagelak-logo.png" alt="" loading="lazy"></span><span class="brand-text"><strong>EVAGELAK</strong><small>EDU LAB</small></span></a><p>Μαθαίνουμε. Δημιουργούμε. Προγραμματίζουμε.</p></div></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> EVAGELAK EDU LAB. Με αγάπη για τη μάθηση.</span></div></footer>
