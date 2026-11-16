@@ -87,6 +87,15 @@ body[data-equipment~="wedo2"] .ws-program-label i {
 .ws-video-two-groups .ws-group-video .ws-action {font-size:11px;min-height:38px;padding:8px 10px;max-width:100%;width:100%;text-align:center;white-space:normal;align-self:stretch;line-height:1.2}
 @media(max-width:390px){.ws-video-two-groups .ws-two-videos{gap:8px}.ws-video-two-groups .ws-group-video .ws-action{font-size:10px;padding:7px 5px}}
 
+/* Octopus collectible card invitation — aligned with the T-Rex card system. */
+.ws-badge-teaser{display:flex;align-items:center;gap:22px;margin:18px 0 0;padding:16px 22px;background:#f4fafb;border:1px solid #cfe7e9;border-radius:17px}
+.ws-badge-teaser img{width:112px;height:auto;aspect-ratio:1229/1536;object-fit:contain;flex:none;filter:drop-shadow(0 8px 10px rgba(4,42,64,.12))}
+.ws-badge-teaser strong{color:#10344a;font-size:17px}.ws-badge-teaser p{margin:7px 0 8px;color:#4d6375;font-size:13px;line-height:1.55}
+.ws-badge-teaser a{color:#067e95!important;font-size:13px;font-weight:850;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:480px){.ws-badge-teaser{gap:13px;padding:14px}.ws-badge-teaser img{width:82px;height:auto}.ws-badge-teaser strong{font-size:14px}}
+.ws-badge-teaser .ws-card-download{margin-left:14px}.ws-badge-teaser [hidden]{display:none!important}
+
+
 </style>
 </head>
 <body data-equipment="wedo2">
@@ -141,5 +150,19 @@ body[data-equipment~="wedo2"] .ws-program-label i {
 </div>
 <a aria-label="Παίξε το quiz προγραμματισμού του Ρομποτικού Χταποδιού" class="ws-quiz-button" href="quiz.html">Παίξε το Quiz <span aria-hidden="true">↗</span></a>
 </section>
+<section class="ws-badge-teaser" aria-label="Συλλεκτική κάρτα του Ρομποτικού Χταποδιού">
+  <img src="../../../assets/images/cards/octopus-level1.webp" alt="Συλλεκτική κάρτα Ρομποτικό Χταπόδι, LEVEL 1, EVAGELAK EDU LAB" width="1229" height="1536" loading="lazy">
+  <div><strong>Συλλεκτική κάρτα Ρομποτικό Χταπόδι · LEVEL 1</strong><p>Εύκολο · Κατηγορία: Κίνηση. Ολοκλήρωσε και τις 10 ερωτήσεις του quiz, ανεξάρτητα από τη βαθμολογία σου, για να ξεκλειδώσεις την κάρτα.</p>
+  <a href="../../../badges/index.html">Δες το συλλεκτικό άλμπουμ ↗</a><a id="octopus-card-download" class="ws-card-download" href="../../../assets/images/cards/octopus-level1.webp" download="EVAGELAK-EDU-LAB-ROBOTIC-OCTOPUS-LEVEL-1.webp" hidden>Κατέβασε την κάρτα ↓</a></div>
+</section>
 </main><footer class="ws-footer"><span>EVAGELAK EDU LAB · Εκπαιδευτική ρομποτική</span><a href="../../../index.html#workshops">Επιστροφή στις κατασκευές ↑</a></footer>
-</div></body></html>
+</div><script src="../../../assets/js/badges.js?v=72"></script>
+<script>
+(function(){
+  const download = document.getElementById('octopus-card-download');
+  const sync = () => { download.hidden = !(window.EduLabBadges && window.EduLabBadges.unlocked('octopus')); };
+  sync(); window.addEventListener('pageshow',sync); window.addEventListener('storage',sync);
+})();
+</script>
+
+</body></html>
