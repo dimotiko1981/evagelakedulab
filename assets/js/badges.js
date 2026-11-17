@@ -21,4 +21,16 @@
     catch (_) { return false; } // Still show the earned badge in the quiz.
   }
   window.EduLabBadges = Object.freeze({ unlocked, award });
+
+  // Collectible-card artwork belongs in the album and quiz award screen,
+  // not in the footer area of individual workshop pages.
+  function removeWorkshopCardTeasers() {
+    if (!document.body || !document.body.classList) return;
+    document.querySelectorAll('main .ws-badge-teaser').forEach(section => section.remove());
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', removeWorkshopCardTeasers, { once: true });
+  } else {
+    removeWorkshopCardTeasers();
+  }
 })();
