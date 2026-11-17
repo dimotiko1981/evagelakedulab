@@ -57,9 +57,17 @@
 .octopus-card-level{margin:0 0 6px;color:#A87850;font-size:10px;font-weight:900;line-height:1.4;letter-spacing:.02em}
 #octopus-preview .preview-image{aspect-ratio:1229/1536;width:auto;max-width:100%;max-height:min(65dvh,640px);height:auto;object-fit:contain}
 @media(max-width:470px){#octopus-visual{min-height:158px}#octopus-visual img{max-height:167px}}
+
+
+/* Basketball collectible card — original LEVEL 2 artwork, no cropping. */
+#basket-visual{min-height:207px}
+#basket-visual img{width:auto;height:auto;max-width:100%;max-height:237px;aspect-ratio:1122/1402;object-fit:contain}
+.basket-card-level{margin:0 0 6px;color:#698293;font-size:10px;font-weight:900;line-height:1.4;letter-spacing:.02em}
+#basket-preview .preview-image{aspect-ratio:1122/1402;width:auto;max-width:100%;max-height:min(65dvh,640px);height:auto;object-fit:contain}
+@media(max-width:470px){#basket-visual{min-height:158px}#basket-visual img{max-height:167px}}
 </style>
-<script src="../assets/js/badges.js?v=72" defer></script>
-<script src="gallery.js?v=72" defer></script>
+<script src="../assets/js/badges.js?v=73" defer></script>
+<script src="gallery.js?v=73" defer></script>
 </head>
 <body>
 <header class="topbar"><div class="shell topbar-inner"><a class="brand" href="../index.html"><img src="../assets/images/branding/evagelak-logo.png" alt=""><span class="brand-name">EVAGELAK<small>EDU LAB</small></span></a><a class="back" href="../index.html">← Αρχική</a></div></header>
@@ -71,7 +79,7 @@
 <span class="cover-note">Χωρίς εγγραφή · Χωρίς βαθμολογικό όριο</span>
 </div><div class="cover-emblem" aria-hidden="true"><div class="cover-shield"><div class="cover-shield-inner"><strong id="album-project-count">07</strong><span>ΑΠΟΣΤΟΛΕΣ</span></div></div></div></div></section>
 <section class="progress-panel" aria-label="Η πρόοδός μου">
-<div><div class="progress-label"><strong>Η πρόοδός μου</strong><span id="collection-count" role="status" aria-live="polite">0 / 2 διαθέσιμες κάρτες</span></div><div class="progress-track" id="album-progress-track" role="progressbar" aria-label="Συλλογή διαθέσιμων καρτών" aria-valuemin="0" aria-valuemax="2" aria-valuenow="0"><div class="progress-bar" id="album-progress"></div></div></div>
+<div><div class="progress-label"><strong>Η πρόοδός μου</strong><span id="collection-count" role="status" aria-live="polite">0 / 3 διαθέσιμες κάρτες</span></div><div class="progress-track" id="album-progress-track" role="progressbar" aria-label="Συλλογή διαθέσιμων καρτών" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><div class="progress-bar" id="album-progress"></div></div></div>
 <div class="progress-stats"><strong id="album-earned">0</strong><span>κερδισμένες κάρτες</span></div>
 </section>
 <section aria-labelledby="collection-title"><div class="album-head"><div><span class="section-overline">Η ΣΥΛΛΟΓΗ ΜΟΥ</span><h2 id="collection-title">Οι συλλεκτικές κάρτες των εργαστηρίων</h2><p>Κάθε νέο εργαστήριο αποκτά αυτόματα θέση στο άλμπουμ. Οι κάρτες ενεργοποιούνται όταν ολοκληρώνεται ο σχεδιασμός τους.</p></div><span class="page-index"><span id="album-slot-count">07</span> ΘΕΣΕΙΣ</span></div>
@@ -96,11 +104,12 @@
 <h3 class="slot-name">Ρομποτικός Στόχος Frisbee</h3>
 <p class="slot-help">Η πρόκληση της στόχευσης</p><p class="status"><span class="dot" aria-hidden="true"></span>Σε προετοιμασία</p>
 </article>
-<article class="slot slot-coming" data-project-id="basket" aria-label="Ρομποτική Μπασκέτα — σε προετοιμασία">
-<div class="slot-top"><span class="slot-num">04 / 07</span><span class="slot-state">ΣΥΝΤΟΜΑ</span></div>
-<div class="slot-art slot-placeholder"><svg class="placeholder-shield" aria-hidden="true" viewBox="0 0 128 154"><path d="M64 5 115 26 111 96 64 148 17 96 13 26Z"></path><path d="M64 15 105 32 102 93 64 136 26 93 23 32Z"></path><path d="M37 64h54m-27-26v52"></path></svg></div>
-<h3 class="slot-name">Ρομποτική Μπασκέτα</h3>
-<p class="slot-help">Ένα παιχνίδι με προγραμματισμό</p><p class="status"><span class="dot" aria-hidden="true"></span>Σε προετοιμασία</p>
+<article id="basket-card" class="slot" data-project-id="basket" aria-labelledby="basket-title">
+<div class="slot-top"><span class="slot-num">04 / 07</span><span id="basket-state-label" class="slot-state">ΚΛΕΙΔΩΜΕΝΗ</span></div>
+<div id="basket-visual" class="slot-art locked"><img src="../assets/images/cards/basket-level2.webp" width="1122" height="1402" alt="Επίσημη συλλεκτική κάρτα Μπασκέτα LEVEL 2 του EVAGELAK EDU LAB" loading="lazy"><span class="lock-symbol" aria-label="Κλειδωμένη κάρτα"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span></div>
+<h3 id="basket-title" class="slot-name">Ρομποτική Μπασκέτα</h3><p class="basket-card-level">LEVEL 2 · Μέτριο · Παιχνίδια &amp; Αθλητισμός</p><p id="basket-description" class="slot-help">Ολοκλήρωσε το quiz της Μπασκέτας για να την κερδίσεις.</p>
+<p class="status"><span class="dot" aria-hidden="true"></span><span id="basket-status">ΚΛΕΙΔΩΜΕΝΗ</span></p>
+<div class="slot-actions"><a id="basket-quiz-link" class="action" href="../workshops/2026-2027/04-robotic-basket/quiz.html">Παίξε το quiz ↗</a><button id="basket-view" class="action secondary" type="button" hidden>Προβολή</button><a id="basket-download" class="action secondary" href="../assets/images/cards/basket-level2.webp" download="EVAGELAK-EDU-LAB-BASKET-LEVEL-2.webp" hidden>Λήψη κάρτας ↓</a></div>
 </article>
 <article class="slot slot-coming" data-project-id="scorpion" aria-label="Ρομποτικός Σκορπιός — σε προετοιμασία">
 <div class="slot-top"><span class="slot-num">05 / 07</span><span class="slot-state">ΣΥΝΤΟΜΑ</span></div>
@@ -137,6 +146,11 @@
 <img class="preview-image" src="../assets/images/cards/octopus-level1.webp" width="1229" height="1536" alt="Ξεκλειδωμένη συλλεκτική κάρτα Ρομποτικό Χταπόδι LEVEL 1">
 <p class="preview-note">Αποθήκευσε την αυθεντική κάρτα σε WebP, 1229 × 1536 px, χωρίς απώλεια ποιότητας.</p>
 <div class="preview-actions"><a class="action" href="../assets/images/cards/octopus-level1.webp" download="EVAGELAK-EDU-LAB-ROBOTIC-OCTOPUS-LEVEL-1.webp">Κατέβασε την κάρτα ↓</a></div></dialog>
+<dialog id="basket-preview" class="preview-dialog" aria-labelledby="basket-preview-title">
+<div class="preview-head"><h2 id="basket-preview-title">Η συλλεκτική κάρτα μου · Μπασκέτα</h2><button id="basket-preview-close" class="preview-close" type="button" aria-label="Κλείσιμο προεπισκόπησης">×</button></div>
+<img class="preview-image" src="../assets/images/cards/basket-level2.webp" width="1122" height="1402" alt="Ξεκλειδωμένη συλλεκτική κάρτα Μπασκέτα LEVEL 2">
+<p class="preview-note">Αποθήκευσε την αυθεντική συλλεκτική κάρτα σε μορφή WebP, 1122 × 1402 px.</p>
+<div class="preview-actions"><a class="action" href="../assets/images/cards/basket-level2.webp" download="EVAGELAK-EDU-LAB-BASKET-LEVEL-2.webp">Κατέβασε την κάρτα ↓</a></div></dialog>
 </main>
 <footer class="footer">EVAGELAK EDU LAB · Μαθαίνουμε. Δημιουργούμε. Προγραμματίζουμε.</footer>
 </body></html>

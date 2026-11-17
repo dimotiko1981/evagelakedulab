@@ -25,6 +25,14 @@
       lockedDesc: 'Ολοκλήρωσε το quiz του Χταποδιού για να κερδίσεις τη συλλεκτική κάρτα LEVEL 1.',
       quizTextEarned: 'Παίξε ξανά ↗', quizTextLocked: 'Παίξε το quiz ↗',
       fallbackHref: '../assets/images/cards/octopus-level1.webp'
+    },
+    {
+      id: 'basket', prefix: 'basket', name: 'Ρομποτική Μπασκέτα',
+      earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
+      earnedDesc: 'Η συλλεκτική κάρτα Μπασκέτα LEVEL 2 βρίσκεται στο άλμπουμ σου!',
+      lockedDesc: 'Ολοκλήρωσε το quiz της Μπασκέτας για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
+      quizTextEarned: 'Παίξε ξανά ↗', quizTextLocked: 'Παίξε το quiz ↗',
+      fallbackHref: '../assets/images/cards/basket-level2.webp'
     }
   ];
 
