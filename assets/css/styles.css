@@ -834,7 +834,7 @@ body { background: #fff; }
 
 
 /* v62 — Minimal YouTube social link in the homepage footer.
-   The link uses an existing verified video URL until a channel URL is supplied. */
+   The YouTube link points to the official @EVAGELAKEDULAB channel. */
 .footer-socials {
   display: flex;
   flex-wrap: wrap;
@@ -877,4 +877,62 @@ body { background: #fff; }
 @media (prefers-reduced-motion: reduce) {
   .footer-social-link { transition: none; }
   .footer-social-link:hover { transform: none; }
+}
+
+
+/* v62 — Intentional two-column footer: brand left, YouTube right; stacked on mobile. */
+.footer .footer-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(215px, 295px);
+  align-items: start;
+  column-gap: clamp(26px, 7vw, 105px);
+  padding-block: 38px 30px;
+}
+.footer .footer-brand {
+  grid-column: auto;
+  min-width: 0;
+  max-width: none;
+}
+.footer .footer-connect {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  min-width: 0;
+  padding-top: 7px;
+}
+.footer .footer-connect-title {
+  margin: 0;
+  color: #1e4251;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: -.015em;
+  line-height: 1.35;
+}
+.footer .footer-connect .footer-socials {
+  margin-top: 12px;
+  justify-content: flex-end;
+}
+.footer .footer-connect-note {
+  margin: 11px 0 0;
+  color: #647988;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.footer .footer-bottom {
+  justify-content: center;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .footer .footer-main {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 24px;
+    padding-block: 32px 28px;
+  }
+  .footer .footer-connect {
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 0;
+  }
+  .footer .footer-connect .footer-socials { justify-content: flex-start; }
 }
