@@ -813,3 +813,21 @@ body { background: #fff; }
 @media (max-width: 680px) {
   .how-section.section { padding-block: 74px 82px; }
 }
+
+
+/* v61 — Align the 'Δες την ιδέα' links at the bottom of each workshop card.
+   Preserve all existing visuals, the image heights and mobile layout.
+   :not([hidden]) is essential: keep search/filter/pagination hiding working. */
+#workshop-list .workshop-card:not([hidden]) {
+  display: flex;
+  flex-direction: column;
+}
+#workshop-list .workshop-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+#workshop-list .workshop-action {
+  align-self: flex-start;
+  margin-top: auto;
+}
