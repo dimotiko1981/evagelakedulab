@@ -831,3 +831,50 @@ body { background: #fff; }
   align-self: flex-start;
   margin-top: auto;
 }
+
+
+/* v62 — Minimal YouTube social link in the homepage footer.
+   The link uses an existing verified video URL until a channel URL is supplied. */
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 16px;
+}
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  min-height: 43px;
+  padding: 8px 14px 8px 10px;
+  border: 1px solid #cddfe0;
+  border-radius: 12px;
+  background: #fff;
+  color: #274c5c;
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 3px 12px rgba(12, 48, 62, .035);
+  transition: border-color .2s ease, background-color .2s ease, transform .2s ease;
+}
+.footer-social-link:hover {
+  border-color: #90bfc7;
+  background: #f8fcfd;
+  transform: translateY(-2px);
+}
+.footer-social-link:focus-visible {
+  outline: 3px solid #087e94;
+  outline-offset: 3px;
+}
+.footer-youtube-icon {
+  width: 26px;
+  height: 20px;
+  flex-shrink: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer-social-link { transition: none; }
+  .footer-social-link:hover { transform: none; }
+}
