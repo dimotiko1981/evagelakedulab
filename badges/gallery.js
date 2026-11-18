@@ -38,7 +38,7 @@
       id: 'frisbee', prefix: 'frisbee', name: 'Ρομποτικός Στόχος Frisbee',
       earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
       earnedDesc: 'Η συλλεκτική κάρτα Frisbee LEVEL 2 βρίσκεται στο άλμπουμ σου!',
-      lockedDesc: 'Ολοκλήρωσε το quiz του Frisbee για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
+      lockedDesc: 'Quiz προσωρινά μη διαθέσιμο. Η συλλεκτική κάρτα παραμένει στο άλμπουμ.',
       quizTextEarned: 'Παίξε ξανά ↗', quizTextLocked: 'Παίξε το quiz ↗',
       fallbackHref: '../assets/images/cards/frisbee-level2.webp?v=20261118'
     },
@@ -92,11 +92,17 @@
       if (quizLink) quizLink.textContent = earned ? cfg.quizTextEarned : cfg.quizTextLocked;
     });
 
-    $('collection-count').textContent = earnedCount + ' / ' + cards.length + ' διαθέσιμες κάρτες';
-    $('album-earned').textContent = String(earnedCount);
-    progress.style.width = (earnedCount / cards.length * 100) + '%';
-    track.setAttribute('aria-valuenow', String(earnedCount));
-    track.setAttribute('aria-valuemax', String(cards.length));
+    // Derive the collection target from the actual album slots, not the
+    // fixed badge registry. New projects add slots automatically.
+    // A slot represents one card to collect, even while its artwork/quiz
+    // is being prepared. Earned badges retain their existing local storage.
+    const totalSlots = grid.querySelectorAll('.slot[data-project-id]').length;
+    const collected = grid.querySelectorAll('.slot.earned[data-project-id]').length;
+    $('collection-count').textContent = collected + ' / ' + totalSlots + ' κάρτες προς συλλογή';
+    $('album-earned').textContent = String(collected);
+    progress.style.width = (totalSlots ? collected / totalSlots * 100 : 0) + '%';
+    track.setAttribute('aria-valuenow', String(collected));
+    track.setAttribute('aria-valuemax', String(totalSlots));
   }
 
   const shield = '<svg class="placeholder-shield" aria-hidden="true" viewBox="0 0 128 154"><path d="M64 5 115 26 111 96 64 148 17 96 13 26Z"></path><path d="M64 15 105 32 102 93 64 136 26 93 23 32Z"></path><path d="M37 64h54m-27-26v52"></path></svg>';
@@ -155,8 +161,10 @@
         }
       }
       renumber();
+      sync();
     } catch (error){
       renumber();
+      sync();
     }
   }
 
