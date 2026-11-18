@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1020" viewBox="0 0 1000 1020" role="img">
+  <title>EVAGELAK EDU LAB — Badge 04 hexagon — MATTE #C5A04D</title>
+  <desc>Original approved silhouette preserved, matte #C5A04D metal and transparent center.</desc>
+  <defs>
+<!-- BADGE 04 — Matte silver hexagon, separate editable shapes -->
+<linearGradient id="hex04-silver-matte" x1="0" y1="0" x2=".82" y2="1">
+  <stop offset="0" stop-color="#D1AC59"/>
+  <stop offset=".24" stop-color="#CBA653"/>
+  <stop offset=".52" stop-color="#C6A14E"/>
+  <stop offset=".79" stop-color="#C9A451"/>
+  <stop offset="1" stop-color="#C29D4A"/>
+</linearGradient>
+<linearGradient id="hex04-rim-light" x1="0" y1="0" x2=".14" y2="1">
+  <stop offset="0" stop-color="#D3AE5B" stop-opacity=".95"/>
+  <stop offset=".43" stop-color="#D0AB58" stop-opacity=".43"/>
+  <stop offset="1" stop-color="#B99441" stop-opacity=".66"/>
+</linearGradient>
+</defs>
+  <g id="badge-04-hexagon" data-badge="04" data-geometry="HEXAGON" data-metal="#C5A04D" data-interior="transparent">
+  <path id="hex04-soft-shadow" d="M 500,30 L 948,276 L 948,744 L 500,990 L 52,744 L 52,276 Z M 500,100 L 887,313 L 887,707 L 500,920 L 113,707 L 113,313 Z" transform="translate(0 9)" fill="#00101C" fill-opacity=".30" fill-rule="evenodd"/>
+  <path id="hex04-silver-rim" d="M 500,30 L 948,276 L 948,744 L 500,990 L 52,744 L 52,276 Z M 500,100 L 887,313 L 887,707 L 500,920 L 113,707 L 113,313 Z" fill="url(#hex04-silver-matte)" fill-rule="evenodd"/>
+  <path id="hex04-outer-bevel" d="M 500,30 L 948,276 L 948,744 L 500,990 L 52,744 L 52,276 Z" fill="none" stroke="url(#hex04-rim-light)" stroke-width="5" stroke-linejoin="round"/>
+  <path id="hex04-inner-shadow" d="M 500,100 L 887,313 L 887,707 L 500,920 L 113,707 L 113,313 Z" transform="translate(0 5)" fill="none" stroke="#314657" stroke-opacity=".52" stroke-width="5" stroke-linejoin="round"/>
+  <path id="hex04-inner-bevel" d="M 500,100 L 887,313 L 887,707 L 500,920 L 113,707 L 113,313 Z" fill="none" stroke="#D1AC59" stroke-opacity=".82" stroke-width="4" stroke-linejoin="round"/>
+</g>
+</svg>

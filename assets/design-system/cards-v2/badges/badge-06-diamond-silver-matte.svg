@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1020" viewBox="0 0 1000 1020" role="img">
+<title>EVAGELAK EDU LAB — Badge 06 diamond — Matte #A8B0BB</title>
+<desc>Editable matte metallic diamond. The transparent center is a cutout. Vector reconstruction of the approved raster silhouette; not a direct vector extraction.</desc>
+<defs><linearGradient id="matte-metal" x1="0" y1="0" x2=".85" y2="1"><stop offset="0" stop-color="#B5BDC8"/><stop offset=".45" stop-color="#ACB4BF"/><stop offset=".60" stop-color="#A8B0BB"/><stop offset="1" stop-color="#9CA4AF"/></linearGradient></defs>
+<g id="badge-06-diamond" data-badge="06" data-metal="#A8B0BB" data-source="vector-reconstructed-from-approved-raster">
+<path id="metal-rim" d="M 500,28 L 970,510 L 500,992 L 30,510 Z M 500,112 L 889,510 L 500,908 L 111,510 Z" fill="url(#matte-metal)" fill-rule="evenodd"/>
+<path id="outer-edge" d="M 500,28 L 970,510 L 500,992 L 30,510 Z" fill="none" stroke="#B3BBC6" stroke-width="5" stroke-linejoin="round"/>
+<path id="inner-edge" d="M 500,112 L 889,510 L 500,908 L 111,510 Z" fill="none" stroke="#929AA5" stroke-width="4" stroke-linejoin="round"/>
+</g></svg>

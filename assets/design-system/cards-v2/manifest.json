@@ -1,0 +1,79 @@
+{
+  "project": "EVAGELAK EDU LAB",
+  "version": "2.1",
+  "upload_path": "assets/design-system/cards-v2",
+  "approved_base_source": "source/approved-step03-silver-master.svg",
+  "geometry_canvas_px": [
+    1260,
+    1760
+  ],
+  "physical_size_mm": [
+    63,
+    88
+  ],
+  "final_delivery": {
+    "format": "WebP",
+    "requested_pixels": [
+      5498,
+      7680
+    ],
+    "compression": "optimized for small bytes without visible artifacts"
+  },
+  "finish": {
+    "outer": "matte metal, always",
+    "interior": "glossy navy with cyan radial rays and subtle shiny floor, clipped inside badge only"
+  },
+  "colors": {
+    "bronze": {
+      "level": 1,
+      "matte_hex": "#A87850"
+    },
+    "silver": {
+      "level": 2,
+      "matte_hex": "#A8B0BB"
+    },
+    "gold": {
+      "level": 3,
+      "matte_hex": "#C5A04D"
+    }
+  },
+  "badges": {
+    "01": "shield",
+    "02": "circle",
+    "03": "crest",
+    "04": "hexagon",
+    "05": "winged-crest",
+    "06": "diamond"
+  },
+  "editable_model_layer_id": "LEGO_PHOTO_CLIPPED_TO_BADGE",
+  "editable_title_id": "project-name-editable",
+  "card_template_count": 18,
+  "badge_svg_count": 18,
+  "badge_02_and_06": "approved raster references, vector reconstructions",
+  "is_uploaded_to_github": false,
+  "do_not_regenerate_model_with_AI": true,
+  "master_color_layout_preserved": true,
+  "outer_corner_alpha": {
+    "mandatory": true,
+    "all_four_corners": true,
+    "alpha_outside_frame": 0,
+    "shape": {
+      "x": 0.5,
+      "y": 0.5,
+      "width": 1259,
+      "height": 1759,
+      "rx": 82,
+      "ry": 82
+    },
+    "export": "WebP RGBA with true transparent corners"
+  },
+  "updated_files": {
+    "card_templates": 18,
+    "master_bases": 3,
+    "untouched_badge_shapes": 18,
+    "change": "Add outer alpha clip only; preserve design"
+  },
+  "package_version": "2.1",
+  "package_root": "assets/design-system/cards-v2",
+  "note": "Full integrated v2.1 archive with assets/design-system/cards-v2/ structure; does not move or delete older accidentally root-level files."
+}
