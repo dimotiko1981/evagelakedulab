@@ -52,6 +52,76 @@
       .footer .footer-connect { justify-content:flex-start; align-items:flex-start; text-align:left; }
       .footer .footer-connect .footer-socials { justify-content:flex-start; }
     }
+
+    /* v78 — Color social icons, horizontal footer row (starting with YouTube).
+       Add future social links as siblings inside .footer-socials; no layout changes needed. */
+    .footer .footer-main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      column-gap: 20px;
+      row-gap: 0;
+      padding-block: 13px;
+    }
+    .footer .footer-brand { min-width: 0; }
+    .footer .footer-connect {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: right;
+      min-width: 0;
+      padding: 0;
+    }
+    .footer .footer-connect .footer-socials {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+    }
+    .footer .footer-social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 46px;
+      width: 46px;
+      height: 46px;
+      min-height: 46px;
+      padding: 0;
+      border: 1px solid #d6e2e5;
+      border-radius: 12px;
+      background: #fff;
+      color: #e62117;
+      box-shadow: 0 3px 10px rgba(26, 53, 62, .055);
+      transition: border-color .2s ease, background .2s ease, transform .2s ease;
+    }
+    .footer .footer-social-link:hover {
+      border-color: #efafa9;
+      background: #fff7f6;
+      transform: translateY(-2px);
+    }
+    .footer .footer-youtube-icon { width: 29px; height: 23px; }
+    .footer .footer-bottom { padding-block: 10px; }
+    @media(max-width:700px) {
+      .footer .footer-main {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 12px;
+        padding-block: 14px;
+      }
+      .footer .footer-connect {
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+      }
+      .footer .footer-connect .footer-socials { justify-content: flex-end; }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      .footer .footer-social-link { transition: none; }
+      .footer .footer-social-link:hover { transform: none; }
+    }
   </style>
   <script src="assets/js/script.js?v=46" defer></script>
 </head>
@@ -169,7 +239,6 @@
               <rect x="1" y="2.5" width="30" height="19" rx="6" fill="#E62117"/>
               <path d="M13 7.8L21.5 12L13 16.2Z" fill="#FFFFFF"/>
             </svg>
-            <span>YouTube</span>
           </a>
         </nav>
       </div>
