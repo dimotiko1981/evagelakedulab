@@ -273,6 +273,92 @@
       .footer .footer-social-link { transition: none; }
     }
   </style>
+
+  <style id="edulab-unified-controls-v79">
+    /* Navigation: Explore is an ordinary menu link, not an illuminated CTA. */
+    .main-nav .nav-explore {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      box-shadow: none;
+      text-shadow: none;
+      color: #395367;
+      background: transparent;
+      border: 0;
+    }
+    .main-nav .nav-explore span { font-size: 12px; line-height: 1; opacity: .66; }
+    @media (max-width: 900px) {
+      .main-nav .nav-explore { justify-content: flex-start; }
+    }
+
+    /* The category chooser is one quiet, cohesive segmented filter. */
+    .workshops-section .filters {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 3px;
+      width: max-content;
+      max-width: 100%;
+      padding: 4px;
+      border: 1px solid #d0e1e5;
+      border-radius: 13px;
+      background: rgba(255, 255, 255, .61);
+      box-shadow: none;
+    }
+    .workshops-section .filters .filter-chip {
+      position: relative;
+      flex: 0 0 auto;
+      min-height: 39px;
+      padding: 9px 13px;
+      border: 0;
+      border-radius: 9px;
+      background: transparent;
+      color: #416275;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0;
+      white-space: nowrap;
+      box-shadow: none;
+      text-shadow: none;
+      transform: none;
+      transition: background-color .17s ease, color .17s ease;
+    }
+    .workshops-section .filters .filter-chip:hover {
+      border: 0;
+      background: #e7f3f5;
+      color: #096b7f;
+      box-shadow: none;
+      transform: none;
+    }
+    .workshops-section .filters .filter-chip.active,
+    .workshops-section .filters .filter-chip[aria-pressed="true"] {
+      border: 0;
+      background: #dceff2;
+      color: #05677a;
+      box-shadow: none;
+      font-weight: 900;
+    }
+    .workshops-section .filters .filter-chip:focus-visible {
+      outline: 2px solid #087e94;
+      outline-offset: -2px;
+    }
+    @media (max-width: 650px) {
+      .workshops-section .filters {
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #a9cad1 transparent;
+        -webkit-overflow-scrolling: touch;
+      }
+      .workshops-section .filters .filter-chip { min-height: 43px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .workshops-section .filters .filter-chip { transition: none; }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Μετάβαση στο κύριο περιεχόμενο</a>
@@ -288,7 +374,7 @@
         <a class="nav-link" href="#workshops">Εργαστήρια</a>
         <a class="nav-link" href="#how-it-works">Πώς μαθαίνουμε</a>
         <a class="nav-link" href="#badges">Συλλεκτικό άλμπουμ</a>
-        <a class="btn btn-nav" href="#workshops">Εξερεύνησε <span aria-hidden="true">↗</span></a>
+        <a class="nav-link nav-explore" href="#workshops">Εξερεύνησε <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
