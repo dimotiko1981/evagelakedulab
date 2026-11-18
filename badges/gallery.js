@@ -150,9 +150,13 @@
     if (preview) preview.addEventListener('click',event=>{if(event.target===preview)preview.close();});
   });
 
-  window.addEventListener('pageshow',sync);
+  window.addEventListener('pageshow', event => {
+    sync();
+    // Re-read newly published projects after a back/forward-cache restore.
+    if (event.persisted) syncProjects();
+  });
   window.addEventListener('storage',sync);
   sync();
-  renumber();
-  syncProjects();
+  renumber(); // Existing slots are counted immediately; no hard-coded total.
+  syncProjects(); // New homepage projects are added and counted automatically.
 })();
