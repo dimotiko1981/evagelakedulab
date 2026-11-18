@@ -32,7 +32,15 @@
       earnedDesc: 'Η συλλεκτική κάρτα Μπασκέτα LEVEL 2 βρίσκεται στο άλμπουμ σου!',
       lockedDesc: 'Ολοκλήρωσε το quiz της Μπασκέτας για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
       quizTextEarned: 'Παίξε ξανά ↗', quizTextLocked: 'Παίξε το quiz ↗',
-      fallbackHref: '../assets/images/cards/basket-level2.webp'
+      fallbackHref: '../assets/images/cards/basket-level2.webp?v=20261118'
+    },
+    {
+      id: 'frisbee', prefix: 'frisbee', name: 'Ρομποτικός Στόχος Frisbee',
+      earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
+      earnedDesc: 'Η συλλεκτική κάρτα Frisbee LEVEL 2 βρίσκεται στο άλμπουμ σου!',
+      lockedDesc: 'Ολοκλήρωσε το quiz του Frisbee για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
+      quizTextEarned: 'Παίξε ξανά ↗', quizTextLocked: 'Παίξε το quiz ↗',
+      fallbackHref: '../assets/images/cards/frisbee-level2.webp?v=20261118'
     }
   ];
 
