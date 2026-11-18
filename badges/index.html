@@ -78,6 +78,95 @@
   #trex-visual img,#octopus-visual img,#basket-visual img,#frisbee-visual img,#jetfighter-visual img,#scorpion-visual img,#electricscooter-visual img{max-height:167px}
   #frisbee-visual,#jetfighter-visual,#scorpion-visual,#electricscooter-visual{min-height:158px}
 }
+
+/* Collectible album — shared, responsive card geometry (2026-11-18).
+   All image panels and information rows have the same visual dimensions.
+   The artwork remains fully visible, with no cropping or deformation. */
+#album-grid .slot {
+  min-width: 0;
+  min-height: 475px;
+  align-self: stretch;
+}
+#album-grid .slot-art {
+  width: 100%;
+  height: clamp(178px, 19vw, 230px);
+  min-height: 0;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+}
+#album-grid .slot-art > img {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 0;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  flex: 0 1 auto;
+}
+#album-grid .slot-art .placeholder-shield {
+  max-width: 100%;
+  max-height: 100%;
+}
+#album-grid .slot-name {
+  height: 2.7em;
+  min-height: 2.7em;
+  max-height: 2.7em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+#album-grid .trex-card-level,
+#album-grid .octopus-card-level,
+#album-grid .basket-card-level,
+#album-grid .frisbee-card-level,
+#album-grid .jetfighter-card-level,
+#album-grid .scorpion-card-level,
+#album-grid .electricscooter-card-level {
+  min-height: 16px;
+  line-height: 16px;
+  margin: 0 0 6px;
+  font-size: 10px;
+}
+#album-grid .slot-help {
+  height: 4.35em;
+  min-height: 4.35em;
+  max-height: 4.35em;
+  line-height: 1.45;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+#album-grid .slot .status {
+  min-height: 17px;
+  line-height: 17px;
+}
+#album-grid .slot-actions {
+  min-height: 38px;
+  align-items: center;
+}
+@media (max-width: 720px) {
+  #album-grid .slot { min-height: 455px; }
+  #album-grid .slot-art {
+    height: clamp(136px, 38vw, 198px);
+    padding: 5px;
+  }
+}
+@media (max-width: 470px) {
+  #album-grid .slot { min-height: 415px; }
+  #album-grid .slot-art { height: clamp(128px, 40vw, 171px); }
+  #album-grid .slot-name { height: 2.7em; min-height: 2.7em; max-height: 2.7em; }
+  #album-grid .slot-help { height: 4.35em; min-height: 4.35em; max-height: 4.35em; }
+  #album-grid .slot-actions { min-height: 35px; }
+}
 </style>
 <script src="../assets/js/badges.js?v=75" defer></script>
 <script src="gallery.js?v=75" defer></script>
@@ -100,49 +189,49 @@
 <article id="trex-card" class="slot" data-project-id="trex" aria-labelledby="trex-title">
 <div class="slot-top"><span class="slot-num">01 / 07</span><span id="trex-state-label" class="slot-state">ΚΛΕΙΔΩΜΕΝΗ</span></div>
 <div id="trex-visual" class="slot-art locked"><img src="../assets/images/cards/t-rex-level3.webp?v=20261118" width="1260" height="1760" alt="Επίσημη συλλεκτική κάρ T-Rex LEVEL 3 του EVAGELAK EDU LAB" loading="eager"><span class="lock-symbol" aria-label="Κλειδωμένη κονκάρδα"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span></div>
-<h3 id="trex-title" class="slot-name">Ρομποτικός T-Rex</h3><p class="trex-card-level">LEVEL 3 · Δύσκολο · Κίνηση</p><p id="trex-description" class="slot-help">Ολοκλήρωσε το quiz του T-Rex για να την κερδίσεις.</p>
+<h3 id="trex-title" class="slot-name">Ρομποτικός T-Rex</h3><p class="trex-card-level">LEVEL 3</p><p id="trex-description" class="slot-help">Ολοκλήρωσε το quiz του T-Rex για να την κερδίσεις.</p>
 <p class="status"><span class="dot" aria-hidden="true"></span><span id="trex-status">ΚΛΕΙΔΩΜΕΝΗ</span></p>
 <div class="slot-actions"><a id="trex-quiz-link" class="action" href="../workshops/2026-2027/07-robotic-t-rex/quiz.html">Παίξε το quiz ↗</a><button id="trex-view" class="action secondary" type="button" hidden>Προβολή</button><a id="trex-download" class="action secondary" href="../assets/images/cards/t-rex-level3.webp?v=20261118" download="EVAGELAK-EDU-LAB-T-REX-LEVEL-3.webp" hidden>Λήψη κάρτας ↓</a></div>
 </article>
 <article id="octopus-card" class="slot" data-project-id="octopus" aria-labelledby="octopus-title">
 <div class="slot-top"><span class="slot-num">02 / 07</span><span id="octopus-state-label" class="slot-state">ΚΛΕΙΔΩΜΕΝΗ</span></div>
 <div id="octopus-visual" class="slot-art locked"><img src="../assets/images/cards/octopus-level1.webp?v=20261118" width="1260" height="1760" alt="Επίσημη συλλεκτική κάρτα Ρομποτικό Χταπόδι LEVEL 1 του EVAGELAK EDU LAB" loading="lazy"><span class="lock-symbol" aria-label="Κλειδωμένη κάρτα"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span></div>
-<h3 id="octopus-title" class="slot-name">Ρομποτικό Χταπόδι</h3><p class="octopus-card-level">LEVEL 1 · Εύκολο · Κίνηση</p><p id="octopus-description" class="slot-help">Ολοκλήρωσε το quiz του Χταποδιού για να την κερδίσεις.</p>
+<h3 id="octopus-title" class="slot-name">Ρομποτικό Χταπόδι</h3><p class="octopus-card-level">LEVEL 1</p><p id="octopus-description" class="slot-help">Ολοκλήρωσε το quiz του Χταποδιού για να την κερδίσεις.</p>
 <p class="status"><span class="dot" aria-hidden="true"></span><span id="octopus-status">ΚΛΕΙΔΩΜΕΝΗ</span></p>
 <div class="slot-actions"><a id="octopus-quiz-link" class="action" href="../workshops/2026-2027/06-robotic-octopus/quiz.html">Παίξε το quiz ↗</a><button id="octopus-view" class="action secondary" type="button" hidden>Προβολή</button><a id="octopus-download" class="action secondary" href="../assets/images/cards/octopus-level1.webp?v=20261118" download="EVAGELAK-EDU-LAB-ROBOTIC-OCTOPUS-LEVEL-1.webp" hidden>Λήψη κάρτας ↓</a></div>
 </article>
 <article id="frisbee-card" class="slot" data-project-id="frisbee" aria-labelledby="frisbee-title">
 <div class="slot-top"><span class="slot-num">03 / 07</span><span id="frisbee-state-label" class="slot-state">ΚΛΕΙΔΩΜΕΝΗ</span></div>
 <div id="frisbee-visual" class="slot-art locked"><img src="../assets/images/cards/frisbee-level2.webp?v=20261118" width="1260" height="1760" alt="Συλλεκτική κάρτα Frisbee LEVEL 2 του EVAGELAK EDU LAB" loading="lazy"><span class="lock-symbol" aria-label="Κλειδωμένη κάρτα"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span></div>
-<h3 id="frisbee-title" class="slot-name">Ρομποτικός Στόχος Frisbee</h3><p class="frisbee-card-level">LEVEL 2 · Μέτριο · Παιχνίδια &amp; Αθλητισμός</p><p id="frisbee-description" class="slot-help">Ολοκλήρωσε το quiz του Frisbee για να κερδίσεις τη συλλεκτική κάρτα.</p>
+<h3 id="frisbee-title" class="slot-name">Ρομποτικός Στόχος Frisbee</h3><p class="frisbee-card-level">LEVEL 2</p><p id="frisbee-description" class="slot-help">Ολοκλήρωσε το quiz του Frisbee για να κερδίσεις τη συλλεκτική κάρτα.</p>
 <p class="status"><span class="dot" aria-hidden="true"></span><span id="frisbee-status">ΚΛΕΙΔΩΜΕΝΗ</span></p>
 <div class="slot-actions"><a id="frisbee-quiz-link" class="action" href="../workshops/2026-2027/05-frisbee-target-challenge/quiz.html">Παίξε το quiz ↗</a><button id="frisbee-view" class="action secondary" type="button" hidden>Προβολή</button><a id="frisbee-download" class="action secondary" href="../assets/images/cards/frisbee-level2.webp?v=20261118" download="EVAGELAK-EDU-LAB-FRISBEE-LEVEL-2.webp" hidden>Λήψη κάρτας ↓</a></div>
 </article>
 <article id="basket-card" class="slot" data-project-id="basket" aria-labelledby="basket-title">
 <div class="slot-top"><span class="slot-num">04 / 07</span><span id="basket-state-label" class="slot-state">ΚΛΕΙΔΩΜΕΝΗ</span></div>
 <div id="basket-visual" class="slot-art locked"><img src="../assets/images/cards/basket-level2.webp?v=20261118" width="1061" height="1482" alt="Επίσημη συλλεκτική κάρτα Μπασκέτα LEVEL 2 του EVAGELAK EDU LAB" loading="lazy"><span class="lock-symbol" aria-label="Κλειδωμένη κάρτα"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span></div>
-<h3 id="basket-title" class="slot-name">Ρομποτική Μπασκέτα</h3><p class="basket-card-level">LEVEL 2 · Μέτριο · Παιχνίδια &amp; Αθλητισμός</p><p id="basket-description" class="slot-help">Ολοκλήρωσε το quiz της Μπασκέτας για να την κερδίσεις.</p>
+<h3 id="basket-title" class="slot-name">Ρομποτική Μπασκέτα</h3><p class="basket-card-level">LEVEL 2</p><p id="basket-description" class="slot-help">Ολοκλήρωσε το quiz της Μπασκέτας για να την κερδίσεις.</p>
 <p class="status"><span class="dot" aria-hidden="true"></span><span id="basket-status">ΚΛΕΙΔΩΜΕΝΗ</span></p>
 <div class="slot-actions"><a id="basket-quiz-link" class="action" href="../workshops/2026-2027/04-robotic-basket/quiz.html">Παίξε το quiz ↗</a><button id="basket-view" class="action secondary" type="button" hidden>Προβολή</button><a id="basket-download" class="action secondary" href="../assets/images/cards/basket-level2.webp?v=20261118" download="EVAGELAK-EDU-LAB-BASKET-LEVEL-2.webp" hidden>Λήψη κάρτας ↓</a></div>
 </article>
 <article id="scorpion-card" class="slot slot-coming" data-project-id="scorpion" aria-labelledby="scorpion-title">
 <div class="slot-top"><span class="slot-num">05 / 07</span><span class="slot-state">ΚΛΕΙΔΩΜΕΝΗ</span></div>
 <div id="scorpion-visual" class="slot-art locked"><img src="../assets/images/cards/scorpion-level2.webp?v=20261118b" width="1260" height="1760" alt="Κλειδωμένη συλλεκτική κάρτα Ρομποτικός Σκορπιός LEVEL 2" loading="lazy"><span class="lock-symbol" aria-label="Η κάρτα δεν είναι ακόμη διαθέσιμη"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span></div>
-<h3 id="scorpion-title" class="slot-name">Ρομποτικός Σκορπιός</h3><p class="scorpion-card-level">LEVEL 2 · Μέτριο · Φύση</p>
+<h3 id="scorpion-title" class="slot-name">Ρομποτικός Σκορπιός</h3><p class="scorpion-card-level">LEVEL 2</p>
 <p class="slot-help">Η τελική κάρτα προστέθηκε στο άλμπουμ. Το quiz για το ξεκλείδωμά της θα είναι σύντομα διαθέσιμο.</p>
 <p class="status"><span class="dot" aria-hidden="true"></span>Quiz σε προετοιμασία</p>
 </article>
 <article id="jetfighter-card" class="slot slot-coming" data-project-id="jetfighter" aria-labelledby="jetfighter-title">
 <div class="slot-top"><span class="slot-num">06 / 07</span><span class="slot-state">ΣΥΝΤΟΜΑ</span></div>
 <div id="jetfighter-visual" class="slot-art locked"><img src="../assets/images/cards/jet-fighter-level2.webp?v=20261118" width="1260" height="1760" alt="Κλειδωμένη συλλεκτική κάρτα Jet Fighter LEVEL 2" loading="lazy"><span class="lock-symbol" aria-label="Η κάρτα δεν είναι ακόμη διαθέσιμη"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span></div>
-<h3 id="jetfighter-title" class="slot-name">Jet Fighter</h3><p class="jetfighter-card-level">LEVEL 2 · Μέτριο · Οχήματα</p>
+<h3 id="jetfighter-title" class="slot-name">Jet Fighter</h3><p class="jetfighter-card-level">LEVEL 2</p>
 <p class="slot-help">Η κάρτα έχει προστεθεί. Το quiz για το ξεκλείδωμά της θα είναι σύντομα διαθέσιμο.</p>
 <p class="status"><span class="dot" aria-hidden="true"></span>Quiz σε προετοιμασία</p>
 </article>
 <article id="electricscooter-card" class="slot slot-coming" data-project-id="electric-scooter" aria-labelledby="electricscooter-title">
 <div class="slot-top"><span class="slot-num">07 / 07</span><span class="slot-state">ΚΛΕΙΔΩΜΕΝΗ</span></div>
 <div id="electricscooter-visual" class="slot-art locked"><img src="../assets/images/cards/electric-scooter-level2.webp?v=20261118b" width="1260" height="1760" alt="Κλειδωμένη συλλεκτική κάρτα Electric Scooter LEVEL 2" loading="lazy"><span class="lock-symbol" aria-label="Η κάρτα δεν είναι ακόμη διαθέσιμη"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span></div>
-<h3 id="electricscooter-title" class="slot-name">Electric Scooter</h3><p class="electricscooter-card-level">LEVEL 2 · Μέτριο · Οχήματα</p>
+<h3 id="electricscooter-title" class="slot-name">Electric Scooter</h3><p class="electricscooter-card-level">LEVEL 2</p>
 <p class="slot-help">Η τελική κάρτα προστέθηκε στο άλμπουμ. Το quiz για το ξεκλείδωμά της θα είναι σύντομα διαθέσιμο.</p>
 <p class="status"><span class="dot" aria-hidden="true"></span>Quiz σε προετοιμασία</p>
 </article>
