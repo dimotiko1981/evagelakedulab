@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1020" viewBox="0 0 1000 1020" role="img">
+<title>EVAGELAK EDU LAB — Badge 01 shield — MATTE #A8B0BB</title><desc>Original approved silhouette preserved, matte #A8B0BB metal and transparent center.</desc>
+<defs>
+<linearGradient id="badge04a-silver" x1="0" y1="0" x2=".9" y2="1">
+ <stop offset="0" stop-color="#B4BCC7"/>
+ <stop offset=".25" stop-color="#AEB6C1"/>
+ <stop offset=".50" stop-color="#A9B1BC"/>
+ <stop offset=".78" stop-color="#ACB4BF"/>
+ <stop offset="1" stop-color="#A6AEB9"/>
+</linearGradient>
+<linearGradient id="badge04a-bevel" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0" stop-color="#B4BCC7" stop-opacity=".94"/>
+ <stop offset=".4" stop-color="#B5BDC8" stop-opacity=".22"/>
+ <stop offset="1" stop-color="#9CA4AF" stop-opacity=".55"/>
+</linearGradient>
+<filter id="badge04a-soft-shadow" x="-7%" y="-7%" width="114%" height="114%">
+ <feGaussianBlur stdDeviation="7" />
+</filter>
+</defs>
+<g id="badge-shield-standalone" transform="translate(0 5)">
+ <path id="outer-silver-rim" d="M 500,25 C 385,82 235,116 100,155 C 62,240 40,314 38,393 L 40,521 C 54,703 220,861 500,985 C 780,861 946,703 960,521 L 962,393 C 960,314 938,240 900,155 C 765,116 615,82 500,25 Z M 500,81 C 394,132 254,165 143,197 C 111,267 90,336 87,408 L 89,509 C 106,676 265,816 500,930 C 735,816 894,676 911,509 L 913,408 C 910,336 889,267 857,197 C 746,165 606,132 500,81 Z" fill="url(#badge04a-silver)" fill-rule="evenodd"/>
+ <path id="outer-edge" d="M 500,25 C 385,82 235,116 100,155 C 62,240 40,314 38,393 L 40,521 C 54,703 220,861 500,985 C 780,861 946,703 960,521 L 962,393 C 960,314 938,240 900,155 C 765,116 615,82 500,25 Z" fill="none" stroke="url(#badge04a-bevel)" stroke-width="5"/>
+ <path id="inner-edge" d="M 500,81 C 394,132 254,165 143,197 C 111,267 90,336 87,408 L 89,509 C 106,676 265,816 500,930 C 735,816 894,676 911,509 L 913,408 C 910,336 889,267 857,197 C 746,165 606,132 500,81 Z" fill="none" stroke="#B4BCC7" stroke-opacity=".72" stroke-width="4"/>
+</g>
+</svg>

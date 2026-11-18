@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1020" viewBox="0 0 1000 1020" role="img">
+<title>EVAGELAK EDU LAB — Badge 03 crest — MATTE #C5A04D</title>
+<desc>Original approved silhouette preserved, matte #C5A04D metal and transparent center.</desc>
+<defs>
+<!-- BADGE 03 / CREST — independent shape gradient and bevels -->
+<linearGradient id="crest03-silver" x1="0" y1="0" x2=".86" y2="1">
+ <stop offset="0" stop-color="#D1AC59"/>
+ <stop offset=".22" stop-color="#CCA754"/>
+ <stop offset=".51" stop-color="#C6A14E"/>
+ <stop offset=".78" stop-color="#CAA552"/>
+ <stop offset="1" stop-color="#C39E4B"/>
+</linearGradient>
+<linearGradient id="crest03-outer-light" x1="0" y1="0" x2=".15" y2="1">
+ <stop offset="0" stop-color="#D3AE5B" stop-opacity=".92"/>
+ <stop offset=".43" stop-color="#CDA855" stop-opacity=".26"/>
+ <stop offset="1" stop-color="#BB9643" stop-opacity=".57"/>
+</linearGradient>
+<filter id="crest03-shadow" x="-8%" y="-8%" width="116%" height="116%">
+ <feGaussianBlur stdDeviation="7" />
+</filter>
+</defs>
+<g id="badge-03-crest-level2" data-badge="03" data-geometry="CREST" data-metal="#C5A04D">
+  
+  <path id="crest-matte-silver-rim" d="M 500,34
+ C 625,34 731,77 821,147
+ L 914,157 L 880,246
+ C 923,378 904,526 860,640
+ C 799,799 647,906 500,988
+ C 353,906 201,799 140,640
+ C 96,526 77,378 120,246
+ L 86,157 L 179,147
+ C 269,77 375,34 500,34 Z M 500,94
+ C 611,94 704,138 793,202
+ L 829,206 L 814,252
+ C 852,369 838,497 802,617
+ C 750,750 627,845 500,918
+ C 373,845 250,750 198,617
+ C 162,497 148,369 186,252
+ L 171,206 L 207,202
+ C 296,138 389,94 500,94 Z" fill="url(#crest03-silver)" fill-rule="evenodd"/>
+  <path id="crest-outer-bevel" d="M 500,34
+ C 625,34 731,77 821,147
+ L 914,157 L 880,246
+ C 923,378 904,526 860,640
+ C 799,799 647,906 500,988
+ C 353,906 201,799 140,640
+ C 96,526 77,378 120,246
+ L 86,157 L 179,147
+ C 269,77 375,34 500,34 Z" fill="none" stroke="url(#crest03-outer-light)" stroke-width="5" stroke-linejoin="round"/>
+  <path id="crest-inner-bevel" d="M 500,94
+ C 611,94 704,138 793,202
+ L 829,206 L 814,252
+ C 852,369 838,497 802,617
+ C 750,750 627,845 500,918
+ C 373,845 250,750 198,617
+ C 162,497 148,369 186,252
+ L 171,206 L 207,202
+ C 296,138 389,94 500,94 Z" fill="none" stroke="#D1AC59" stroke-opacity=".78" stroke-width="4" stroke-linejoin="round"/>
+  <path id="crest-inner-shadow" d="M 500,94
+ C 611,94 704,138 793,202
+ L 829,206 L 814,252
+ C 852,369 838,497 802,617
+ C 750,750 627,845 500,918
+ C 373,845 250,750 198,617
+ C 162,497 148,369 186,252
+ L 171,206 L 207,202
+ C 296,138 389,94 500,94 Z" fill="none" stroke="#36495B" stroke-opacity=".44" stroke-width="4" stroke-linejoin="round" transform="translate(0 7)"/>
+</g>
+</svg>

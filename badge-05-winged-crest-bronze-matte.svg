@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1040" viewBox="0 0 1200 1040" role="img">
+<title>EVAGELAK EDU LAB — Badge 05 winged-crest — MATTE #A87850</title>
+<desc>Original approved silhouette preserved, matte #A87850 metal and transparent center.</desc>
+<defs>
+<clipPath id="wing05-cutout" clipPathUnits="userSpaceOnUse">
+  <rect x="0" y="0" width="208" height="1040"/>
+</clipPath>
+<!-- BADGE 05 / WINGED CREST — independent SVG elements -->
+<linearGradient id="wing05-silver" x1=".12" y1="0" x2=".88" y2="1">
+ <stop offset="0" stop-color="#B5855D"/>
+ <stop offset=".20" stop-color="#B08058"/>
+ <stop offset=".52" stop-color="#A97951"/>
+ <stop offset=".77" stop-color="#AC7C54"/>
+ <stop offset="1" stop-color="#A4744C"/>
+</linearGradient>
+<linearGradient id="wing05-winglight" x1="0" y1="0" x2=".35" y2="1">
+ <stop offset="0" stop-color="#B6865E" stop-opacity=".88"/>
+ <stop offset=".45" stop-color="#B3835B" stop-opacity=".23"/>
+ <stop offset="1" stop-color="#9F6F47" stop-opacity=".45"/>
+</linearGradient>
+<linearGradient id="wing05-bevel" x1="0" y1="0" x2=".22" y2="1">
+ <stop offset="0" stop-color="#B6865E" stop-opacity=".96"/>
+ <stop offset=".45" stop-color="#AC7C54" stop-opacity=".4"/>
+ <stop offset="1" stop-color="#9D6D45" stop-opacity=".7"/>
+</linearGradient>
+</defs>
+<g id="badge-05-winged-crest" data-badge="05" data-geometry="WINGED-CREST" data-metal="#A87850" data-interior="transparent">
+<!-- The left and right wing layers are separate and mirrored vector paths. -->
+<g id="wing-05-left" data-layer="independent metal feathers" clip-path="url(#wing05-cutout)">
+<path id="left-wing-feather-1-shadow" d="M 245,262 C 191,239 104,212 24,178
+ C 65,266 121,330 253,359 L 279,302
+ C 272,283 258,272 245,262 Z" fill="#001525" opacity=".5" transform="translate(0 8)"/>
+<path id="left-wing-feather-1" d="M 245,262 C 191,239 104,212 24,178
+ C 65,266 121,330 253,359 L 279,302
+ C 272,283 258,272 245,262 Z" fill="url(#wing05-silver)" stroke="#A07048" stroke-width="3.5" stroke-linejoin="round"/>
+<path id="left-wing-feather-1-bevel" d="M 245,262 C 191,239 104,212 24,178
+ C 65,266 121,330 253,359 L 279,302
+ C 272,283 258,272 245,262 Z" fill="none" stroke="url(#wing05-winglight)" stroke-width="4" stroke-linejoin="round"/>
+<path id="left-wing-feather-2-shadow" d="M 250,365 C 184,353 110,329 48,306
+ C 100,407 161,455 261,469 L 285,417
+ C 279,391 268,372 250,365 Z" fill="#001525" opacity=".5" transform="translate(0 8)"/>
+<path id="left-wing-feather-2" d="M 250,365 C 184,353 110,329 48,306
+ C 100,407 161,455 261,469 L 285,417
+ C 279,391 268,372 250,365 Z" fill="url(#wing05-silver)" stroke="#A07048" stroke-width="3.5" stroke-linejoin="round"/>
+<path id="left-wing-feather-2-bevel" d="M 250,365 C 184,353 110,329 48,306
+ C 100,407 161,455 261,469 L 285,417
+ C 279,391 268,372 250,365 Z" fill="none" stroke="url(#wing05-winglight)" stroke-width="4" stroke-linejoin="round"/>
+<path id="left-wing-feather-3-shadow" d="M 250,471 C 194,477 129,461 71,436
+ C 135,529 180,562 262,580 L 282,527
+ C 278,495 266,478 250,471 Z" fill="#001525" opacity=".5" transform="translate(0 8)"/>
+<path id="left-wing-feather-3" d="M 250,471 C 194,477 129,461 71,436
+ C 135,529 180,562 262,580 L 282,527
+ C 278,495 266,478 250,471 Z" fill="url(#wing05-silver)" stroke="#A07048" stroke-width="3.5" stroke-linejoin="round"/>
+<path id="left-wing-feather-3-bevel" d="M 250,471 C 194,477 129,461 71,436
+ C 135,529 180,562 262,580 L 282,527
+ C 278,495 266,478 250,471 Z" fill="none" stroke="url(#wing05-winglight)" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<g id="wing-05-right" data-layer="independent metal feathers" transform="translate(1200,0) scale(-1,1)" clip-path="url(#wing05-cutout)">
+<path id="right-wing-feather-1-shadow" d="M 245,262 C 191,239 104,212 24,178
+ C 65,266 121,330 253,359 L 279,302
+ C 272,283 258,272 245,262 Z" fill="#001525" opacity=".5" transform="translate(0 8)"/>
+<path id="right-wing-feather-1" d="M 245,262 C 191,239 104,212 24,178
+ C 65,266 121,330 253,359 L 279,302
+ C 272,283 258,272 245,262 Z" fill="url(#wing05-silver)" stroke="#A07048" stroke-width="3.5" stroke-linejoin="round"/>
+<path id="right-wing-feather-1-bevel" d="M 245,262 C 191,239 104,212 24,178
+ C 65,266 121,330 253,359 L 279,302
+ C 272,283 258,272 245,262 Z" fill="none" stroke="url(#wing05-winglight)" stroke-width="4" stroke-linejoin="round"/>
+<path id="right-wing-feather-2-shadow" d="M 250,365 C 184,353 110,329 48,306
+ C 100,407 161,455 261,469 L 285,417
+ C 279,391 268,372 250,365 Z" fill="#001525" opacity=".5" transform="translate(0 8)"/>
+<path id="right-wing-feather-2" d="M 250,365 C 184,353 110,329 48,306
+ C 100,407 161,455 261,469 L 285,417
+ C 279,391 268,372 250,365 Z" fill="url(#wing05-silver)" stroke="#A07048" stroke-width="3.5" stroke-linejoin="round"/>
+<path id="right-wing-feather-2-bevel" d="M 250,365 C 184,353 110,329 48,306
+ C 100,407 161,455 261,469 L 285,417
+ C 279,391 268,372 250,365 Z" fill="none" stroke="url(#wing05-winglight)" stroke-width="4" stroke-linejoin="round"/>
+<path id="right-wing-feather-3-shadow" d="M 250,471 C 194,477 129,461 71,436
+ C 135,529 180,562 262,580 L 282,527
+ C 278,495 266,478 250,471 Z" fill="#001525" opacity=".5" transform="translate(0 8)"/>
+<path id="right-wing-feather-3" d="M 250,471 C 194,477 129,461 71,436
+ C 135,529 180,562 262,580 L 282,527
+ C 278,495 266,478 250,471 Z" fill="url(#wing05-silver)" stroke="#A07048" stroke-width="3.5" stroke-linejoin="round"/>
+<path id="right-wing-feather-3-bevel" d="M 250,471 C 194,477 129,461 71,436
+ C 135,529 180,562 262,580 L 282,527
+ C 278,495 266,478 250,471 Z" fill="none" stroke="url(#wing05-winglight)" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<!-- Crest body covers wing joints; interior is a genuine knockout, not a colored rectangle. -->
+<path id="shield-05-soft-shadow" d="M 600,26
+ C 733,99 870,160 1022,200
+ C 1048,350 1049,504 1024,635
+ C 994,778 804,895 600,985
+ C 396,895 206,778 176,635
+ C 151,504 152,350 178,200
+ C 330,160 467,99 600,26 Z M 600,94
+ C 736,169 854,209 975,245
+ C 990,376 987,500 967,615
+ C 942,722 786,829 600,921
+ C 414,829 258,722 233,615
+ C 213,500 210,376 225,245
+ C 346,209 464,169 600,94 Z" fill="#00101B" fill-rule="evenodd" opacity=".44" transform="translate(0 12)"/>
+<path id="shield-05-matte-silver-rim" d="M 600,26
+ C 733,99 870,160 1022,200
+ C 1048,350 1049,504 1024,635
+ C 994,778 804,895 600,985
+ C 396,895 206,778 176,635
+ C 151,504 152,350 178,200
+ C 330,160 467,99 600,26 Z M 600,94
+ C 736,169 854,209 975,245
+ C 990,376 987,500 967,615
+ C 942,722 786,829 600,921
+ C 414,829 258,722 233,615
+ C 213,500 210,376 225,245
+ C 346,209 464,169 600,94 Z" fill="url(#wing05-silver)" fill-rule="evenodd"/>
+<path id="shield-05-outer-bevel" d="M 600,26
+ C 733,99 870,160 1022,200
+ C 1048,350 1049,504 1024,635
+ C 994,778 804,895 600,985
+ C 396,895 206,778 176,635
+ C 151,504 152,350 178,200
+ C 330,160 467,99 600,26 Z" fill="none" stroke="url(#wing05-bevel)" stroke-width="5.5" stroke-linejoin="round"/>
+<path id="shield-05-inner-shadow" d="M 600,94
+ C 736,169 854,209 975,245
+ C 990,376 987,500 967,615
+ C 942,722 786,829 600,921
+ C 414,829 258,722 233,615
+ C 213,500 210,376 225,245
+ C 346,209 464,169 600,94 Z" fill="none" stroke="#23384B" stroke-width="6" stroke-opacity=".53" transform="translate(0 6)" stroke-linejoin="round"/>
+<path id="shield-05-inner-bevel" d="M 600,94
+ C 736,169 854,209 975,245
+ C 990,376 987,500 967,615
+ C 942,722 786,829 600,921
+ C 414,829 258,722 233,615
+ C 213,500 210,376 225,245
+ C 346,209 464,169 600,94 Z" fill="none" stroke="#B5855D" stroke-width="4" stroke-opacity=".89" stroke-linejoin="round"/>
+</g>
+</svg>

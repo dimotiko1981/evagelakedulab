@@ -1,0 +1,56 @@
+{
+  "project": "EVAGELAK EDU LAB",
+  "version": "2.0",
+  "upload_path": "assets/design-system/cards-v2",
+  "approved_base_source": "source/approved-step03-silver-master.svg",
+  "geometry_canvas_px": [
+    1260,
+    1760
+  ],
+  "physical_size_mm": [
+    63,
+    88
+  ],
+  "final_delivery": {
+    "format": "WebP",
+    "requested_pixels": [
+      5498,
+      7680
+    ],
+    "compression": "optimized for small bytes without visible artifacts"
+  },
+  "finish": {
+    "outer": "matte metal, always",
+    "interior": "glossy navy with cyan radial rays and subtle shiny floor, clipped inside badge only"
+  },
+  "colors": {
+    "bronze": {
+      "level": 1,
+      "matte_hex": "#A87850"
+    },
+    "silver": {
+      "level": 2,
+      "matte_hex": "#A8B0BB"
+    },
+    "gold": {
+      "level": 3,
+      "matte_hex": "#C5A04D"
+    }
+  },
+  "badges": {
+    "01": "shield",
+    "02": "circle",
+    "03": "crest",
+    "04": "hexagon",
+    "05": "winged-crest",
+    "06": "diamond"
+  },
+  "editable_model_layer_id": "LEGO_PHOTO_CLIPPED_TO_BADGE",
+  "editable_title_id": "project-name-editable",
+  "card_template_count": 18,
+  "badge_svg_count": 18,
+  "badge_02_and_06": "approved raster references, vector reconstructions",
+  "is_uploaded_to_github": false,
+  "do_not_regenerate_model_with_AI": true,
+  "master_color_layout_preserved": true
+}
