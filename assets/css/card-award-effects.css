@@ -1,4 +1,4 @@
-/* EVAGELAK EDU LAB — Collectible card reveal v1
+/* EVAGELAK EDU LAB — Collectible card reveal v2 (directly mounted per quiz result)
    LEVEL 1 Bronze: warm circular ripple + soft turn
    LEVEL 2 Silver: technical scanning sweep + elegant lift
    LEVEL 3 Gold: ceremonial 3D turn + gold particle burst
@@ -45,7 +45,7 @@
   aspect-ratio:63/88 !important;
   margin:0 auto !important;padding:0 !important;
   border:0 !important;border-radius:6px !important;
-  opacity:1 !important;
+  opacity:1;
   object-fit:contain !important;
   box-shadow:none !important;
   filter:drop-shadow(0 17px 18px rgba(0,0,0,.24)) !important;
@@ -72,7 +72,7 @@
 .edulab-award--gold .edulab-award__ring {animation:edulab-gold-ring 2050ms ease-out 120ms both;}
 .edulab-award--gold .award-medal,.edulab-award--gold > img {animation:edulab-gold-card 2000ms cubic-bezier(.18,.72,.19,1) both !important;}
 .edulab-award--gold .edulab-award__spark {animation:edulab-gold-spark 1280ms ease-out var(--delay) both;}
-@keyframes edulab-gold-card {0%{opacity:0;transform:translateY(63px) scale(.66) rotateY(-178deg) rotateX(14deg) rotateZ(-12deg)}42%{opacity:1;transform:translateY(-22px) scale(1.06) rotateY(28deg) rotateX(-3deg) rotateZ(4deg)}68%{opacity:1;transform:translateY(5px) scale(.99) rotateY(-10deg) rotateX(1deg) rotateZ(-2deg)}100%{opacity:1;transform:translateY(0) scale(1) rotateY(0) rotateX(0) rotateZ(0)}}
+@keyframes edulab-gold-card {0%{opacity:0;transform:translateY(63px) scale(.66) rotateY(-145deg) rotateX(13deg)}55%{opacity:1;transform:translateY(-17px) scale(1.04) rotateY(15deg)}75%{transform:translateY(3px) scale(.99) rotateY(-4deg)}100%{opacity:1;transform:none}}
 @keyframes edulab-gold-halo {0%{opacity:0;transform:scale(.65)}40%{opacity:1}100%{opacity:.65;transform:scale(1.1)}}
 @keyframes edulab-gold-ring {0%{opacity:0;transform:scale(.55) rotate(-40deg)}45%{opacity:.7}100%{opacity:.32;transform:scale(1.25) rotate(45deg)}}
 @keyframes edulab-gold-ray {0%{opacity:0;transform:rotate(-25deg) translateX(-80%)}50%{opacity:.6}100%{opacity:0;transform:rotate(-25deg) translateX(75%)}}
@@ -85,7 +85,7 @@
 .edulab-award--silver .edulab-award__ring {border-style:dashed;animation:edulab-silver-ring 1550ms ease-out both;}
 .edulab-award--silver .award-medal,.edulab-award--silver > img {animation:edulab-silver-card 1500ms cubic-bezier(.22,.75,.2,1) both !important;}
 .edulab-award--silver .edulab-award__spark {width:3px;height:9px;border-radius:1px;animation:edulab-silver-spark 1050ms ease-out var(--delay) both;}
-@keyframes edulab-silver-card {0%{opacity:0;transform:translateY(52px) scale(.88) rotateY(-52deg) rotateZ(-8deg);filter:blur(5px)}46%{opacity:1;transform:translateY(-10px) scale(1.02) rotateY(14deg) rotateZ(2deg);filter:blur(0)}72%{opacity:1;transform:translateY(2px) scale(.995) rotateY(-6deg) rotateZ(-1deg);filter:none}100%{opacity:1;transform:translateY(0) scale(1) rotateY(0) rotateZ(0);filter:none}}
+@keyframes edulab-silver-card {0%{opacity:0;transform:translateY(49px) scale(.90) rotateY(-12deg);filter:blur(5px)}55%{opacity:1;transform:translateY(-8px) scale(1.015) rotateY(3deg);filter:blur(0)}100%{opacity:1;transform:none;filter:none}}
 @keyframes edulab-silver-frame {0%{opacity:0;transform:scale(.9)}100%{opacity:.6;transform:scale(1)}}
 @keyframes edulab-silver-ring {0%{opacity:0;transform:scale(.6) rotate(-20deg)}55%{opacity:.65}100%{opacity:.16;transform:scale(1.17) rotate(30deg)}}
 @keyframes edulab-silver-scan {0%{opacity:0;transform:rotate(-25deg) translateX(-110%)}40%{opacity:.9}100%{opacity:0;transform:rotate(-25deg) translateX(100%)}}
@@ -98,7 +98,7 @@
 .edulab-award--bronze .edulab-award__ring {animation:edulab-bronze-ring 1800ms ease-out both;}
 .edulab-award--bronze .award-medal,.edulab-award--bronze > img {animation:edulab-bronze-card 1650ms cubic-bezier(.2,.8,.23,1) both !important;}
 .edulab-award--bronze .edulab-award__spark {animation:edulab-bronze-spark 1050ms ease-out var(--delay) both;}
-@keyframes edulab-bronze-card {0%{opacity:0;transform:scale(.72) rotateY(-34deg) rotateZ(-12deg) translateY(46px)}48%{opacity:1;transform:scale(1.04) rotateY(10deg) rotateZ(3deg) translateY(-10px)}74%{opacity:1;transform:scale(.995) rotateY(-5deg) rotateZ(-1deg) translateY(2px)}100%{opacity:1;transform:scale(1) rotateY(0) rotateZ(0) translateY(0)}}
+@keyframes edulab-bronze-card {0%{opacity:0;transform:scale(.73) rotateZ(-7deg) translateY(44px)}65%{opacity:1;transform:scale(1.035) rotateZ(2deg) translateY(-8px)}100%{opacity:1;transform:none}}
 @keyframes edulab-bronze-pulse {0%{opacity:0;transform:scale(.62)}50%{opacity:.7}100%{opacity:.45;transform:scale(1.1)}}
 @keyframes edulab-bronze-ring {0%{opacity:0;transform:scale(.5)}45%{opacity:.65}100%{opacity:.21;transform:scale(1.18)}}
 @keyframes edulab-bronze-glow {0%{opacity:0;transform:rotate(-25deg) translateX(-85%)}45%{opacity:.38}100%{opacity:0;transform:rotate(-25deg) translateX(65%)}}
@@ -117,4 +117,110 @@
   }
   .edulab-award .award-medal,.edulab-award > img {opacity:1 !important;transform:none !important;filter:none !important;}
   .edulab-award::after,.edulab-award__spark {display:none !important;}
+}
+
+/* v2: animated stage is mounted synchronously by each quiz. No observer needed. */
+.edulab-award.edulab-award--gold .award-medal,
+.edulab-award.edulab-award--bronze .award-medal,
+.edulab-award.edulab-award--silver .award-medal {will-change:transform,opacity;}
+.edulab-award__ring,.edulab-award__spark {will-change:transform,opacity;}
+
+
+/* v3 — ACTUAL CARD 3D ROTATION, mounted inside the earned-result HTML.
+   This must animate the card container rather than the surrounding halo.
+   Two-sided flip ensures there is never backwards readable text. */
+.edulab-award .edulab-card-spin {
+  position:relative !important;
+  z-index:4 !important;
+  width:min(245px,70vw) !important;
+  aspect-ratio:63 / 88 !important;
+  max-width:100% !important;
+  margin:0 auto !important;
+  transform-origin:50% 50% !important;
+  transform-style:preserve-3d !important;
+  -webkit-transform-style:preserve-3d;
+  will-change:transform,opacity;
+}
+/* A distinct back face, shown only while the card turns away from the viewer. */
+.edulab-award .edulab-card-spin::after {
+  content:'EVAGELAK\A EDU LAB';
+  white-space:pre-line;
+  display:grid;
+  place-items:center;
+  position:absolute;
+  inset:0;
+  border-radius:9px;
+  border:7px solid var(--metal);
+  outline:1px solid color-mix(in srgb,var(--metal) 30%,transparent);
+  outline-offset:-16px;
+  background:radial-gradient(circle at 50% 40%,#0c4a62,#082c44 65%,#061c2f);
+  color:#f1f8fb;
+  text-align:center;
+  font:bold clamp(15px,2.2vw,21px)/1.48 system-ui,sans-serif;
+  letter-spacing:.06em;
+  text-shadow:0 3px 9px rgba(0,0,0,.4);
+  transform:rotateY(180deg) translateZ(2px);
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  pointer-events:none;
+}
+.edulab-award .edulab-card-spin > img,
+.edulab-award .edulab-card-spin > .award-medal {
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  max-height:none !important;
+  max-width:100% !important;
+  margin:0 !important;
+  padding:0 !important;
+  object-fit:contain !important;
+  animation:none !important;
+  transform:translateZ(1px) !important;
+  filter:drop-shadow(0 16px 17px rgba(0,0,0,.25)) !important;
+  backface-visibility:hidden !important;
+  -webkit-backface-visibility:hidden !important;
+}
+.edulab-award .edulab-card-spin > .award-medal > .award-face:not(.award-face-back) {
+  position:relative !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+}
+/* Full vertical-axis rotation in each tier, with tier-specific timing. */
+.edulab-award--gold .edulab-card-spin {
+  animation:edulab-gold-flip-v3 2700ms cubic-bezier(.2,.66,.15,1) both !important;
+}
+.edulab-award--silver .edulab-card-spin {
+  animation:edulab-silver-flip-v3 2200ms cubic-bezier(.25,.72,.25,1) both !important;
+}
+.edulab-award--bronze .edulab-card-spin {
+  animation:edulab-bronze-flip-v3 2450ms cubic-bezier(.24,.7,.2,1) both !important;
+}
+@keyframes edulab-gold-flip-v3 {
+  0% {opacity:0;transform:translateY(45px) scale(.82) rotateY(-360deg) rotateX(8deg)}
+  28% {opacity:1;transform:translateY(-8px) scale(1.04) rotateY(-268deg) rotateX(3deg)}
+  60% {opacity:1;transform:translateY(-16px) scale(1.05) rotateY(-112deg) rotateX(-2deg)}
+  84% {opacity:1;transform:translateY(4px) scale(.99) rotateY(13deg) rotateX(0)}
+  100% {opacity:1;transform:none}
+}
+@keyframes edulab-silver-flip-v3 {
+  0% {opacity:0;transform:translateY(35px) scale(.91) rotateY(-360deg)}
+  35% {opacity:1;transform:translateY(-4px) scale(1.02) rotateY(-235deg)}
+  70% {opacity:1;transform:translateY(-9px) scale(1.025) rotateY(-70deg)}
+  90% {opacity:1;transform:translateY(2px) scale(.99) rotateY(7deg)}
+  100% {opacity:1;transform:none}
+}
+@keyframes edulab-bronze-flip-v3 {
+  0% {opacity:0;transform:translateY(35px) scale(.87) rotateY(-360deg) rotateZ(-5deg)}
+  32% {opacity:1;transform:translateY(-8px) scale(1.02) rotateY(-250deg) rotateZ(-3deg)}
+  65% {opacity:1;transform:translateY(-12px) scale(1.035) rotateY(-100deg) rotateZ(2deg)}
+  85% {opacity:1;transform:translateY(4px) scale(.99) rotateY(9deg) rotateZ(1deg)}
+  100% {opacity:1;transform:none}
+}
+@media(max-width:500px) {
+  .edulab-award .edulab-card-spin {width:min(218px,67vw) !important;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .edulab-award .edulab-card-spin {animation:none !important;opacity:1 !important;transform:none !important;}
+  .edulab-award .edulab-card-spin::after {display:none !important;}
 }
