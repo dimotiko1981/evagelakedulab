@@ -1,4 +1,4 @@
-/* EVAGELAK EDU LAB — Collectible card reveal v1
+/* EVAGELAK EDU LAB — Collectible card reveal v2 (directly mounted per quiz result)
    LEVEL 1 Bronze: warm circular ripple + soft turn
    LEVEL 2 Silver: technical scanning sweep + elegant lift
    LEVEL 3 Gold: ceremonial 3D turn + gold particle burst
@@ -45,7 +45,7 @@
   aspect-ratio:63/88 !important;
   margin:0 auto !important;padding:0 !important;
   border:0 !important;border-radius:6px !important;
-  opacity:1 !important;
+  opacity:1;
   object-fit:contain !important;
   box-shadow:none !important;
   filter:drop-shadow(0 17px 18px rgba(0,0,0,.24)) !important;
@@ -118,3 +118,9 @@
   .edulab-award .award-medal,.edulab-award > img {opacity:1 !important;transform:none !important;filter:none !important;}
   .edulab-award::after,.edulab-award__spark {display:none !important;}
 }
+
+/* v2: animated stage is mounted synchronously by each quiz. No observer needed. */
+.edulab-award.edulab-award--gold .award-medal,
+.edulab-award.edulab-award--bronze .award-medal,
+.edulab-award.edulab-award--silver .award-medal {will-change:transform,opacity;}
+.edulab-award__ring,.edulab-award__spark {will-change:transform,opacity;}
