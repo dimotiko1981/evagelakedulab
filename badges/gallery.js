@@ -15,7 +15,7 @@
       earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
       earnedDesc: 'Η συλλεκτική κάρτα T-Rex LEVEL 3 βρίσκεται στο άλμπουμ σου!',
       lockedDesc: 'Ολοκλήρωσε το quiz του T-Rex για να κερδίσεις τη συλλεκτική κάρτα LEVEL 3.',
-      quizTextEarned: 'Παίξε ξανά ↗', quizTextLocked: 'Παίξε το quiz ↗',
+      quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
       fallbackHref: '../assets/images/cards/t-rex-level3.webp'
     },
     {
@@ -23,7 +23,7 @@
       earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
       earnedDesc: 'Η συλλεκτική κάρτα Ρομποτικό Χταπόδι LEVEL 1 βρίσκεται στο άλμπουμ σου!',
       lockedDesc: 'Ολοκλήρωσε το quiz του Χταποδιού για να κερδίσεις τη συλλεκτική κάρτα LEVEL 1.',
-      quizTextEarned: 'Παίξε ξανά ↗', quizTextLocked: 'Παίξε το quiz ↗',
+      quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
       fallbackHref: '../assets/images/cards/octopus-level1.webp'
     },
     {
@@ -31,7 +31,7 @@
       earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
       earnedDesc: 'Η συλλεκτική κάρτα Μπασκέτα LEVEL 2 βρίσκεται στο άλμπουμ σου!',
       lockedDesc: 'Ολοκλήρωσε το quiz της Μπασκέτας για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
-      quizTextEarned: 'Παίξε ξανά ↗', quizTextLocked: 'Παίξε το quiz ↗',
+      quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
       fallbackHref: '../assets/images/cards/basket-level2.webp?v=20261118'
     },
     {
@@ -39,7 +39,7 @@
       earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
       earnedDesc: 'Η συλλεκτική κάρτα Frisbee LEVEL 2 βρίσκεται στο άλμπουμ σου!',
       lockedDesc: 'Quiz προσωρινά μη διαθέσιμο. Η συλλεκτική κάρτα παραμένει στο άλμπουμ.',
-      quizTextEarned: 'Παίξε ξανά ↗', quizTextLocked: 'Παίξε το quiz ↗',
+      quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
       fallbackHref: '../assets/images/cards/frisbee-level2.webp?v=20261118'
     },
     {
@@ -47,7 +47,7 @@
       earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
       earnedDesc: 'Η συλλεκτική κάρτα Jet Fighter LEVEL 2 βρίσκεται στο άλμπουμ σου!',
       lockedDesc: 'Το quiz του Jet Fighter θα προστεθεί σύντομα. Η κάρτα παραμένει κλειδωμένη μέχρι τότε.',
-      quizTextEarned: 'Παίξε ξανά ↗', quizTextLocked: 'Σύντομα διαθέσιμο ↗',
+      quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Σύντομα διαθέσιμο ↗',
       fallbackHref: '../assets/images/cards/jet-fighter-level2.webp?v=20261118'
     },
     {
@@ -55,7 +55,7 @@
       earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
       earnedDesc: 'Η συλλεκτική κάρτα Ρομποτικός Σκορπιός LEVEL 2 βρίσκεται στο άλμπουμ σου!',
       lockedDesc: 'Το quiz του Ρομποτικού Σκορπιού θα προστεθεί σύντομα. Η κάρτα παραμένει κλειδωμένη μέχρι τότε.',
-      quizTextEarned: 'Παίξε ξανά ↗', quizTextLocked: 'Σύντομα διαθέσιμο ↗',
+      quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Σύντομα διαθέσιμο ↗',
       fallbackHref: '../assets/images/cards/scorpion-level2.webp?v=20261118b'
     },
     {
@@ -63,7 +63,7 @@
       earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
       earnedDesc: 'Η συλλεκτική κάρτα Electric Scooter LEVEL 2 βρίσκεται στο άλμπουμ σου!',
       lockedDesc: 'Το quiz του Electric Scooter θα προστεθεί σύντομα. Η κάρτα παραμένει κλειδωμένη μέχρι τότε.',
-      quizTextEarned: 'Παίξε ξανά ↗', quizTextLocked: 'Σύντομα διαθέσιμο ↗',
+      quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Σύντομα διαθέσιμο ↗',
       fallbackHref: '../assets/images/cards/electric-scooter-level2.webp?v=20261118b'
     }
   ];
