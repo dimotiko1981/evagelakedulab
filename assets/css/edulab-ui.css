@@ -117,3 +117,32 @@ body :is(a, button, input, select):focus-visible { outline: 3px solid #137d99; o
   letter-spacing: 0;
   text-transform: none;
 }
+
+#album-grid .earned .slot-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1px 6px;
+  width: 100%;
+}
+#album-grid .earned .slot-actions button.action {
+  flex: 1 0 100%;
+  min-height: 44px;
+  background: #193e5b;
+  border-color: #193e5b;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+}
+#album-grid .earned .slot-actions button.action:hover { background: #245777; }
+#album-grid .earned .slot-actions a.action {
+  min-height: 40px;
+  padding: 4px 2px;
+  border: 0;
+  background: transparent;
+  color: #345568;
+  font-size: 12px;
+  box-shadow: none;
+}
+#album-grid .earned .slot-actions a.action:hover { color: #075966; text-decoration: underline; }
