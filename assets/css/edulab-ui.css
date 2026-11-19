@@ -26,3 +26,9 @@ body, button, input, select { font-family: Inter, system-ui, sans-serif; }
   animation: none; filter: drop-shadow(0 12px 12px rgba(0,8,19,.24));
 }
 body :is(a, button, input, select):focus-visible { outline: 3px solid #137d99; outline-offset: 3px; box-shadow: 0 0 0 3px white; }
+
+/* Workshop templates set white link text with !important. */
+.ws-page a.ws-action:any-link,
+.ws-page a.ws-program-link:any-link {
+  color: #163e60 !important;
+}
