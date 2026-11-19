@@ -4,8 +4,32 @@ body, button, input, select { font-family: Inter, system-ui, sans-serif; }
 #workshop-list .workshop-info p, .ws-page .ws-card p, .ws-page .ws-card li {
   font-size: 17px; line-height: 1.55;
 }
-#workshop-list .workshop-image { height: auto; width: 100%; aspect-ratio: 16/9; }
-#workshop-list .workshop-image img { object-fit: contain; object-position: center; padding: 0; transform: none; }
+/* Workshop covers: fixed viewport, not a grid with percentage-height children.
+   Absolute sizing prevents 4:3 photos from overflowing a 16:9 card.
+   object-fit:contain displays every complete model without cropping. */
+#workshop-list .workshop-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  overflow: hidden;
+  background-color: #18212b;
+}
+#workshop-list .workshop-image img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
 #workshop-list .workshop-action, .ws-page .ws-action, .ws-page .ws-program-link,
 .slot-actions .action, .btn.btn-academy-home {
   box-sizing: border-box; min-height: 46px; padding: 10px 16px; border-radius: 12px;
