@@ -175,3 +175,18 @@ body.quiz-unified .quiz-foot,body.quiz-unified .footer {
     transition:none!important;animation:none!important;
   }
 }
+
+/* Align links and retry buttons inside the award panel. */
+body.quiz-unified :is(.earned-actions, .basket-award-actions, .frisbee-award-actions) {
+  align-items: stretch;
+}
+body.quiz-unified :is(.earned-actions, .basket-award-actions, .frisbee-award-actions) > :is(a, button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 48px;
+  margin: 0;
+  padding-block: 10px;
+  line-height: 1.35;
+}
