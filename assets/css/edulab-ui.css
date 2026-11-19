@@ -118,38 +118,42 @@ body :is(a, button, input, select):focus-visible { outline: 3px solid #137d99; o
   text-transform: none;
 }
 
-#album-grid .earned .slot-actions {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 7px;
-  width: 100%;
-}
-#album-grid .earned .slot-actions button.action {
-  grid-column: 1 / -1;
-  min-height: 44px;
-  background: #193e5b;
-  border-color: #193e5b;
+
+/* One primary action per album slot. Secondary actions live in the preview. */
+#album-grid .earned .slot-actions a { display: none; }
+#album-grid .slot-actions .action:not([hidden]),
+.preview-actions a.action,
+.btn.btn-academy-home,
+.ws-page .ws-material a.ws-action:any-link {
+  border: 1px solid #193e5b;
   border-radius: 10px;
-  color: white;
-  font-size: 14px;
-}
-#album-grid .earned .slot-actions button.action:hover { background: #245777; }
-#album-grid .earned .slot-actions a.action {
-  min-width: 0;
-  min-height: 38px;
-  padding: 5px 3px;
-  border: 1px solid #aac1cc;
-  border-radius: 8px;
-  background: #fff;
-  color: #244859;
-  font-size: 12px;
-  line-height: 1.25;
-  white-space: normal;
+  background: #193e5b;
+  color: #fff;
+  min-height: 44px;
+  padding: 10px 16px;
+  font: 600 14px/1.35 Inter, system-ui, sans-serif;
   box-shadow: none;
 }
-#album-grid .earned .slot-actions a.action:hover {
-  background: #edf5f8;
-  border-color: #587e91;
+#album-grid .slot-actions .action { width: 100%; }
+.btn.btn-academy-home { border-color: #9db4c4; }
+#album-grid .slot-actions .action:hover,
+.preview-actions a.action:hover,
+.btn.btn-academy-home:hover,
+.ws-page .ws-material a.ws-action:hover { background: #275674; }
+#workshop-list .workshop-action, .topbar a.back, .preview-actions a.album-replay {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  color: #193e5b;
+  font: 600 14px/1.35 Inter, system-ui, sans-serif;
   text-decoration: none;
+  box-shadow: none;
 }
-#album-grid .earned .slot-actions a:only-of-type { grid-column: 1 / -1; }
+#workshop-list .workshop-action:hover, .topbar a.back:hover, .preview-actions a.album-replay:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.preview-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 18px; }
