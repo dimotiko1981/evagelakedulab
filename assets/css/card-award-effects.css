@@ -1,0 +1,120 @@
+/* EVAGELAK EDU LAB — Collectible card reveal v1
+   LEVEL 1 Bronze: warm circular ripple + soft turn
+   LEVEL 2 Silver: technical scanning sweep + elegant lift
+   LEVEL 3 Gold: ceremonial 3D turn + gold particle burst
+   The underlying card image is never edited. */
+.edulab-award {
+  --metal:#bfcbd1;
+  --glow:rgba(198,215,224,.26);
+  position:relative !important;
+  display:grid !important;
+  place-items:center !important;
+  isolation:isolate;
+  perspective:1050px;
+  box-sizing:border-box;
+  width:min(406px,100%) !important;
+  height:410px !important;
+  min-height:410px !important;
+  margin:12px auto 23px !important;
+  padding:24px !important;
+  overflow:hidden !important;
+  border:1px solid rgba(178,207,216,.22) !important;
+  border-radius:23px !important;
+  background:radial-gradient(ellipse at 50% 42%,var(--glow),transparent 60%),linear-gradient(150deg,#102d43,#071a2a) !important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.045),0 17px 32px rgba(10,42,62,.14) !important;
+}
+.edulab-award::before,.edulab-award::after {
+  content:"";position:absolute;pointer-events:none;z-index:0;
+}
+.edulab-award::before {
+  inset:10%;border:1px solid color-mix(in srgb,var(--metal) 55%,transparent);
+  border-radius:50%;box-shadow:0 0 0 22px color-mix(in srgb,var(--metal) 8%,transparent);
+}
+.edulab-award::after {
+  width:145%;height:65%;left:-22%;top:12%;opacity:0;
+  background:linear-gradient(105deg,transparent 28%,color-mix(in srgb,var(--metal) 23%,transparent) 51%,transparent 70%);
+  transform:rotate(-25deg) translateX(-100%);
+}
+.edulab-award .award-aura,.edulab-award .award-orbit,
+.edulab-award .award-spark {display:none !important;}
+.edulab-award .award-medal,.edulab-award > img {
+  position:relative !important;z-index:3 !important;
+  width:min(245px,70vw) !important;
+  max-width:100% !important;
+  height:auto !important;max-height:356px !important;
+  aspect-ratio:63/88 !important;
+  margin:0 auto !important;padding:0 !important;
+  border:0 !important;border-radius:6px !important;
+  opacity:1 !important;
+  object-fit:contain !important;
+  box-shadow:none !important;
+  filter:drop-shadow(0 17px 18px rgba(0,0,0,.24)) !important;
+  backface-visibility:visible !important;
+  transform-style:preserve-3d;
+}
+.edulab-award .award-medal {display:block !important;animation:none !important;}
+.edulab-award .award-medal .award-face:not(.award-face-back) {
+  position:relative !important;inset:auto !important;width:100% !important;
+  height:100% !important;max-height:none !important;
+  display:block !important;object-fit:contain !important;
+  opacity:1 !important;transform:none !important;filter:none !important;
+  box-shadow:none !important;animation:none !important;
+}
+.edulab-award .award-medal .award-face-back {display:none !important;}
+.edulab-award .award-medal::before,.edulab-award .award-medal::after {display:none !important;}
+.edulab-award__ring {pointer-events:none;position:absolute;z-index:1;width:285px;height:285px;border:1px solid var(--metal);border-radius:50%;opacity:0;}
+.edulab-award__spark {position:absolute;left:50%;top:50%;z-index:2;width:5px;height:5px;border-radius:50%;background:var(--metal);box-shadow:0 0 9px 2px var(--metal);opacity:0;pointer-events:none;}
+
+/* LEVEL 3 — GOLD: noble, deliberate three-dimensional reveal. */
+.edulab-award--gold {--metal:#C5A04D;--glow:rgba(197,160,77,.34);}
+.edulab-award--gold::before {border-radius:50%;animation:edulab-gold-halo 2100ms ease-out both;}
+.edulab-award--gold::after {animation:edulab-gold-ray 1850ms ease-out 260ms both;}
+.edulab-award--gold .edulab-award__ring {animation:edulab-gold-ring 2050ms ease-out 120ms both;}
+.edulab-award--gold .award-medal,.edulab-award--gold > img {animation:edulab-gold-card 2000ms cubic-bezier(.18,.72,.19,1) both !important;}
+.edulab-award--gold .edulab-award__spark {animation:edulab-gold-spark 1280ms ease-out var(--delay) both;}
+@keyframes edulab-gold-card {0%{opacity:0;transform:translateY(63px) scale(.66) rotateY(-145deg) rotateX(13deg)}55%{opacity:1;transform:translateY(-17px) scale(1.04) rotateY(15deg)}75%{transform:translateY(3px) scale(.99) rotateY(-4deg)}100%{opacity:1;transform:none}}
+@keyframes edulab-gold-halo {0%{opacity:0;transform:scale(.65)}40%{opacity:1}100%{opacity:.65;transform:scale(1.1)}}
+@keyframes edulab-gold-ring {0%{opacity:0;transform:scale(.55) rotate(-40deg)}45%{opacity:.7}100%{opacity:.32;transform:scale(1.25) rotate(45deg)}}
+@keyframes edulab-gold-ray {0%{opacity:0;transform:rotate(-25deg) translateX(-80%)}50%{opacity:.6}100%{opacity:0;transform:rotate(-25deg) translateX(75%)}}
+@keyframes edulab-gold-spark {0%{opacity:0;transform:translate(0,0) scale(.1)}30%{opacity:1}100%{opacity:0;transform:translate(var(--sx),var(--sy)) scale(.35)}}
+
+/* LEVEL 2 — SILVER: clean precision, subtle lift and scanning light. */
+.edulab-award--silver {--metal:#B8CAD3;--glow:rgba(174,210,228,.32);}
+.edulab-award--silver::before {border-radius:18%;animation:edulab-silver-frame 1350ms ease-out both;}
+.edulab-award--silver::after {animation:edulab-silver-scan 2100ms ease-in-out 240ms both;}
+.edulab-award--silver .edulab-award__ring {border-style:dashed;animation:edulab-silver-ring 1550ms ease-out both;}
+.edulab-award--silver .award-medal,.edulab-award--silver > img {animation:edulab-silver-card 1500ms cubic-bezier(.22,.75,.2,1) both !important;}
+.edulab-award--silver .edulab-award__spark {width:3px;height:9px;border-radius:1px;animation:edulab-silver-spark 1050ms ease-out var(--delay) both;}
+@keyframes edulab-silver-card {0%{opacity:0;transform:translateY(49px) scale(.90) rotateY(-12deg);filter:blur(5px)}55%{opacity:1;transform:translateY(-8px) scale(1.015) rotateY(3deg);filter:blur(0)}100%{opacity:1;transform:none;filter:none}}
+@keyframes edulab-silver-frame {0%{opacity:0;transform:scale(.9)}100%{opacity:.6;transform:scale(1)}}
+@keyframes edulab-silver-ring {0%{opacity:0;transform:scale(.6) rotate(-20deg)}55%{opacity:.65}100%{opacity:.16;transform:scale(1.17) rotate(30deg)}}
+@keyframes edulab-silver-scan {0%{opacity:0;transform:rotate(-25deg) translateX(-110%)}40%{opacity:.9}100%{opacity:0;transform:rotate(-25deg) translateX(100%)}}
+@keyframes edulab-silver-spark {0%{opacity:0;transform:translate(0,0) scale(.2)}45%{opacity:.65}100%{opacity:0;transform:translate(var(--sx),var(--sy)) scale(.5)}}
+
+/* LEVEL 1 — BRONZE: warm copper resonance and gentle turn. */
+.edulab-award--bronze {--metal:#A87850;--glow:rgba(168,120,80,.35);}
+.edulab-award--bronze::before {animation:edulab-bronze-pulse 1700ms ease-out both;}
+.edulab-award--bronze::after {animation:edulab-bronze-glow 1700ms ease-out 180ms both;}
+.edulab-award--bronze .edulab-award__ring {animation:edulab-bronze-ring 1800ms ease-out both;}
+.edulab-award--bronze .award-medal,.edulab-award--bronze > img {animation:edulab-bronze-card 1650ms cubic-bezier(.2,.8,.23,1) both !important;}
+.edulab-award--bronze .edulab-award__spark {animation:edulab-bronze-spark 1050ms ease-out var(--delay) both;}
+@keyframes edulab-bronze-card {0%{opacity:0;transform:scale(.73) rotateZ(-7deg) translateY(44px)}65%{opacity:1;transform:scale(1.035) rotateZ(2deg) translateY(-8px)}100%{opacity:1;transform:none}}
+@keyframes edulab-bronze-pulse {0%{opacity:0;transform:scale(.62)}50%{opacity:.7}100%{opacity:.45;transform:scale(1.1)}}
+@keyframes edulab-bronze-ring {0%{opacity:0;transform:scale(.5)}45%{opacity:.65}100%{opacity:.21;transform:scale(1.18)}}
+@keyframes edulab-bronze-glow {0%{opacity:0;transform:rotate(-25deg) translateX(-85%)}45%{opacity:.38}100%{opacity:0;transform:rotate(-25deg) translateX(65%)}}
+@keyframes edulab-bronze-spark {0%{opacity:0;transform:translate(0,0) scale(.4)}35%{opacity:.75}100%{opacity:0;transform:translate(var(--sx),var(--sy)) scale(.2)}}
+
+@media(max-width:500px) {
+  .edulab-award {height:355px !important;min-height:355px !important;padding:14px !important;}
+  .edulab-award .award-medal,.edulab-award > img {width:min(218px,67vw) !important;max-height:310px !important;}
+  .edulab-award__ring {width:225px;height:225px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .edulab-award,.edulab-award::before,.edulab-award::after,
+  .edulab-award .award-medal,.edulab-award > img,
+  .edulab-award__ring,.edulab-award__spark {
+    animation:none !important;transition:none !important;
+  }
+  .edulab-award .award-medal,.edulab-award > img {opacity:1 !important;transform:none !important;filter:none !important;}
+  .edulab-award::after,.edulab-award__spark {display:none !important;}
+}
