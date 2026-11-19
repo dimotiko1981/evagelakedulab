@@ -32,3 +32,32 @@ body :is(a, button, input, select):focus-visible { outline: 3px solid #137d99; o
 .ws-page a.ws-program-link:any-link {
   color: #163e60 !important;
 }
+
+/* Workshop resources share a layout and use a distinct accent for each medium. */
+.ws-material.ws-pdf {
+  --ink: #204767;
+  --tint: #edf3fa;
+  --edge: #c8d7e6;
+}
+.ws-material.ws-video {
+  --ink: #125862;
+  --tint: #e8f6f5;
+  --edge: #bbdcd9;
+}
+.ws-material.ws-booklet {
+  --ink: #385545;
+  --tint: #eff5ee;
+  --edge: #cdddcf;
+}
+.ws-page .ws-material:is(.ws-pdf, .ws-video, .ws-booklet) {
+  background: linear-gradient(145deg, var(--tint), #fff 90%);
+  border-color: var(--edge);
+}
+.ws-material :is(.ws-material-icon, .ws-material-head h3) { color: var(--ink); }
+.ws-material .ws-material-icon { background: white; border-color: var(--edge); }
+.ws-page .ws-material a.ws-action:any-link {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: white !important;
+}
+.ws-page .ws-material a.ws-action:hover { background: #152f42; }
