@@ -85,7 +85,11 @@
       card.classList.toggle('earned', earned);
       visual.classList.toggle('locked', !earned);
       if (status) status.textContent = earned ? cfg.earnedLabel : cfg.lockedLabel;
-      if (stateLabel) stateLabel.textContent = earned ? 'ΑΠΟΚΤΗΘΗΚΕ' : cfg.lockedLabel;
+      const stateBadge = stateLabel || card.querySelector('.slot-state');
+      if (stateBadge) {
+        stateBadge.dataset.initialLabel ??= stateBadge.textContent;
+        stateBadge.textContent = earned ? 'Αποκτήθηκε ✓' : (stateLabel ? cfg.lockedLabel : stateBadge.dataset.initialLabel);
+      }
       if (description) description.textContent = earned ? cfg.earnedDesc : cfg.lockedDesc;
       if (download) download.hidden = !earned;
       if (view) view.hidden = !earned;

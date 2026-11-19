@@ -103,3 +103,17 @@ body :is(a, button, input, select):focus-visible { outline: 3px solid #137d99; o
   font-size: 11px;
   font-weight: 650;
 }
+
+#hero-title { color: #193e5b; }
+#hero-title span { color: #116474; }
+
+.slot.earned .slot-state {
+  padding: 4px 9px;
+  border-radius: 12px;
+  background: #e4f4e9;
+  color: #225d3d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
