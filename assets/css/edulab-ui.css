@@ -61,3 +61,45 @@ body :is(a, button, input, select):focus-visible { outline: 3px solid #137d99; o
   color: white !important;
 }
 .ws-page .ws-material a.ws-action:hover { background: #152f42; }
+
+.workshops-section .filters .filter-chip {
+  padding-inline-start: 29px;
+  border: 1px solid #bed3e3;
+  background: white;
+  color: #28475e;
+}
+.workshops-section .filters .filter-chip:hover {
+  border: 1px solid #85abc4;
+  background: #f0f7fc;
+}
+.workshops-section .filters .filter-chip[aria-pressed="true"] {
+  background: #193e5b;
+  border-color: #193e5b;
+  color: white;
+}
+.workshops-section .filter-chip[aria-pressed="true"]::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 45%;
+  width: 8px;
+  height: 4px;
+  border: solid currentColor;
+  border-width: 0 0 2px 2px;
+  transform: translateY(-50%) rotate(-45deg);
+}
+.workshops-section .filters .filter-chip:focus-visible {
+  outline: 2px solid #1883a0;
+  outline-offset: 1px;
+}
+.workshop-card[data-category="vehicles"] { --category-bg: #e8f2fc; --category-ink: #28557e; }
+.workshop-card[data-category="nature"] { --category-bg: #e7f4e9; --category-ink: #295c3c; }
+.workshop-card[data-category="games"] { --category-bg: #fff0d2; --category-ink: #775016; }
+#workshop-list .workshop-info .workshop-meta .category {
+  padding: 3px 8px;
+  border-radius: 7px;
+  background: var(--category-bg, #ecf1f4);
+  color: var(--category-ink, #384e60);
+  font-size: 11px;
+  font-weight: 650;
+}
