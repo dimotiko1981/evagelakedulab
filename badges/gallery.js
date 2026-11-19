@@ -62,8 +62,8 @@
       id: 'electric-scooter', prefix: 'electricscooter', name: 'Electric Scooter',
       earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
       earnedDesc: 'Η συλλεκτική κάρτα Electric Scooter LEVEL 2 βρίσκεται στο άλμπουμ σου!',
-      lockedDesc: 'Το quiz του Electric Scooter θα προστεθεί σύντομα. Η κάρτα παραμένει κλειδωμένη μέχρι τότε.',
-      quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Σύντομα διαθέσιμο ↗',
+      lockedDesc: 'Ολοκλήρωσε το quiz του Electric Scooter για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
+      quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
       fallbackHref: '../assets/images/cards/electric-scooter-level2.webp?v=20261118b'
     }
   ];
