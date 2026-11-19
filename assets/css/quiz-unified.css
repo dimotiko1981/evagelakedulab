@@ -190,3 +190,16 @@ body.quiz-unified :is(.earned-actions, .basket-award-actions, .frisbee-award-act
   padding-block: 10px;
   line-height: 1.35;
 }
+
+body.quiz-unified .award-retry {
+  display: inline-flex;
+  border: 0;
+  border-radius: 11px;
+  padding-inline: 20px;
+  background: var(--quiz-teal);
+  color: white;
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+}
+body.quiz-unified .award-retry:hover { background: #05677d; }
