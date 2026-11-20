@@ -119,6 +119,7 @@ body :is(a, button, input, select):focus-visible { outline: 3px solid #137d99; o
 .workshop-card[data-category="vehicles"] { --category-bg: #e8f2fc; --category-ink: #28557e; }
 .workshop-card[data-category="nature"] { --category-bg: #e7f4e9; --category-ink: #295c3c; }
 .workshop-card[data-category="games"] { --category-bg: #fff0d2; --category-ink: #775016; }
+.workshop-card[data-category="technology"] { --category-bg: #F0EBFA; --category-ink: #63478B; }
 #workshop-list .workshop-info .workshop-meta .category {
   padding: 3px 8px;
   border-radius: 7px;
