@@ -66,6 +66,14 @@
       quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
       fallbackHref: '../assets/images/cards/electric-scooter-level2.webp?v=20261118b'
     }
+    ,{
+      id: 'smart-bin', prefix: 'smartbin', name: 'Έξυπνος Κάδος',
+      earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
+      earnedDesc: 'Η συλλεκτική κάρτα Έξυπνος Κάδος LEVEL 2 βρίσκεται στο άλμπουμ σου!',
+      lockedDesc: 'Ολοκλήρωσε το quiz του Έξυπνου Κάδου για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
+      quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
+      fallbackHref: '../assets/images/cards/smart-bin-level2.webp'
+    }
   ];
 
   function sync(){

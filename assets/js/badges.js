@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   const KEY = 'evagelak-edulab-badges-v1';
-  const VALID = new Set(['t-rex','octopus','basket','frisbee','electric-scooter']);
+  const VALID = new Set(['t-rex','octopus','basket','frisbee','electric-scooter','smart-bin']);
   function read() {
     try {
       const raw = localStorage.getItem(KEY);
