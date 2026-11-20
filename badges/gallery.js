@@ -59,10 +59,10 @@
       fallbackHref: '../assets/images/cards/scorpion-level2.webp?v=20261118b'
     },
     {
-      id: 'electric-scooter', prefix: 'electricscooter', name: 'Electric Scooter',
+      id: 'electric-scooter', prefix: 'electricscooter', name: 'Ηλεκτρικό Scooter',
       earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
-      earnedDesc: 'Η συλλεκτική κάρτα Electric Scooter LEVEL 2 βρίσκεται στο άλμπουμ σου!',
-      lockedDesc: 'Ολοκλήρωσε το quiz του Electric Scooter για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
+      earnedDesc: 'Η συλλεκτική κάρτα Ηλεκτρικό Scooter LEVEL 2 βρίσκεται στο άλμπουμ σου!',
+      lockedDesc: 'Ολοκλήρωσε το quiz του Ηλεκτρικού Scooter για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
       quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
       fallbackHref: '../assets/images/cards/electric-scooter-level2.webp?v=20261118b'
     }
