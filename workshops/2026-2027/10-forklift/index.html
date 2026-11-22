@@ -29,6 +29,27 @@ a{color:inherit}.ws-wrap{width:min(1060px,calc(100% - 52px));margin-inline:auto}
 .ws-mission p{text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word;text-justify:inter-word;line-height:1.82}
 .ws-card li span{min-width:0;overflow-wrap:anywhere}
 body[data-equipment~="wedo2"] .ws-kicker::before{background:#20B35D;box-shadow:0 0 0 4px #e5f5e9}body[data-equipment~="wedo2"] .ws-stage figcaption span:first-child::before{background:#B7D832}body[data-equipment~="wedo2"] .ws-card.ws-mission{border-left:3px solid #B7D832}body[data-equipment~="wedo2"] .ws-card li::before{color:#169b55}body[data-equipment~="wedo2"] .ws-program-label i{background:#17A8CF;box-shadow:13px 0 0 #B7D832,26px 0 0 #FF941F}
+
+/* Forklift assembly-video access dialog: scoped; no changes to other projects. */
+.ws-video-unlock{border:0;cursor:pointer;font-family:inherit}
+.ws-video-lock{width:min(440px,calc(100vw - 32px));max-height:calc(100dvh - 32px);border:1px solid #d5e7eb;border-radius:19px;padding:0;background:#fff;color:#152f42;box-shadow:0 24px 75px rgba(7,32,47,.22);overflow:auto}
+.ws-video-lock::backdrop{background:rgba(10,31,47,.58)}
+.ws-video-lock-form{padding:27px}
+.ws-video-lock-heading{display:flex;align-items:flex-start;gap:13px;margin:0 0 22px}
+.ws-video-lock-symbol{flex:0 0 43px;width:43px;height:43px;border-radius:12px;display:grid;place-items:center;background:#e5f4f5;color:#0a7e92}
+.ws-video-lock-symbol svg{width:22px;height:22px}
+.ws-video-lock-heading h2{font-size:20px;line-height:1.3;margin:0 0 7px;font-weight:900;letter-spacing:-.025em}
+.ws-video-lock-heading p{font-size:13px;line-height:1.6;color:#57707d;margin:0}
+.ws-video-lock-label{display:block;font-weight:850;color:#244356;font-size:13px;margin:0 0 8px}
+.ws-video-lock input{box-sizing:border-box;display:block;width:100%;height:46px;border:1px solid #cbdde2;border-radius:10px;background:#f9fcfd;padding:10px 13px;font:800 16px/1.2 system-ui,sans-serif;letter-spacing:.2em;color:#153649}
+.ws-video-lock input:focus-visible,.ws-video-lock button:focus-visible{outline:3px solid #32b4cb;outline-offset:2px}
+.ws-video-lock-error{color:#ad2f37;font-weight:750;font-size:12.5px;margin:9px 0 0}
+.ws-video-lock-error[hidden]{display:none}
+.ws-video-lock-actions{display:flex;justify-content:flex-end;align-items:center;gap:9px;margin-top:22px}
+.ws-video-lock-cancel{border:1px solid #d6e6ea;border-radius:10px;background:#fff;color:#2e5363;padding:11px 15px;font:800 13px/1.2 system-ui,sans-serif;cursor:pointer}
+.ws-video-lock-cancel:hover{background:#f0f7f8}
+.ws-video-lock-submit{margin:0;cursor:pointer;border:0;font-family:inherit}
+@media(max-width:450px){.ws-video-lock-form{padding:20px}.ws-video-lock-actions{flex-wrap:wrap}.ws-video-lock-actions>*{flex:1;white-space:nowrap}}
 </style>
 <link href="../../../assets/css/back-navigation.css?v=1" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&amp;display=swap" rel="stylesheet"/>
@@ -42,5 +63,53 @@ body[data-equipment~="wedo2"] .ws-kicker::before{background:#20B35D;box-shadow:0
 <figure class="ws-stage"><img alt="Ανυψωτικό Μηχάνημα LEGO WeDo 2.0: περόνες, κατακόρυφος οδηγός, τέσσερις τροχοί, γρανάζια και φιγούρα οδηγού" class="ws-photo" loading="eager" src="cover.webp"/><figcaption><span>Η ΚΑΤΑΣΚΕΥΗ</span><span>LEGO WeDo 2.0</span></figcaption></figure>
 <div class="ws-grid"><section class="ws-card ws-mission"><div class="ws-section-intro"><span aria-hidden="true" class="ws-icon"><svg viewbox="0 0 24 24"><path d="M5 21V4m0 1c3-2 5 2 9 0s6 0 6 0v11c-4-2-6 2-10 0s-5 0-5 0"></path></svg></span><h2>Η αποστολή μας</h2></div><p>Η αποστολή μας είναι να κατασκευάσουμε ένα μικρό ανυψωτικό όχημα με τέσσερις τροχούς και περόνες για τη μεταφορά αντικειμένων. Παρατηρούμε πώς το πλαίσιο, ο κατακόρυφος οδηγός, ο οδοντωτός μηχανισμός και ο ηλεκτρικός κινητήρας συνδυάζονται σε μια πραγματική μηχανική εφαρμογή. Στον προγραμματισμό ρυθμίζουμε την ισχύ του κινητήρα στο 8, αναγνωρίζουμε τη στάση και την επανάληψη και δοκιμάζουμε την ανταπόκριση σε εντολές που ξεκινούν με διαφορετικά μηνύματα. Τα μηνύματα 0, 3 και 6 ενεργοποιούν αντίστοιχα το σταμάτημα και τις δύο αντίθετες κατευθύνσεις περιστροφής. Δοκιμάζουμε τον μηχανισμό με προσοχή και εξηγούμε πώς οι αλλαγές στη φορά του κινητήρα επηρεάζουν την κίνηση των περονών.</p></section><section class="ws-card"><div class="ws-section-intro"><span aria-hidden="true" class="ws-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><h2>Τι μάθαμε</h2></div><ul><li><span>Αναγνωρίσαμε τη χρησιμότητα ενός <strong>ανυψωτικού μηχανήματος</strong> για τη μεταφορά φορτίων.</span></li><li><span>Κατασκευάσαμε τροχοφόρο πλαίσιο, περόνες και έναν <strong>κατακόρυφο μηχανισμό</strong> με γρανάζια.</span></li><li><span>Εξερευνήσαμε πώς ο <strong>κινητήρας</strong> δίνει κίνηση στον μηχανισμό ανύψωσης.</span></li><li><span>Ρυθμίσαμε την <strong>ισχύ κίνησης στο 8</strong> και αναγνωρίσαμε την εντολή «Σταμάτημα».</span></li><li><span>Χρησιμοποιήσαμε την εντολή <strong>«Επανάληψη»</strong> μαζί με αναμονή σήματος από αισθητήρα.</span></li><li><span>Μάθαμε πώς λειτουργεί το <strong>«Ξεκίνημα με μήνυμα»</strong> και πώς ενεργοποιεί διαφορετικές ακολουθίες.</span></li><li><span>Συνδέσαμε το <strong>μήνυμα 0</strong> με το σταμάτημα του κινητήρα.</span></li><li><span>Συγκρίναμε τα <strong>μηνύματα 3 και 6</strong>, που ενεργοποιούν αντίθετες κατευθύνσεις περιστροφής.</span></li></ul></section></div>
 <section aria-labelledby="ws-program-title" class="ws-panel"><div class="ws-section-intro"><span aria-hidden="true" class="ws-icon"><svg viewbox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="4"></rect><path d="m9 9-3 3 3 3m6-6 3 3-3 3"></path></svg></span><h2 id="ws-program-title">Προγραμματισμός</h2></div><p class="ws-lead">Το αρχικό πρόγραμμα ξεκινά με το «Ξεκίνημα», ορίζει <strong>ισχύ 8</strong> και δίνει εντολή «Σταμάτημα». Σε βρόχο «Επανάληψη» εμφανίζεται εντολή αναμονής με είσοδο από αισθητήρα. Παράλληλα υπάρχουν <strong>τρεις ξεχωριστές ακολουθίες</strong> που ενεργοποιούνται με τα μηνύματα <strong>0, 3 και 6</strong>: σταμάτημα, κίνηση προς τη μία φορά και κίνηση προς την αντίθετη, αντίστοιχα.</p><div class="ws-program-area"><div class="ws-program-label"><i aria-hidden="true"></i> LEGO WeDo 2.0 · ΠΡΟΓΡΑΜΜΑ</div><a aria-label="Προβολή του προγράμματος σε μεγάλο μέγεθος" href="program.webp" rel="noopener noreferrer" target="_blank"><img alt="Πραγματικές εντολές LEGO WeDo 2.0 του κλαρκ: ισχύς 8, σταμάτημα, αναμονή, επανάληψη και τρεις ακολουθίες με μηνύματα 0, 3 και 6" class="ws-program" height="941" loading="eager" src="program.webp" width="1672"/></a></div><a class="ws-program-link" href="program.webp" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-width="1.5" viewbox="0 0 20 20" width="18"><circle cx="9" cy="9" r="5"></circle><path d="m13 13 4 4M6 9h6M9 6v6"></path></svg>Μεγέθυνση προγράμματος ↗</a></section>
-<section aria-labelledby="ws-materials-title" class="ws-panel ws-materials"><div class="ws-section-intro"><span aria-hidden="true" class="ws-icon"><svg viewbox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v10H3z"></path></svg></span><h2 id="ws-materials-title">Υλικό εργαστηρίου</h2></div><p class="ws-lead">Βίντεο οδηγιών συναρμολόγησης και πληροφορίες για παρουσίαση λειτουργίας.</p><div class="ws-material-grid"><article class="ws-material ws-video"><div class="ws-material-head"><span aria-hidden="true" class="ws-material-icon"><svg viewbox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v5h5M9 12h6M9 16h6"></path></svg></span><h3>Οδηγίες κατασκευής (YouTube)</h3></div><p>Παρακολούθησε οδηγίες συναρμολόγησης LEGO WeDo 2.0 Forklift στο YouTube. Το βίντεο είναι εξωτερικό εκπαιδευτικό υλικό και μπορεί να παρουσιάζει παραλλαγή του μοντέλου.</p><a class="ws-action" href="https://www.youtube.com/watch?v=jQpicIm2tiU" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-width="1.7" viewbox="0 0 24 24" width="18"><rect height="14" rx="4" width="20" x="2" y="5"></rect><path d="m10 9 5 3-5 3z"></path></svg>Δες τις οδηγίες στο YouTube ↗</a></article><article class="ws-material ws-video"><div class="ws-material-head"><span aria-hidden="true" class="ws-material-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="m10 8 6 4-6 4z"></path></svg></span><h3>Βίντεο λειτουργίας</h3></div><p>Το βίντεο λειτουργίας θα προστεθεί αργότερα.</p><div aria-label="Δεν υπάρχει ακόμη διαθέσιμο βίντεο" class="ws-video-pending">Διαθέσιμο σύντομα</div></article></div></section>
-</main><footer class="ws-footer"><span>EVAGELAK EDU LAB · Εκπαιδευτική ρομποτική</span><a href="../../../index.html#workshops">Επιστροφή στις κατασκευές ↑</a></footer></div></body></html>
+<section aria-labelledby="ws-materials-title" class="ws-panel ws-materials"><div class="ws-section-intro"><span aria-hidden="true" class="ws-icon"><svg viewbox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v10H3z"></path></svg></span><h2 id="ws-materials-title">Υλικό εργαστηρίου</h2></div><p class="ws-lead">Βίντεο οδηγιών συναρμολόγησης και πληροφορίες για παρουσίαση λειτουργίας.</p><div class="ws-material-grid"><article class="ws-material ws-video"><div class="ws-material-head"><span aria-hidden="true" class="ws-material-icon"><svg viewbox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v5h5M9 12h6M9 16h6"></path></svg></span><h3>Οδηγίες κατασκευής (YouTube)</h3></div><p>Δες τις οδηγίες κατασκευής του κλαρκ σε βίντεο. Για πρόσβαση θα χρειαστείς τον κωδικό του εργαστηρίου.</p><button class="ws-action ws-video-unlock" id="forklift-instructions-open" type="button" aria-haspopup="dialog" aria-controls="forklift-instructions-lock"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-width="1.7" viewbox="0 0 24 24" width="18"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>Δες τις οδηγίες στο YouTube</button></article><article class="ws-material ws-video"><div class="ws-material-head"><span aria-hidden="true" class="ws-material-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="m10 8 6 4-6 4z"></path></svg></span><h3>Βίντεο λειτουργίας</h3></div><p>Το βίντεο λειτουργίας θα προστεθεί αργότερα.</p><div aria-label="Δεν υπάρχει ακόμη διαθέσιμο βίντεο" class="ws-video-pending">Διαθέσιμο σύντομα</div></article></div></section>
+<dialog class="ws-video-lock" id="forklift-instructions-lock" aria-labelledby="forklift-lock-title" aria-describedby="forklift-lock-help">
+  <form id="forklift-lock-form" class="ws-video-lock-form" novalidate>
+    <div class="ws-video-lock-heading">
+      <span class="ws-video-lock-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span>
+      <div><h2 id="forklift-lock-title">Οδηγίες κατασκευής</h2><p id="forklift-lock-help">Πληκτρολόγησε τον κωδικό για να ανοίξεις το βίντεο στο YouTube.</p></div>
+    </div>
+    <label class="ws-video-lock-label" for="forklift-access-code">Κωδικός πρόσβασης</label>
+    <input id="forklift-access-code" name="code" type="password" inputmode="numeric" autocomplete="off" maxlength="4" required placeholder="••••" aria-describedby="forklift-lock-error"/>
+    <p class="ws-video-lock-error" id="forklift-lock-error" role="status" aria-live="polite" hidden>Ο κωδικός δεν είναι σωστός. Δοκίμασε ξανά.</p>
+    <div class="ws-video-lock-actions"><button type="button" class="ws-video-lock-cancel" id="forklift-lock-cancel">Άκυρο</button><button class="ws-action ws-video-lock-submit" type="submit">Άνοιγμα οδηγιών ↗</button></div>
+  </form>
+</dialog>
+</main><footer class="ws-footer"><span>EVAGELAK EDU LAB · Εκπαιδευτική ρομποτική</span><a href="../../../index.html#workshops">Επιστροφή στις κατασκευές ↑</a></footer></div>
+<script>
+(function(){
+  'use strict';
+  const trigger=document.getElementById('forklift-instructions-open');
+  const dialog=document.getElementById('forklift-instructions-lock');
+  const form=document.getElementById('forklift-lock-form');
+  const code=document.getElementById('forklift-access-code');
+  const error=document.getElementById('forklift-lock-error');
+  const cancel=document.getElementById('forklift-lock-cancel');
+  if(!trigger||!dialog||!form||!code||!error||!cancel)return;
+  function reset(){code.value='';error.hidden=true;code.removeAttribute('aria-invalid');}
+  trigger.addEventListener('click',()=>{
+    reset();
+    dialog.showModal();
+    code.focus();
+  });
+  cancel.addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('close',reset);
+  dialog.addEventListener('click',(event)=>{if(event.target===dialog)dialog.close();});
+  code.addEventListener('input',()=>{error.hidden=true;code.removeAttribute('aria-invalid');});
+  form.addEventListener('submit',(event)=>{
+    event.preventDefault();
+    if(code.value.trim()!=='2330'){
+      error.hidden=false;
+      code.setAttribute('aria-invalid','true');
+      code.focus();
+      code.select();
+      return;
+    }
+    dialog.close();
+    // A simple client-side classroom access gate, not password protection of YouTube itself.
+    window.open('https://www.youtube.com/watch?v=f_4wjNonz0Q','_blank','noopener,noreferrer');
+  });
+})();
+</script>
+</body></html>
