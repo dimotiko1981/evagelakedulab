@@ -50,6 +50,32 @@ body[data-equipment~="wedo2"] .ws-kicker::before{background:#20B35D;box-shadow:0
 .ws-video-lock-cancel:hover{background:#f0f7f8}
 .ws-video-lock-submit{margin:0;cursor:pointer;border:0;font-family:inherit}
 @media(max-width:450px){.ws-video-lock-form{padding:20px}.ws-video-lock-actions{flex-wrap:wrap}.ws-video-lock-actions>*{flex:1;white-space:nowrap}}
+
+/* Forklift only: restore readable video/PIN actions after the global UI stylesheet.
+   Higher-specificity selectors prevent white-on-white .ws-action buttons. */
+#forklift-instructions-open,
+#forklift-lock-form .ws-video-lock-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #193e5b;
+  border: 1px solid #193e5b;
+  color: #ffffff !important;
+  opacity: 1;
+  text-align: center;
+  box-shadow: none;
+}
+#forklift-instructions-open:hover,
+#forklift-lock-form .ws-video-lock-submit:hover {
+  background: #275674;
+  border-color: #275674;
+  color: #ffffff !important;
+}
+@media (max-width: 450px) {
+  #forklift-lock-form .ws-video-lock-cancel { flex: 0 0 auto; }
+  #forklift-lock-form .ws-video-lock-submit { flex: 1 1 auto; min-width: 0; white-space: normal; }
+}
 </style>
 <link href="../../../assets/css/back-navigation.css?v=1" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&amp;display=swap" rel="stylesheet"/>
