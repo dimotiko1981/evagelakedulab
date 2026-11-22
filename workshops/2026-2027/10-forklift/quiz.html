@@ -1,0 +1,106 @@
+<!doctype html><html lang="el"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f9fa">
+<meta name="description" content="Ανυψωτικό Μηχάνημα: διαδραστικό quiz LEGO WeDo 2.0 με αυθεντικές εικόνες εντολών από τον οδηγό LEGO WeDo 2.0 και συλλεκτική κάρτα LEVEL 2.">
+<title>Quiz Ανυψωτικό Μηχάνημα | EVAGELAK EDU LAB</title>
+<style>
+:root{--ink:#122b40;--muted:#526a7b;--teal:#087f95;--green:#238978;--border:#dce9ed;--shadow:0 18px 55px rgba(14,41,55,.07)}
+*{box-sizing:border-box}html{font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;scroll-behavior:smooth}body{margin:0;background:#f5f9fa;color:var(--ink);line-height:1.6}
+.wrap{width:min(920px,calc(100% - 32px));margin:auto}.top{border-bottom:1px solid #deebef;background:white}.top .wrap{padding:16px 0;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{font-size:14px;letter-spacing:.07em;font-weight:900}.brand b{color:var(--teal)}
+.pill{border:1px solid #cfe5e7;color:#14677c;background:#effbfc;padding:7px 12px;border-radius:40px;font-size:12px;font-weight:800}
+main{padding:33px 0 65px}.heading{margin:0 0 14px;font-size:clamp(26px,4vw,38px);line-height:1.18;letter-spacing:-.035em}.lead{margin:0;color:var(--muted);font-size:15px;max-width:750px}
+.head{display:grid;grid-template-columns:minmax(0,1fr) 190px;align-items:center;gap:22px;margin:0 0 22px}.mascot{border-radius:20px;overflow:hidden;aspect-ratio:16/10;background:#1a2430}.mascot img{width:100%;height:100%;object-fit:contain}
+.program{border:1px solid var(--border);background:white;border-radius:17px;padding:14px 17px;margin-bottom:22px;box-shadow:var(--shadow)}.program summary{cursor:pointer;font-weight:800;color:#176a7b;list-style:none;display:flex;align-items:center;gap:10px}.program summary::-webkit-details-marker{display:none}.program summary:before{content:'▸';font-size:16px;transition:transform .15s}.program[open] summary:before{transform:rotate(90deg)}.program img{display:block;width:100%;height:auto;object-fit:contain;max-width:100%;margin-top:18px;background:white;border:1px solid #e6eaed;border-radius:9px}.program p{color:var(--muted);font-size:12px;margin:8px 0 0}
+.panel{background:white;border:1px solid var(--border);border-radius:22px;padding:clamp(18px,3vw,34px);box-shadow:var(--shadow)}.topline{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}.count,.score{font-size:13px;font-weight:800;color:#567188}.bar{height:9px;border-radius:20px;background:#e6f1f2;overflow:hidden;margin:16px 0 27px}.fill{height:100%;width:0;background:linear-gradient(90deg,#29a692,#087e94);transition:width .3s}
+.kicker{font-size:11px;letter-spacing:.09em;font-weight:900;color:var(--teal);margin:0 0 9px}.question{font-size:clamp(19px,2.6vw,24px);line-height:1.35;margin:0 0 20px}
+.block-stage{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#f4f9fa;border:1px solid #e0ecee;border-radius:14px;padding:13px 16px;margin:0 0 21px;min-height:86px}.lego-block{display:inline-flex;flex-direction:column;align-items:center;gap:0;min-width:52px}.lego-block img{object-fit:contain;display:block;width:90px;max-height:86px;height:auto;mix-blend-mode:multiply}.lego-block.sensor img{width:110px}.lego-block.loop img{width:140px}.lego-block .block-num{font-weight:900;color:#263f57;border:2px solid #69a9cf;background:#fff;border-radius:5px;padding:1px 17px;margin-top:-2px;line-height:1.4}
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.choice{background:#fff;border:1.5px solid #dce7e9;border-radius:14px;padding:16px;min-height:96px;display:flex;align-items:center;justify-content:flex-start;gap:14px;text-align:left;font-size:14px;font-weight:700;color:var(--ink);cursor:pointer;transition:background .15s,border-color .15s,transform .15s;width:100%}.choice:hover:not(:disabled){background:#f4fbfa;border-color:#70b4b0;transform:translateY(-1px)}.choice:focus-visible{outline:3px solid #56b8c4;outline-offset:2px}.choice:disabled{cursor:default}.choice img{width:62px;height:58px;object-fit:contain;flex:none}.choice .letter{font-weight:900;font-size:11px;border:1px solid #d5e7e9;background:#f6fafb;border-radius:7px;min-width:24px;height:24px;display:grid;place-items:center;color:#678091;flex:none}.choice:has(img){flex-direction:column;text-align:center;justify-content:center;gap:5px;padding:14px 10px}.choice:has(img) img{width:80px;height:82px}.choice:has(img) .letter{position:absolute;align-self:flex-start;margin-top:-72px;margin-left:5px}.choice:has(img){position:relative}.choice.right{background:#effaf4;border-color:#3b9b75}.choice.wrong{background:#fff3f0;border-color:#cf7963}.choice.disabled{opacity:.66}.answer{margin:18px 0 0;padding:13px 15px;border-radius:11px;background:#f0f8fa;border:1px solid #daeef0;color:#24485d;font-size:14px}.answer.good{background:#eefaef;border-color:#d3e7d9}.answer.bad{background:#fff7ee;border-color:#f0dfc7}.actions{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:24px;flex-wrap:wrap}.btn{border:none;cursor:pointer;border-radius:11px;padding:12px 20px;background:#087e94;color:white;font-weight:850;font-size:14px}.btn:disabled{background:#c9d6dc;cursor:not-allowed}.btn.secondary{background:#eff7f8;color:#156b7e;border:1px solid #d8e8ea}.hint{font-size:12px;color:#718895}.end{text-align:center;padding:28px 10px}.end h2{font-size:31px;line-height:1.3;margin:7px 0}.final-score{font-size:48px;font-weight:900;color:#168b7b;letter-spacing:-.04em}.footer{font-size:12px;color:#7b909c;text-align:center;padding:0 0 30px}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+@media(max-width:680px){main{padding:22px 0 36px}.head{grid-template-columns:1fr}.mascot{display:none}.options{grid-template-columns:1fr}.choice{min-height:74px}.choice:has(img){flex-direction:row;text-align:left;min-height:94px;justify-content:flex-start}.choice:has(img) img{width:65px;height:70px}.choice:has(img) .letter{position:static;align-self:auto;margin:0}.panel{padding:18px}.block-stage{padding:9px}.lego-block img{width:70px}.lego-block.loop img{width:105px}.lego-block.sensor img{width:92px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Earned LEVEL 2 Basketball card: original image, subtle one-off reveal. */
+.scooter-award-stage{position:relative;display:grid;place-items:center;overflow:hidden;isolation:isolate;width:min(390px,100%);min-height:360px;margin:10px auto 18px;border:1px solid #d8e8ed;border-radius:22px;background:radial-gradient(circle at 50% 38%,#ddfaff 0%,#eaf6fa 41%,#f5f9fa 78%)}
+.scooter-award-stage::before{content:"";position:absolute;width:270px;height:270px;border-radius:50%;border:1px solid rgba(40,153,180,.24);box-shadow:0 0 0 22px rgba(40,153,180,.055),0 0 0 48px rgba(40,153,180,.035);animation:scooter-award-halo 1.6s ease-out both}
+.scooter-award-image{position:relative;z-index:1;display:block;width:min(245px,65vw);height:auto;aspect-ratio:1122/1402;object-fit:contain;filter:drop-shadow(0 15px 19px rgba(6,44,69,.18));animation:scooter-award-rise 1.45s cubic-bezier(.2,.8,.2,1) both}
+.scooter-award-message{max-width:540px;margin:5px auto 19px;color:#456476;font-size:14px;line-height:1.7}
+.scooter-award-actions{display:flex;gap:11px;flex-wrap:wrap;justify-content:center;align-items:center;margin:18px auto 0}
+.scooter-award-actions .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;text-decoration:none;line-height:1.3}
+.scooter-award-note{font-size:12px;color:#6b8290;margin:10px auto 0;max-width:540px}
+@keyframes scooter-award-rise{0%{opacity:0;transform:translateY(55px) scale(.80) rotateY(-9deg)}65%{opacity:1;transform:translateY(-7px) scale(1.015) rotateY(0deg)}100%{opacity:1;transform:none}}
+@keyframes scooter-award-halo{0%{opacity:0;transform:scale(.6)}65%{opacity:1;transform:scale(1.08)}100%{opacity:.8;transform:none}}
+@media(max-width:480px){.scooter-award-stage{min-height:315px}.scooter-award-image{width:min(218px,64vw)}}
+@media(prefers-reduced-motion:reduce){.scooter-award-image,.scooter-award-stage::before{animation:none}}
+
+/* Ανυψωτικό Μηχάνημα: στην εισαγωγή δείχνουμε την ΚΑΤΑΣΚΕΥΗ, όχι την κάρτα. */
+body.quiz-unified.scooter-quiz .head .mascot{width:min(280px,100%);max-width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:18px;background:transparent;justify-self:center}
+body.quiz-unified.scooter-quiz .head .mascot img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(5,39,56,.16))}
+@media(max-width:680px){body.quiz-unified.scooter-quiz .head .mascot{display:block;width:min(250px,100%);margin:0 auto 4px}body.quiz-unified.scooter-quiz .head{grid-template-columns:1fr;gap:14px}}
+</style>
+<link rel="stylesheet" href="../../../assets/css/quiz-unified.css?v=2">
+<link rel="stylesheet" href="../../../assets/css/back-navigation.css?v=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&amp;display=swap">
+<link rel="stylesheet" href="../../../assets/css/edulab-ui.css">
+<link rel="stylesheet" href="../../../assets/css/card-award-effects.css?v=3">
+</head><body data-award-tier="silver" class="quiz-unified scooter-quiz"><header class="top"><div class="wrap">
+<div class="brand">EVAGELAK <b>EDU LAB</b></div>
+<a class="pill" href="../../../badges/index.html" aria-label="Επιστροφή στο Συλλεκτικό Άλμπουμ">← Στο άλμπουμ</a>
+</div></header><main class="wrap"><section class="head">
+<div><p class="kicker">ΔΙΑΔΡΑΣΤΙΚΟ QUIZ · LEGO WeDo 2.0</p><h1 class="heading">Ανυψωτικό Μηχάνημα</h1><p><strong>Στόχος για την κάρτα: 8/10 σωστές απαντήσεις (80%).</strong></p>
+<p class="lead">Αναγνώρισε τις εντολές που χρησιμοποιήσαμε για τον έλεγχο του ανυψωτικού μηχανήματος. Απάντησε σε <strong>10 ερωτήσεις</strong> με τέσσερις εικόνες επιλογών και κέρδισε τη συλλεκτική κάρτα <strong>LEVEL 2</strong>.</p></div>
+<div class="mascot"><img src="cover.webp" alt="Η κατασκευή Ανυψωτικού Μηχανήματος LEGO WeDo 2.0" width="1448" height="1086"></div></section>
+<details class="program"><summary>Δες το πραγματικό πρόγραμμα του Ανυψωτικό Μηχάνημα</summary>
+<img id="actual-program" src="program.webp" alt="Πρόγραμμα ανυψωτικού μηχανήματος: ισχύς 8, σταμάτημα, αναμονή με αισθητήρα, επανάληψη και μηνύματα 0, 3 και 6"></details>
+<section id="quiz" class="panel" aria-live="polite"><div id="quiz-content"></div></section></main>
+<footer class="footer wrap">EVAGELAK EDU LAB · Εκπαιδευτικό quiz LEGO WeDo 2.0</footer>
+<script src="../../../assets/js/badges.js?v=tier-score-1"></script>
+<script>
+const IMAGES={"start":"quiz-assets/official/start.webp","motor_power":"quiz-assets/official/motor_power.webp","motor_stop":"quiz-assets/official/motor_stop.webp","repeat":"quiz-assets/official/repeat.webp","wait":"quiz-assets/official/wait.webp","sensor_shake":"quiz-assets/official/sensor_shake.webp","sensor_left":"quiz-assets/official/sensor_left.webp","sensor_right":"quiz-assets/official/sensor_right.webp","start_message":"quiz-assets/official/start_message.webp","start_button":"quiz-assets/official/start_button.webp","send":"quiz-assets/official/send.webp","motor_left":"quiz-assets/official/motor_left.webp","motor_right":"quiz-assets/official/motor_right.webp","motor_time":"quiz-assets/official/motor_time.webp","sound":"quiz-assets/official/sound.webp","light":"quiz-assets/official/light.webp","tilt_level":"quiz-assets/official/tilt_level.webp"};
+const QUIZ=[{"kicker":"ΕΝΑΡΞΗ","question":"Ποιο τουβλάκι ξεκινά την κύρια ακολουθία του Ανυψωτικού Μηχανήματος;","choices":[{"label":"Αναμονή","img":"wait"},{"label":"Ξεκίνημα","img":"start"},{"label":"Ξεκίνημα με μήνυμα","img":"start_message"},{"label":"Επανάληψη","img":"repeat"}],"correct":1,"explain":"Το «Ξεκίνημα» με το πράσινο τρίγωνο ενεργοποιεί την κύρια ακολουθία.","n":1},{"kicker":"ΙΣΧΥΣ ΚΙΝΗΤΗΡΑ","question":"Ποιο τουβλάκι χρησιμοποιούμε για να ρυθμίσουμε την ισχύ του κινητήρα στο 8;","choices":[{"label":"Κίνηση για ορισμένο χρόνο","img":"motor_time"},{"label":"Ισχύς κίνησης","img":"motor_power"},{"label":"Σταμάτημα","img":"motor_stop"},{"label":"Κίνηση προς τα δεξιά","img":"motor_right"}],"correct":1,"explain":"Η «Ισχύς κίνησης» ρυθμίζει την ένταση από 0 έως 10. Στο πρόγραμμα του κλαρκ η τιμή είναι 8.","n":2},{"kicker":"ΑΡΧΙΚΗ ΑΚΟΛΟΥΘΙΑ","question":"Ποια εντολή ακολουθεί αμέσως μετά τη ρύθμιση της ισχύος 8 στην επάνω ακολουθία;","choices":[{"label":"Παίξε ήχο","img":"sound"},{"label":"Κίνηση προς τα αριστερά","img":"motor_left"},{"label":"Σταμάτημα","img":"motor_stop"},{"label":"Αναμονή","img":"wait"}],"correct":2,"explain":"Μετά τη ρύθμιση της ισχύος 8 εμφανίζεται το πράσινο τουβλάκι «Σταμάτημα».","n":3},{"kicker":"ΣΥΝΕΧΗΣ ΕΛΕΓΧΟΣ","question":"Ποιο τουβλάκι οργανώνει την επανάληψη της αναμονής στην επάνω ακολουθία;","choices":[{"label":"Ξεκίνημα","img":"start"},{"label":"Επανάληψη","img":"repeat"},{"label":"Αποστολή μηνύματος","img":"send"},{"label":"Ξεκίνημα με μήνυμα","img":"start_message"}],"correct":1,"explain":"Το κίτρινο τουβλάκι «Επανάληψη» εκτελεί ξανά τις εντολές που περιλαμβάνει.","n":4},{"kicker":"ΑΝΑΜΟΝΗ","question":"Ποιο κίτρινο τουβλάκι χρησιμοποιείται για να περιμένει το πρόγραμμα μια συνθήκη από αισθητήρα;","choices":[{"label":"Αναμονή","img":"wait"},{"label":"Ξεκίνημα με πάτημα κουμπιού","img":"start_button"},{"label":"Επανάληψη","img":"repeat"},{"label":"Ξεκίνημα","img":"start"}],"correct":0,"explain":"Η «Αναμονή» μπορεί να περιμένει μια τιμή ή ένα συμβάν από συνδεδεμένο αισθητήρα.","n":5},{"kicker":"ΑΙΣΘΗΤΗΡΑΣ ΚΛΙΣΗΣ","question":"Ποια πορτοκαλί εικόνα αντιστοιχεί στο σήμα κίνησης πάνω-κάτω που φαίνεται στην αναμονή του προγράμματος;","choices":[{"label":"Κίνηση προς άλλη κατεύθυνση","img":"sensor_left"},{"label":"Κίνηση πάνω-κάτω","img":"sensor_shake"},{"label":"Οριζόντια θέση","img":"tilt_level"},{"label":"Κίνηση προς διαφορετική κατεύθυνση","img":"sensor_right"}],"correct":1,"explain":"Το πορτοκαλί τουβλάκι με τις κυματιστές γραμμές δείχνει κίνηση πάνω-κάτω του αισθητήρα κλίσης.","n":6},{"kicker":"ΜΗΝΥΜΑΤΑ","question":"Με ποιο τουβλάκι αρχίζει κάθε μία από τις τρεις κάτω ακολουθίες με μηνύματα 0, 3 και 6;","choices":[{"label":"Αποστολή μηνύματος","img":"send"},{"label":"Ξεκίνημα","img":"start"},{"label":"Ξεκίνημα με μήνυμα","img":"start_message"},{"label":"Ξεκίνημα με πάτημα κουμπιού","img":"start_button"}],"correct":2,"explain":"Το «Ξεκίνημα με μήνυμα» περιμένει το αντίστοιχο μήνυμα πριν εκτελέσει την εντολή που ακολουθεί.","n":7},{"kicker":"ΜΗΝΥΜΑ 0","question":"Ποια εντολή ενεργοποιείται στο πρόγραμμα όταν φτάσει το μήνυμα 0;","choices":[{"label":"Ισχύς κίνησης","img":"motor_power"},{"label":"Κίνηση προς τα αριστερά","img":"motor_left"},{"label":"Σταμάτημα","img":"motor_stop"},{"label":"Κίνηση προς τα δεξιά","img":"motor_right"}],"correct":2,"explain":"Στην κάτω αριστερή ακολουθία το μήνυμα 0 οδηγεί στην εντολή «Σταμάτημα».","n":8},{"kicker":"ΜΗΝΥΜΑ 3","question":"Ποια εντολή ακολουθεί το μήνυμα 3 στη μεσαία κάτω ακολουθία;","choices":[{"label":"Κίνηση προς τα αριστερά","img":"motor_left"},{"label":"Σταμάτημα","img":"motor_stop"},{"label":"Κίνηση προς τα δεξιά","img":"motor_right"},{"label":"Κίνηση για ορισμένο χρόνο","img":"motor_time"}],"correct":2,"explain":"Στη μεσαία κάτω ακολουθία, μετά το μήνυμα 3, ο κινητήρας παίρνει την κατεύθυνση που δείχνει το τουβλάκι κίνησης προς τα δεξιά.","n":9},{"kicker":"ΜΗΝΥΜΑ 6","question":"Ποια εντολή ακολουθεί το μήνυμα 6 στη δεξιά κάτω ακολουθία;","choices":[{"label":"Κίνηση προς τα αριστερά","img":"motor_left"},{"label":"Ισχύς κίνησης","img":"motor_power"},{"label":"Σταμάτημα","img":"motor_stop"},{"label":"Κίνηση προς τα δεξιά","img":"motor_right"}],"correct":0,"explain":"Στη δεξιά κάτω ακολουθία, μετά το μήνυμα 6, η φορά του κινητήρα αντιστρέφεται με την εντολή κίνησης προς τα αριστερά.","n":10}];
+let index=0,selected=-1,score=0,finished=false;
+const root=document.getElementById('quiz-content');
+function elem(tag,cls,text){const x=document.createElement(tag);if(cls)x.className=cls;if(text!==undefined)x.textContent=text;return x}
+function draw(){
+ root.textContent='';
+ if(finished){
+  if (!window.EduLabBadges.qualifies('forklift', score, QUIZ.length)) {
+    window.EduLabBadges.showRetry(root, 'forklift', score, QUIZ.length);
+    return;
+  }
+  const saved=Boolean(window.EduLabBadges && window.EduLabBadges.award('forklift', score, QUIZ.length));
+  const e=elem('div','end');e.appendChild(elem('p','kicker','ΑΠΟΣΤΟΛΗ ΟΛΟΚΛΗΡΩΘΗΚΕ'));
+  const stage=elem('div','scooter-award-stage edulab-award edulab-award--silver');stage.insertAdjacentHTML('afterbegin','<span class="edulab-award__ring" aria-hidden="true"></span><span class="edulab-award__spark" aria-hidden="true" style="--sx:0px;--sy:-127px;--delay:110ms"></span><span class="edulab-award__spark" aria-hidden="true" style="--sx:108px;--sy:-79px;--delay:160ms"></span><span class="edulab-award__spark" aria-hidden="true" style="--sx:135px;--sy:28px;--delay:210ms"></span><span class="edulab-award__spark" aria-hidden="true" style="--sx:60px;--sy:114px;--delay:260ms"></span><span class="edulab-award__spark" aria-hidden="true" style="--sx:-60px;--sy:114px;--delay:310ms"></span><span class="edulab-award__spark" aria-hidden="true" style="--sx:-135px;--sy:28px;--delay:360ms"></span><span class="edulab-award__spark" aria-hidden="true" style="--sx:-108px;--sy:-79px;--delay:410ms"></span>');stage.setAttribute('aria-label','Απονομή συλλεκτικής κάρτας Ανυψωτικό Μηχάνημα LEVEL 2');
+  const card=document.createElement('img');card.className='scooter-award-image';card.src='../../../assets/images/cards/forklift-level2.webp';card.alt='Η αυθεντική συλλεκτική κάρτα Ανυψωτικό Μηχάνημα LEVEL 2';card.width=1260;card.height=1760;const spin=document.createElement('div');spin.className='edulab-card-spin';spin.appendChild(card);stage.appendChild(spin);e.appendChild(stage);
+  e.appendChild(elem('h2','','Κέρδισες τη συλλεκτική κάρτα LEVEL 2!'));
+  e.appendChild(elem('div','final-score',`${score} / ${QUIZ.length}`));
+  const title=score===QUIZ.length?'Άριστα!':score>=7?'Πολύ καλή δουλειά!':'Μπράβο για την προσπάθεια!';
+  e.appendChild(elem('p','scooter-award-message',title+' Ολοκλήρωσες τις 10 ερωτήσεις του Ανυψωτικού Μηχανήματος.'));
+  e.appendChild(elem('p','scooter-award-message',saved?'Η κάρτα προστέθηκε στη συλλογή σου. Μπορείς να την προβάλλεις και να την κατεβάσεις από το άλμπουμ.':'Το quiz ολοκληρώθηκε, αλλά η πρόοδος δεν αποθηκεύτηκε σε αυτή τη συσκευή. Έλεγξε αν επιτρέπεται η τοπική αποθήκευση.'));
+  const actions=elem('div','scooter-award-actions');
+  const album=document.createElement('a');album.className='btn';album.href='../../../badges/index.html';album.textContent='Δες το άλμπουμ μου ↗';actions.appendChild(album);
+  const retry=elem('button','btn secondary','Παίξε ξανά ↻');retry.type='button';retry.onclick=()=>{index=0;selected=-1;score=0;finished=false;draw()};actions.appendChild(retry);
+  e.appendChild(actions);root.appendChild(e);return;
+ }
+ const q=QUIZ[index];const top=elem('div','topline');
+ top.appendChild(elem('div','count',`Ερώτηση ${index+1} από ${QUIZ.length}`));top.appendChild(elem('div','score',`Σκορ: ${score}`));root.appendChild(top);
+ const bar=elem('div','bar');const fill=elem('div','fill');fill.style.width=`${(index/QUIZ.length)*100}%`;bar.appendChild(fill);root.appendChild(bar);
+ root.appendChild(elem('p','kicker',q.kicker));root.appendChild(elem('h2','question',q.question));
+ const opts=elem('div','options');q.choices.forEach((choice,j)=>{
+  const btn=elem('button','choice');btn.type='button';btn.disabled=selected!==-1;
+  btn.appendChild(elem('span','letter',String.fromCharCode(65+j)));
+  const img=document.createElement('img');img.src=IMAGES[choice.img];img.alt=`Τουβλάκι: ${choice.label}`;img.loading='eager';btn.appendChild(img);
+  btn.appendChild(elem('span','',choice.label));
+  if(selected!==-1){if(j===q.correct)btn.classList.add('right');else if(j===selected)btn.classList.add('wrong');else btn.classList.add('disabled')}
+  btn.onclick=()=>{if(selected!==-1)return;selected=j;if(selected===q.correct)score++;draw()};opts.appendChild(btn);
+ });root.appendChild(opts);
+ if(selected!==-1){const correct=selected===q.correct;
+  const p=elem('div','answer '+(correct?'good':'bad'),(correct?'Σωστά! ':'Η σωστή απάντηση είναι: '+q.choices[q.correct].label+' — ')+q.explain);
+  p.setAttribute('role','status');root.appendChild(p)}
+ const actions=elem('div','actions');
+ const next=elem('button','btn',index===QUIZ.length-1?'Δες αποτέλεσμα →':'Επόμενη ερώτηση →');
+ next.type='button';next.disabled=selected===-1;next.onclick=()=>{if(selected===-1)return;index++;selected=-1;if(index>=QUIZ.length)finished=true;draw();document.getElementById('quiz').scrollIntoView({behavior:'smooth',block:'start'})};actions.appendChild(next);root.appendChild(actions);
+}
+draw();
+
+</script>
+</body></html>
