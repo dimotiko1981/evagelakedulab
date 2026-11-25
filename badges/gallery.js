@@ -88,7 +88,7 @@
       earnedDesc: 'Η συλλεκτική κάρτα Κλαρκ II LEVEL 2 βρίσκεται στο άλμπουμ σου!',
       lockedDesc: 'Πέτυχε τουλάχιστον 8/10 στο quiz του δεύτερου Ανυψωτικού Μηχανήματος για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
       quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
-      fallbackHref: '../assets/images/cards/forklift-2-level2.webp'
+      fallbackHref: '../assets/images/cards/forklift-2-level2.webp?v=tires-20261125'
     }
   ];
 
