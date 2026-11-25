@@ -81,6 +81,14 @@
       lockedDesc: 'Πέτυχε τουλάχιστον 8/10 στο quiz του Ανυψωτικού Μηχανήματος για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
       quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
       fallbackHref: '../assets/images/cards/forklift-level2.webp'
+    },
+    {
+      id: 'forklift-2', prefix: 'forklift2', name: 'Ανυψωτικό Μηχάνημα II (Κλαρκ)',
+      earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
+      earnedDesc: 'Η συλλεκτική κάρτα Κλαρκ II LEVEL 2 βρίσκεται στο άλμπουμ σου!',
+      lockedDesc: 'Πέτυχε τουλάχιστον 8/10 στο quiz του δεύτερου Ανυψωτικού Μηχανήματος για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
+      quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
+      fallbackHref: '../assets/images/cards/forklift-2-level2.webp'
     }
   ];
 
