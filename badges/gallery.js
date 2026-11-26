@@ -102,7 +102,7 @@
       id: 'robotic-launcher', prefix: 'launcher', name: 'Ρομποτικός Εκτοξευτής',
       earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
       earnedDesc: 'Η συλλεκτική κάρτα Εκτοξευτής LEVEL 1 βρίσκεται στο άλμπουμ σου!',
-      lockedDesc: 'Πέτυχε τουλάχιστον 6/10 στο quiz του Ρομποτικός Εκτοξευτής για να κερδίσεις τη συλλεκτική κάρτα LEVEL 1.',
+      lockedDesc: 'Πέτυχε τουλάχιστον 4/6 στο quiz του Ρομποτικού Εκτοξευτή για να κερδίσεις τη συλλεκτική κάρτα LEVEL 1.',
       quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
       fallbackHref: '../assets/images/cards/robotic-launcher-level1.webp'
     }
