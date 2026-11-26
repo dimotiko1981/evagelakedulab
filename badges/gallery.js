@@ -89,6 +89,14 @@
       lockedDesc: 'Πέτυχε τουλάχιστον 8/10 στο quiz του δεύτερου Ανυψωτικού Μηχανήματος για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
       quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
       fallbackHref: '../assets/images/cards/forklift-2-level2.webp?v=tires-20261125'
+    },
+    {
+      id: 'vintage-fighter', prefix: 'vintagefighter', name: 'Vintage Fighter Plane',
+      earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
+      earnedDesc: 'Η συλλεκτική κάρτα Vintage Fighter LEVEL 2 βρίσκεται στο άλμπουμ σου!',
+      lockedDesc: 'Πέτυχε τουλάχιστον 8/10 στο quiz του Vintage Fighter Plane για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
+      quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
+      fallbackHref: '../assets/images/cards/vintage-fighter-level2.webp'
     }
   ];
 

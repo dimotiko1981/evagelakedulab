@@ -3,7 +3,7 @@
   'use strict';
   const KEY = 'evagelak-edulab-badges-v1';
   const targets = Object.freeze({
-    't-rex': 10, octopus: 6, basket: 8, frisbee: 8, 'electric-scooter': 8, 'smart-bin': 8, forklift: 8, 'forklift-2': 8
+    't-rex': 10, octopus: 6, basket: 8, frisbee: 8, 'electric-scooter': 8, 'smart-bin': 8, forklift: 8, 'forklift-2': 8, 'vintage-fighter': 8
   });
   function qualifies(id, score, total) {
     return Object.hasOwn(targets, id) && Number.isInteger(score) && Number.isInteger(total)
