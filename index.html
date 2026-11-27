@@ -359,6 +359,7 @@
   .album-card-marquee{position:relative;width:100%;overflow:hidden;padding:12px 0 17px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
   .album-card-track{display:flex;width:max-content;align-items:center;animation:homepage-card-pass 54s linear infinite;will-change:transform}
   .album-card-group{display:flex;flex:0 0 auto;align-items:center;gap:11px;padding:0 7px}
+  .album-carousel-fallback{display:block;padding:28px 20px;color:#b5eaf2;font-size:13px;font-weight:800;text-decoration:none}
   .homepage-collectible-card{display:block;flex:0 0 clamp(105px,12.3vw,148px);width:clamp(105px,12.3vw,148px);aspect-ratio:63/88;border:1px solid rgba(184,230,238,.58);border-radius:9px;background:#101b26;box-shadow:0 13px 25px rgba(0,8,18,.4),0 0 12px rgba(47,164,187,.08);transform:rotate(-2deg);transition:transform .25s ease,box-shadow .25s ease}
   .homepage-collectible-card:nth-child(3n){transform:rotate(2deg) translateY(3px)}
   .homepage-collectible-card:nth-child(3n+2){transform:rotate(-.8deg) translateY(-3px)}
@@ -457,11 +458,7 @@
         </div>
         <div class="album-home-showcase">
           <div class="album-card-marquee" role="region" aria-label="Συλλεκτικές κάρτες ρομποτικών κατασκευών">
-            <div class="album-card-track">
-              <div class="album-card-group"><a class="homepage-collectible-card" href="badges/index.html" aria-label="Προβολή στο Συλλεκτικό Άλμπουμ: Ρομποτική Χελώνα"><img src="assets/images/cards/robotic-turtle-level2.webp" width="1260" height="1760" alt="Ρομποτική Χελώνα, συλλεκτική κάρτα LEGO WeDo 2.0" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" aria-label="Προβολή στο Συλλεκτικό Άλμπουμ: Ρομποτικός Εκτοξευτής"><img src="assets/images/cards/robotic-launcher-level1.webp" width="1260" height="1760" alt="Ρομποτικός Εκτοξευτής, συλλεκτική κάρτα LEGO WeDo 2.0" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" aria-label="Προβολή στο Συλλεκτικό Άλμπουμ: Vintage Fighter"><img src="assets/images/cards/vintage-fighter-level2.webp" width="1260" height="1760" alt="Vintage Fighter, συλλεκτική κάρτα LEGO WeDo 2.0" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" aria-label="Προβολή στο Συλλεκτικό Άλμπουμ: Κλαρκ II"><img src="assets/images/cards/forklift-2-level2.webp" width="1260" height="1760" alt="Κλαρκ II, συλλεκτική κάρτα LEGO WeDo 2.0" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" aria-label="Προβολή στο Συλλεκτικό Άλμπουμ: Κλαρκ"><img src="assets/images/cards/forklift-level2.webp" width="1260" height="1760" alt="Κλαρκ, συλλεκτική κάρτα LEGO WeDo 2.0" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" aria-label="Προβολή στο Συλλεκτικό Άλμπουμ: Έξυπνος Κάδος"><img src="assets/images/cards/smart-bin-level2.webp" width="1260" height="1760" alt="Έξυπνος Κάδος, συλλεκτική κάρτα LEGO WeDo 2.0" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" aria-label="Προβολή στο Συλλεκτικό Άλμπουμ: Ηλεκτρικό Scooter"><img src="assets/images/cards/electric-scooter-level2.webp" width="1260" height="1760" alt="Ηλεκτρικό Scooter, συλλεκτική κάρτα LEGO WeDo 2.0" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" aria-label="Προβολή στο Συλλεκτικό Άλμπουμ: Ρομποτικός T-Rex"><img src="assets/images/cards/t-rex-level3.webp" width="1260" height="1760" alt="Ρομποτικός T-Rex, συλλεκτική κάρτα LEGO WeDo 2.0" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" aria-label="Προβολή στο Συλλεκτικό Άλμπουμ: Ρομποτικό Χταπόδι"><img src="assets/images/cards/octopus-level1.webp" width="1260" height="1760" alt="Ρομποτικό Χταπόδι, συλλεκτική κάρτα LEGO WeDo 2.0" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" aria-label="Προβολή στο Συλλεκτικό Άλμπουμ: Frisbee"><img src="assets/images/cards/frisbee-level2.webp" width="1260" height="1760" alt="Frisbee, συλλεκτική κάρτα LEGO WeDo 2.0" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" aria-label="Προβολή στο Συλλεκτικό Άλμπουμ: Ρομποτική Μπασκέτα"><img src="assets/images/cards/basket-level2.webp" width="1260" height="1760" alt="Ρομποτική Μπασκέτα, συλλεκτική κάρτα LEGO WeDo 2.0" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" aria-label="Προβολή στο Συλλεκτικό Άλμπουμ: Ρομποτικός Σκορπιός"><img src="assets/images/cards/scorpion-level2.webp" width="1260" height="1760" alt="Ρομποτικός Σκορπιός, συλλεκτική κάρτα LEGO WeDo 2.0" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" aria-label="Προβολή στο Συλλεκτικό Άλμπουμ: Jet Fighter"><img src="assets/images/cards/jet-fighter-level2.webp" width="1260" height="1760" alt="Jet Fighter, συλλεκτική κάρτα LEGO WeDo 2.0" loading="lazy" decoding="async"></a></div>
-              <div class="album-card-group" aria-hidden="true" inert><a class="homepage-collectible-card" href="badges/index.html" tabindex="-1" aria-hidden="true"><img src="assets/images/cards/robotic-turtle-level2.webp" width="1260" height="1760" alt="" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" tabindex="-1" aria-hidden="true"><img src="assets/images/cards/robotic-launcher-level1.webp" width="1260" height="1760" alt="" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" tabindex="-1" aria-hidden="true"><img src="assets/images/cards/vintage-fighter-level2.webp" width="1260" height="1760" alt="" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" tabindex="-1" aria-hidden="true"><img src="assets/images/cards/forklift-2-level2.webp" width="1260" height="1760" alt="" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" tabindex="-1" aria-hidden="true"><img src="assets/images/cards/forklift-level2.webp" width="1260" height="1760" alt="" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" tabindex="-1" aria-hidden="true"><img src="assets/images/cards/smart-bin-level2.webp" width="1260" height="1760" alt="" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" tabindex="-1" aria-hidden="true"><img src="assets/images/cards/electric-scooter-level2.webp" width="1260" height="1760" alt="" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" tabindex="-1" aria-hidden="true"><img src="assets/images/cards/t-rex-level3.webp" width="1260" height="1760" alt="" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" tabindex="-1" aria-hidden="true"><img src="assets/images/cards/octopus-level1.webp" width="1260" height="1760" alt="" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" tabindex="-1" aria-hidden="true"><img src="assets/images/cards/frisbee-level2.webp" width="1260" height="1760" alt="" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" tabindex="-1" aria-hidden="true"><img src="assets/images/cards/basket-level2.webp" width="1260" height="1760" alt="" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" tabindex="-1" aria-hidden="true"><img src="assets/images/cards/scorpion-level2.webp" width="1260" height="1760" alt="" loading="lazy" decoding="async"></a><a class="homepage-collectible-card" href="badges/index.html" tabindex="-1" aria-hidden="true"><img src="assets/images/cards/jet-fighter-level2.webp" width="1260" height="1760" alt="" loading="lazy" decoding="async"></a></div>
-            </div>
-          </div>
+            <div class="album-card-track" id="homepage-card-track" aria-busy="true"></div>
           <span class="album-home-caption">ΚΑΡΤΕΣ ΠΟΥ ΚΕΡΔΙΖΕΙΣ · ΑΝΑΚΑΛΥΨΕ · ΣΥΛΛΕΞΕ</span>
         </div>
       </div>
@@ -496,6 +493,83 @@
   </footer>
 
   <dialog class="workshop-modal" id="workshop-dialog" aria-labelledby="dialog-title"><div class="modal-wrap"><button type="button" class="modal-close" aria-label="Κλείσιμο παραθύρου">×</button><span class="section-label">ΜΙΑ ΙΔΕΑ ΓΙΑ ΚΑΤΑΣΚΕΥΗ</span><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="modal-facts"><div><strong>Τι ανακαλύπτουμε</strong><p id="dialog-learn"></p></div><div><strong>Μια πρόκληση</strong><p id="dialog-challenge"></p></div></div><p class="modal-footnote">Πρόκειται για συνοπτική παρουσίαση της ιδέας — όχι για πλήρη οδηγό κατασκευής.</p><button type="button" class="btn btn-primary modal-done">Επιστροφή στις κατασκευές</button></div></dialog>
+<script id="homepage-collectible-card-loader">
+(() => {
+  const track = document.querySelector('#homepage-card-track');
+  if (!track) return;
+  const albumUrl = new URL('badges/index.html', document.baseURI);
+
+  const showAlbumLink = () => {
+    track.style.animation = 'none';
+    const link = document.createElement('a');
+    link.className = 'album-carousel-fallback';
+    link.href = albumUrl.href;
+    link.textContent = 'Άνοιξε το συλλεκτικό άλμπουμ';
+    track.replaceChildren(link);
+    track.setAttribute('aria-busy', 'false');
+  };
+
+  fetch(albumUrl, { credentials: 'same-origin' })
+    .then(response => {
+      if (!response.ok) throw new Error('Album unavailable');
+      return response.text();
+    })
+    .then(markup => {
+      const album = new DOMParser().parseFromString(markup, 'text/html');
+      const seen = new Set();
+      const cards = [...album.querySelectorAll('#album-grid .slot')]
+        .map(slot => {
+          const image = slot.querySelector('.slot-art img[src*="/cards/"]');
+          const name = slot.querySelector('.slot-name')?.textContent.trim();
+          if (!image || !name) return null;
+          const src = new URL(image.getAttribute('src'), albumUrl);
+          if (src.origin !== location.origin || !src.pathname.includes('/assets/images/cards/')) return null;
+          if (seen.has(src.pathname)) return null;
+          seen.add(src.pathname);
+          return { name, src: src.href, alt: image.alt || `${name}, συλλεκτική κάρτα EVAGELAK EDU LAB` };
+        })
+        .filter(Boolean);
+
+      if (!cards.length) {
+        showAlbumLink();
+        return;
+      }
+
+      const makeGroup = duplicate => {
+        const group = document.createElement('div');
+        group.className = 'album-card-group';
+        if (duplicate) {
+          group.setAttribute('aria-hidden', 'true');
+          group.inert = true;
+        }
+        cards.forEach((card, index) => {
+          const link = document.createElement('a');
+          link.className = 'homepage-collectible-card';
+          link.href = albumUrl.href;
+          link.setAttribute('aria-label', `Προβολή στο Συλλεκτικό Άλμπουμ: ${card.name}`);
+          if (duplicate) link.tabIndex = -1;
+          const image = document.createElement('img');
+          image.src = card.src;
+          image.alt = duplicate ? '' : card.alt;
+          image.width = 1260;
+          image.height = 1760;
+          image.loading = index < 3 ? 'eager' : 'lazy';
+          image.decoding = 'async';
+          link.append(image);
+          group.append(link);
+        });
+        return group;
+      };
+
+      track.replaceChildren(makeGroup(false), makeGroup(true));
+      track.style.animation = 'none';
+      void track.offsetWidth;
+      track.style.animation = '';
+      track.setAttribute('aria-busy', 'false');
+    })
+    .catch(showAlbumLink);
+})();
+</script>
 </body>
 </html>
 
