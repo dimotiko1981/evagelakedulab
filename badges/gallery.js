@@ -105,6 +105,14 @@
       lockedDesc: 'Πέτυχε τουλάχιστον 4/6 στο quiz του Ρομποτικού Εκτοξευτή για να κερδίσεις τη συλλεκτική κάρτα LEVEL 1.',
       quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
       fallbackHref: '../assets/images/cards/robotic-launcher-level1.webp'
+    },
+    {
+      id: 'robotic-turtle', prefix: 'turtle', name: 'Ρομποτική Χελώνα',
+      earnedLabel: 'ΚΕΡΔΙΣΜΕΝΗ', lockedLabel: 'ΚΛΕΙΔΩΜΕΝΗ',
+      earnedDesc: 'Η συλλεκτική κάρτα Χελώνα LEVEL 2 βρίσκεται στο άλμπουμ σου!',
+      lockedDesc: 'Πέτυχε τουλάχιστον 8/10 στο quiz του Ρομποτικής Χελώνας για να κερδίσεις τη συλλεκτική κάρτα LEVEL 2.',
+      quizTextEarned: 'Παίξε ξανά →', quizTextLocked: 'Παίξε το κουίζ →',
+      fallbackHref: '../assets/images/cards/robotic-turtle-level2.webp'
     }
   ];
 
