@@ -360,11 +360,11 @@
   .album-card-track{display:flex;width:max-content;align-items:center;animation:homepage-card-pass 54s linear infinite;will-change:transform}
   .album-card-group{display:flex;flex:0 0 auto;align-items:center;gap:11px;padding:0 7px}
   .album-carousel-fallback{display:block;padding:28px 20px;color:#b5eaf2;font-size:13px;font-weight:800;text-decoration:none}
-  .homepage-collectible-card{display:block;flex:0 0 clamp(105px,12.3vw,148px);width:clamp(105px,12.3vw,148px);aspect-ratio:63/88;border:1px solid rgba(184,230,238,.58);border-radius:9px;background:#101b26;box-shadow:0 13px 25px rgba(0,8,18,.4),0 0 12px rgba(47,164,187,.08);transform:rotate(-2deg);transition:transform .25s ease,box-shadow .25s ease}
-  .homepage-collectible-card:nth-child(3n){transform:rotate(2deg) translateY(3px)}
-  .homepage-collectible-card:nth-child(3n+2){transform:rotate(-.8deg) translateY(-3px)}
+  .homepage-collectible-card{display:block;flex:0 0 clamp(105px,12.3vw,148px);width:clamp(105px,12.3vw,148px);aspect-ratio:63/88;border:1px solid rgba(184,230,238,.58);border-radius:9px;background:#101b26;box-shadow:0 13px 25px rgba(0,8,18,.4),0 0 12px rgba(47,164,187,.08);transform:none;transition:transform .25s ease,box-shadow .25s ease}
+  .homepage-collectible-card:nth-child(3n){transform:translateY(3px)}
+  .homepage-collectible-card:nth-child(3n+2){transform:translateY(-3px)}
   .homepage-collectible-card img{display:block;width:100%;height:100%;object-fit:contain;border-radius:7px}
-  .homepage-collectible-card:hover,.homepage-collectible-card:focus-visible{z-index:2;transform:translateY(-7px) rotate(0) scale(1.045);box-shadow:0 0 0 1px rgba(91,215,231,.55),0 20px 34px rgba(0,11,23,.48),0 0 22px rgba(51,183,207,.17)}
+  .homepage-collectible-card:hover,.homepage-collectible-card:focus-visible{z-index:2;transform:translateY(-7px) scale(1.045);box-shadow:0 0 0 1px rgba(91,215,231,.55),0 20px 34px rgba(0,11,23,.48),0 0 22px rgba(51,183,207,.17)}
   .album-card-marquee:hover .album-card-track,.album-card-marquee:focus-within .album-card-track{animation-play-state:paused}
   @keyframes homepage-card-pass{to{transform:translateX(-50%)}}
   .album-home-showcase .album-home-caption{padding:0 12px;color:#b5eaf2;font-size:10px;letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,8,18,.55)}
