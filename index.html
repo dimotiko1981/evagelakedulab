@@ -18,18 +18,6 @@
   <style>
     /* v77 — real, approved album cover. No collectible cards disclosed on homepage. */
     .card-home-layout { align-items:center; }
-    .hero-path-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:23px; }
-    .hero-path-actions .btn { min-width:180px; }
-    .hero-path-primary { background:#0b6678; color:#fff; box-shadow:0 8px 22px rgba(11,102,120,.18); }
-    .hero-path-primary:hover { background:#084f5e; }
-    .hero-path-secondary { border:1px solid #c9dfe3; background:#fff; color:#21495b; }
-    .hero-path-secondary:hover { background:#f3fafb; }
-    .start-steps { list-style:none; margin:0; padding:0; }
-    .start-steps .step-card { min-height:220px; }
-    .start-steps .step-card p { font-size:15px; max-width:310px; }
-    .start-step-link { display:inline-flex; margin-top:15px; color:#075d72; font-size:14px; font-weight:900; text-decoration:underline; text-underline-offset:4px; }
-    .start-step-link:focus-visible { outline:3px solid #087e94; outline-offset:4px; border-radius:3px; }
-    @media(max-width:480px) { .hero-path-actions { align-items:stretch; } .hero-path-actions .btn { width:100%; } }
     .album-home-showcase { display:flex; min-width:0; flex-direction:column; align-items:center; justify-content:center; gap:11px; text-decoration:none; color:#dceef3; perspective:1100px; }
     .album-home-book { display:block; width:clamp(208px,25vw,292px); max-width:100%; flex:none; transform-origin:50% 70%; animation:album-book-float 7.4s ease-in-out infinite; filter:drop-shadow(0 20px 19px rgba(0,8,19,.34)); transition:filter .35s ease; }
     .album-home-book img { display:block; width:100%; height:auto; aspect-ratio:1122/1402; object-fit:contain; animation:album-book-appear .95s ease-out both; }
@@ -407,42 +395,9 @@
         <span class="eyebrow"><span class="live-dot"></span> ΚΑΤΑΣΚΕΥΕΣ ΡΟΜΠΟΤΙΚΗΣ · 2026–2027</span>
         <h1 id="hero-title">Μικρές ιδέες<br><span>Μεγάλες κατασκευές</span></h1>
         <p class="hero-lead">Τα παιδιά κατασκευάζουν τα μοντέλα τους, τα προγραμματίζουν και δοκιμάζουν ξανά ώσπου να λειτουργήσουν όπως τα φαντάστηκαν.</p>
-        <div class="hero-path-actions" aria-label="Ξεκίνα από εδώ">
-          <a class="btn hero-path-primary" href="#workshops">Δες τις κατασκευές</a>
-          <a class="btn hero-path-secondary" href="#badges">Πήγαινε στο άλμπουμ</a>
-        </div>
       </div>
       <div class="hero-art">
         <img class="hero-main-logo" src="assets/images/branding/evagelak-logo.png" alt="Το επίσημο λογότυπο του EVAGELAK EDU LAB – Μαθαίνω, Δημιουργώ, Καινοτομώ" width="1100" height="1100" fetchpriority="high">
-      </div>
-    </section>
-
-    <section class="how-section section" id="how-it-works" aria-labelledby="start-title">
-      <div class="wrap">
-        <div class="section-heading centered">
-          <span class="section-label">Η ΔΙΑΔΡΟΜΗ ΤΟΥ ΕΡΓΑΣΤΗΡΙΟΥ</span>
-          <h2 id="start-title">Ξεκίνα σε <em>τρία βήματα</em></h2>
-          <p>Διάλεξε μια κατασκευή, γνώρισέ την και πρόσθεσε τη συλλεκτική της κάρτα στο άλμπουμ.</p>
-        </div>
-        <ol class="steps-grid start-steps">
-          <li class="step-card">
-            <span class="step-number" aria-hidden="true">01</span>
-            <h3>Διάλεξε κατασκευή</h3>
-            <p>Περιηγήσου στις κατασκευές και επίλεξε αυτή που θέλεις να γνωρίσεις.</p>
-            <a class="start-step-link" href="#workshops">Δες τις κατασκευές</a>
-          </li>
-          <li class="step-card">
-            <span class="step-number" aria-hidden="true">02</span>
-            <h3>Μπες στο εργαστήριο</h3>
-            <p>Άνοιξε τη σελίδα της κατασκευής και εξερεύνησε το υλικό, τις οδηγίες και τον προγραμματισμό της.</p>
-          </li>
-          <li class="step-card">
-            <span class="step-number" aria-hidden="true">03</span>
-            <h3>Κέρδισε την κάρτα</h3>
-            <p>Ολοκλήρωσε το κουίζ της κατασκευής και ξεκλείδωσε τη συλλεκτική κάρτα σου.</p>
-            <a class="start-step-link" href="#badges">Δες το άλμπουμ</a>
-          </li>
-        </ol>
       </div>
     </section>
 
