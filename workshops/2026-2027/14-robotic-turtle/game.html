@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c2432">
+  <meta name="description" content="Βοήθησε τη Ρομποτική Χελώνα να φτάσει στο φύλλο. Δημιούργησε ακολουθίες εντολών και λύσε τρεις πίστες προγραμματισμού.">
+  <title>Η αποστολή της Χελώνας | EVAGELAK EDU LAB</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b1b26;--panel:#122a38;--panel-soft:#173343;--line:#294a59;--ink:#f4fafb;--muted:#b7cbd2;--teal:#4ed2d0;--lime:#b8e36f;--danger:#ffbd9d;--shadow:0 22px 60px #020a1080;font-family:Inter,"Segoe UI",Arial,sans-serif}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -30%,#195168 0,transparent 52%),linear-gradient(160deg,#102633,#091720 68%);color:var(--ink);font-size:16px;line-height:1.55}a{color:inherit}button{font:inherit}button:focus-visible,a:focus-visible{outline:3px solid var(--lime);outline-offset:3px}.game-shell{width:min(1100px,calc(100% - 36px));margin:auto;padding:22px 0 48px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:34px}.brand{font-size:12px;font-weight:900;letter-spacing:.12em;color:#e8f4f6}.brand span{color:var(--teal)}.back-link{font-size:13px;font-weight:800;color:#c1d8df;text-decoration:none;border:1px solid #456170;border-radius:999px;padding:9px 14px;transition:background .2s,border-color .2s}.back-link:hover{background:#173748;border-color:#72c7d0}.intro{max-width:780px;margin:0 auto 25px;text-align:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#bfe7e7;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px #b8e36f22}.intro h1{margin:12px 0 8px;font-size:clamp(30px,5vw,49px);line-height:1.08;letter-spacing:-.04em}.intro p{margin:0 auto;max-width:650px;color:var(--muted);font-size:16px}.game-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(310px,.9fr);gap:18px;align-items:stretch}.panel{border:1px solid var(--line);border-radius:22px;background:linear-gradient(150deg,#173444,#102633 72%);box-shadow:var(--shadow)}.board-panel{padding:20px}.board-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}.board-head h2,.controls-head h2{font-size:18px;margin:0 0 3px;letter-spacing:-.02em}.board-head p{margin:0;color:var(--muted);font-size:13px}.level-chip{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border:1px solid #3e6878;border-radius:999px;color:#c8e9eb;font-size:11px;font-weight:900;white-space:nowrap}.levels{display:flex;gap:8px;margin-bottom:15px}.level-button{width:40px;height:38px;border:1px solid #3b5c6a;border-radius:11px;background:#102631;color:#b6cbd1;font-weight:900;cursor:pointer}.level-button[aria-current="step"]{border-color:var(--teal);background:#14505c;color:#fff;box-shadow:inset 0 0 0 1px #4ed2d033}.level-button:disabled{opacity:.38;cursor:not-allowed}.board-frame{width:min(100%,510px);margin:auto;padding:10px;border:1px solid #426575;border-radius:17px;background:#0b202b;box-shadow:inset 0 1px 0 #ffffff0d}.board{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;width:100%;aspect-ratio:1}.cell{display:grid;place-items:center;min-width:0;border:1px solid #315363;border-radius:10px;background:linear-gradient(145deg,#204452,#183744);font-size:clamp(19px,4vw,30px);user-select:none}.cell:nth-child(odd){background:linear-gradient(145deg,#1c3c49,#16313e)}.cell.obstacle{border-color:#5e6570;background:linear-gradient(145deg,#394750,#25343c);font-size:clamp(17px,3.3vw,26px)}.cell.goal{border-color:#638050;background:linear-gradient(145deg,#304d3e,#1f4039);box-shadow:inset 0 0 18px #a8da7240}.cell.start-cell{box-shadow:inset 0 0 0 1px #66d2c544}.turtle-token{position:absolute;z-index:2;display:grid;place-items:center;width:15%;height:15%;border:2px solid #effff4;border-radius:40%;background:linear-gradient(145deg,#eaffd9,#bfe794);font-size:clamp(22px,5vw,38px);line-height:1;box-shadow:0 5px 12px #020a1080;transform:translate(-50%,-50%);transition:left .35s ease,top .35s ease}.turtle-token #heading{position:absolute;top:-8px;left:50%;display:grid;place-items:center;width:18px;height:18px;border:1px solid #214234;border-radius:50%;background:#f4fff0;color:#1f654d;font-size:12px;font-weight:1000;line-height:1;transform:translateX(-50%) rotate(var(--turn,0deg))}.board-legend{display:flex;flex-wrap:wrap;gap:12px 18px;justify-content:center;margin:12px 0 0;color:#bbd1d8;font-size:12px}.board-legend span{display:inline-flex;align-items:center;gap:6px}.legend-turtle{font-size:17px}.legend-leaf{font-size:15px}.legend-rock{font-size:15px}.instruction{margin:16px 0 0;padding:12px 14px;border-left:3px solid var(--teal);border-radius:0 11px 11px 0;background:#0c202c;color:#e3f2f4;font-size:14px}.controls-panel{display:flex;flex-direction:column;padding:20px}.controls-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.count{color:#b9d4da;font-size:12px;font-weight:800;white-space:nowrap}.command-buttons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:16px 0}.command-button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:78px;padding:9px 5px;border:1px solid #416575;border-radius:14px;background:#0f2734;color:#ecf8f9;font-size:12px;font-weight:850;cursor:pointer;transition:transform .16s,border-color .16s,background .16s}.command-button:hover:not(:disabled){transform:translateY(-2px);border-color:var(--teal);background:#143b49}.command-button:disabled{opacity:.45;cursor:not-allowed}.command-icon{font-size:24px;line-height:1;color:var(--lime)}.program-label{display:flex;justify-content:space-between;align-items:center;margin:2px 0 8px;font-size:13px;font-weight:900}.program-box{min-height:88px;max-height:130px;overflow:auto;padding:10px;border:1px dashed #456574;border-radius:13px;background:#0b202b}.program-list{display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;list-style:none}.program-empty{color:#9db8c2;font-size:13px}.command-chip{display:flex;align-items:center;gap:6px;padding:6px 8px;border:1px solid #355969;border-radius:8px;background:#173746;color:#edfafa;font-size:12px;font-weight:850}.command-chip b{color:var(--lime);font-size:15px}.action-row{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:8px;margin-top:11px}.action-button{min-height:45px;padding:9px 11px;border:1px solid #496a78;border-radius:12px;background:#183645;color:#e8f5f7;font-size:13px;font-weight:900;cursor:pointer;transition:background .16s,border-color .16s,transform .16s}.action-button:hover:not(:disabled){transform:translateY(-1px);background:#214756;border-color:#72a2b2}.action-button:disabled{opacity:.4;cursor:not-allowed}.action-button.run{border-color:#4ed2d0;background:linear-gradient(135deg,#42cbc7,#81d8ae);color:#0a2730;box-shadow:0 6px 18px #23a9a544}.action-button.run:hover:not(:disabled){background:linear-gradient(135deg,#5ee0da,#a5e789)}.status{min-height:68px;margin:15px 0 0;padding:13px 14px;border:1px solid #365565;border-radius:13px;background:#0b202b;color:#cfe2e6;font-size:14px}.status[data-state="success"]{border-color:#73954e;background:#263b31;color:#e6ffd0}.status[data-state="error"]{border-color:#91694d;background:#392e29;color:#ffe0d1}.next-button{display:none;width:100%;margin-top:10px;padding:11px 14px;border:1px solid #9dc967;border-radius:12px;background:#b8e36f;color:#142b25;font-weight:950;cursor:pointer}.next-button.visible{display:block}.help{margin:13px 0 0;color:#a9c0c8;font-size:12px;line-height:1.55}.footer-note{margin:20px 0 0;text-align:center;color:#99b4bd;font-size:12px}
+    @media(max-width:800px){.game-layout{grid-template-columns:1fr}.board-frame{width:min(100%,460px)}.controls-panel{min-height:auto}}
+    @media(max-width:520px){.game-shell{width:calc(100% - 24px);padding-top:14px}.topbar{margin-bottom:24px}.brand{font-size:10px}.back-link{font-size:11px;padding:8px 10px}.intro{margin-bottom:20px}.intro p{font-size:14px}.board-panel,.controls-panel{padding:14px;border-radius:17px}.board-frame{padding:7px}.board{gap:4px}.cell{border-radius:8px}.board-head h2,.controls-head h2{font-size:16px}.action-row{grid-template-columns:1fr 1fr}.action-button.run{grid-column:1/-1;grid-row:1}.command-buttons{gap:6px}.command-button{min-height:72px;font-size:11px}.status{font-size:13px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+  <div class="game-shell">
+    <header class="topbar">
+      <div class="brand">EVAGELAK <span>EDU LAB</span> · ΡΟΜΠΟΤΙΚΕΣ ΑΠΟΣΤΟΛΕΣ</div>
+      <a class="back-link" href="index.html">← Πίσω στη Χελώνα</a>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="game-title">
+        <span class="eyebrow">LEGO WeDo 2.0 · Παιχνίδι προγραμματισμού</span>
+        <h1 id="game-title">Η αποστολή της Χελώνας</h1>
+        <p>Βάλε τις εντολές στη σωστή σειρά και βοήθησε τη Χελώνα να φτάσει στο φύλλο. Πρόσεχε τα βράχια και σχεδίασε τη διαδρομή της πριν πατήσεις «Εκτέλεση».</p>
+      </section>
+      <section class="game-layout" aria-label="Παιχνίδι προγραμματισμού Χελώνας">
+        <div class="panel board-panel">
+          <div class="board-head">
+            <div><h2 id="level-title">Πίστα 1 · Η πρώτη βόλτα</h2><p id="level-subtitle">Μια ευθεία διαδρομή για αρχή.</p></div>
+            <span class="level-chip"><span id="completed-count">0</span> / 3 πίστες</span>
+          </div>
+          <nav class="levels" aria-label="Επιλογή πίστας">
+            <button class="level-button" type="button" data-level="0" aria-label="Πίστα 1" aria-current="step">1</button>
+            <button class="level-button" type="button" data-level="1" aria-label="Πίστα 2" disabled>2</button>
+            <button class="level-button" type="button" data-level="2" aria-label="Πίστα 3" disabled>3</button>
+          </nav>
+          <div class="board-frame">
+            <div class="board" id="board" role="grid" aria-label="Πίστα παιχνιδιού, πέντε επί πέντε τετραγωνάκια">
+              <span class="turtle-token" id="turtle-token" aria-label="Η Χελώνα" style="left:10%;top:90%">🐢<span id="heading" aria-hidden="true">↑</span></span>
+            </div>
+          </div>
+          <div class="board-legend" aria-label="Σύμβολα πίστας">
+            <span><i class="legend-turtle" aria-hidden="true">🐢</i> Χελώνα</span>
+            <span><i class="legend-leaf" aria-hidden="true">🍃</i> Στόχος</span>
+            <span><i class="legend-rock" aria-hidden="true">🪨</i> Εμπόδιο</span>
+          </div>
+          <p class="instruction" id="instruction">Οδήγησε τη Χελώνα ευθεία μέχρι το φύλλο. Χρειάζονται τέσσερις εντολές «Προχώρα».</p>
+        </div>
+        <div class="panel controls-panel">
+          <div class="controls-head"><h2>Πρόγραμμα εντολών</h2><span class="count" id="command-count">0 / 8</span></div>
+          <p class="help" style="margin:4px 0 0">Πάτησε τις εντολές για να φτιάξεις τη διαδρομή. Οι στροφές αλλάζουν κατεύθυνση χωρίς να μετακινούν τη Χελώνα.</p>
+          <div class="command-buttons" role="group" aria-label="Προσθήκη εντολής">
+            <button class="command-button" type="button" data-command="forward"><span class="command-icon" aria-hidden="true">↑</span><span>Προχώρα</span></button>
+            <button class="command-button" type="button" data-command="left"><span class="command-icon" aria-hidden="true">↶</span><span>Αριστερά</span></button>
+            <button class="command-button" type="button" data-command="right"><span class="command-icon" aria-hidden="true">↷</span><span>Δεξιά</span></button>
+          </div>
+          <div class="program-label"><span>Η διαδρομή σου</span><span id="program-hint">Πρόσθεσε μια εντολή</span></div>
+          <div class="program-box"><ol class="program-list" id="program-list" aria-label="Επιλεγμένες εντολές"><li class="program-empty">Οι εντολές θα εμφανιστούν εδώ.</li></ol></div>
+          <div class="action-row">
+            <button class="action-button" id="undo-button" type="button" disabled>Αναίρεση</button>
+            <button class="action-button" id="clear-button" type="button" disabled>Καθαρισμός</button>
+            <button class="action-button run" id="run-button" type="button" disabled>Εκτέλεση</button>
+          </div>
+          <div class="status" id="status" role="status" aria-live="polite" data-state="info">Διάλεξε εντολές και πάτησε «Εκτέλεση».</div>
+          <button class="next-button" id="next-button" type="button">Επόμενη πίστα</button>
+          <p class="help">Αν η Χελώνα συναντήσει βράχο ή βγει έξω από την πίστα, η διαδρομή σταματά. Διόρθωσε τις εντολές και ξαναδοκίμασε.</p>
+        </div>
+      </section>
+      <p class="footer-note">Παίξε, παρατήρησε και δοκίμασε διαφορετικές ακολουθίες εντολών.</p>
+    </main>
+  </div>
+  <script>
+    (() => {
+      const levels = [
+        {name:"Η πρώτη βόλτα", subtitle:"Μια ευθεία διαδρομή για αρχή.", start:{x:0,y:4,d:1}, goal:{x:4,y:4}, rocks:[], max:8, instruction:"Οδήγησε τη Χελώνα ευθεία μέχρι το φύλλο. Χρειάζονται τέσσερις εντολές «Προχώρα»."},
+        {name:"Γύρω από τη λιμνούλα", subtitle:"Φτάσε στην πάνω πλευρά και μετά στρίψε.", start:{x:0,y:4,d:0}, goal:{x:4,y:0}, rocks:[[2,4],[1,2],[3,1]], max:10, instruction:"Πέρασε από την αριστερή πλευρά, φτάσε στην πάνω σειρά και έπειτα στρίψε προς το φύλλο."},
+        {name:"Το μονοπάτι με τα βράχια", subtitle:"Σχεδίασε δύο στροφές πριν ξεκινήσεις.", start:{x:0,y:4,d:0}, goal:{x:4,y:0}, rocks:[[0,2],[2,3],[3,1]], max:14, instruction:"Το βράχινο εμπόδιο κλείνει τον ευθύ δρόμο. Κάνε πρώτα μια στροφή για να το παρακάμψεις."}
+      ];
+      const names={forward:{symbol:"↑",label:"Προχώρα"},left:{symbol:"↶",label:"Αριστερά"},right:{symbol:"↷",label:"Δεξιά"}};
+      const vectors=[[0,-1],[1,0],[0,1],[-1,0]], arrows=["↑","→","↓","←"];
+      const board=document.querySelector('#board'), token=document.querySelector('#turtle-token'), heading=document.querySelector('#heading');
+      const list=document.querySelector('#program-list'), count=document.querySelector('#command-count'), status=document.querySelector('#status'), nextButton=document.querySelector('#next-button');
+      const levelTitle=document.querySelector('#level-title'), levelSubtitle=document.querySelector('#level-subtitle'), instruction=document.querySelector('#instruction');
+      const buttons=[...document.querySelectorAll('.command-button')], levelButtons=[...document.querySelectorAll('.level-button')];
+      let current=0, commands=[], running=false, completed=new Set(), unlocked=0;
+      let position={...levels[0].start};
+      const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+      const setStatus=(message,state='info')=>{status.textContent=message;status.dataset.state=state;};
+      function renderPosition(){
+        token.style.left=`${(position.x+.5)*20}%`;
+        token.style.top=`${(position.y+.5)*20}%`;
+        heading.textContent=arrows[position.d];
+        heading.style.setProperty('--turn',`${position.d*90}deg`);
+        token.setAttribute('aria-label',`Η Χελώνα, κατεύθυνση ${['πάνω','δεξιά','κάτω','αριστερά'][position.d]}`);
+      }
+      function renderProgram(){
+        count.textContent=`${commands.length} / ${levels[current].max}`;
+        document.querySelector('#program-hint').textContent=commands.length?`${commands.length} ${commands.length===1?'εντολή':'εντολές'}`:'Πρόσθεσε μια εντολή';
+        if(!commands.length){list.innerHTML='<li class="program-empty">Οι εντολές θα εμφανιστούν εδώ.</li>';}
+        else list.innerHTML=commands.map((command,index)=>`<li class="command-chip" aria-label="Εντολή ${index+1}: ${names[command].label}"><b aria-hidden="true">${names[command].symbol}</b>${index+1}</li>`).join('');
+        const atLimit=commands.length>=levels[current].max;
+        buttons.forEach(button=>button.disabled=running||atLimit);
+        document.querySelector('#undo-button').disabled=running||!commands.length;
+        document.querySelector('#clear-button').disabled=running||!commands.length;
+        document.querySelector('#run-button').disabled=running||!commands.length;
+        levelButtons.forEach((button,index)=>{button.disabled=running||index>unlocked; if(index===current)button.setAttribute('aria-current','step');else button.removeAttribute('aria-current');});
+      }
+      function drawBoard(){
+        board.querySelectorAll('.cell').forEach(cell=>cell.remove());
+        const level=levels[current], rockSet=new Set(level.rocks.map(([x,y])=>`${x},${y}`));
+        for(let y=0;y<5;y++) for(let x=0;x<5;x++){
+          const cell=document.createElement('div');cell.className='cell';cell.setAttribute('role','gridcell');
+          const atGoal=x===level.goal.x&&y===level.goal.y, atStart=x===level.start.x&&y===level.start.y, rock=rockSet.has(`${x},${y}`);
+          if(atGoal){cell.classList.add('goal');cell.textContent='🍃';cell.setAttribute('aria-label','Στόχος: φύλλο');}
+          else if(rock){cell.classList.add('obstacle');cell.textContent='🪨';cell.setAttribute('aria-label','Βράχος: εμπόδιο');}
+          else if(atStart){cell.classList.add('start-cell');cell.setAttribute('aria-label','Αφετηρία της Χελώνας');}
+          else cell.setAttribute('aria-label',`Τετραγωνάκι ${x+1}, ${y+1}`);
+          board.insertBefore(cell,token);
+        }
+        token.setAttribute('aria-label',`Η Χελώνα, κατεύθυνση ${['πάνω','δεξιά','κάτω','αριστερά'][level.start.d]}`);
+      }
+      function loadLevel(index){
+        if(index>unlocked||running)return;
+        current=index;commands=[];position={...levels[current].start};
+        const level=levels[current];levelTitle.textContent=`Πίστα ${current+1} · ${level.name}`;levelSubtitle.textContent=level.subtitle;instruction.textContent=level.instruction;
+        nextButton.classList.remove('visible');drawBoard();renderPosition();renderProgram();setStatus('Διάλεξε εντολές και πάτησε «Εκτέλεση».');
+      }
+      function completeLevel(){
+        completed.add(current);unlocked=Math.min(levels.length-1,Math.max(unlocked,current+1));
+        document.querySelector('#completed-count').textContent=completed.size;renderProgram();
+        if(current<levels.length-1){setStatus('Μπράβο! Η Χελώνα έφτασε στο φύλλο. Ξεκλείδωσες την επόμενη πίστα.','success');nextButton.textContent='Επόμενη πίστα';nextButton.classList.add('visible');}
+        else{setStatus('Τα κατάφερες! Ολοκλήρωσες και τις τρεις αποστολές της Χελώνας.','success');nextButton.textContent='Παίξε ξανά από την αρχή';nextButton.classList.add('visible');}
+      }
+      async function runProgram(){
+        if(running||!commands.length)return;
+        running=true;position={...levels[current].start};renderPosition();renderProgram();setStatus('Η Χελώνα ξεκινά τη διαδρομή…');await delay(280);
+        const level=levels[current], rockSet=new Set(level.rocks.map(([x,y])=>`${x},${y}`));
+        for(const command of commands){
+          if(command==='left')position.d=(position.d+3)%4;
+          else if(command==='right')position.d=(position.d+1)%4;
+          else{
+            const [dx,dy]=vectors[position.d],nx=position.x+dx,ny=position.y+dy;
+            if(nx<0||nx>4||ny<0||ny>4||rockSet.has(`${nx},${ny}`)){
+              await delay(180);running=false;renderProgram();setStatus('Η Χελώνα βρήκε εμπόδιο. Δοκίμασε να αλλάξεις τη σειρά των εντολών.','error');return;
+            }
+            position.x=nx;position.y=ny;
+          }
+          renderPosition();await delay(command==='forward'?440:260);
+          if(position.x===level.goal.x&&position.y===level.goal.y){running=false;completeLevel();return;}
+        }
+        running=false;renderProgram();setStatus('Η Χελώνα δεν έφτασε ακόμη στο φύλλο. Πρόσθεσε ή άλλαξε εντολές και ξαναδοκίμασε.','info');
+      }
+      buttons.forEach(button=>button.addEventListener('click',()=>{if(running||commands.length>=levels[current].max)return;commands.push(button.dataset.command);renderProgram();setStatus('Η εντολή προστέθηκε. Όταν είσαι έτοιμος, πάτησε «Εκτέλεση».');}));
+      document.querySelector('#undo-button').addEventListener('click',()=>{if(running)return;commands.pop();renderProgram();setStatus('Αφαίρεσες την τελευταία εντολή.');});
+      document.querySelector('#clear-button').addEventListener('click',()=>{if(running)return;commands=[];position={...levels[current].start};renderPosition();renderProgram();setStatus('Η διαδρομή καθαρίστηκε. Φτιάξε μια νέα ακολουθία.');});
+      document.querySelector('#run-button').addEventListener('click',runProgram);
+      levelButtons.forEach(button=>button.addEventListener('click',()=>loadLevel(Number(button.dataset.level))));
+      nextButton.addEventListener('click',()=>{if(current<levels.length-1)loadLevel(current+1);else{completed.clear();unlocked=0;document.querySelector('#completed-count').textContent='0';loadLevel(0);}});
+      loadLevel(0);
+    })();
+  </script>
+</body>
+</html>
