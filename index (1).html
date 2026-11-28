@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6fafc">
+  <meta name="description" content="EVAGELAK EDU LAB – Κατασκευές εκπαιδευτικής ρομποτικής για παιδιά Δημοτικού. Κατασκευάζουμε, προγραμματίζουμε και μαθαίνουμε μέσα από το παιχνίδι.">
+  <meta property="og:title" content="EVAGELAK EDU LAB | Κατασκευές Ρομποτικής">
+  <meta property="og:description" content="Μικρές ιδέες, μεγάλες κατασκευές. Μια δημιουργική γωνιά για παιδιά και γονείς.">
+  <meta property="og:type" content="website">
+  <title>EVAGELAK EDU LAB | Κατασκευές Εκπαιδευτικής Ρομποτικής</title>
+  <link rel="icon" type="image/png" href="assets/images/branding/evagelak-logo.png">
+  <meta property="og:image" content="assets/images/branding/evagelak-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link rel="stylesheet" href="assets/css/styles.css?v=63">
+  <style>
+    /* v77 — real, approved album cover. No collectible cards disclosed on homepage. */
+    .card-home-layout { align-items:center; }
+    .album-home-showcase { display:flex; min-width:0; flex-direction:column; align-items:center; justify-content:center; gap:11px; text-decoration:none; color:#dceef3; perspective:1100px; }
+    .album-home-book { display:block; width:clamp(208px,25vw,292px); max-width:100%; flex:none; transform-origin:50% 70%; animation:album-book-float 7.4s ease-in-out infinite; filter:drop-shadow(0 20px 19px rgba(0,8,19,.34)); transition:filter .35s ease; }
+    .album-home-book img { display:block; width:100%; height:auto; aspect-ratio:1122/1402; object-fit:contain; animation:album-book-appear .95s ease-out both; }
+    .album-home-showcase:hover .album-home-book { filter:drop-shadow(0 26px 22px rgba(0,8,19,.46)); }
+    .album-home-caption { display:block; font-size:11px; font-weight:900; letter-spacing:.09em; line-height:1.45; color:#a8dfe7; text-align:center; }
+    .academy-home-copy .card-home-note { margin:15px 0 0; color:#adcbd8; font-size:12px; line-height:1.55; }
+    @keyframes album-book-float {
+      0%, 100% { transform:translate3d(0,0,0) rotateY(-2deg) rotateZ(-.25deg); }
+      50% { transform:translate3d(0,-8px,0) rotateY(2deg) rotateZ(.25deg); }
+    }
+    @keyframes album-book-appear {
+      from { opacity:0; transform:scale(.965); }
+      to { opacity:1; transform:scale(1); }
+    }
+    @media(max-width:780px) { .album-home-book { width:min(68vw,238px); } }
+    @media(prefers-reduced-motion:reduce) { .album-home-book,.album-home-book img { animation:none!important; transform:none!important; } .album-home-book { transition:none; } }
+
+    /* v64 — Compact footer, self-contained to avoid CSS upload/cache mismatches. */
+    .footer .footer-main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 20px;
+      padding-block: 12px;
+    }
+    .footer .footer-brand { grid-column: auto; max-width: none; min-width: 0; }
+    .footer .footer-connect { display:flex; align-items:flex-end; justify-content:flex-end; padding:0; min-width:0; }
+    .footer .footer-connect .footer-socials { margin:0; justify-content:flex-end; }
+    .footer .footer-bottom { justify-content:center; text-align:center; padding-block:10px; }
+    @media (max-width:700px) {
+      .footer .footer-main { grid-template-columns:minmax(0,1fr); gap:13px; padding-block:15px; }
+      .footer .footer-connect { justify-content:flex-start; align-items:flex-start; text-align:left; }
+      .footer .footer-connect .footer-socials { justify-content:flex-start; }
+    }
+
+    /* v78 — Color social icons, horizontal footer row (starting with YouTube).
+       Add future social links as siblings inside .footer-socials; no layout changes needed. */
+    .footer .footer-main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      column-gap: 20px;
+      row-gap: 0;
+      padding-block: 13px;
+    }
+    .footer .footer-brand { min-width: 0; }
+    .footer .footer-connect {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: right;
+      min-width: 0;
+      padding: 0;
+    }
+    .footer .footer-connect .footer-socials {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+    }
+    .footer .footer-social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 46px;
+      width: 46px;
+      height: 46px;
+      min-height: 46px;
+      padding: 0;
+      border: 1px solid #d6e2e5;
+      border-radius: 12px;
+      background: #fff;
+      color: #e62117;
+      box-shadow: 0 3px 10px rgba(26, 53, 62, .055);
+      transition: border-color .2s ease, background .2s ease, transform .2s ease;
+    }
+    .footer .footer-social-link:hover {
+      border-color: #efafa9;
+      background: #fff7f6;
+      transform: translateY(-2px);
+    }
+    .footer .footer-youtube-icon { width: 29px; height: 23px; }
+    .footer .footer-bottom { padding-block: 10px; }
+    @media(max-width:700px) {
+      .footer .footer-main {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 12px;
+        padding-block: 14px;
+      }
+      .footer .footer-connect {
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+      }
+      .footer .footer-connect .footer-socials { justify-content: flex-end; }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      .footer .footer-social-link { transition: none; }
+      .footer .footer-social-link:hover { transform: none; }
+    }
+  </style>
+  <script src="assets/js/script.js?v=46" defer></script>
+
+  <style id="edulab-modern-navigation-v78">
+    /* EVAGELAK EDU LAB — modern editorial navigation.
+       Keep all existing links, mobile menu behavior, and homepage content. */
+    @media (min-width: 901px) {
+      .site-header {
+        height: 82px;
+        border-bottom: 1px solid #e5edef;
+      }
+      .main-nav {
+        gap: clamp(9px, 1.25vw, 19px);
+      }
+      .main-nav .nav-link {
+        position: relative;
+        min-height: 44px;
+        padding: 10px 5px;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        color: #395367;
+        font-size: 13px;
+        font-weight: 800;
+        transform: none;
+        transition: color .2s ease;
+      }
+      .main-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+        height: 2px;
+        border-radius: 999px;
+        background: #07849a;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform .2s ease;
+      }
+      .main-nav .nav-link.current,
+      .main-nav .nav-link.current:hover,
+      .main-nav .nav-link:hover {
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        color: #066f82;
+        transform: none;
+      }
+      .main-nav .nav-link.current::after,
+      .main-nav .nav-link:hover::after {
+        transform: scaleX(1);
+      }
+      .main-nav .btn-nav {
+        margin-left: 5px;
+        min-height: 42px;
+        padding: 10px 18px;
+        border: 1px solid #0e677a;
+        border-radius: 999px;
+        background: #0e677a;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 850;
+        box-shadow: none;
+        transform: none;
+      }
+      .main-nav .btn-nav:hover {
+        border-color: #09566a;
+        background: #09566a;
+        color: #fff;
+        box-shadow: 0 4px 11px rgba(9, 86, 106, .13);
+        transform: none;
+      }
+    }
+    @media (max-width: 900px) {
+      .main-nav { gap: 5px; }
+      .main-nav .nav-link,
+      .main-nav .btn-nav {
+        min-height: 44px;
+        padding: 10px 12px;
+        border: 0;
+        border-radius: 10px;
+        background: transparent;
+        color: #395367;
+        box-shadow: none;
+        transform: none;
+      }
+      .main-nav .nav-link:hover {
+        border: 0;
+        background: #f2f9fa;
+        color: #056e80;
+        box-shadow: none;
+        transform: none;
+      }
+      .main-nav .nav-link.current,
+      .main-nav .nav-link.current:hover {
+        padding-left: 9px;
+        border: 0;
+        border-left: 3px solid #07849a;
+        background: #eaf6f8;
+        color: #076b7c;
+        box-shadow: none;
+      }
+      .main-nav .btn-nav,
+      .main-nav .btn-nav:hover {
+        justify-content: center;
+        min-height: 44px;
+        margin-top: 8px;
+        border: 0;
+        border-radius: 12px;
+        background: #0e677a;
+        color: #fff;
+        font-size: 13px;
+        box-shadow: none;
+        transform: none;
+      }
+    }
+    .footer .footer-social-link {
+      flex: 0 0 46px;
+      width: 46px;
+      height: 46px;
+      min-height: 46px;
+      padding: 0;
+      border: 1px solid #c1d1d8;
+      border-radius: 14px;
+      background: linear-gradient(155deg, #fff 35%, #edf3f5);
+      box-shadow: inset 0 1px 0 white, 0 2px 5px #18384812;
+      transition: border-color .18s ease, box-shadow .18s ease;
+    }
+    .footer .footer-social-link:hover {
+      background: white;
+      border-color: #7197a6;
+      box-shadow: 0 3px 9px #18384820;
+      transform: none;
+    }
+    .footer .footer-youtube-icon { width: 27px; height: 20px; }
+    @media (prefers-reduced-motion: reduce) {
+      .main-nav .nav-link,
+      .main-nav .nav-link::after,
+      .main-nav .btn-nav,
+      .footer .footer-social-link { transition: none; }
+    }
+  </style>
+
+  <style id="edulab-unified-controls-v79">
+    /* Navigation: Explore is an ordinary menu link, not an illuminated CTA. */
+    .main-nav .nav-explore {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      box-shadow: none;
+      text-shadow: none;
+      color: #395367;
+      background: transparent;
+      border: 0;
+    }
+    .main-nav .nav-explore span { font-size: 12px; line-height: 1; opacity: .66; }
+    @media (max-width: 900px) {
+      .main-nav .nav-explore { justify-content: flex-start; }
+    }
+
+    /* The category chooser is one quiet, cohesive segmented filter. */
+    .workshops-section .filters {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 3px;
+      width: max-content;
+      max-width: 100%;
+      padding: 4px;
+      border: 1px solid #d0e1e5;
+      border-radius: 13px;
+      background: rgba(255, 255, 255, .61);
+      box-shadow: none;
+    }
+    .workshops-section .filters .filter-chip {
+      position: relative;
+      flex: 0 0 auto;
+      min-height: 39px;
+      padding: 9px 13px;
+      border: 0;
+      border-radius: 9px;
+      background: transparent;
+      color: #416275;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0;
+      white-space: nowrap;
+      box-shadow: none;
+      text-shadow: none;
+      transform: none;
+      transition: background-color .17s ease, color .17s ease;
+    }
+    .workshops-section .filters .filter-chip:hover {
+      border: 0;
+      background: #e7f3f5;
+      color: #096b7f;
+      box-shadow: none;
+      transform: none;
+    }
+    .workshops-section .filters .filter-chip.active,
+    .workshops-section .filters .filter-chip[aria-pressed="true"] {
+      border: 0;
+      background: #dceff2;
+      color: #05677a;
+      box-shadow: none;
+      font-weight: 900;
+    }
+    .workshops-section .filters .filter-chip:focus-visible {
+      outline: 2px solid #087e94;
+      outline-offset: -2px;
+    }
+    @media (max-width: 650px) {
+      .workshops-section .filters {
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #a9cad1 transparent;
+        -webkit-overflow-scrolling: touch;
+      }
+      .workshops-section .filters .filter-chip { min-height: 43px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .workshops-section .filters .filter-chip { transition: none; }
+    }
+  </style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&amp;display=swap">
+<link rel="stylesheet" href="assets/css/edulab-ui.css">
+<style id="homepage-collectible-card-motion">
+  .album-home-showcase{width:100%;min-width:0;overflow:hidden;padding:14px 0 12px;border:1px solid rgba(115,214,230,.35);border-radius:20px;background:radial-gradient(ellipse at 50% -25%,rgba(29,117,145,.42),transparent 66%),linear-gradient(145deg,#071927 0%,#0d2a3d 54%,#061722 100%);box-shadow:0 18px 40px rgba(2,10,20,.34),inset 0 1px 0 rgba(201,244,255,.08)}
+  .album-card-marquee{position:relative;width:100%;overflow:hidden;padding:12px 0 17px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+  .album-card-track{display:flex;width:max-content;align-items:center;animation:homepage-card-pass 54s linear infinite;will-change:transform}
+  .album-card-group{display:flex;flex:0 0 auto;align-items:center;gap:11px;padding:0 7px}
+  .album-carousel-fallback{display:block;padding:28px 20px;color:#b5eaf2;font-size:13px;font-weight:800;text-decoration:none}
+  .homepage-collectible-card{display:block;flex:0 0 clamp(105px,12.3vw,148px);width:clamp(105px,12.3vw,148px);aspect-ratio:63/88;border:1px solid rgba(184,230,238,.58);border-radius:9px;background:#101b26;box-shadow:0 13px 25px rgba(0,8,18,.4),0 0 12px rgba(47,164,187,.08);transform:rotate(-2deg);transition:transform .25s ease,box-shadow .25s ease}
+  .homepage-collectible-card:nth-child(3n){transform:rotate(2deg) translateY(3px)}
+  .homepage-collectible-card:nth-child(3n+2){transform:rotate(-.8deg) translateY(-3px)}
+  .homepage-collectible-card img{display:block;width:100%;height:100%;object-fit:contain;border-radius:7px}
+  .homepage-collectible-card:hover,.homepage-collectible-card:focus-visible{z-index:2;transform:translateY(-7px) rotate(0) scale(1.045);box-shadow:0 0 0 1px rgba(91,215,231,.55),0 20px 34px rgba(0,11,23,.48),0 0 22px rgba(51,183,207,.17)}
+  .album-card-marquee:hover .album-card-track,.album-card-marquee:focus-within .album-card-track{animation-play-state:paused}
+  @keyframes homepage-card-pass{to{transform:translateX(-50%)}}
+  @media(max-width:780px){.album-home-showcase{max-width:100%}.homepage-collectible-card{flex-basis:clamp(98px,25vw,132px);width:clamp(98px,25vw,132px)}.album-card-track{animation-duration:48s}}
+  @media(prefers-reduced-motion:reduce){.album-card-track{animation:none!important;transform:none!important}.homepage-collectible-card{transition:none}}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Μετάβαση στο κύριο περιεχόμενο</a>
+  <header class="site-header" id="top">
+    <div class="nav-shell wrap">
+      <a class="brand" href="#top" aria-label="EVAGELAK EDU LAB — αρχική">
+        <span class="brand-mark official-mark" aria-hidden="true"><img src="assets/images/branding/evagelak-logo.png" alt="" loading="eager"></span>
+        <span class="brand-text"><strong>EVAGELAK</strong><small>EDU LAB</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Άνοιγμα μενού" aria-controls="main-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="main-menu" aria-label="Κεντρική πλοήγηση">
+        <a class="nav-link current" href="#home">Αρχική</a>
+        <a class="nav-link" href="#workshops">Κατασκευές</a>
+        <a class="nav-link" href="#badges">Συλλεκτικό άλμπουμ</a>
+        <a class="nav-link" href="games/train-crossing/index.html">Πέρασε το τρένο!</a>
+        <a class="nav-link nav-explore" href="#workshops">Δες όλες τις κατασκευές <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="live-dot"></span> ΚΑΤΑΣΚΕΥΕΣ ΡΟΜΠΟΤΙΚΗΣ · 2026–2027</span>
+        <h1 id="hero-title">Μικρές ιδέες<br><span>Μεγάλες κατασκευές</span></h1>
+        <p class="hero-lead">Τα παιδιά κατασκευάζουν τα μοντέλα τους, τα προγραμματίζουν και δοκιμάζουν ξανά ώσπου να λειτουργήσουν όπως τα φαντάστηκαν.</p>
+      </div>
+      <div class="hero-art">
+        <img class="hero-main-logo" src="assets/images/branding/evagelak-logo.png" alt="Το επίσημο λογότυπο του EVAGELAK EDU LAB – Μαθαίνω, Δημιουργώ, Καινοτομώ" width="1100" height="1100" fetchpriority="high">
+      </div>
+    </section>
+
+    <section class="workshops-section section" id="workshops" aria-labelledby="workshops-title">
+      <div class="wrap">
+        <div class="section-row"><div class="section-heading"><span class="section-label">ΓΝΩΡΙΣΕ ΤΙΣ ΚΑΤΑΣΚΕΥΕΣ</span><h2 id="workshops-title">Η ρομποτική <em>στην πράξη</em></h2></div><div class="filters" role="group" aria-label="Φίλτρο θεμάτων κατασκευών"><button class="filter-chip active" type="button" data-filter="all" aria-pressed="true">Όλα</button><button class="filter-chip" type="button" data-filter="vehicles" aria-pressed="false">Οχήματα</button><button class="filter-chip" type="button" data-filter="nature" aria-pressed="false">Ζώα &amp; Φύση</button><button class="filter-chip" type="button" data-filter="technology" aria-pressed="false">Τεχνολογία</button><button class="filter-chip" type="button" data-filter="games" aria-pressed="false">Παιχνίδια &amp; Αθλητισμός</button></div></div>
+
+        <div class="workshop-catalog-toolbar" role="search" aria-label="Αναζήτηση και φιλτράρισμα κατασκευών">
+          <div class="workshop-search-field">
+            <label for="workshop-search">Αναζήτηση κατασκευής</label>
+            <input type="search" id="workshop-search" placeholder="π.χ. T-Rex, Χταπόδι, Frisbee" aria-controls="workshop-list" autocomplete="off">
+          </div>
+          <div class="workshop-equipment-field">
+            <label for="workshop-equipment">Εξοπλισμός</label>
+            <select id="workshop-equipment" aria-controls="workshop-list"><option value="all">Όλος ο εξοπλισμός</option></select>
+          </div>
+          <div class="workshop-results-count" id="workshop-results-count" role="status" aria-live="polite">14 κατασκευές</div>
+        </div>
+        <div class="workshop-grid" id="workshop-list">
+          <article class="workshop-card" data-category="nature" data-id="robotic-turtle" data-equipment="wedo2"><div class="workshop-image tone-blue" style="background:#18212b"><img src="workshops/2026-2027/14-robotic-turtle/cover.webp" alt="Ρομποτική Χελώνα LEGO WeDo 2.0" loading="lazy"></div><div class="workshop-info"><div class="workshop-meta"><small>LEGO WeDo 2.0</small><span class="category">Ζώα &amp; Φύση</span></div><h3>Ρομποτική Χελώνα</h3><p>Κατασκευάζουμε μια χελώνα που αντιδρά σε αντικείμενα με αισθητήρα κίνησης και αλλαγή φοράς του κινητήρα.</p><a class="workshop-action" href="workshops/2026-2027/14-robotic-turtle/index.html">Δες την κατασκευή <span aria-hidden="true">→</span></a></div></article>
+          <article class="workshop-card" data-category="technology" data-id="robotic-launcher" data-equipment="wedo2"><div class="workshop-image tone-blue" style="background:#18212b"><img src="workshops/2026-2027/13-robotic-launcher/cover.webp" alt="Ρομποτικός Εκτοξευτής LEGO WeDo 2.0" loading="lazy"></div><div class="workshop-info"><div class="workshop-meta"><small>LEGO WeDo 2.0</small><span class="category">Τεχνολογία</span></div><h3>Ρομποτικός Εκτοξευτής</h3><p>Γνωρίζουμε τις βασικές έννοιες της μηχανικής και του προγραμματισμού LEGO WeDo 2.0.</p><a class="workshop-action" href="workshops/2026-2027/13-robotic-launcher/index.html">Δες την κατασκευή <span aria-hidden="true">→</span></a></div></article>
+          <article class="workshop-card" data-category="vehicles" data-id="vintage-fighter" data-equipment="wedo2"><div class="workshop-image tone-blue" style="background:#18212b"><img src="workshops/2026-2027/12-vintage-fighter-plane/cover.webp" alt="Vintage Fighter Plane LEGO WeDo 2.0: πράσινο ελικοφόρο αεροπλάνο σε βάση με κινητήρα και αισθητήρα κλίσης" loading="lazy"></div><div class="workshop-info"><div class="workshop-meta"><small>LEGO WeDo 2.0</small><span class="category">Οχήματα</span></div><h3>Vintage Fighter Plane</h3><p>Κατασκευάζουμε ένα ελικοφόρο αεροπλάνο και εξερευνούμε την περιστροφή του κινητήρα με αισθητήρα κλίσης, μηνύματα και επανάληψη.</p><a class="workshop-action" href="workshops/2026-2027/12-vintage-fighter-plane/index.html">Δες την κατασκευή <span aria-hidden="true">→</span></a></div></article>
+          <article class="workshop-card" data-category="vehicles" data-id="forklift-2" data-equipment="wedo2"><div class="workshop-image tone-blue" style="background:#18212b"><img src="workshops/2026-2027/11-forklift-2/cover.webp" alt="Ανυψωτικό Μηχάνημα II LEGO WeDo 2.0 με ανυψωτικούς βραχίονες, δύο τροχούς ως φορτίο και κινητήρα" loading="lazy"></div><div class="workshop-info"><div class="workshop-meta"><small>LEGO WeDo 2.0</small><span class="category">Οχήματα</span></div><h3>Ανυψωτικό Μηχάνημα II</h3><p>Δεύτερη εκδοχή του κλαρκ: κατασκευάζουμε τον μηχανισμό και ελέγχουμε την κίνηση με αισθητήρα, μηνύματα και επανάληψη.</p><a class="workshop-action" href="workshops/2026-2027/11-forklift-2/index.html">Δες την κατασκευή <span aria-hidden="true">→</span></a></div></article>
+          <article class="workshop-card" data-category="vehicles" data-id="forklift" data-equipment="wedo2"><div class="workshop-image tone-blue" style="background:#18212b"><img src="workshops/2026-2027/10-forklift/cover.webp" alt="Ανυψωτικό Μηχάνημα LEGO WeDo 2.0 με περόνες, τέσσερις τροχούς, γρανάζια και οδηγό" loading="lazy"></div><div class="workshop-info"><div class="workshop-meta"><small>LEGO WeDo 2.0</small><span class="category">Οχήματα</span></div><h3>Ανυψωτικό Μηχάνημα</h3><p>Κατασκευάζουμε ένα κλαρκ με μηχανισμό ανύψωσης και μαθαίνουμε να ελέγχουμε τον κινητήρα με μηνύματα και επαναλήψεις.</p><a class="workshop-action" href="workshops/2026-2027/10-forklift/index.html">Δες την κατασκευή <span aria-hidden="true">→</span></a></div></article>
+          <article class="workshop-card" data-category="technology" data-id="smart-bin" data-equipment="wedo2"><div class="workshop-image tone-blue" style="background:#18212b"><img src="workshops/2026-2027/09-smart-bin/cover.webp" alt="Έξυπνος Κάδος LEGO WeDo 2.0 με πολύχρωμο σώμα, τέσσερις τροχούς και αισθητήρα" loading="lazy"></div><div class="workshop-info"><div class="workshop-meta"><small>LEGO WeDo 2.0</small><span class="category">Τεχνολογία</span></div><h3>Έξυπνος Κάδος</h3><p>Κατασκευάζουμε έναν τροχοφόρο έξυπνο κάδο και εξερευνούμε την κίνηση, τις συνθήκες αισθητήρα και τον ήχο.</p><a class="workshop-action" href="workshops/2026-2027/09-smart-bin/index.html">Δες την κατασκευή <span aria-hidden="true">→</span></a></div></article>
+          <article class="workshop-card" data-category="nature" data-id="trex" data-equipment="wedo2"><div class="workshop-image tone-blue" style="background:#18212b"><img src="workshops/2026-2027/07-robotic-t-rex/cover.webp" alt="Ρομποτικός T-Rex LEGO WeDo 2.0 με πράσινο σώμα, μεγάλο στόμα, δύο πόδια και ουρά σε σκοτεινό φωτογραφικό στούντιο" loading="lazy"></div><div class="workshop-info"><div class="workshop-meta"><small>LEGO WeDo 2.0</small><span class="category">Ζώα &amp; Φύση</span></div><h3>Ρομποτικός T-Rex</h3><p>Κατασκευάζουμε έναν δεινόσαυρο με κινητήρα και ανακαλύπτουμε πώς αντιδρά στην προσέγγιση με αισθητήρα και επαναλήψεις.</p><a class="workshop-action" href="workshops/2026-2027/07-robotic-t-rex/index.html">Δες την κατασκευή <span aria-hidden="true">→</span></a></div></article>
+          <article class="workshop-card" data-category="nature" data-id="octopus" data-equipment="wedo2"><div class="workshop-image tone-blue" style="background:#18212b"><img src="workshops/2026-2027/06-robotic-octopus/home-cover.webp" alt="Ρομποτικό Χταπόδι LEGO WeDo 2.0 με μπλε κεφάλι, πράσινα πλοκάμια και κινητήριο μηχανισμό" loading="lazy"></div><div class="workshop-info"><div class="workshop-meta"><small>LEGO WeDo 2.0</small><span class="category">Ζώα &amp; Φύση</span></div><h3>Ρομποτικό Χταπόδι</h3><p>Ζωντανεύουμε ένα θαλάσσιο πλάσμα με κινητήρα, επανάληψη, τυχαίο φωτισμό και ήχο.</p><a class="workshop-action" href="workshops/2026-2027/06-robotic-octopus/index.html">Δες την κατασκευή <span aria-hidden="true">→</span></a></div></article>
+          <article class="workshop-card" data-category="games" data-id="frisbee" data-equipment="wedo2"><div class="workshop-image tone-lilac" style="background:#18212b"><img src="workshops/2026-2027/05-frisbee-target-challenge/cover.webp" alt="Ρομποτικός Στόχος Frisbee LEGO WeDo 2.0 με μηχανισμό εκτόξευσης και πράσινο στόχο" loading="lazy"></div><div class="workshop-info"><div class="workshop-meta"><small>LEGO WeDo 2.0</small><span class="category">Παιχνίδια &amp; Αθλητισμός</span></div><h3>Ρομποτικός Στόχος Frisbee</h3><p>Δοκιμάζουμε ένα παιχνίδι στόχου με frisbee, κινητήρα, αισθητήρα και ψηφιακή καταμέτρηση.</p><a class="workshop-action" href="workshops/2026-2027/05-frisbee-target-challenge/index.html">Δες την κατασκευή <span aria-hidden="true">→</span></a></div></article>
+          <article class="workshop-card" data-category="games" data-id="basket" data-equipment="wedo2"><div class="workshop-image tone-lilac" style="background:#18212b"><img src="workshops/2026-2027/04-robotic-basket/cover.webp" alt="Ρομποτική μπασκέτα LEGO WeDo 2.0 με πράσινο στόχο, κινητήρα και λευκή μπάλα" loading="lazy"></div><div class="workshop-info"><div class="workshop-meta"><small>LEGO WeDo 2.0</small><span class="category">Παιχνίδια &amp; Αθλητισμός</span></div><h3>Ρομποτική Μπασκέτα</h3><p>Κατασκευάζουμε ένα παιχνίδι μπάσκετ και συνδυάζουμε μηχανική κίνηση, αισθητήρα και καταμέτρηση πόντων.</p><a class="workshop-action" href="workshops/2026-2027/04-robotic-basket/index.html">Δες την κατασκευή <span aria-hidden="true">→</span></a></div></article>
+          <article class="workshop-card" data-category="nature" data-id="scorpion" data-equipment="wedo2"><div class="workshop-image tone-blue" style="background:#18212b"><img src="workshops/2026-2027/03-robotic-scorpion/cover.webp" alt="Φωτογραφία της κατασκευής LEGO WeDo 2.0 Ρομποτικός Σκορπιός με πράσινα πόδια, δαγκάνες και ανασηκωμένη ουρά" loading="lazy"></div><div class="workshop-info"><div class="workshop-meta"><small>LEGO WeDo 2.0</small><span class="category">Ζώα &amp; Φύση</span></div><h3>Ρομποτικός Σκορπιός</h3><p>Ανακαλύπτουμε τα αραχνοειδή και προγραμματίζουμε αντίδραση με αισθητήρα απόστασης.</p><a class="workshop-action" href="workshops/2026-2027/03-robotic-scorpion/index.html">Δες την κατασκευή <span aria-hidden="true">→</span></a></div></article>
+          <article class="workshop-card" data-category="vehicles" data-id="jetfighter" data-equipment="wedo2"><div class="workshop-image tone-peach" style="background:#1d2330"><img src="workshops/2026-2027/02-jet-fighter/home-cover.webp" alt="Πραγματική εικόνα της κατασκευής LEGO WeDo 2.0 Jet Fighter" loading="lazy"></div><div class="workshop-info"><div class="workshop-meta"><small>LEGO WeDo 2.0</small><span class="category">Οχήματα</span></div><h3>Jet Fighter</h3><p>Κατασκευάζουμε ένα μαχητικό αεροσκάφος και δοκιμάζουμε το πρόγραμμά του.</p><a class="workshop-action" href="workshops/2026-2027/02-jet-fighter/index.html">Δες την κατασκευή <span aria-hidden="true">→</span></a></div></article>
+          <article class="workshop-card" data-category="vehicles" data-id="electric-scooter" data-equipment="wedo2"><div class="workshop-image tone-peach" style="background:#1d2330"><img src="workshops/2026-2027/08-electric-scooter/cover.webp" alt="Πραγματική εικόνα της κατασκευής LEGO WeDo 2.0 Ηλεκτρικό Scooter" loading="lazy"></div><div class="workshop-info"><div class="workshop-meta"><small>LEGO WeDo 2.0</small><span class="category">Οχήματα</span></div><h3>Ηλεκτρικό Scooter</h3><p>Κατασκευάζουμε ένα ηλεκτρικό scooter και μελετάμε πώς ο κινητήρας, οι αναμονές και η επανάληψη οργανώνουν την κίνησή του.</p><a class="workshop-action" href="workshops/2026-2027/08-electric-scooter/index.html">Δες την κατασκευή <span aria-hidden="true">→</span></a></div></article>
+          <article class="workshop-card" data-category="vehicles" data-id="rally" data-equipment="wedo2"><div class="workshop-image tone-lilac" style="background:#18212b"><img src="workshops/2026-2027/01-rally-drift-car/cover.webp?v=8" alt="Πραγματική εικόνα της κατασκευής LEGO WeDo 2.0 Drift Car με πίσω φτερό" loading="lazy"></div><div class="workshop-info"><div class="workshop-meta"><small>LEGO WeDo 2.0</small><span class="category">Οχήματα</span></div><h3>Ρομποτικό Rally</h3><p>Drift Car με φτερό: κατασκευάζουμε αγωνιστικό όχημα και δοκιμάζουμε την κίνησή του.</p><a class="workshop-action" href="workshops/2026-2027/01-rally-drift-car/index.html">Δες την κατασκευή <span aria-hidden="true">→</span></a></div></article>
+        </div>
+
+        <div class="workshop-empty" id="workshop-empty" hidden>
+          <strong>Δεν βρέθηκαν κατασκευές</strong>
+          <p>Δοκίμασε άλλον όρο ή άλλαξε τα φίλτρα</p>
+          <button type="button" id="workshop-reset" class="workshop-reset">Καθαρισμός φίλτρων</button>
+        </div>
+        <nav class="workshop-pagination" id="workshop-pagination" aria-label="Σελίδες κατασκευών" hidden>
+          <button type="button" class="workshop-page-btn" id="workshop-page-prev">Προηγούμενη</button>
+          <div id="workshop-page-numbers" class="workshop-page-numbers"></div>
+          <button type="button" class="workshop-page-btn" id="workshop-page-next">Επόμενη</button>
+        </nav>
+      </div>
+    </section>
+
+    <section class="quiz-section section" id="badges" aria-labelledby="badges-title">
+      <div class="wrap academy-home card-home-layout">
+        <div class="academy-home-copy">
+          <span class="section-label light-label">EVAGELAK EDU LAB · ΣΥΛΛΕΚΤΙΚΟ ΑΛΜΠΟΥΜ</span>
+          <h2 id="badges-title">Κάθε αποστολή, <em>μια νέα ανακάλυψη!</em></h2>
+          <p>Ολοκλήρωσε το quiz κάθε κατασκευής, ξεκλείδωσε τη συλλεκτική της κάρτα και πρόσθεσέ τη στο άλμπουμ σου. Η συλλογή μεγαλώνει με κάθε νέα κατασκευή — και οι εκπλήξεις σε περιμένουν μέσα!</p>
+          <a class="btn btn-academy-home" href="badges/index.html">Άνοιξε το άλμπουμ <span aria-hidden="true">→</span></a>
+          <p class="card-home-note">Χωρίς λογαριασμό · Η πρόοδός σου αποθηκεύεται σε αυτή τη συσκευή.</p>
+        </div>
+        <div class="album-home-showcase">
+          <div class="album-card-marquee" role="region" aria-label="Συλλεκτικές κάρτες ρομποτικών κατασκευών">
+            <div class="album-card-track" id="homepage-card-track" aria-busy="true"></div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <span class="brand-mark official-mark" aria-hidden="true"><img src="assets/images/branding/evagelak-logo.png" alt="" loading="lazy"></span>
+          <span class="brand-text"><strong>EVAGELAK</strong><small>EDU LAB</small></span>
+        </a>
+      </div>
+      <div class="footer-connect">
+        <nav class="footer-socials" aria-label="Κοινωνικά δίκτυα">
+          <a class="footer-social-link" href="https://www.youtube.com/@EVAGELAKEDULAB" target="_blank" rel="noopener noreferrer" aria-label="Επισκέψου το κανάλι EVAGELAK EDU LAB στο YouTube (ανοίγει σε νέα καρτέλα)" title="Το κανάλι EVAGELAK EDU LAB στο YouTube">
+            <img src="assets/images/social/youtube.svg" width="30" height="24" alt="" style="object-fit:contain">
+          </a>
+          <a class="footer-social-link" href="https://www.instagram.com/evagelakedulab/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @evagelakedulab (ανοίγει σε νέα καρτέλα)" title="Instagram @evagelakedulab">
+            <img src="assets/images/social/instagram.svg" width="24" height="24" alt="" style="object-fit:contain">
+          </a>
+          <a class="footer-social-link" href="https://www.tiktok.com/@evagelakedulab" target="_blank" rel="noopener noreferrer" aria-label="TikTok @evagelakedulab (ανοίγει σε νέα καρτέλα)" title="TikTok @evagelakedulab">
+            <img src="assets/images/social/tiktok.svg" width="24" height="24" alt="" style="object-fit:contain">
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div class="wrap footer-bottom"><span>© <span id="year">2026</span> EVAGELAK EDU LAB. Με αγάπη για τη μάθηση.</span></div>
+  </footer>
+
+  <dialog class="workshop-modal" id="workshop-dialog" aria-labelledby="dialog-title"><div class="modal-wrap"><button type="button" class="modal-close" aria-label="Κλείσιμο παραθύρου">×</button><span class="section-label">ΜΙΑ ΙΔΕΑ ΓΙΑ ΚΑΤΑΣΚΕΥΗ</span><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="modal-facts"><div><strong>Τι ανακαλύπτουμε</strong><p id="dialog-learn"></p></div><div><strong>Μια πρόκληση</strong><p id="dialog-challenge"></p></div></div><p class="modal-footnote">Πρόκειται για συνοπτική παρουσίαση της ιδέας — όχι για πλήρη οδηγό κατασκευής.</p><button type="button" class="btn btn-primary modal-done">Επιστροφή στις κατασκευές</button></div></dialog>
+<script id="homepage-collectible-card-loader">
+(() => {
+  const track = document.querySelector('#homepage-card-track');
+  if (!track) return;
+  const albumUrl = new URL('badges/index.html', document.baseURI);
+
+  const showAlbumLink = () => {
+    track.style.animation = 'none';
+    const link = document.createElement('a');
+    link.className = 'album-carousel-fallback';
+    link.href = albumUrl.href;
+    link.textContent = 'Άνοιξε το συλλεκτικό άλμπουμ';
+    track.replaceChildren(link);
+    track.setAttribute('aria-busy', 'false');
+  };
+
+  fetch(albumUrl, { credentials: 'same-origin' })
+    .then(response => {
+      if (!response.ok) throw new Error('Album unavailable');
+      return response.text();
+    })
+    .then(markup => {
+      const album = new DOMParser().parseFromString(markup, 'text/html');
+      const seen = new Set();
+      const cards = [...album.querySelectorAll('#album-grid .slot')]
+        .map(slot => {
+          const image = slot.querySelector('.slot-art img[src*="/cards/"]');
+          const name = slot.querySelector('.slot-name')?.textContent.trim();
+          if (!image || !name) return null;
+          const src = new URL(image.getAttribute('src'), albumUrl);
+          if (src.origin !== location.origin || !src.pathname.includes('/assets/images/cards/')) return null;
+          if (seen.has(src.pathname)) return null;
+          seen.add(src.pathname);
+          return { name, src: src.href, alt: image.alt || `${name}, συλλεκτική κάρτα EVAGELAK EDU LAB` };
+        })
+        .filter(Boolean);
+
+      if (!cards.length) {
+        showAlbumLink();
+        return;
+      }
+
+      const makeGroup = duplicate => {
+        const group = document.createElement('div');
+        group.className = 'album-card-group';
+        if (duplicate) {
+          group.setAttribute('aria-hidden', 'true');
+          group.inert = true;
+        }
+        cards.forEach((card, index) => {
+          const link = document.createElement('a');
+          link.className = 'homepage-collectible-card';
+          link.href = albumUrl.href;
+          link.setAttribute('aria-label', `Προβολή στο Συλλεκτικό Άλμπουμ: ${card.name}`);
+          if (duplicate) link.tabIndex = -1;
+          const image = document.createElement('img');
+          image.src = card.src;
+          image.alt = duplicate ? '' : card.alt;
+          image.width = 1260;
+          image.height = 1760;
+          image.loading = index < 3 ? 'eager' : 'lazy';
+          image.decoding = 'async';
+          link.append(image);
+          group.append(link);
+        });
+        return group;
+      };
+
+      track.replaceChildren(makeGroup(false), makeGroup(true));
+      track.style.animation = 'none';
+      void track.offsetWidth;
+      track.style.animation = '';
+      track.setAttribute('aria-busy', 'false');
+    })
+    .catch(showAlbumLink);
+})();
+</script>
+</body>
+</html>
+
