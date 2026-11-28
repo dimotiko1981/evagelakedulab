@@ -370,6 +370,13 @@
   @media(max-width:780px){.album-home-showcase{max-width:100%}.homepage-collectible-card{flex-basis:clamp(98px,25vw,132px);width:clamp(98px,25vw,132px)}.album-card-track{animation-duration:48s}}
   @media(prefers-reduced-motion:reduce){.album-card-track{animation:none!important;transform:none!important}.homepage-collectible-card{transition:none}}
 </style>
+  <style>
+    .home-programming { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px 20px; margin-top:28px; padding-top:18px; border-top:1px solid #cbdde3; }
+    .home-programming h2 { margin:0; color:var(--ink); font-size:1.08rem; line-height:1.4; }
+    .home-programming a { display:inline-flex; align-items:center; gap:8px; min-height:44px; color:#075c74; font-weight:800; text-underline-offset:4px; }
+    .home-programming a:hover, .home-programming a:focus-visible { text-decoration:underline; }
+    @media(max-width:600px) { .home-programming { flex-direction:column; gap:0; } }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Μετάβαση στο κύριο περιεχόμενο</a>
@@ -384,7 +391,6 @@
         <a class="nav-link current" href="#home">Αρχική</a>
         <a class="nav-link" href="#workshops">Κατασκευές</a>
         <a class="nav-link" href="#badges">Συλλεκτικό άλμπουμ</a>
-        <a class="nav-link" href="train-crossing.html">Πέρασε το τρένο!</a>
         <a class="nav-link nav-explore" href="#workshops">Δες όλες τις κατασκευές <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
@@ -444,6 +450,10 @@
           <div id="workshop-page-numbers" class="workshop-page-numbers"></div>
           <button type="button" class="workshop-page-btn" id="workshop-page-next">Επόμενη</button>
         </nav>
+        <section class="home-programming" aria-labelledby="programming-title">
+          <h2 id="programming-title">Παιχνίδια προγραμματισμού</h2>
+          <a href="train-crossing.html">Κώδικας στις ράγες <span aria-hidden="true">→</span></a>
+        </section>
       </div>
     </section>
 
